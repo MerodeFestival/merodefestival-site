@@ -131,6 +131,7 @@ window.TEKSTEN = {
   "partners.label": "Samen sterk",
   "partners.lead": "Overheden, erfgoedsites en muziekorganisaties die mee bouwen.",
   "partners.samen-kop": "In samenwerking met",
+  "partners.sponsors-kop": "Sponsors",
   "partners.steun-kop": "Met steun van",
   "partners.titel": "Partners",
   "partners.wesp": "Over WESP",

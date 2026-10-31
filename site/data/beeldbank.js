@@ -112,6 +112,34 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "Logo Reinhart",
+    "src": "https://beeld.merodefestival.be/partners/t/reinhart.webp",
+    "alt": "Handtekening Reinhart",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo GC Den Egger",
+    "src": "https://beeld.merodefestival.be/partners/t/denegger.webp",
+    "alt": "Logo GC Den Egger",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
     "titel": "Logo Westelfolk",
     "src": "https://beeld.merodefestival.be/partners/westelfolk.webp",
     "alt": "Logo Westelfolk",
