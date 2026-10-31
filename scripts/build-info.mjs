@@ -72,7 +72,9 @@ export async function bouwInfo({ ROOT, SITE, S, esc, kopEd, voetEd }) {
 
   // ---------- Partners ----------
   const steun = van("Partner").filter(r => r.label === "Met steun van");
-  const samen = van("Partner").filter(r => r.label !== "Met steun van");
+  // Label “Sponsors” staat in een eigen blok net onder “Met steun van”
+  const sponsors = van("Partner").filter(r => r.label === "Sponsors");
+  const samen = van("Partner").filter(r => r.label !== "Met steun van" && r.label !== "Sponsors");
   // Groepen onder “In samenwerking met”: het veld Label is de tussentitel, in de volgorde waarin het eerst voorkomt; zonder label achteraan
   const groepen = [...samen.reduce((m, r) => m.set(r.label, [...(m.get(r.label) || []), r]), new Map())]
     .sort(([a], [b]) => (a ? 0 : 1) - (b ? 0 : 1));
@@ -88,7 +90,7 @@ export async function bouwInfo({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     titel: T("partners.titel", "Partners"),
     beschrijving: T("partners.beschrijving", "De overheden, erfgoedsites en muziekorganisaties die Merodefestival en WESP vzw steunen en er mee aan bouwen."),
     body: hero(T("partners.label", "Samen sterk"), T("partners.titel", "Partners"), T("partners.lead", "Overheden, erfgoedsites en muziekorganisaties die mee bouwen.")) +
-      (steun.length ? sectie("donker", `<h2>${esc(T("partners.steun-kop", "Met steun van"))}</h2><div class="i-steun"><img class="i-vl-logo" src="img/vlaanderen-verbeelding-werkt.png" alt="${esc(T("footer.logo-alt", "Vlaanderen, verbeelding werkt"))}" width="240" height="104" loading="lazy"><ul class="i-lijst">${steun.map(naam).join("")}</ul></div>`) : "") +
+      (steun.length ? sectie("donker", `<h2>${esc(T("partners.steun-kop", "Met steun van"))}</h2><div class="i-steun"><img class="i-vl-logo" src="img/vlaanderen-verbeelding-werkt.png" alt="${esc(T("footer.logo-alt", "Vlaanderen, verbeelding werkt"))}" width="240" height="104" loading="lazy"><ul class="i-lijst">${steun.map(naam).join("")}</ul></div>${sponsors.length ? `<h3 class="i-groep">${esc(T("partners.sponsors-kop", "Sponsors"))}</h3><ul class="i-lijst">${sponsors.map(naam).join("")}</ul>` : ""}`) : "") +
       (samen.length ? sectie("licht", `<h2>${esc(T("partners.samen-kop", "In samenwerking met"))}</h2>${groepen.map(([kop, rijen]) => `${kop ? `<h3 class="i-groep">${esc(kop)}</h3>` : ""}<ul class="i-lijst">${rijen.map(naam).join("")}</ul>`).join("")}`) : "") +
       sectie(steun.length ? "donker" : "licht", `<div class="i-tekst"><h2>${esc(T("partners.word-kop", "Partner worden?"))}</h2>${alinea(T("partners.word", "Een gemeente, erfgoedsite of organisatie die wil samenwerken? Vertel ons waar je mee bezig bent."))}<p><a class="btn" href="mailto:jochen@wespvzw.be?subject=${encodeURIComponent("Samenwerking")}">${esc(T("partners.knop", "Neem contact op"))}</a> <a class="btn ghost" href="wesp.html">${esc(T("partners.wesp", "Over WESP"))}</a></p></div>`),
   });
