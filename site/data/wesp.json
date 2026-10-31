@@ -10,6 +10,15 @@
   },
   {
     "soort": "Partner",
+    "titel": "Stad Leuven",
+    "label": "Met steun van",
+    "tekst": "",
+    "link": "https://www.leuven.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/partners/stad-leuven.webp"
+  },
+  {
+    "soort": "Partner",
     "titel": "Provincie Vlaams-Brabant",
     "label": "Met steun van",
     "tekst": "",
@@ -532,15 +541,6 @@
   },
   {
     "soort": "Partner",
-    "titel": "Stad Leuven",
-    "label": "Cultuurcentra en steden",
-    "tekst": "",
-    "link": "https://www.leuven.be/",
-    "linktekst": "",
-    "foto": "https://beeld.merodefestival.be/partners/stad-leuven.webp"
-  },
-  {
-    "soort": "Partner",
     "titel": "LOV 2030",
     "label": "Cultuurcentra en steden",
     "tekst": "",
@@ -668,7 +668,7 @@
   {
     "soort": "Partner",
     "titel": "Den Boogerd",
-    "label": "Lokale partners",
+    "label": "Sponsors",
     "tekst": "",
     "link": "https://www.denboogerd.be/",
     "linktekst": "",
@@ -677,7 +677,7 @@
   {
     "soort": "Partner",
     "titel": "B&B de Meren",
-    "label": "Lokale partners",
+    "label": "Sponsors",
     "tekst": "",
     "link": "https://www.demeren.com/",
     "linktekst": "",
@@ -686,7 +686,7 @@
   {
     "soort": "Partner",
     "titel": "Universiteit Hasselt",
-    "label": "Lokale partners",
+    "label": "Sponsors",
     "tekst": "",
     "link": "https://www.uhasselt.be/nl",
     "linktekst": "",
