@@ -112,6 +112,21 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "Aram – Shahab Azinmehr, Derya Türkan & Robbe Kieckens",
+    "src": "https://beeld.merodefestival.be/merodefestival/aram-azinmehr-turkan-kieckens.webp",
+    "alt": "Het trio Aram met tar, daf en kemençe op betonnen banken in een park",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival",
+      "Klanken van de Steden"
+    ]
+  },
+  {
     "titel": "31646778_10155742762353583_7509322997874819072_o_bxkmu5.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/31646778-10155742762353583-7509322997874819072-o-bxkmu5.webp",
     "alt": "Vier muzikanten spelen in begroeide kerkruïne",

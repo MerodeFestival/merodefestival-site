@@ -245,7 +245,7 @@ window.AGENDA = [
     ],
     "reeks": "Klanken van de Steden",
     "price": "",
-    "tickets": "",
+    "tickets": "https://pierrot.io/wesp-vzw/klanken-van-de-steden",
     "volzet": false,
     "info": "https://www.klankenvandesteden.be",
     "sub": "Tussen oost en west",
@@ -259,7 +259,8 @@ window.AGENDA = [
     ],
     "spotify": [],
     "webadres": "",
-    "foto": ""
+    "foto": "https://beeld.merodefestival.be/merodefestival/aram-azinmehr-turkan-kieckens.webp",
+    "slug": "aram-2026-11-27"
   },
   {
     "start": "2026-12-03",

@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:aram-2026-11-27@merodefestival.be
+DTSTAMP:20261127T000000Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261127
+SUMMARY:Aram: Shahab Azinmehr\, Derya Türkan & Robbe Kieckens
+LOCATION:De Studio Antwerpen\, Antwerpen
+URL:https://www.merodefestival.be/concert/aram-2026-11-27
+END:VEVENT
+END:VCALENDAR
