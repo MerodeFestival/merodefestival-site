@@ -24,11 +24,14 @@ async function notion(pad, body, poging = 0) {
 const tekst = p => (p?.title || p?.rich_text || []).map(t => t.plain_text).join("");
 
 // Foto’s bij een rij (veld Foto): eerste foto, verkleind en als JPEG bewaard in site/data/wesp-foto/
+// Een Fotolink naar de beeldbank (beeld.merodefestival.be) gaat voor en wordt rechtstreeks gebruikt.
 let sharp = null;
 try { sharp = (await import("sharp")).default; } catch { /* geen sharp: foto’s blijven zoals ze zijn */ }
 const FOTO = path.resolve("site/data/wesp-foto");
 const gebruikt = new Set();
 async function haalFoto(p, id) {
+  const link = p.Fotolink?.url || "";
+  if (/^https:\/\/beeld\.merodefestival\.be\//.test(link)) return link;
   const f = p.Foto?.files?.[0];
   if (!f) return "";
   const url = f.type === "external" ? f.external.url : f.file.url;

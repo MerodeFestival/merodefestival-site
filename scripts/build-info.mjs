@@ -74,9 +74,11 @@ export async function bouwInfo({ ROOT, SITE, S, esc, kopEd, voetEd }) {
   const steun = van("Partner").filter(r => r.label === "Met steun van");
   const samen = van("Partner").filter(r => r.label !== "Met steun van");
   const naam = r => {
-    const inhoud = r.foto ? `<img src="${esc(r.foto)}" alt="${esc(r.titel)}" loading="lazy">` : esc(r.titel);
-    const a = r.link ? `<a href="${esc(href(r.link))}"${extern(r.link) ? ' target="_blank" rel="noopener"' : ""}>${inhoud}</a>` : inhoud;
-    return `<li class="${r.foto ? "met-logo" : ""}">${a}${r.tekst ? `<span class="i-sub">${esc(r.tekst)}</span>` : ""}</li>`;
+    // Elke partner is een wit kaartje met het logo (of de naam), zodat ook donkere logo’s op een donkere achtergrond leesbaar zijn
+    const inhoud = r.foto ? `<img src="${esc(r.foto)}" alt="${esc(r.titel)}" loading="lazy">` : `<span class="i-naam">${esc(r.titel)}</span>`;
+    const a = r.link ? `<a class="i-logo" href="${esc(href(r.link))}"${extern(r.link) ? ' target="_blank" rel="noopener"' : ""} title="${esc(r.titel)}">${inhoud}</a>`
+      : `<span class="i-logo">${inhoud}</span>`;
+    return `<li class="met-logo">${a}${r.tekst ? `<span class="i-sub">${esc(r.tekst)}</span>` : ""}</li>`;
   };
   await pagina({
     bestand: "partners.html", canonical: "partners",
@@ -120,7 +122,12 @@ const CSS = String.raw`/* Privacy, Vrienden en Partners */
 .i-lijst{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.9rem 2.25rem;font-size:1.15rem}
 .i-lijst a{text-underline-offset:4px}
 .i-lijst li{display:flex;flex-direction:column}
-.i-lijst li.met-logo img{display:block;max-height:64px;width:auto}
+.i-logo{display:flex;align-items:center;justify-content:center;width:180px;height:100px;padding:.8rem 1rem;box-sizing:border-box;background:#fff;border-radius:6px}
+.i-logo .i-naam{color:#2b2622;font-size:1rem;line-height:1.25;text-align:center}
+a.i-logo{text-decoration:none;transition:transform .15s}
+a.i-logo:hover,a.i-logo:focus-visible{transform:translateY(-2px)}
+.i-logo img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.i-lijst li.met-logo .i-sub{max-width:180px;margin-top:.35rem}
 .i-sub{font-size:.9rem;opacity:.8}
 .i-citaat{margin:1.5rem 0;padding-left:1.1rem;border-left:3px solid var(--s-oranje);font-style:italic;font-size:1.2rem}
 .i-missie{margin:0 0 1.5rem}
