@@ -14,5 +14,5 @@ window.SEIZOEN = {
   tickets: [
     ["Per concert", "€ 22"]
   ],
-  ticketlink: "https://wesp-vzw.pierrot.io/"
+  ticketlink: "https://pierrot.io/wesp-vzw/kerkconcerten-2026-2027"
 };
