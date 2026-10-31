@@ -289,14 +289,17 @@ for (const r of await queryAll(BEELDBANK_DB, [{ property: "Volgorde", direction:
     uitsnede: (p.Uitsnede?.select?.name || "").toLowerCase(),
     gebruik: (p.Gebruik?.multi_select || []).map(o => o.name),
     volgorde: p.Volgorde?.number ?? null,
+    sites: (p.Website?.multi_select || []).map(o => o.name),
     concerten: (p.Concert?.relation || []).map(x => x.id),
   });
 }
 
 // Foto’s uit de beeldbank bij het bijhorende concert zetten (relatie “Concert”).
+// Enkel foto’s voor dezelfde website als het concert (veld Website; leeg = Merodefestival).
 // Heeft het concert zelf geen Foto/Fotolink, dan wordt de eerste beeldbankfoto de hoofdfoto.
+const websites = x => x.sites.length ? x.sites : ["Merodefestival"];
 for (const e of agenda) {
-  const b = beeldbank.filter(x => x.concerten.includes(e._id));
+  const b = beeldbank.filter(x => x.concerten.includes(e._id) && websites(x).some(s => websites(e).includes(s)));
   // Extra foto’s in het veld Foto van het concert (na de eerste) komen vóór die uit de beeldbank
   const extra = (e._extra || []).map((src, i) => ({ src, alt: `${e.artist}, foto ${i + 1}`, fotograaf: "" }));
   if (b.length || extra.length) {

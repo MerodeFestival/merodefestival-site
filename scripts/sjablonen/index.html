@@ -153,7 +153,7 @@ document.getElementById("credit").textContent = S.credit || "";
 // ---------- het seizoensbeeld wisselt zacht met foto’s uit de kerken (Beeldbank: onderwerp Kerkconcert + Homepage-carrousel) ----------
 (function () {
   const box = document.getElementById("art"), credit = document.getElementById("credit"), knop = document.getElementById("art-pauze");
-  const fotos = (window.BEELDBANK || []).filter(b => b.onderwerp === "Kerkconcert" && (b.gebruik || []).includes("Homepage-carrousel"))
+  const fotos = (window.BEELDBANK || []).filter(b => isMerode(b) && b.onderwerp === "Kerkconcert" && (b.gebruik || []).includes("Homepage-carrousel"))
     .sort((a, b) => (a.volgorde ?? 99) - (b.volgorde ?? 99));
   if (!fotos.length) return;
   // Uitsnede uit de Beeldbank: welk deel van de foto zichtbaar blijft

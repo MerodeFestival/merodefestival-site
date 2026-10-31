@@ -156,10 +156,21 @@ Per foto: upload in *Foto* of een gedeelde Drive-link in *Fotolink*, een *Alt-te
 en bij *Gebruik* waar ze verschijnt. Alles met *Homepage-carrousel* en *Online* aangevinkt verspringt op de homepage
 naast het seizoensbeeld, in de volgorde van *Volgorde*. Foto’s die al in de site zitten verwijzen via *Lokaal bestand*.
 
+**Website** bepaalt op welke site een foto mag verschijnen, net als in de agenda. Leeg = Merodefestival.
+Een Holsbeek-foto komt dus nooit in de carrousel of bij een concert op merodefestival.be.
+
+De beschreven foto’s staan als WebP op Cloudflare R2 (bucket `wesp-beeldbank`) en hun *Fotolink* wijst naar
+`https://beeld.merodefestival.be/<site>/<naam>.webp`; een miniatuur (max. 600 px) vind je op `…/<site>/thumb/<naam>.webp`.
+Zo’n link wordt niet gedownload of verkleind: de site toont de foto rechtstreeks van R2.
+Een nieuwe foto zet je zelf op R2:
+
+    npx wrangler r2 object put wesp-beeldbank/<site>/<naam>.webp --file <bestand> --remote --content-type image/webp
+
 ### Foto’s bij een concert
 
 In de Beeldbank koppel je een foto aan een concert via het veld **Concert** (zoek de artiest in de agenda).
-Vink *Online* aan. Heeft het concert zelf nog geen foto, dan wordt de eerste gekoppelde foto de grote foto
+Vink *Online* aan. De foto verschijnt enkel als haar *Website* overeenkomt met die van het concert.
+Heeft het concert zelf nog geen foto, dan wordt de eerste gekoppelde foto de grote foto
 bovenaan de concertpagina; extra foto’s verschijnen onder de tekst onder “Foto’s”, met de naam van de fotograaf.
 In de agenda zie je de gekoppelde foto’s terug in het veld **Foto’s (beeldbank)**.
 
