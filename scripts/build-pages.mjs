@@ -149,9 +149,10 @@ function pagina(e, overige) {
   const reeks = reeksVan(e);
   // Meer info (enkel bij een andere reeks): het veld Meer info in Notion, anders de website van de reeks
   const meerInfo = reeks ? e.info || REEKSEN[reeks] || "" : "";
-  const ticket = (e.volzet ? `<span class="soldout">${T("concert.volzet", "Volzet")}</span>`
-    : e.tickets ? `<a class="btn" href="${esc(e.tickets)}">${esc(e.cta || T("concert.koop", "Koop tickets"))}${e.price ? ` (${esc(e.price)})` : ""}</a>` : "")
-    + (meerInfo ? `<a class="btn ghost" href="${esc(meerInfo)}" target="_blank" rel="noopener">${T("concert.meer-info", "Meer info")} ↗</a>` : "");
+  // Heeft het concert een ticketlink (de ticketshop van de reeks), dan vervangt die de knop Meer info
+  const ticket = e.volzet ? `<span class="soldout">${T("concert.volzet", "Volzet")}</span>`
+    : e.tickets ? `<a class="btn" href="${esc(e.tickets)}">${esc(e.cta || T("concert.koop", "Koop tickets"))}${e.price ? ` (${esc(e.price)})` : ""}</a>`
+    : meerInfo ? `<a class="btn ghost" href="${esc(meerInfo)}" target="_blank" rel="noopener">${T("concert.meer-info", "Meer info")} ↗</a>` : "";
 
   // Foto’s en video’s midden in de tekst: een alinea [foto’s] of [video: adres] in de Notion-pagina bepaalt waar ze komen.
   // Zonder zo’n alinea staan de foto’s en video’s onder de tekst, zoals voorheen.
@@ -222,7 +223,7 @@ function pagina(e, overige) {
         <li><a href="../vorige-edities.html">${T("menu.edities", "Vorige edities")}</a></li>
       </ul>
     </nav>
-    <a class="btn" href="${esc(S.ticketlink || e.tickets || "#")}">${T("menu.tickets", "Tickets")}</a>
+    <a class="btn" href="${esc((reeks && e.tickets) || S.ticketlink || e.tickets || "#")}">${T("menu.tickets", "Tickets")}</a>
   </div>
 </header>
 
