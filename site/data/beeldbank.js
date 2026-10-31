@@ -112,6 +112,62 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "Logo Westelfolk",
+    "src": "https://beeld.merodefestival.be/partners/westelfolk.webp",
+    "alt": "Logo Westelfolk",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo Dafodil",
+    "src": "https://beeld.merodefestival.be/partners/dafodil.webp",
+    "alt": "Logo Dafodil",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo 't Stamineeke",
+    "src": "https://beeld.merodefestival.be/partners/stamineeke.webp",
+    "alt": "Logo 't Stamineeke",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo Folkfestival Ham",
+    "src": "https://beeld.merodefestival.be/partners/folkfestivalham.webp",
+    "alt": "Logo Folkfestival Ham",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
     "titel": "Logo Herkenrode",
     "src": "https://beeld.merodefestival.be/partners/herkenrode.webp",
     "alt": "Beeldmerk Herkenrode",

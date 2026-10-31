@@ -182,7 +182,7 @@
   {
     "soort": "Partner",
     "titel": "Landschapspark de Merode",
-    "label": "",
+    "label": "Erfgoed en natuur",
     "tekst": "",
     "link": "https://www.landschapsparkdemerode.be/",
     "linktekst": "",
@@ -254,7 +254,7 @@
   {
     "soort": "Partner",
     "titel": "Muziekpublique",
-    "label": "",
+    "label": "Muziek en folk",
     "tekst": "",
     "link": "https://muziekpublique.be/",
     "linktekst": "",
@@ -317,7 +317,7 @@
   {
     "soort": "Partner",
     "titel": "Muziekcentrum Dranouter",
-    "label": "",
+    "label": "Muziek en folk",
     "tekst": "",
     "link": "https://nouter.be/",
     "linktekst": "",
@@ -371,7 +371,7 @@
   {
     "soort": "Partner",
     "titel": "Cluster",
-    "label": "",
+    "label": "Muziek en folk",
     "tekst": "",
     "link": "https://clustermusic.be/nl/",
     "linktekst": "",
@@ -425,7 +425,7 @@
   {
     "soort": "Partner",
     "titel": "Brosella",
-    "label": "",
+    "label": "Muziek en folk",
     "tekst": "",
     "link": "https://www.brosellafestival.be/nl",
     "linktekst": "",
@@ -443,7 +443,7 @@
   {
     "soort": "Partner",
     "titel": "Muziekmuseum Vleeshuis",
-    "label": "",
+    "label": "Erfgoed en natuur",
     "tekst": "",
     "link": "https://museumvleeshuis.be/nl",
     "linktekst": "",
@@ -452,7 +452,7 @@
   {
     "soort": "Partner",
     "titel": "MIM",
-    "label": "",
+    "label": "Erfgoed en natuur",
     "tekst": "",
     "link": "https://www.mim.be/",
     "linktekst": "",
@@ -461,7 +461,7 @@
   {
     "soort": "Partner",
     "titel": "Abdij van Park",
-    "label": "",
+    "label": "Erfgoed en natuur",
     "tekst": "",
     "link": "https://www.abdijvanpark.be/",
     "linktekst": "",
@@ -470,7 +470,7 @@
   {
     "soort": "Partner",
     "titel": "Abdij van Averbode",
-    "label": "",
+    "label": "Erfgoed en natuur",
     "tekst": "",
     "link": "https://www.abdijaverbode.be/",
     "linktekst": "",
@@ -479,7 +479,7 @@
   {
     "soort": "Partner",
     "titel": "Citadel Diest / Kwartiermakerij",
-    "label": "",
+    "label": "Erfgoed en natuur",
     "tekst": "",
     "link": "https://www.citadeldiest.be/",
     "linktekst": "",
@@ -488,7 +488,7 @@
   {
     "soort": "Partner",
     "titel": "Abdijsite Herkenrode",
-    "label": "",
+    "label": "Erfgoed en natuur",
     "tekst": "",
     "link": "https://www.herita.be/nl/monumenten/abdij-van-herkenrode",
     "linktekst": "",
@@ -497,7 +497,7 @@
   {
     "soort": "Partner",
     "titel": "CC De Bogaard",
-    "label": "",
+    "label": "Cultuurcentra en steden",
     "tekst": "",
     "link": "https://www.debogaard.be/",
     "linktekst": "",
@@ -506,7 +506,7 @@
   {
     "soort": "Partner",
     "titel": "CC Het Gasthuis",
-    "label": "",
+    "label": "Cultuurcentra en steden",
     "tekst": "",
     "link": "https://www.hetgasthuis.be/",
     "linktekst": "",
@@ -515,7 +515,7 @@
   {
     "soort": "Partner",
     "titel": "GC Den Egger",
-    "label": "",
+    "label": "Cultuurcentra en steden",
     "tekst": "",
     "link": "https://www.scherpenheuvel-zichem.be/denegger",
     "linktekst": "",
@@ -524,7 +524,7 @@
   {
     "soort": "Partner",
     "titel": "Natuurpunt",
-    "label": "",
+    "label": "Erfgoed en natuur",
     "tekst": "",
     "link": "https://www.natuurpunt.be/",
     "linktekst": "",
@@ -533,7 +533,7 @@
   {
     "soort": "Partner",
     "titel": "Stad Leuven",
-    "label": "",
+    "label": "Cultuurcentra en steden",
     "tekst": "",
     "link": "https://www.leuven.be/",
     "linktekst": "",
@@ -542,7 +542,7 @@
   {
     "soort": "Partner",
     "titel": "LOV 2030",
-    "label": "",
+    "label": "Cultuurcentra en steden",
     "tekst": "",
     "link": "https://www.lov2030.be/",
     "linktekst": "",
@@ -551,7 +551,7 @@
   {
     "soort": "Partner",
     "titel": "Flanders Folk Network",
-    "label": "",
+    "label": "Muziek en folk",
     "tekst": "",
     "link": "https://www.flandersfolknetwork.be/",
     "linktekst": "",
@@ -560,7 +560,7 @@
   {
     "soort": "Partner",
     "titel": "Folkwaarts",
-    "label": "",
+    "label": "Muziek en folk",
     "tekst": "",
     "link": "https://www.folkwaarts.be/",
     "linktekst": "",
@@ -569,7 +569,7 @@
   {
     "soort": "Partner",
     "titel": "Awa vzw",
-    "label": "",
+    "label": "Lokale partners",
     "tekst": "",
     "link": "",
     "linktekst": "",
@@ -578,7 +578,7 @@
   {
     "soort": "Partner",
     "titel": "Muziekclub ’t Ey",
-    "label": "",
+    "label": "Muziek en folk",
     "tekst": "",
     "link": "https://tey.be/home",
     "linktekst": "",
@@ -586,8 +586,53 @@
   },
   {
     "soort": "Partner",
+    "titel": "Dafodil",
+    "label": "Muziek en folk",
+    "tekst": "",
+    "link": "https://dafodil.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/partners/dafodil.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "Folkfestival Ham",
+    "label": "Muziek en folk",
+    "tekst": "",
+    "link": "https://folkfestivalham.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/partners/folkfestivalham.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "’t Stamineeke Webbekom",
+    "label": "Muziek en folk",
+    "tekst": "",
+    "link": "https://www.stamineeke.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/partners/stamineeke.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "Folkmjusic vzw",
+    "label": "Muziek en folk",
+    "tekst": "",
+    "link": "",
+    "linktekst": "",
+    "foto": ""
+  },
+  {
+    "soort": "Partner",
+    "titel": "Westelfolk",
+    "label": "Muziek en folk",
+    "tekst": "",
+    "link": "https://www.westelfolk.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/partners/westelfolk.webp"
+  },
+  {
+    "soort": "Partner",
     "titel": "Klara",
-    "label": "",
+    "label": "Muziek en folk",
     "tekst": "",
     "link": "https://www.vrt.be/vrtmax/kanalen/klara/",
     "linktekst": "",
@@ -596,7 +641,7 @@
   {
     "soort": "Partner",
     "titel": "De Kwekerie",
-    "label": "",
+    "label": "Lokale partners",
     "tekst": "",
     "link": "https://www.dekwekerie.be/",
     "linktekst": "",
@@ -605,7 +650,7 @@
   {
     "soort": "Partner",
     "titel": "Plug-in",
-    "label": "",
+    "label": "Lokale partners",
     "tekst": "",
     "link": "http://timjanssen.be/",
     "linktekst": "",
@@ -614,7 +659,7 @@
   {
     "soort": "Partner",
     "titel": "S.E.L.V.",
-    "label": "",
+    "label": "Lokale partners",
     "tekst": "",
     "link": "https://www.selv.be/",
     "linktekst": "",
@@ -623,7 +668,7 @@
   {
     "soort": "Partner",
     "titel": "Den Boogerd",
-    "label": "",
+    "label": "Lokale partners",
     "tekst": "",
     "link": "https://www.denboogerd.be/",
     "linktekst": "",
@@ -632,7 +677,7 @@
   {
     "soort": "Partner",
     "titel": "B&B de Meren",
-    "label": "",
+    "label": "Lokale partners",
     "tekst": "",
     "link": "https://www.demeren.com/",
     "linktekst": "",
@@ -641,7 +686,7 @@
   {
     "soort": "Partner",
     "titel": "Universiteit Hasselt",
-    "label": "",
+    "label": "Lokale partners",
     "tekst": "",
     "link": "https://www.uhasselt.be/nl",
     "linktekst": "",
