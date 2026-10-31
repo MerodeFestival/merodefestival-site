@@ -39,7 +39,7 @@
     "soort": "Partner",
     "titel": "Parochies en kerkfabrieken",
     "label": "Met steun van",
-    "tekst": "met de medewerking van",
+    "tekst": "Kerkfabrieken Engsbergen, Testelt, Langdorp, Wolfsdonk en Blauberg",
     "link": "",
     "linktekst": "",
     "foto": ""
@@ -376,6 +376,15 @@
     "link": "https://www.abdijaverbode.be/",
     "linktekst": "",
     "foto": "https://beeld.merodefestival.be/partners/abdij-van-averbode.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "Citadel Diest / Kwartiermakerij",
+    "label": "",
+    "tekst": "",
+    "link": "https://www.citadeldiest.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/partners/kwartiermakerij.webp"
   },
   {
     "soort": "Partner",
