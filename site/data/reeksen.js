@@ -3,7 +3,7 @@
 // Leeg = de link valt terug op de ticketlink of op wespvzw.be.
 window.REEKSEN = {
   "Holsbeek Sessies": "https://www.holsbeeksessies.be",
-  "Limburg Sessies": "",
+  "Limburg Sessies": "https://www.limburgsessies.be",
   "Klanken van de Steden": "",
   "PARK Festival": "",
   "WESP": "https://www.wespvzw.be"

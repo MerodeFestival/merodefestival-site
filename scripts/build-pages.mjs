@@ -22,9 +22,14 @@ const alles = JSON.parse(await fs.readFile(path.join(ROOT, "data/agenda.json"), 
 // Deze site toont enkel de concerten van Merodefestival (veld Website leeg = Merodefestival)
 const SITE_NAAM = process.env.SITE_NAAM || "Merodefestival";
 const hoortHier = e => !(e.sites || []).length ? SITE_NAAM === "Merodefestival" : e.sites.includes(SITE_NAAM);
-const agenda = alles.filter(hoortHier);
+// Concerten van deze reeksen krijgen op merodefestival.be ook een eigen concertpagina (tekst, foto’s, video’s uit Notion)
+const OOK_PAGINA = ["Holsbeek Sessies", "Limburg Sessies"];
+const reeksVan = e => (e.sites || []).find(s => OOK_PAGINA.includes(s)) || "";
+const agenda = alles.filter(e => hoortHier(e) || (SITE_NAAM === "Merodefestival" && reeksVan(e)));
 const ctx = { window: {} };
 vm.runInNewContext(await fs.readFile(path.join(ROOT, "seizoen/seizoen.js"), "utf8"), ctx);
+vm.runInNewContext(await fs.readFile(path.join(ROOT, "data/reeksen.js"), "utf8"), ctx);
+const REEKSEN = ctx.window.REEKSEN || {};
 await laadTeksten(ROOT);
 const S = seizoenOverrides(ctx.window.SEIZOEN || {});
 
@@ -141,8 +146,12 @@ function pagina(e, overige) {
   const sps = (e.spotify || []).map(spotifyEmbed).filter(Boolean);
   const kerk = /kerkconcert/i.test(e.kind);
   const route = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.adres || [e.place, e.village].filter(Boolean).join(", "))}`;
-  const ticket = e.volzet ? `<span class="soldout">${T("concert.volzet", "Volzet")}</span>`
-    : e.tickets ? `<a class="btn" href="${esc(e.tickets)}">${esc(e.cta || T("concert.koop", "Koop tickets"))}${e.price ? ` (${esc(e.price)})` : ""}</a>` : "";
+  const reeks = reeksVan(e);
+  // Meer info (enkel bij een andere reeks): het veld Meer info in Notion, anders de website van de reeks
+  const meerInfo = reeks ? e.info || REEKSEN[reeks] || "" : "";
+  const ticket = (e.volzet ? `<span class="soldout">${T("concert.volzet", "Volzet")}</span>`
+    : e.tickets ? `<a class="btn" href="${esc(e.tickets)}">${esc(e.cta || T("concert.koop", "Koop tickets"))}${e.price ? ` (${esc(e.price)})` : ""}</a>` : "")
+    + (meerInfo ? `<a class="btn ghost" href="${esc(meerInfo)}" target="_blank" rel="noopener">${T("concert.meer-info", "Meer info")} ↗</a>` : "");
 
   // Foto’s en video’s midden in de tekst: een alinea [foto’s] of [video: adres] in de Notion-pagina bepaalt waar ze komen.
   // Zonder zo’n alinea staan de foto’s en video’s onder de tekst, zoals voorheen.
@@ -251,6 +260,7 @@ function pagina(e, overige) {
       <aside class="praktisch">
         <h2 class="label">${T("concert.praktisch", "Praktisch")}</h2>
         <dl>
+          ${reeks ? `<div><dt>${T("concert.reeks", "Reeks")}</dt><dd>${meerInfo ? `<a href="${esc(meerInfo)}" target="_blank" rel="noopener">${esc(reeks)}</a>` : esc(reeks)}</dd></div>` : ""}
           <div><dt>${T("concert.wanneer", "Wanneer")}</dt><dd>${esc(datumregel)}</dd></div>
           <div><dt>${T("concert.waar", "Waar")}</dt><dd>${esc(e.place)}${e.adres ? `<br>${esc(e.adres)}` : e.village ? `<br>${esc(e.village)}` : ""}<br><a href="${route}">${T("concert.route", "Route")}</a></dd></div>
           ${e.duur ? `<div><dt>${T("concert.duur", "Duur")}</dt><dd>${esc(e.duur)}</dd></div>` : ""}
@@ -265,7 +275,7 @@ function pagina(e, overige) {
 
   ${overige.length ? `<section class="donker ook" aria-labelledby="ook-titel">
     <div class="wrap">
-      <h2 id="ook-titel">${T("concert.ook", "Ook in de agenda")}</h2>
+      <h2 id="ook-titel">${reeks ? `${T("concert.ook-reeks", "Ook bij")} ${esc(reeks)}` : T("concert.ook", "Ook in de agenda")}</h2>
       <ul class="ook-lijst">
         ${overige.map(o => { const x = d(o.start); return `<li><a href="${o.slug}.html"><span class="label">${x.getUTCDate()} ${MAAND_KORT[x.getUTCMonth()]} · ${esc(o.village)}</span><span class="naam">${esc(o.artist)}</span></a></li>`; }).join("\n        ")}
       </ul>
@@ -340,9 +350,10 @@ for (const f of await fs.readdir(OUT)) await fs.unlink(path.join(OUT, f));
 const vandaag = new Date().toISOString().slice(0, 10);
 const komend = agenda.filter(e => (e.end || e.start) >= vandaag);
 for (const e of agenda) {
-  // Eerst wat erna komt, aangevuld met wat ervoor ligt
-  const na = komend.filter(o => o !== e && o.start >= e.start);
-  const voor = komend.filter(o => o !== e && o.start < e.start).reverse();
+  // Eerst wat erna komt, aangevuld met wat ervoor ligt; telkens uit dezelfde reeks
+  const zelfde = komend.filter(o => o !== e && reeksVan(o) === reeksVan(e));
+  const na = zelfde.filter(o => o.start >= e.start);
+  const voor = zelfde.filter(o => o.start < e.start).reverse();
   const overige = [...na, ...voor].slice(0, 3);
   await fs.writeFile(path.join(OUT, `${e.slug}.html`), pagina(e, overige));
   await fs.writeFile(path.join(OUT, `${e.slug}.ics`), ics(e));
