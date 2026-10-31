@@ -79,7 +79,7 @@ export async function bouwInfo({ ROOT, SITE, S, esc, kopEd, voetEd }) {
   const groepen = [...samen.reduce((m, r) => m.set(r.label, [...(m.get(r.label) || []), r]), new Map())]
     .sort(([a], [b]) => (a ? 0 : 1) - (b ? 0 : 1));
   const naam = r => {
-    // Elke partner is een wit kaartje met het logo (of de naam), zodat ook donkere logo’s op een donkere achtergrond leesbaar zijn
+    // Elke partner is een even groot vak met het (transparante) logo, of de naam als er geen logo is
     const inhoud = r.foto ? `<img src="${esc(r.foto)}" alt="${esc(r.titel)}" loading="lazy">` : `<span class="i-naam">${esc(r.titel)}</span>`;
     const a = r.link ? `<a class="i-logo" href="${esc(href(r.link))}"${extern(r.link) ? ' target="_blank" rel="noopener"' : ""} title="${esc(r.titel)}">${inhoud}</a>`
       : `<span class="i-logo">${inhoud}</span>`;
@@ -90,9 +90,10 @@ export async function bouwInfo({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     titel: T("partners.titel", "Partners"),
     beschrijving: T("partners.beschrijving", "De overheden, erfgoedsites en muziekorganisaties die Merodefestival en WESP vzw steunen en er mee aan bouwen."),
     body: hero(T("partners.label", "Samen sterk"), T("partners.titel", "Partners"), T("partners.lead", "Overheden, erfgoedsites en muziekorganisaties die mee bouwen.")) +
-      (steun.length ? sectie("donker", `<h2>${esc(T("partners.steun-kop", "Met steun van"))}</h2><div class="i-steun"><img class="i-vl-logo" src="img/vlaanderen-verbeelding-werkt.png" alt="${esc(T("footer.logo-alt", "Vlaanderen, verbeelding werkt"))}" width="240" height="104" loading="lazy"><ul class="i-lijst">${steun.map(naam).join("")}</ul></div>${sponsors.length ? `<h3 class="i-groep">${esc(T("partners.sponsors-kop", "Sponsors"))}</h3><ul class="i-lijst">${sponsors.map(naam).join("")}</ul>` : ""}`) : "") +
-      (samen.length ? sectie("licht", `<h2>${esc(T("partners.samen-kop", "In samenwerking met"))}</h2>${groepen.map(([kop, rijen]) => `${kop ? `<h3 class="i-groep">${esc(kop)}</h3>` : ""}<ul class="i-lijst">${rijen.map(naam).join("")}</ul>`).join("")}`) : "") +
-      sectie(steun.length ? "donker" : "licht", `<div class="i-tekst"><h2>${esc(T("partners.word-kop", "Partner worden?"))}</h2>${alinea(T("partners.word", "Een gemeente, erfgoedsite of organisatie die wil samenwerken? Vertel ons waar je mee bezig bent."))}<p><a class="btn" href="mailto:jochen@wespvzw.be?subject=${encodeURIComponent("Samenwerking")}">${esc(T("partners.knop", "Neem contact op"))}</a> <a class="btn ghost" href="wesp.html">${esc(T("partners.wesp", "Over WESP"))}</a></p></div>`),
+      // De logo’s staan op een vaste lichte achtergrond (ook in donkere modus), zodat transparante logo’s altijd leesbaar zijn
+      (steun.length ? sectie("logos", `<h2>${esc(T("partners.steun-kop", "Met steun van"))}</h2><ul class="i-lijst">${steun.map(naam).join("")}</ul>${sponsors.length ? `<h3 class="i-groep">${esc(T("partners.sponsors-kop", "Sponsors"))}</h3><ul class="i-lijst">${sponsors.map(naam).join("")}</ul>` : ""}`) : "") +
+      (samen.length ? sectie("logos tweede", `<h2>${esc(T("partners.samen-kop", "In samenwerking met"))}</h2>${groepen.map(([kop, rijen]) => `${kop ? `<h3 class="i-groep">${esc(kop)}</h3>` : ""}<ul class="i-lijst">${rijen.map(naam).join("")}</ul>`).join("")}`) : "") +
+      sectie("donker", `<div class="i-tekst"><h2>${esc(T("partners.word-kop", "Partner worden?"))}</h2>${alinea(T("partners.word", "Een gemeente, erfgoedsite of organisatie die wil samenwerken? Vertel ons waar je mee bezig bent."))}<p><a class="btn" href="mailto:jochen@wespvzw.be?subject=${encodeURIComponent("Samenwerking")}">${esc(T("partners.knop", "Neem contact op"))}</a> <a class="btn ghost" href="wesp.html">${esc(T("partners.wesp", "Over WESP"))}</a></p></div>`),
   });
 
   await fs.writeFile(path.join(ROOT, "css/info.css"), CSS);
@@ -122,24 +123,26 @@ const CSS = String.raw`/* Privacy, Vrienden en Partners */
 .i-kaart{border-top:3px solid var(--s-oranje);padding-top:.8rem}
 .i-kaart h3{font-size:1.4rem;margin:.2rem 0 .5rem}
 .i-kaart p{margin:.3rem 0}
-.i-steun{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center}
-.i-vl-logo{display:block;width:240px;max-width:100%;height:auto}
-.i-lijst{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.9rem 2.25rem;font-size:1.15rem}
-.i-lijst a{text-underline-offset:4px}
-.i-lijst li{display:flex;flex-direction:column}
-.i-logo{display:flex;align-items:center;justify-content:center;width:180px;height:100px;padding:.8rem 1rem;box-sizing:border-box;background:#fff;border-radius:6px}
-.i-logo .i-naam{color:#2b2622;font-size:1rem;line-height:1.25;text-align:center}
-a.i-logo{text-decoration:none;transition:transform .15s}
-a.i-logo:hover,a.i-logo:focus-visible{transform:translateY(-2px)}
+/* Partners: transparante logo’s op een vaste lichte achtergrond, ook in donkere modus */
+.i-sec.logos{background:#EFE7DA;color:#2B1D14}
+.i-sec.logos.tweede{padding-top:0}
+.i-sec.logos.tweede .wrap{border-top:1px solid rgba(43,29,20,.18);padding-top:3rem}
+.i-lijst{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:2rem 2.75rem;font-size:1.15rem}
+.i-lijst li{display:flex;flex-direction:column;align-items:center}
+.i-logo{display:flex;align-items:center;justify-content:center;width:210px;height:120px}
+.i-logo .i-naam{font-size:1.15rem;line-height:1.25;text-align:center;font-weight:600}
+a.i-logo{color:inherit;text-decoration:none;transition:transform .15s}
+a.i-logo:hover,a.i-logo:focus-visible{transform:translateY(-3px)}
 .i-logo img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
-.i-lijst li.met-logo .i-sub{max-width:180px;margin-top:.35rem}
+.i-lijst li.met-logo .i-sub{max-width:210px;margin-top:.35rem;text-align:center}
 .i-sub{font-size:.9rem;opacity:.8}
-.i-groep{font-family:var(--label);font-size:1.05rem;font-weight:normal;color:var(--s-oranje);margin:2.2rem 0 .9rem}
+.i-groep{font-family:var(--label);font-size:1.1rem;font-weight:normal;color:#A84E0C;margin:2.6rem 0 1.1rem}
 .i-sec h2+.i-groep{margin-top:.6rem}
+@media (max-width:760px){.i-lijst{gap:1.5rem 1.75rem;justify-content:center}.i-logo{width:150px;height:90px}}
 .i-citaat{margin:1.5rem 0;padding-left:1.1rem;border-left:3px solid var(--s-oranje);font-style:italic;font-size:1.2rem}
 .i-missie{margin:0 0 1.5rem}
 .i-missie div{padding:.8rem 0;border-top:1px solid rgba(239,231,218,.25)}
 .i-missie dt{font-family:var(--label);font-size:1rem;color:var(--s-oranje)}
 .i-missie dd{margin:.25rem 0 0;font-size:1.1rem}
-@media (max-width:760px){.i-steun{grid-template-columns:1fr;gap:1.5rem}.i-sec{padding:2.75rem 0}}
+@media (max-width:760px){.i-sec{padding:2.75rem 0}}
 `;
