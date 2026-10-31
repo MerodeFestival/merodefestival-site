@@ -4,7 +4,7 @@
     "titel": "Vlaamse overheid, kunsten en erfgoed",
     "label": "Met steun van",
     "tekst": "",
-    "link": "",
+    "link": "https://www.vlaanderen.be/cjm/nl",
     "linktekst": "",
     "foto": ""
   },
@@ -13,7 +13,7 @@
     "titel": "Provincie Vlaams-Brabant",
     "label": "Met steun van",
     "tekst": "",
-    "link": "",
+    "link": "https://www.vlaamsbrabant.be/nl",
     "linktekst": "",
     "foto": ""
   },
@@ -22,7 +22,7 @@
     "titel": "Nationale Loterij",
     "label": "Met steun van",
     "tekst": "",
-    "link": "",
+    "link": "https://www.nationale-loterij.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -31,7 +31,7 @@
     "titel": "Projectvereniging de Merode",
     "label": "Met steun van",
     "tekst": "",
-    "link": "",
+    "link": "https://www.landschapsparkdemerode.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -85,7 +85,7 @@
     "titel": "Landschapspark de Merode",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://www.landschapsparkdemerode.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -157,7 +157,7 @@
     "titel": "Muziekpublique",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://muziekpublique.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -220,7 +220,7 @@
     "titel": "Muziekcentrum Dranouter",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://nouter.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -274,7 +274,7 @@
     "titel": "Cluster",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://clustermusic.be/nl/",
     "linktekst": "",
     "foto": ""
   },
@@ -328,7 +328,7 @@
     "titel": "Brosella",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://www.brosellafestival.be/nl",
     "linktekst": "",
     "foto": ""
   },
@@ -346,7 +346,7 @@
     "titel": "Muziekmuseum Vleeshuis",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://museumvleeshuis.be/nl",
     "linktekst": "",
     "foto": ""
   },
@@ -355,7 +355,7 @@
     "titel": "MIM",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://www.mim.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -364,7 +364,7 @@
     "titel": "Abdij van Park",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://www.abdijvanpark.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -373,7 +373,7 @@
     "titel": "Abdij van Averbode",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://www.abdijaverbode.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -382,7 +382,7 @@
     "titel": "Natuurpunt",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://www.natuurpunt.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -391,7 +391,7 @@
     "titel": "Stad Leuven",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://www.leuven.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -400,7 +400,7 @@
     "titel": "Flanders Folk Network",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://www.flandersfolknetwork.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -409,7 +409,7 @@
     "titel": "Folkwaarts",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://www.folkwaarts.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -427,7 +427,7 @@
     "titel": "Muziekclub ’t Ey",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://tey.be/home",
     "linktekst": "",
     "foto": ""
   },
@@ -436,7 +436,7 @@
     "titel": "Klara",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://www.vrt.be/vrtmax/kanalen/klara/",
     "linktekst": "",
     "foto": ""
   },
@@ -463,7 +463,7 @@
     "titel": "S.E.L.V.",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://www.selv.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -472,7 +472,7 @@
     "titel": "Den Boogerd",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://www.denboogerd.be/",
     "linktekst": "",
     "foto": ""
   },
@@ -490,7 +490,7 @@
     "titel": "Universiteit Hasselt",
     "label": "",
     "tekst": "",
-    "link": "",
+    "link": "https://www.uhasselt.be/nl",
     "linktekst": "",
     "foto": ""
   }
