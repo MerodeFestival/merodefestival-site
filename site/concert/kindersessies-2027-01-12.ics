@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:kindersessies-2027-01-12@merodefestival.be
+DTSTAMP:20270112T000000Z
+DTSTART;VALUE=DATE:20270112
+DTEND;VALUE=DATE:20270114
+SUMMARY:Kindersessies met Rémi Decker (Zigoto)
+LOCATION:Buurthuis\, Holsbeek
+URL:https://www.merodefestival.be/concert/kindersessies-2027-01-12
+END:VEVENT
+END:VCALENDAR

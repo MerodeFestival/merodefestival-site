@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:eriksson-delcroix-2026-10-29@merodefestival.be
+DTSTAMP:20261029T000000Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261029
+SUMMARY:Eriksson Delcroix
+LOCATION:Buurthuis Nieuwrode\, Holsbeek
+URL:https://www.merodefestival.be/concert/eriksson-delcroix-2026-10-29
+END:VEVENT
+END:VCALENDAR

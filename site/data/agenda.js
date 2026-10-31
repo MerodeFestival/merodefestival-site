@@ -150,14 +150,19 @@ window.AGENDA = [
     "info": "https://www.holsbeeksessies.be",
     "sub": "",
     "origin": "",
-    "text": "",
+    "text": "Eriksson-Delcroix is het country- en bluegrassduo van Bjorn Eriksson en Nathalie Delcroix. Tweestemmig en met gitaren bewegen ze zich door americana en folk, van eigen songs tot klassiekers uit de rootsmuziek. Close harmony en gitaarvirtuositeit kenmerkt het duo.\n\nMet Nathalie Delcroix (zang) en Bjorn Eriksson (zang, gitaar)",
     "adres": "",
     "duur": "",
     "lang": [],
-    "videos": [],
-    "spotify": [],
+    "videos": [
+      "https://www.youtube.com/watch?v=bwguJHLerK0"
+    ],
+    "spotify": [
+      "https://open.spotify.com/album/5Ln99EL0CaLPSl49jydyGr"
+    ],
     "webadres": "",
-    "foto": ""
+    "foto": "https://beeld.merodefestival.be/holsbeek-sessies/561850-770302.webp",
+    "slug": "eriksson-delcroix-2026-10-29"
   },
   {
     "start": "2026-11-14",
@@ -214,14 +219,19 @@ window.AGENDA = [
     "info": "https://www.holsbeeksessies.be",
     "sub": "",
     "origin": "",
-    "text": "",
+    "text": "Lenny & de Wespen presenteren hun nieuwe album Noem het dan maar dromen, een verzameling songs op het snijvlak van folk, pop, americana en kleinkunst. De muziek klinkt ingetogen en melodieus, vaak rond fingerpicking-gitaarpartijen en sterke, poëtische teksten en ademt tegelijk licht en melancholie. Met een warme en akoestische benadering brengt het trio een intieme sfeer.\n\nMet Lennaert Maes (zang, gitaar), Andries Boone (mandoline, gitaar) en Bert Huysentruyt (drum, bas)",
     "adres": "",
     "duur": "",
     "lang": [],
-    "videos": [],
-    "spotify": [],
+    "videos": [
+      "https://www.youtube.com/watch?v=3mlAstjgcLo"
+    ],
+    "spotify": [
+      "https://open.spotify.com/album/7uOtqHxLBulvOAtYmVJJ4X"
+    ],
     "webadres": "",
-    "foto": ""
+    "foto": "https://beeld.merodefestival.be/wesp/713098-810565.webp",
+    "slug": "lenny-de-wespen-2026-11-26"
   },
   {
     "start": "2026-11-27",
@@ -271,7 +281,36 @@ window.AGENDA = [
     "text": "Sam Grassie is een jonge Schotse gitarist en singer-songwriter die furore maakt binnen de hedendaagse Angelsaksische folkscene. Welshman Dylan Fowler is een internationaal bekende grootmeester op akoestische en klassieke gitaar. Klara-twintiger Haroun Iqbal is componist en multi-instrumentalist met invloeden uit jazz, Indiase en West-Afrikaanse muziek. Samen creëren ze een uitzonderlijk gitarenconcert.",
     "adres": "",
     "duur": "",
-    "lang": [],
+    "lang": [
+      {
+        "type": "p",
+        "html": "Sam Grassie, opgegroeid in Glasgow en nu wonend in Londen, werd door de Bert Jansch Foundation omschreven als een van de beste folkgitaristen van zijn generatie — zijn debuut-ep <em>Sandwood</em> (2024) mengt Keltische melodie met desertblues-ritmes."
+      },
+      {
+        "type": "quote",
+        "html": "&quot;One of the finest folk guitarists of his generation.&quot; — Bert Jansch Foundation"
+      },
+      {
+        "type": "p",
+        "html": "Dylan Fowler werd geboren in Tripoli (Libië) in 1956, groeide op in Zuid-Wales en bouwde in veertig jaar een oeuvre dat Keltische traditie combineert met Europese jazz, Balkan- en Scandinavische invloeden. Hij was ooit muziektherapeut voor mensen met een beperking, richtte de Welsh-Finse trio Taith op, en was bezieler van de Welshe band 'Alaw'."
+      },
+      {
+        "type": "quote",
+        "html": "&quot;Music with heart, soul, and a bullish determination to ignore recognised boundaries.&quot; — BBC, Chris Jones"
+      },
+      {
+        "type": "p",
+        "html": "Haroun Iqbal, uit Vlaanderen, vond zijn weg naar de gitaar via een omweg: eerst jazz en klassiek, dan West-Afrikaanse muziek (via de Senegalese kora-speler Bao Sissoko), en uiteindelijk de Indiase raga-traditie, die hij leerde bij de Pakistaanse sarod-speler Asad Qizilbash. Klara selecteerde hem in 2025 voor De Twintigers."
+      },
+      {
+        "type": "quote",
+        "html": "&quot;Een gitarist die vlotjes alle muzikale grenzen verlegt.&quot; — Klara"
+      },
+      {
+        "type": "p",
+        "html": "Drie totaal verschillende leerscholen, één avond, één gitaar telkens weer opnieuw uitgevonden."
+      }
+    ],
     "videos": [
       "https://www.youtube.com/watch?v=LQYB7dcnsbs",
       "https://www.youtube.com/watch?v=KFgCzlQazkQ",
@@ -283,7 +322,8 @@ window.AGENDA = [
       "https://open.spotify.com/artist/2EIip4bHQ5ZRYbO3VXL2xu"
     ],
     "webadres": "",
-    "foto": "data/foto/40077c21f8db8104bd39c89044f809af.jpg"
+    "foto": "https://beeld.merodefestival.be/limburg-sessies/220136-111048.webp",
+    "slug": "sam-grassie-2026-12-03"
   },
   {
     "start": "2026-12-05",
@@ -517,14 +557,19 @@ window.AGENDA = [
     "info": "https://www.holsbeeksessies.be",
     "sub": "",
     "origin": "",
-    "text": "",
+    "text": "Laura Cortese en Bert Ruymbeek zoeken in hun muziek naar de sfeer van betekenisvolle momenten en zetten die om in klank en verhalen. Soms zingen ze, soms brengen ze instrumentale stukken, altijd in een directe wisselwerking tussen viool en accordeon. Hun repertoire komt voort uit een gedeelde interesse voor melodie, ritme en de plaatsen en mensen die hen vormgeven.\n\nMet Laura Cortese (zang, viool, voetpercussie) en Bert Ruymbeek (accordeon)",
     "adres": "",
     "duur": "",
     "lang": [],
-    "videos": [],
-    "spotify": [],
+    "videos": [
+      "https://www.youtube.com/watch?v=sr5hJDlcRsQ"
+    ],
+    "spotify": [
+      "https://open.spotify.com/artist/5T5BMVZGSvhRXSx3alNp2n"
+    ],
     "webadres": "",
-    "foto": ""
+    "foto": "https://beeld.merodefestival.be/holsbeek-sessies/408921-477550.webp",
+    "slug": "laura-cortese-bert-ruymbeek-2026-12-13"
   },
   {
     "start": "2026-12-18",
@@ -745,7 +790,8 @@ window.AGENDA = [
     "videos": [],
     "spotify": [],
     "webadres": "",
-    "foto": ""
+    "foto": "",
+    "slug": "kindersessies-2027-01-12"
   },
   {
     "start": "2027-01-14",
@@ -764,14 +810,19 @@ window.AGENDA = [
     "info": "https://www.holsbeeksessies.be",
     "sub": "",
     "origin": "",
-    "text": "",
+    "text": "Robb Johnson is een Britse singer-songwriter bekend om zijn folk en scherpe, vaak politieke getinte teksten. Al meer dan veertig jaar brengt hij solo en samen met anderen nummers die satire, maatschappelijke thema’s en persoonlijk verhaal combineren. Met gitaar en stem zet hij liedjes neer die direct, verhalend en to the point zijn.\n\nMet Robb Johnson (zang, gitaar)",
     "adres": "",
     "duur": "",
     "lang": [],
-    "videos": [],
-    "spotify": [],
+    "videos": [
+      "https://www.youtube.com/watch?v=J-Fe02xXpfM"
+    ],
+    "spotify": [
+      "https://open.spotify.com/artist/4wa3zwtzULN5yBOotFzl7z"
+    ],
     "webadres": "",
-    "foto": ""
+    "foto": "https://beeld.merodefestival.be/holsbeek-sessies/109593-878252.webp",
+    "slug": "robb-johnson-2027-01-14"
   },
   {
     "start": "2027-01-24",
@@ -790,14 +841,19 @@ window.AGENDA = [
     "info": "https://www.holsbeeksessies.be",
     "sub": "",
     "origin": "",
-    "text": "",
+    "text": "Bao Sissoko is een Senegalese griot, muzikant en verteller die met zang en kora de geschiedenis en tradities van zijn gemeenschap doorgeeft. Haroun Iqbal is een Belgische gitarist en één van de Twintigers van Klara, actief tussen jazz en wereldmuziek. Kora en gitaar gaan in gesprek, met ruimte voor ritme en improvisatie.\n\nMet Bao Sissoko (kora, zang) en Haroun Iqbal (gitaar)",
     "adres": "",
     "duur": "",
     "lang": [],
-    "videos": [],
-    "spotify": [],
+    "videos": [
+      "https://www.youtube.com/watch?v=qUPy8yZ091Q"
+    ],
+    "spotify": [
+      "https://open.spotify.com/artist/4CTaCrWrRUUmZt3KJtwg3E"
+    ],
     "webadres": "",
-    "foto": ""
+    "foto": "https://beeld.merodefestival.be/holsbeek-sessies/118141-707932.webp",
+    "slug": "bao-sissoko-haroun-iqbal-2027-01-24"
   },
   {
     "start": "2027-01-28",
@@ -819,7 +875,16 @@ window.AGENDA = [
     "text": "Het jonge, talentvolle trio The Weaving bewijst dat Ierse en Engelse folk nog springlevend is. Méabh Begley (accordeon, zang), Owen Spafford (viool) en Cait Ni Riain (piano, zang) brengen muziek met wortels in Kerry, Tipperary en Yorkshire. Ze spelen dansmelodieën en liederen die ze vanuit hun eigen achtergrond benaderen, met ruimte voor samenspel en meerstemmigheid.",
     "adres": "",
     "duur": "",
-    "lang": [],
+    "lang": [
+      {
+        "type": "p",
+        "html": "Méabh Ní Bheaglaoich, Owen Spafford en Cáit Ní Riain ontmoetten elkaar in de Gaeltacht van West Kerry — Iers taalgebied waar traditie nog dagelijks leeft. Méabh is dochter van de legendarische Séamus Begley; Owen groeide op in Leeds en leerde er de Sligo-stijl van wijlen violist Des Hurley; Cáit komt uit Upperchurch, Tipperary, waar ze opgroeide in de muziekpub Jim of the Mills."
+      },
+      {
+        "type": "p",
+        "html": "Hun tweede album, <em>Dlúth agus Inneach / Warp &amp; Weft</em> (uitgebracht februari 2026), verwijst met zijn titel naar het weefproces zelf: kettingdraad en inslag die samen een stof vormen. Precies zo werken zij drie tradities — Kerry, Tipperary, Yorkshire — tot één geheel."
+      }
+    ],
     "videos": [
       "https://www.youtube.com/watch?v=HYXwKIw4FjY"
     ],
@@ -827,7 +892,8 @@ window.AGENDA = [
       "https://open.spotify.com/artist/19uXXk4wreh3f02OcWZyb5"
     ],
     "webadres": "",
-    "foto": "data/foto/40077c21f8db81268146cbea23d42b9b.jpg"
+    "foto": "https://beeld.merodefestival.be/limburg-sessies/370834-658675.webp",
+    "slug": "the-weaving-2027-01-28"
   },
   {
     "start": "2027-01-30",
@@ -887,15 +953,30 @@ window.AGENDA = [
     "text": "La Mal Coiffée is een vocaal kwartet uit Zuid-Frankrijk dat zich toelegt op Occitaanse polyfonie. De groep combineert meerstemmige zang met percussie en werkt met teksten uit de regionale traditie. Hun repertoire verbindt historische bronnen met nieuwe composities. Live ligt de nadruk op ritme, taal en collectieve zang.",
     "adres": "",
     "duur": "",
-    "lang": [],
+    "lang": [
+      {
+        "type": "p",
+        "html": "Vier vrouwenstemmen uit de Languedoc, al meer dan twintig jaar samen. La Mal Coiffée zingt uitsluitend in het Occitaans en bouwt haar muziek op twee pijlers: meerstemmige polyfonie en percussie op traditionele trommels. Geen elektrische instrumenten, geen artificiële laag — alleen stem en ritme."
+      },
+      {
+        "type": "p",
+        "html": "Hun recentste albums <em>Roge</em> en <em>Rojas</em> gaan over verzet, ongehoorzaamheid en volksgeschiedenis van de Languedoc; de Franse pers omschreef hun muziek als &quot;un coup de gueule&quot; — letterlijk een schreeuw uit de keel. Dit is geen nostalgische folklore, maar een levende taal die weigert te verdwijnen."
+      },
+      {
+        "type": "quote",
+        "html": "&quot;La Mal Coiffée spreekt voor alle onderdrukte culturen. Krachtig.&quot; — Anne Berthod, Télérama"
+      }
+    ],
     "videos": [
-      "https://www.youtube.com/watch?v=WrZislKYl-k"
+      "https://www.youtube.com/watch?v=WrZislKYl-k",
+      "https://www.youtube.com/watch?v=dl0Yqy7WT9c"
     ],
     "spotify": [
       "https://open.spotify.com/artist/31YQrpDSa3uuLecHuTrZOq"
     ],
     "webadres": "",
-    "foto": "data/foto/40077c21f8db8169a089ecfd79a1dbb0.jpg"
+    "foto": "https://beeld.merodefestival.be/limburg-sessies/457988-897694.webp",
+    "slug": "la-mal-coiffee-2027-02-19"
   },
   {
     "start": "2027-02-20",
@@ -954,16 +1035,19 @@ window.AGENDA = [
     "tickets": "",
     "volzet": false,
     "info": "https://www.limburgsessies.be",
-    "sub": "",
+    "sub": "Van Trah Njim tot Vinistan",
     "origin": "",
-    "text": "",
+    "text": "Troissoeur is de groep van de broers Rein, Edwin en Joris Vanvinckenroye samen met gitarist Pieter Thys. Sinds het einde van de jaren negentig ontwikkelen zij een eigen electro-akoestische stijl waarin folk, kamermuziek en experiment samenkomen. Na een lange pauze en verschillende zijprojecten namen ze de draad opnieuw op. Dit concert sluit aan bij hun recente werk en het programma Vinistan, hun muzikaal universum met een eigen taal.",
     "adres": "",
     "duur": "",
     "lang": [],
-    "videos": [],
+    "videos": [
+      "https://www.youtube.com/watch?v=FdZEL6SXGcw"
+    ],
     "spotify": [],
     "webadres": "",
-    "foto": ""
+    "foto": "https://beeld.merodefestival.be/limburg-sessies/996959-935677.webp",
+    "slug": "troissoeur-2027-03-03"
   },
   {
     "start": "2027-03-04",
@@ -982,14 +1066,19 @@ window.AGENDA = [
     "info": "https://www.holsbeeksessies.be",
     "sub": "",
     "origin": "",
-    "text": "",
+    "text": "Vera Coomans is misschien wel de meest doorleefde stem in de Vlaamse folk. Ze ontving in 2026 een Flanders Folk Award voor haar jarenlange bijdrage aan de folk in Vlaanderen. Ze werd bekend als dé stem van Madou en bouwde sindsdien verder aan een rijk parcours binnen folk en roots. Samen met haar zoon Thomas brengt ze het repertoire van Madou.\n\nMet Vera Coomans (zang) en Thomas Devos (gitaar)",
     "adres": "",
     "duur": "",
     "lang": [],
-    "videos": [],
-    "spotify": [],
+    "videos": [
+      "https://www.youtube.com/watch?v=G_55hx810e0"
+    ],
+    "spotify": [
+      "https://open.spotify.com/artist/5LHkXGZndRebUjbJqvMQyN"
+    ],
     "webadres": "",
-    "foto": ""
+    "foto": "https://beeld.merodefestival.be/holsbeek-sessies/596939-183992.webp",
+    "slug": "vera-coomans-thomas-devos-2027-03-04"
   },
   {
     "start": "2027-03-05",
@@ -1012,10 +1101,15 @@ window.AGENDA = [
     "adres": "",
     "duur": "",
     "lang": [],
-    "videos": [],
-    "spotify": [],
+    "videos": [
+      "https://www.youtube.com/watch?v=cv5tdEYbOiw"
+    ],
+    "spotify": [
+      "https://open.spotify.com/artist/5CxmG18g0Za8n3kxtRShFj"
+    ],
     "webadres": "",
-    "foto": ""
+    "foto": "",
+    "slug": "john-blek-2027-03-05"
   },
   {
     "start": "2027-03-20",
@@ -1110,7 +1204,20 @@ window.AGENDA = [
     "text": "Livia Giaffreda is zangeres en percussioniste met een focus op Italiaanse en mediterrane tradities, ondersteund op accordeon. Katerina Douka & Stamatis Pasopoulos brengen een programma met Grieks repertoire voor zang en accordeon, met de rebetiko als middelpunt: de stedelijke volksmuziek die ontstond in de havens van het Griekse schiereiland.",
     "adres": "",
     "duur": "",
-    "lang": [],
+    "lang": [
+      {
+        "type": "p",
+        "html": "Vlaanderen maakte eerder reeds kennis met beide zangeressen door hun participatie aan het Mediterraanse Hiraeth-project van componist-violist Wouter Vandenabeele."
+      },
+      {
+        "type": "p",
+        "html": "Livia Giaffreda bouwt haar repertoire op de framedrum en haar stem, vertrekkend vanuit orale Mediterrane tradities die ze een hedendaagse lezing geeft — ze trad al op met onder meer Redi Hasa en bracht een solo-concertreeks genaamd <em>Piel</em>. Nino Conte ondersteunt haar op accordeon."
+      },
+      {
+        "type": "p",
+        "html": "Katerina Douka begon te zingen en dansen binnen een studentendansgroep in Thessaloniki, voor ze zich in 2007 volledig op rebetiko stortte — de stedelijke volksmuziek die ontstond in de havenwijken van Griekenland, doordrongen van migratie en verlangen. Sinds 2010 vormt ze met Stamatis Pasopoulos het duo &quot;ραδυόφωνο&quot; (radiofoon), gewijd aan liederen uit de jaren 1930."
+      }
+    ],
     "videos": [
       "https://www.youtube.com/watch?v=YJyYm2zCgbY",
       "https://www.youtube.com/watch?v=fYc09oxXtHs"
@@ -1120,7 +1227,8 @@ window.AGENDA = [
       "https://open.spotify.com/artist/1687KDBhdbPnWerLxMQbVE"
     ],
     "webadres": "",
-    "foto": "data/foto/40077c21f8db81e391eccfaffc69e5a6.jpg"
+    "foto": "https://beeld.merodefestival.be/limburg-sessies/820143-160836.webp",
+    "slug": "livia-giaffreda-simone-frezza-2027-04-16"
   },
   {
     "start": "2027-04-17",
@@ -1177,16 +1285,21 @@ window.AGENDA = [
     "tickets": "",
     "volzet": false,
     "info": "https://www.holsbeeksessies.be",
-    "sub": "",
+    "sub": "In vino veritas",
     "origin": "",
-    "text": "",
+    "text": "Sopraan Liesbeth Devos en accordeonist Gwen Cresens duiken in het rijke muzikale erfgoed van de Renaissance tot vandaag, op zoek naar melodieën waarin de wijn rijkelijk vloeit. Van Monteverdi, Purcell, Eccles en Landi tot Barbara en Luis Mariano – elk glas muziek vertelt zijn eigen verhaal.\n\nMet Gwen Cresens (accordeon) en Liesbeth Devos (zang)",
     "adres": "",
     "duur": "",
     "lang": [],
-    "videos": [],
-    "spotify": [],
+    "videos": [
+      "https://www.youtube.com/watch?v=RLAbGgnJNg8"
+    ],
+    "spotify": [
+      "https://open.spotify.com/artist/7BIJhGB7mt9HoPJZqqostR"
+    ],
     "webadres": "",
-    "foto": ""
+    "foto": "https://beeld.merodefestival.be/holsbeek-sessies/871093-660751.webp",
+    "slug": "liesbeth-devos-gwen-cresens-2027-04-25"
   },
   {
     "start": "2027-05-05",

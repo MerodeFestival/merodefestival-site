@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:la-mal-coiffee-2027-02-19@merodefestival.be
+DTSTAMP:20270219T000000Z
+DTSTART;VALUE=DATE:20270219
+DTEND;VALUE=DATE:20270219
+SUMMARY:La Mal Coiffée
+LOCATION:Abdijsite Herkenrode\, Herkenrode
+URL:https://www.merodefestival.be/concert/la-mal-coiffee-2027-02-19
+END:VEVENT
+END:VCALENDAR

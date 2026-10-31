@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:vera-coomans-thomas-devos-2027-03-04@merodefestival.be
+DTSTAMP:20270304T000000Z
+DTSTART;VALUE=DATE:20270304
+DTEND;VALUE=DATE:20270304
+SUMMARY:Vera Coomans & Thomas Devos
+LOCATION:Buurthuis\, Holsbeek
+URL:https://www.merodefestival.be/concert/vera-coomans-thomas-devos-2027-03-04
+END:VEVENT
+END:VCALENDAR

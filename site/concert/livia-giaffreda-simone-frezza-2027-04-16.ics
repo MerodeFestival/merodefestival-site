@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:livia-giaffreda-simone-frezza-2027-04-16@merodefestival.be
+DTSTAMP:20270416T000000Z
+DTSTART;VALUE=DATE:20270416
+DTEND;VALUE=DATE:20270416
+SUMMARY:Livia Giaffreda & Simone Frezza\, Katerina Douka & Stamatis Pasopoulos
+LOCATION:Abdijsite Herkenrode\, Herkenrode
+URL:https://www.merodefestival.be/concert/livia-giaffreda-simone-frezza-2027-04-16
+END:VEVENT
+END:VCALENDAR

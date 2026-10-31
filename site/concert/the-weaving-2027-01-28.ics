@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:the-weaving-2027-01-28@merodefestival.be
+DTSTAMP:20270128T000000Z
+DTSTART;VALUE=DATE:20270128
+DTEND;VALUE=DATE:20270128
+SUMMARY:The Weaving
+LOCATION:Academiezaal \, Sint-Truiden
+URL:https://www.merodefestival.be/concert/the-weaving-2027-01-28
+END:VEVENT
+END:VCALENDAR

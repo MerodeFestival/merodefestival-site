@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:laura-cortese-bert-ruymbeek-2026-12-13@merodefestival.be
+DTSTAMP:20261213T000000Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261213
+SUMMARY:Laura Cortese & Bert Ruymbeek
+LOCATION:Kerk\, Kortrijk-Dutsel
+URL:https://www.merodefestival.be/concert/laura-cortese-bert-ruymbeek-2026-12-13
+END:VEVENT
+END:VCALENDAR

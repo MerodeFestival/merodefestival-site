@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:john-blek-2027-03-05@merodefestival.be
+DTSTAMP:20270305T000000Z
+DTSTART;VALUE=DATE:20270305
+DTEND;VALUE=DATE:20270305
+SUMMARY:John Blek
+LOCATION:Buurthuis\, Holsbeek
+URL:https://www.merodefestival.be/concert/john-blek-2027-03-05
+END:VEVENT
+END:VCALENDAR

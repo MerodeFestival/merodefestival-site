@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:sam-grassie-2026-12-03@merodefestival.be
+DTSTAMP:20261203T000000Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261203
+SUMMARY:Sam Grassie\, Dylan Fowler & Haroun Iqbal
+LOCATION:Academiezaal Sint-Truiden\, Sint-Truiden
+URL:https://www.merodefestival.be/concert/sam-grassie-2026-12-03
+END:VEVENT
+END:VCALENDAR
