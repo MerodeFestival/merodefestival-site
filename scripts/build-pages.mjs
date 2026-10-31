@@ -32,6 +32,11 @@ vm.runInNewContext(await fs.readFile(path.join(ROOT, "data/reeksen.js"), "utf8")
 const REEKSEN = ctx.window.REEKSEN || {};
 await laadTeksten(ROOT);
 const S = seizoenOverrides(ctx.window.SEIZOEN || {});
+// Vermelding van de kunstenaar onderaan; met creditlink wordt de naam (na “Artwork:”) een link
+const creditHtml = () => {
+  const c = esc(S.credit || "");
+  return S.creditlink ? c.replace(/^(.*?:\s*)?(.+)$/, (m, voor, naam) => `${voor || ""}<a href="${esc(S.creditlink)}" target="_blank" rel="noopener">${naam}</a>`) : c;
+};
 
 const MAAND = ["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"];
 const MAAND_KORT = ["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"];
@@ -292,7 +297,7 @@ function pagina(e, overige) {
       <h3>${T("footer.contact", "Contact")}</h3>
       <p><a href="mailto:info@merodefestival.be">info@merodefestival.be</a></p>
       <p><a href="tel:+32498758296">0498 75 82 96</a></p>
-      <p>${T("footer.organisatie", "Merodefestival is een project van WESP vzw, BE 0863 441 738, Jozef Wautersstraat 4, 3010 Kessel-Lo")}</p>
+      <p>${T("footer.organisatie", "Merodefestival is een project van WESP vzw, BE 0863 441 738, Jozef Wautersstraat 4, 3010 Kessel-Lo, IBAN BE50 9731 3542 0118")}</p>
     </div>
     <div>
       <h3>${T("footer.volg", "Volg ons")}</h3>
@@ -305,7 +310,7 @@ function pagina(e, overige) {
     <div>
       <h3>${T("footer.steun-kop", "Met steun van")}</h3>
       <p>${T("footer.steun", "De Vlaamse overheid, kunsten en erfgoed, de provincie Vlaams-Brabant, de Nationale Loterij en projectvereniging de Merode. Met de medewerking van de parochies en kerkfabrieken.")}</p>
-      <p>${esc(S.credit || "")}</p>
+      <p>${creditHtml()}</p>
     </div>
   </div>
 </footer>
@@ -517,9 +522,9 @@ const editiesHtml = `<!DOCTYPE html>
 <footer>
   <div class="wrap"><img class="foot-logo" src="${esc(S.logo)}" alt="Merodefestival" width="147" height="100" loading="lazy"></div>
   <div class="wrap cols">
-    <div><h3>${T("footer.contact", "Contact")}</h3><p><a href="mailto:info@merodefestival.be">info@merodefestival.be</a></p><p><a href="tel:+32498758296">0498 75 82 96</a></p><p>${T("footer.organisatie", "Merodefestival is een project van WESP vzw, BE 0863 441 738, Jozef Wautersstraat 4, 3010 Kessel-Lo")}</p></div>
+    <div><h3>${T("footer.contact", "Contact")}</h3><p><a href="mailto:info@merodefestival.be">info@merodefestival.be</a></p><p><a href="tel:+32498758296">0498 75 82 96</a></p><p>${T("footer.organisatie", "Merodefestival is een project van WESP vzw, BE 0863 441 738, Jozef Wautersstraat 4, 3010 Kessel-Lo, IBAN BE50 9731 3542 0118")}</p></div>
     <div><h3>${T("footer.volg", "Volg ons")}</h3><ul><li><a href="https://www.facebook.com/merodefestival">Facebook</a></li><li><a href="https://www.instagram.com/merodefestival/">Instagram</a></li><li><a href="https://www.youtube.com/channel/UCahKa1lM3yaWEwXdV_bBJdw">YouTube</a></li></ul></div>
-    <div><h3>${T("footer.steun-kop", "Met steun van")}</h3><p>${T("footer.steun", "De Vlaamse overheid, kunsten en erfgoed, de provincie Vlaams-Brabant, de Nationale Loterij en projectvereniging de Merode. Met de medewerking van de parochies en kerkfabrieken.")}</p><p>${esc(S.credit || "")}</p></div>
+    <div><h3>${T("footer.steun-kop", "Met steun van")}</h3><p>${T("footer.steun", "De Vlaamse overheid, kunsten en erfgoed, de provincie Vlaams-Brabant, de Nationale Loterij en projectvereniging de Merode. Met de medewerking van de parochies en kerkfabrieken.")}</p><p>${creditHtml()}</p></div>
   </div>
 </footer>
 <script>

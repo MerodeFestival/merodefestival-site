@@ -114,7 +114,7 @@ const HOMEPAGE = [
   ["homepage.kijk-luister", "Kijk en luister", "Link bij een concert met video of muziek", ['"{}"']],
   ["algemeen.foto", "Foto:", "Voor de naam van de fotograaf", ['"{} "']],
   ["footer.contact", "Contact", "Kop van de eerste kolom onderaan", ["<h3>{}</h3>"]],
-  ["footer.organisatie", "Merodefestival is een project van WESP vzw, BE 0863 441 738, Jozef Wautersstraat 4, 3010 Kessel-Lo", "Gegevens van de organisatie onderaan", [P]],
+  ["footer.organisatie", "Merodefestival is een project van WESP vzw, BE 0863 441 738, Jozef Wautersstraat 4, 3010 Kessel-Lo, IBAN BE50 9731 3542 0118", "Gegevens van de organisatie onderaan", [P]],
   ["footer.volg", "Volg ons", "Kop van de tweede kolom onderaan", ["<h3>{}</h3>"]],
   ["footer.steun-kop", "Met steun van", "Kop van de derde kolom onderaan", ["<h3>{}</h3>"]],
   ["footer.steun", "De Vlaamse overheid, kunsten en erfgoed, de provincie Vlaams-Brabant, de Nationale Loterij en projectvereniging de Merode. Met de medewerking van de parochies en kerkfabrieken.", "Wie de site steunt, onderaan", [P]],

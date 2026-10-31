@@ -6,6 +6,7 @@ window.SEIZOEN = {
   artwork: "seizoen/artwork.jpg",
   artworkAlt: "Illustratie van een harpiste die boven een dorpskerk in het Merodelandschap uittorent",
   credit: "Artwork: Reinhart Croon",
+  creditlink: "https://www.reinhart.be",
   kop: "De wereld komt naar de Merode",
   intro: [
     "In de kerken van het Merodegebied klinkt muziek van ver en dichtbij. Van Noord-Ierland tot Zuid-Frankrijk, van Schotland tot Griekenland — elke avond een andere wereld, elke keer dezelfde bijzondere ruimtes.",
