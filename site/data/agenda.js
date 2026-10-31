@@ -230,7 +230,7 @@ window.AGENDA = [
       "https://open.spotify.com/album/7uOtqHxLBulvOAtYmVJJ4X"
     ],
     "webadres": "",
-    "foto": "https://beeld.merodefestival.be/wesp/713098-810565.webp",
+    "foto": "https://beeld.merodefestival.be/holsbeek-sessies/790045-507050.webp",
     "slug": "lenny-de-wespen-2026-11-26"
   },
   {
@@ -569,7 +569,7 @@ window.AGENDA = [
       "https://open.spotify.com/artist/5T5BMVZGSvhRXSx3alNp2n"
     ],
     "webadres": "",
-    "foto": "https://beeld.merodefestival.be/holsbeek-sessies/408921-477550.webp",
+    "foto": "https://beeld.merodefestival.be/wesp/103589-655231.webp",
     "slug": "laura-cortese-bert-ruymbeek-2026-12-13"
   },
   {
@@ -1109,7 +1109,7 @@ window.AGENDA = [
       "https://open.spotify.com/artist/5CxmG18g0Za8n3kxtRShFj"
     ],
     "webadres": "",
-    "foto": "",
+    "foto": "https://beeld.merodefestival.be/holsbeek-sessies/256352-800728.webp",
     "slug": "john-blek-2027-03-05"
   },
   {
