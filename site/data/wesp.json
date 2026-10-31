@@ -19,6 +19,24 @@
   },
   {
     "soort": "Partner",
+    "titel": "Provincie Antwerpen",
+    "label": "Met steun van",
+    "tekst": "",
+    "link": "https://www.provincieantwerpen.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/merodefestival/854383-261185.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "Provincie Limburg",
+    "label": "Met steun van",
+    "tekst": "",
+    "link": "https://www.limburg.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/partners/provincie-limburg.webp"
+  },
+  {
+    "soort": "Partner",
     "titel": "Nationale Loterij",
     "label": "Met steun van",
     "tekst": "",
@@ -34,6 +52,87 @@
     "link": "https://www.landschapsparkdemerode.be/",
     "linktekst": "",
     "foto": "https://beeld.merodefestival.be/merodefestival/442459-228757.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "Stad Aarschot",
+    "label": "Met steun van",
+    "tekst": "",
+    "link": "https://www.aarschot.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/merodefestival/975605-90389.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "Stad Diest",
+    "label": "Met steun van",
+    "tekst": "",
+    "link": "https://www.diest.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/merodefestival/996710-821527.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "Stad Geel",
+    "label": "Met steun van",
+    "tekst": "",
+    "link": "https://www.geel.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/merodefestival/750941-372920.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "Gemeente Herselt",
+    "label": "Met steun van",
+    "tekst": "",
+    "link": "https://www.herselt.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/merodefestival/980827-76044.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "Gemeente Hulshout",
+    "label": "Met steun van",
+    "tekst": "",
+    "link": "https://www.hulshout.be/nl",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/merodefestival/581027-48419.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "Gemeente Laakdal",
+    "label": "Met steun van",
+    "tekst": "",
+    "link": "https://www.laakdal.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/merodefestival/488484-871064.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "Stad Scherpenheuvel-Zichem",
+    "label": "Met steun van",
+    "tekst": "",
+    "link": "https://www.scherpenheuvel-zichem.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/merodefestival/329164-937915.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "Gemeente Tessenderlo-Ham",
+    "label": "Met steun van",
+    "tekst": "",
+    "link": "https://www.tessenderlo-ham.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/partners/tessenderlo-ham.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "Gemeente Westerlo",
+    "label": "Met steun van",
+    "tekst": "",
+    "link": "https://www.westerlo.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/merodefestival/993120-835587.webp"
   },
   {
     "soort": "Partner",
@@ -388,6 +487,42 @@
   },
   {
     "soort": "Partner",
+    "titel": "Abdijsite Herkenrode",
+    "label": "",
+    "tekst": "",
+    "link": "https://www.herita.be/nl/monumenten/abdij-van-herkenrode",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/partners/herkenrode.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "CC De Bogaard",
+    "label": "",
+    "tekst": "",
+    "link": "https://www.debogaard.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/partners/debogaard.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "CC Het Gasthuis",
+    "label": "",
+    "tekst": "",
+    "link": "https://www.hetgasthuis.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/partners/hetgasthuis.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "GC Den Egger",
+    "label": "",
+    "tekst": "",
+    "link": "https://www.scherpenheuvel-zichem.be/denegger",
+    "linktekst": "",
+    "foto": ""
+  },
+  {
+    "soort": "Partner",
     "titel": "Natuurpunt",
     "label": "",
     "tekst": "",
@@ -403,6 +538,15 @@
     "link": "https://www.leuven.be/",
     "linktekst": "",
     "foto": "https://beeld.merodefestival.be/partners/stad-leuven.webp"
+  },
+  {
+    "soort": "Partner",
+    "titel": "LOV 2030",
+    "label": "",
+    "tekst": "",
+    "link": "https://www.lov2030.be/",
+    "linktekst": "",
+    "foto": "https://beeld.merodefestival.be/partners/lov2030.webp"
   },
   {
     "soort": "Partner",

@@ -112,6 +112,93 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "Logo Herkenrode",
+    "src": "https://beeld.merodefestival.be/partners/herkenrode.webp",
+    "alt": "Beeldmerk Herkenrode",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival",
+      "Limburg Sessies"
+    ]
+  },
+  {
+    "titel": "Logo CC De Bogaard",
+    "src": "https://beeld.merodefestival.be/partners/debogaard.webp",
+    "alt": "Logo cultuurcentrum De Bogaard",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival",
+      "Limburg Sessies"
+    ]
+  },
+  {
+    "titel": "Logo CC Het Gasthuis",
+    "src": "https://beeld.merodefestival.be/partners/hetgasthuis.webp",
+    "alt": "Logo Het Gasthuis Aarschot",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo Gemeente Tessenderlo-Ham",
+    "src": "https://beeld.merodefestival.be/partners/tessenderlo-ham.webp",
+    "alt": "Logo gemeente Tessenderlo-Ham",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo LOV 2030",
+    "src": "https://beeld.merodefestival.be/partners/lov2030.webp",
+    "alt": "Logo LOV 2030 – Leuven & Beyond",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo Provincie Limburg",
+    "src": "https://beeld.merodefestival.be/partners/provincie-limburg.webp",
+    "alt": "Logo provincie Limburg",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival",
+      "Limburg Sessies"
+    ]
+  },
+  {
     "titel": "Logo Kwartiermakerij",
     "src": "https://beeld.merodefestival.be/partners/kwartiermakerij.webp",
     "alt": "Logo Kwartiermakerij",
