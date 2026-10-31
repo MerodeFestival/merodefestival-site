@@ -112,6 +112,188 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "Logo Muziekmuseum Vleeshuis",
+    "src": "https://beeld.merodefestival.be/partners/muziekmuseum-vleeshuis.webp",
+    "alt": "Logo Muziekmuseum Vleeshuis",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo Muziekpublique",
+    "src": "https://beeld.merodefestival.be/partners/muziekpublique.webp",
+    "alt": "Logo Muziekpublique",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo Flanders Folk Network",
+    "src": "https://beeld.merodefestival.be/partners/flanders-folk-network.webp",
+    "alt": "Logo Flanders Folk Network",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo Folkwaarts",
+    "src": "https://beeld.merodefestival.be/partners/folkwaarts.webp",
+    "alt": "Logo Folkwaarts",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo 'Nouter (Muziekcentrum Dranouter)",
+    "src": "https://beeld.merodefestival.be/partners/muziekcentrum-dranouter.webp",
+    "alt": "Logo 'Nouter",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo Brosella Festival",
+    "src": "https://beeld.merodefestival.be/partners/brosella.webp",
+    "alt": "Logo Brosella Festival",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo Abdij van Averbode",
+    "src": "https://beeld.merodefestival.be/partners/abdij-van-averbode.webp",
+    "alt": "Wapen van de Abdij van Averbode",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo MIM",
+    "src": "https://beeld.merodefestival.be/partners/mim.webp",
+    "alt": "Logo MIM (Muziekinstrumentenmuseum)",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo Abdij van Park",
+    "src": "https://beeld.merodefestival.be/partners/abdij-van-park.webp",
+    "alt": "Logo Abdij van Park Leuven",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo Cluster",
+    "src": "https://beeld.merodefestival.be/partners/cluster.webp",
+    "alt": "Logo Cluster",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo SELV",
+    "src": "https://beeld.merodefestival.be/partners/selv.webp",
+    "alt": "Logo SELV – passion for sound",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo Stad Leuven",
+    "src": "https://beeld.merodefestival.be/partners/stad-leuven.webp",
+    "alt": "Logo stad Leuven",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Logo Muziekclub 't Ey",
+    "src": "https://beeld.merodefestival.be/partners/muziekclub-t-ey.webp",
+    "alt": "Logo Muziekclub 't Ey",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Partnerlogo",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": null,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
     "titel": "256352_800728.jpeg",
     "src": "https://beeld.merodefestival.be/holsbeek-sessies/256352-800728.webp",
     "alt": "Portret van singer-songwriter John Blek",
