@@ -34,6 +34,8 @@ const DAG = ["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zate
 const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const d = s => { const [y, m, dd] = s.split("-").map(Number); return new Date(Date.UTC(y, m - 1, dd)); };
 const cap = t => t.charAt(0).toUpperCase() + t.slice(1);
+// Beeldpad vanuit een andere map: volledige adressen (beeldbank op beeld.merodefestival.be) blijven zoals ze zijn
+const pad = (voor, src) => /^https?:\/\//.test(src) ? src : voor + src;
 const langeDatum = s => { const x = d(s); return `${DAG[x.getUTCDay()]} ${x.getUTCDate()} ${MAAND[x.getUTCMonth()]} ${x.getUTCFullYear()}`; };
 const slugify = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
   .replace(/[’']/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -130,9 +132,9 @@ function blokkenHtml(bl) {
 
 function pagina(e, overige) {
   const datumregel = `${cap(langeDatum(e.start))}${e.end ? ` tot ${langeDatum(e.end)}` : ""}${e.time ? ` · ${e.time}` : ""}`;
-  const beeldLokaal = e.foto ? `../${e.foto}` : `../${S.artwork}`;
+  const beeldLokaal = pad("../", e.foto || S.artwork);
   const extraBeelden = (e.beelden || []).filter(b => b.src !== e.foto);
-  const beeldAbs = `${SITE}/${e.foto || S.artwork}`;
+  const beeldAbs = pad(`${SITE}/`, e.foto || S.artwork);
   const alineas = String(e.text || "").split(/\n\s*\n/).filter(Boolean);
   const omschrijving = (e.sub ? e.sub + ". " : "") + (alineas[0] || `${e.kind} in ${e.place}, ${e.village}.`);
   let yts = (e.videos || []).map(youtubeId).filter(Boolean);
@@ -146,7 +148,7 @@ function pagina(e, overige) {
   // Zonder zo’n alinea staan de foto’s en video’s onder de tekst, zoals voorheen.
   const beeldenHtml = extraBeelden.length ? `<section class="beelden" aria-labelledby="beelden-titel">
           <h2 class="label" id="beelden-titel">${T("concert.fotos", "Foto’s")}</h2>
-          <div class="beeldrij" tabindex="0" role="group" aria-label="${T("concert.fotos-schuif", "Foto’s, schuif opzij voor meer")}">${extraBeelden.map(b => `<figure><img src="../${esc(b.src)}" alt="${esc(b.alt)}" loading="lazy">${b.fotograaf ? `<figcaption>${T("algemeen.foto", "Foto:")} ${esc(b.fotograaf)}</figcaption>` : ""}</figure>`).join("")}</div>
+          <div class="beeldrij" tabindex="0" role="group" aria-label="${T("concert.fotos-schuif", "Foto’s, schuif opzij voor meer")}">${extraBeelden.map(b => `<figure><img src="${esc(pad("../", b.src))}" alt="${esc(b.alt)}" loading="lazy">${b.fotograaf ? `<figcaption>${T("algemeen.foto", "Foto:")} ${esc(b.fotograaf)}</figcaption>` : ""}</figure>`).join("")}</div>
         </section>` : "";
   const platTekst = h => String(h || "").replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&nbsp;/g, " ").trim();
   let fotosInTekst = false;
@@ -629,7 +631,7 @@ for (const b of beleef) {
     .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${SITE}/${b.slug}">`)
     .replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(b.titel)}">`)
     .replace(/<style>[\s\S]*?<\/style>/, beleefCss);
-  if (hoofd) kop = kop.replace(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${SITE}/${hoofd.src}">`);
+  if (hoofd) kop = kop.replace(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${pad(`${SITE}/`, hoofd.src)}">`);
   await fs.writeFile(path.join(ROOT, `${b.slug}.html`), kop + "<main>" + body + "\n</main>" + voetEd);
 }
 

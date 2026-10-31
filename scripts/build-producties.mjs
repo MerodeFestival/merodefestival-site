@@ -102,7 +102,7 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
       .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(beschrijving)}">`)
       .replace(/<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${SITE}/${naam.replace(/\.html$/, "")}">`)
       .replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(titel)}">`)
-      .replace(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${SITE}/${afbeelding}">`)
+      .replace(/<meta property="og:image" content="[^"]*">/, `<meta property="og:image" content="${/^https?:\/\//.test(afbeelding) ? afbeelding : `${SITE}/${afbeelding}`}">`)
       .replace(/<style>[\s\S]*?<\/style>/, '<link rel="stylesheet" href="css/producties.css">');
     if (verborgen) kop = kop.replace("</head>", '<meta name="robots" content="noindex">\n</head>');
     return kop + "<main>" + body + "\n</main>" + voetEd;
