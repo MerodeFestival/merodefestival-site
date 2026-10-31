@@ -23,7 +23,7 @@ const alles = JSON.parse(await fs.readFile(path.join(ROOT, "data/agenda.json"), 
 const SITE_NAAM = process.env.SITE_NAAM || "Merodefestival";
 const hoortHier = e => !(e.sites || []).length ? SITE_NAAM === "Merodefestival" : e.sites.includes(SITE_NAAM);
 // Concerten van deze reeksen krijgen op merodefestival.be ook een eigen concertpagina (tekst, foto’s, video’s uit Notion)
-const OOK_PAGINA = ["Holsbeek Sessies", "Limburg Sessies"];
+const OOK_PAGINA = ["Holsbeek Sessies", "Limburg Sessies", "Klanken van de Steden"];
 const reeksVan = e => (e.sites || []).find(s => OOK_PAGINA.includes(s)) || "";
 const agenda = alles.filter(e => hoortHier(e) || (SITE_NAAM === "Merodefestival" && reeksVan(e)));
 const ctx = { window: {} };

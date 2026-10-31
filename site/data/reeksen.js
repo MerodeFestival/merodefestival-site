@@ -4,7 +4,7 @@
 window.REEKSEN = {
   "Holsbeek Sessies": "https://www.holsbeeksessies.be",
   "Limburg Sessies": "https://www.limburgsessies.be",
-  "Klanken van de Steden": "",
+  "Klanken van de Steden": "https://www.klankenvandesteden.be",
   "PARK Festival": "",
   "WESP": "https://www.wespvzw.be"
 };
