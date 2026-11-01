@@ -1,5 +1,21 @@
 [
   {
+    "titel": "Wannes Raps 1",
+    "src": "https://beeld.merodefestival.be/folkwaarts/wannes-raps-2025-1.webp",
+    "alt": "Wannes Raps — vertelster tussen de muzikanten",
+    "fotograaf": "",
+    "jaar": 2025,
+    "onderwerp": "Artiest",
+    "uitsnede": "boven",
+    "gebruik": [
+      "Concertpagina"
+    ],
+    "volgorde": 1,
+    "sites": [
+      "Folkwaarts"
+    ]
+  },
+  {
     "titel": "GLJ_Merode_-20_hv3acb.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/glj-merode-20-hv3acb.webp",
     "alt": "Oudspeler speelt voor kerkaltaar",
@@ -172,6 +188,22 @@
     ],
     "volgorde": 1,
     "sites": []
+  },
+  {
+    "titel": "Wannes Raps 2",
+    "src": "https://beeld.merodefestival.be/folkwaarts/wannes-raps-2025-2.webp",
+    "alt": "Wannes Raps — saxofonist op het podium",
+    "fotograaf": "",
+    "jaar": 2025,
+    "onderwerp": "Artiest",
+    "uitsnede": "boven",
+    "gebruik": [
+      "Concertpagina"
+    ],
+    "volgorde": 2,
+    "sites": [
+      "Folkwaarts"
+    ]
   },
   {
     "titel": "31646778_10155742762353583_7509322997874819072_o_bxkmu5.jpg",
@@ -348,6 +380,22 @@
     "sites": []
   },
   {
+    "titel": "Wannes Raps 3",
+    "src": "https://beeld.merodefestival.be/folkwaarts/wannes-raps-2025-3.webp",
+    "alt": "Wannes Raps — Toon Van Mierlo voor het ensemble",
+    "fotograaf": "",
+    "jaar": 2025,
+    "onderwerp": "Artiest",
+    "uitsnede": "boven",
+    "gebruik": [
+      "Concertpagina"
+    ],
+    "volgorde": 3,
+    "sites": [
+      "Folkwaarts"
+    ]
+  },
+  {
     "titel": "GLJ_Merode_-10_hqnnzk.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/glj-merode-10-hqnnzk.webp",
     "alt": "Violist en gitarist spelen, zwart-wit",
@@ -520,6 +568,22 @@
     ],
     "volgorde": 3,
     "sites": []
+  },
+  {
+    "titel": "Wannes Raps 4",
+    "src": "https://beeld.merodefestival.be/folkwaarts/wannes-raps-2025-4.webp",
+    "alt": "Wannes Raps — het volledige ensemble in de kerk",
+    "fotograaf": "",
+    "jaar": 2025,
+    "onderwerp": "Artiest",
+    "uitsnede": "midden",
+    "gebruik": [
+      "Concertpagina"
+    ],
+    "volgorde": 4,
+    "sites": [
+      "Folkwaarts"
+    ]
   },
   {
     "titel": "GLJ_Merode_-34_fkkkam.jpg",
@@ -2462,62 +2526,6 @@
     "sites": [
       "Merodefestival"
     ]
-  },
-  {
-    "titel": "Wannes Raps 4",
-    "src": "data/foto/40b77c21f8db8143a983f4ea72cd76ad.jpg",
-    "alt": "Wannes Raps — ensemble",
-    "fotograaf": "",
-    "jaar": null,
-    "onderwerp": "Artiest",
-    "uitsnede": "",
-    "gebruik": [
-      "Concertpagina"
-    ],
-    "volgorde": null,
-    "sites": []
-  },
-  {
-    "titel": "Wannes Raps 2",
-    "src": "data/foto/40b77c21f8db818a9068fc9a5cd2fb9e.jpg",
-    "alt": "Wannes Raps — optreden",
-    "fotograaf": "",
-    "jaar": null,
-    "onderwerp": "Artiest",
-    "uitsnede": "",
-    "gebruik": [
-      "Concertpagina"
-    ],
-    "volgorde": null,
-    "sites": []
-  },
-  {
-    "titel": "Wannes Raps 3",
-    "src": "data/foto/40b77c21f8db81df92d1f1e06d9fd4ce.jpg",
-    "alt": "Wannes Raps — muzikanten",
-    "fotograaf": "",
-    "jaar": null,
-    "onderwerp": "Artiest",
-    "uitsnede": "",
-    "gebruik": [
-      "Concertpagina"
-    ],
-    "volgorde": null,
-    "sites": []
-  },
-  {
-    "titel": "Wannes Raps 1",
-    "src": "data/foto/40b77c21f8db81f68438ffecede5b685.jpg",
-    "alt": "Wannes Raps — concert",
-    "fotograaf": "",
-    "jaar": null,
-    "onderwerp": "Artiest",
-    "uitsnede": "",
-    "gebruik": [
-      "Concertpagina"
-    ],
-    "volgorde": null,
-    "sites": []
   },
   {
     "titel": "Logo Reinhart",
