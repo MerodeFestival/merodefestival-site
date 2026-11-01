@@ -105,9 +105,9 @@ Installatie, vanuit de map `publiceer-knop`:
    met enkel de scope **repo**. JochenSmets is medewerker (geen lid) van MerodeFestival, dus een
    fine-grained token van JochenSmets kan niet bij de Merode-repo. Wie wel lid is, kan in de plaats
    per eigenaar een fine-grained token maken (zie bovenaan `worker.js`).
-2. `npx wrangler deploy`
-3. `npx wrangler secret put GITHUB_TOKEN` (plak het token).
-4. Een geheim woord voor de link: `npx wrangler secret put KNOP_KEY`. De link wordt
+2. `npx wrangler deploy -c wrangler.toml` (altijd met `-c`: zonder neemt wrangler de site-instellingen uit de map erboven)
+3. `npx wrangler secret put GITHUB_TOKEN -c wrangler.toml` (plak het token).
+4. Een geheim woord voor de link: `npx wrangler secret put KNOP_KEY -c wrangler.toml`. De link wordt
    `https://publiceer-knop.smetsjochen.workers.dev/?key=<KNOP_KEY>`.
 
 ## Pierrot-koppeling: Volzet automatisch
