@@ -1,5 +1,21 @@
 window.BEELDBANK = [
   {
+    "titel": "Merodefestival 2026 – Citadel met volle tribune",
+    "src": "https://beeld.merodefestival.be/merodefestival/2026-citadel-publiek.webp",
+    "alt": "Volle tribune voor het openluchtpodium in de bakstenen Citadel van Diest, met lichtslingers boven het podium",
+    "fotograaf": "Steven Vanderaspoilden",
+    "jaar": 2026,
+    "onderwerp": "Festival",
+    "uitsnede": "",
+    "gebruik": [
+      "Vorige edities"
+    ],
+    "volgorde": 1,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
     "titel": "Wannes Raps 1",
     "src": "https://beeld.merodefestival.be/folkwaarts/wannes-raps-2025-1.webp",
     "alt": "Wannes Raps — vertelster tussen de muzikanten",
@@ -188,6 +204,22 @@ window.BEELDBANK = [
     ],
     "volgorde": 1,
     "sites": []
+  },
+  {
+    "titel": "Merodefestival 2026 – Sathanao in de weide",
+    "src": "https://beeld.merodefestival.be/merodefestival/2026-sathanao-weide.webp",
+    "alt": "Acht zangeressen in traditionele Georgische jurken staan samen in een hoge grasweide",
+    "fotograaf": "Manu Theunis",
+    "jaar": 2026,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [
+      "Vorige edities"
+    ],
+    "volgorde": 2,
+    "sites": [
+      "Merodefestival"
+    ]
   },
   {
     "titel": "Wannes Raps 2",
@@ -380,6 +412,22 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "Merodefestival 2026 – Sophie Cavez & Baltazar Montanaro onder de boom",
+    "src": "https://beeld.merodefestival.be/merodefestival/2026-cavez-montanaro-boom.webp",
+    "alt": "Violist en accordeoniste spelen samen aan de voet van een grote boom langs een wandelpad",
+    "fotograaf": "Manu Theunis",
+    "jaar": 2026,
+    "onderwerp": "Wandeling",
+    "uitsnede": "",
+    "gebruik": [
+      "Vorige edities"
+    ],
+    "volgorde": 3,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
     "titel": "Wannes Raps 3",
     "src": "https://beeld.merodefestival.be/folkwaarts/wannes-raps-2025-3.webp",
     "alt": "Wannes Raps — Toon Van Mierlo voor het ensemble",
@@ -568,6 +616,22 @@ window.BEELDBANK = [
     ],
     "volgorde": 3,
     "sites": []
+  },
+  {
+    "titel": "Merodefestival 2026 – Joël & Ousmana Diarra in het veld",
+    "src": "https://beeld.merodefestival.be/merodefestival/2026-diarra-balafon-tent.webp",
+    "alt": "Twee muzikanten met balafoon en djembé onder een witte tent in een groene weide",
+    "fotograaf": "Manu Theunis",
+    "jaar": 2026,
+    "onderwerp": "Wandeling",
+    "uitsnede": "",
+    "gebruik": [
+      "Vorige edities"
+    ],
+    "volgorde": 4,
+    "sites": [
+      "Merodefestival"
+    ]
   },
   {
     "titel": "Wannes Raps 4",
@@ -760,6 +824,22 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "Merodefestival 2026 – Klaprozen langs de Demer",
+    "src": "https://beeld.merodefestival.be/merodefestival/2026-demer-klaprozen.webp",
+    "alt": "Rode klaprozen in het gras langs de oever van de Demer onder een blauwe lucht",
+    "fotograaf": "Achim",
+    "jaar": 2026,
+    "onderwerp": "Landschap",
+    "uitsnede": "",
+    "gebruik": [
+      "Vorige edities"
+    ],
+    "volgorde": 5,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
     "titel": "MERODE7_ngmltv.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/merode7-ngmltv.webp",
     "alt": "Gitarist speelt in een zonnige weide",
@@ -932,6 +1012,22 @@ window.BEELDBANK = [
     ],
     "volgorde": 5,
     "sites": []
+  },
+  {
+    "titel": "Merodefestival 2026 – Wandelaars bij de watermolen",
+    "src": "https://beeld.merodefestival.be/merodefestival/2026-watermolen-wandelaars.webp",
+    "alt": "Wandelaars steken een brugje over naast een oude bakstenen watermolen met schoepenrad",
+    "fotograaf": "Annie",
+    "jaar": 2026,
+    "onderwerp": "Wandeling",
+    "uitsnede": "",
+    "gebruik": [
+      "Vorige edities"
+    ],
+    "volgorde": 6,
+    "sites": [
+      "Merodefestival"
+    ]
   },
   {
     "titel": "MERODE3_rkoxgq.jpg",
@@ -1108,6 +1204,22 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "Merodefestival 2026 – Wandelaars door de weide",
+    "src": "https://beeld.merodefestival.be/merodefestival/2026-wandelaars-weide.webp",
+    "alt": "Een lange rij wandelaars loopt langs een grote boom door een groene weide",
+    "fotograaf": "Steven Vanderaspoilden",
+    "jaar": 2026,
+    "onderwerp": "Wandeling",
+    "uitsnede": "",
+    "gebruik": [
+      "Vorige edities"
+    ],
+    "volgorde": 7,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
     "titel": "32411139_10211374287213012_7918231432374255616_o_pumxap.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/32411139-10211374287213012-7918231432374255616-o-pumxap.webp",
     "alt": "Harpiste zingt en speelt harp",
@@ -1280,6 +1392,22 @@ window.BEELDBANK = [
     ],
     "volgorde": 7,
     "sites": []
+  },
+  {
+    "titel": "Merodefestival 2026 – Concert in de wei",
+    "src": "https://beeld.merodefestival.be/merodefestival/2026-concert-in-de-wei.webp",
+    "alt": "Gitarist speelt voor wandelaars die in het gras zitten, met een hond vooraan",
+    "fotograaf": "Steven Vanderaspoilden",
+    "jaar": 2026,
+    "onderwerp": "Publiek",
+    "uitsnede": "",
+    "gebruik": [
+      "Vorige edities"
+    ],
+    "volgorde": 8,
+    "sites": [
+      "Merodefestival"
+    ]
   },
   {
     "titel": "MERODE8_qgeb7j.jpg",
@@ -1456,6 +1584,22 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "Merodefestival 2026 – Rue Pascale in de kerk van Oosterlo",
+    "src": "https://beeld.merodefestival.be/merodefestival/2026-rue-pascale-kerk-oosterlo.webp",
+    "alt": "Drie muzikantes met mandoline en accordeon spelen voor het altaar van een lichte dorpskerk",
+    "fotograaf": "Annie",
+    "jaar": 2026,
+    "onderwerp": "Kerkconcert",
+    "uitsnede": "",
+    "gebruik": [
+      "Vorige edities"
+    ],
+    "volgorde": 9,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
     "titel": "MERODE9_wnoewj.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/merode9-wnoewj.webp",
     "alt": "Gitarist met mondharmonica bij een vijver",
@@ -1595,6 +1739,22 @@ window.BEELDBANK = [
       "Vorige edities"
     ],
     "volgorde": 9,
+    "sites": [
+      "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Merodefestival 2026 – Sabiha Khan op het podium",
+    "src": "https://beeld.merodefestival.be/merodefestival/2026-sabiha-khan-podium.webp",
+    "alt": "Zangeres in een grijze omslagdoek zingt lachend in rood en blauw licht",
+    "fotograaf": "Manu Theunis",
+    "jaar": 2026,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [
+      "Vorige edities"
+    ],
+    "volgorde": 10,
     "sites": [
       "Merodefestival"
     ]
