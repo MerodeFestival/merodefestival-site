@@ -5,6 +5,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { verwerkFoto } from "./foto.mjs";
+import { VELDEN, VERTAALD, KOLOM, LANGE_TEKST, blokkenNaarMd } from "./talen.mjs";
 
 const TOKEN = process.env.NOTION_TOKEN;
 const AGENDA_DB = process.env.AGENDA_DB;
@@ -181,6 +182,19 @@ async function fotoLinks(page, prop) {
   return out;
 }
 
+// Vertalingen in Notion (kolommen "<veld> EN" en "<veld> FR"): vertaal.mjs leest ze uit .build/notion-bron.json,
+// neemt aanpassingen over en vult lege kolommen aan. Dat bestand komt niet op de site.
+const bron = [];
+function noteerBron(db, page, x, velden, lang) {
+  const p = page.properties, v = {};
+  for (const [veld, kolom] of Object.entries(velden)) {
+    const nl = Array.isArray(x[veld]) ? x[veld].join("\n") : x[veld];
+    v[veld] = { kolom, nl: nl || "", ...Object.fromEntries(VERTAALD.map(t => [t, text(p[`${kolom} ${KOLOM[t]}`])])) };
+  }
+  if (lang !== undefined) v.lang = { kolom: LANGE_TEKST, nl: blokkenNaarMd(lang), ...Object.fromEntries(VERTAALD.map(t => [t, text(p[`${LANGE_TEKST} ${KOLOM[t]}`])])) };
+  bron.push({ db, id: page.id, velden: v });
+}
+
 async function write(name, data) {
   const json = JSON.stringify(data, null, 2);
   await fs.writeFile(path.join(OUT, name + ".json"), json + "\n");
@@ -223,6 +237,7 @@ for (const r of await queryAll(AGENDA_DB, [{ property: "Datum", direction: "asce
     _extra: await fotoReeks(r, p.Foto),   // alle foto’s na de eerste in het veld Foto
     _id: r.id,
   });
+  noteerBron("agenda", r, agenda[agenda.length - 1], VELDEN.agenda, agenda[agenda.length - 1].lang);
 }
 
 // Producties (podiumproducties, installaties, playlists en concepten op maat)
@@ -260,6 +275,7 @@ for (const r of await queryAll(PRODUCTIES_DB, [{ property: "Volgorde", direction
     fotos: [...(await fotoReeks(r, p.Foto)), ...(await fotoLinks(r, p.Fotolinks))],
     verborgen: p.Verborgen?.checkbox === true,   // pagina bestaat, maar staat niet in het overzicht, de sitemap of de zoekmachines
   });
+  noteerBron("producties", r, producties[producties.length - 1], VELDEN.producties, producties[producties.length - 1].lang);
 }
 await write("producties", producties);
 
@@ -269,6 +285,7 @@ for (const r of await queryAll(TEKSTEN_DB, [{ property: "Sleutel", direction: "a
   const sleutel = text(r.properties.Sleutel).trim();
   const tekst = text(r.properties.Tekst);
   if (sleutel && tekst.trim()) teksten[sleutel] = tekst;
+  if (sleutel) { noteerBron("teksten", r, { tekst }, { tekst: "Tekst" }); bron[bron.length - 1].sleutel = sleutel; }
 }
 await write("teksten", teksten);
 
@@ -311,6 +328,9 @@ for (const e of agenda) {
 }
 await write("agenda", agenda);
 await write("beeldbank", beeldbank.map(({ concerten, ...x }) => x));
+
+await fs.mkdir(path.resolve(".build"), { recursive: true });
+await fs.writeFile(path.resolve(".build/notion-bron.json"), JSON.stringify(bron) + "\n");
 
 // Foto’s die niet meer gebruikt worden opruimen
 for (const f of await fs.readdir(FOTO)) if (!used.has(f)) await fs.unlink(path.join(FOTO, f));

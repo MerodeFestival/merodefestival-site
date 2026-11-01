@@ -39,11 +39,33 @@ Alles gebeurt in Notion, op de pagina **Website Merodefestival – beheer**:
 Binnen het uur staat alles online. Meteen publiceren: de link **Publiceer de websites** op de
 Notion-beheerpagina (zie *Publiceerknop* hieronder), of GitHub → **Actions** → **Notion → website** → **Run workflow**.
 
+## Drie talen: Nederlands, Engels, Frans
+
+De site bestaat in drie talen: merodefestival.be (Nederlands), merodefestival.be/en/ en merodefestival.be/fr/.
+Bovenaan elke pagina staat een taalkeuze NL · EN · FR (op een telefoon onderaan in het menu).
+
+- **Je schrijft alleen in het Nederlands.** Bij elke run vertaalt `scripts/vertaal.mjs` nieuwe of gewijzigde teksten
+  automatisch naar het Engels en het Frans, en zet de vertaling in Notion.
+- **De vertalingen staan in Notion in verborgen kolommen** (`Beschrijving EN`, `Beschrijving FR`, `Lange tekst EN`...).
+  Je dagelijkse weergaven en de pagina’s zelf tonen ze niet. Wil je ze zien of verbeteren: kies in Agenda, Producties,
+  Teksten of Over WESP de weergave **🌍 Vertalingen**.
+- **Een vertaling verbeteren?** Pas ze aan in die weergave. Je aanpassing blijft staan zolang de Nederlandse tekst
+  dezelfde blijft. Verander je later het Nederlands, dan komt er een nieuwe automatische vertaling.
+- **Nog niet vertaald** (bv. als de vertaaldienst even niet werkt): dan toont de Engelse of Franse site voorlopig de
+  Nederlandse tekst; de volgende run probeert opnieuw.
+- Niet vertaald worden: namen van artiesten, kerken, dorpen en reeksen, en instellingen zoals links en statistieken.
+
+Hoe het werkt: de vertaling gebeurt met GitHub Models via het gewone token van de workflow (geen extra sleutel nodig).
+Staat er een secret `ANTHROPIC_API_KEY` in GitHub, dan vertaalt Claude in de plaats. Alle vertalingen worden ook bewaard
+in `vertalingen/cache.json`. Daarna bouwt `scripts/build-talen.mjs` de Engelse en Franse versie in `site/en/` en `site/fr/`.
+De Notion-koppeling heeft daarvoor het recht **Inhoud bijwerken** nodig.
+
 ## Eenmalige installatie (± 30 minuten)
 
 ### 1. Notion-koppeling
 1. Ga naar https://www.notion.so/profile/integrations → **Nieuwe koppeling**.
-   Naam: *Website Merodefestival*. Rechten: alleen **Inhoud lezen**.
+   Naam: *Website Merodefestival*. Rechten: **Inhoud lezen**, **Inhoud bijwerken** en **Inhoud invoegen**
+   (voor de vertalingen en de lijst met teksten).
 2. Kopieer de geheime sleutel (begint met `ntn_`).
 3. Open in Notion de pagina **Website Merodefestival – beheer** → `•••` →
    **Verbindingen** → voeg *Website Merodefestival* toe.

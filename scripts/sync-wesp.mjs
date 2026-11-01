@@ -3,6 +3,7 @@
 
 import fs from "node:fs/promises";
 import path from "node:path";
+import { VERTAALD, KOLOM, VELDEN, wespVelden } from "./talen.mjs";
 
 const TOKEN = process.env.NOTION_TOKEN;
 const DB = process.env.WESP_DB || "7cfc3964403d4e0d924e82f1e5ffc78f";
@@ -54,6 +55,7 @@ async function haalFoto(p, id) {
 
 try {
   const rijen = [];
+  const bron = [];   // vertalingen in Notion, voor vertaal.mjs (zie sync-notion.mjs)
   let cursor;
   do {
     const r = await notion(`databases/${DB}/query`, {
@@ -72,6 +74,12 @@ try {
         linktekst: tekst(p.Linktekst).trim(),
         foto: await haalFoto(p, pagina.id),
       });
+      const x = rijen[rijen.length - 1], velden = {};
+      for (const veld of wespVelden(x.soort)) {
+        const kolom = VELDEN.wesp[veld];
+        velden[veld] = { kolom, nl: x[veld], ...Object.fromEntries(VERTAALD.map(t => [t, tekst(p[`${kolom} ${KOLOM[t]}`]).trim()])) };
+      }
+      if (Object.keys(velden).length) bron.push({ db: "wesp", id: pagina.id, velden });
     }
     cursor = r.has_more ? r.next_cursor : undefined;
   } while (cursor);
@@ -80,6 +88,8 @@ try {
   await fs.writeFile(path.resolve("site/data/wesp.json"), JSON.stringify(rijenMetTitel, null, 2) + "\n");
   // Foto’s die niet meer gebruikt worden opruimen
   try { for (const f of await fs.readdir(FOTO)) if (!gebruikt.has(f)) await fs.unlink(path.join(FOTO, f)); } catch { /* map bestaat nog niet */ }
+  await fs.mkdir(path.resolve(".build"), { recursive: true });
+  await fs.writeFile(path.resolve(".build/notion-bron-wesp.json"), JSON.stringify(bron) + "\n");
   console.log(`Over WESP: ${rijenMetTitel.length} rijen uit Notion.`);
 } catch (err) {
   console.warn("Over WESP niet bijgewerkt:", err.message);

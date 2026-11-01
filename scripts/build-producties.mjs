@@ -62,7 +62,7 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
 
   const video = v => {
     const t = v.titel || "";
-    const label = esc("Speel video af" + (t ? ": " + t : ""));
+    const label = esc(T("algemeen.speel-video", "Speel video af") + (t ? ": " + t : ""));
     const tekst = t ? `<p class="vtitel">${esc(t)}</p>` : "";
     const yt = ytId(v.url);
     if (yt) return `<div class="vblok"><div class="video"><button class="yt" type="button" data-id="${yt}" aria-label="${label}" style="background-image:url(https://i.ytimg.com/vi/${yt}/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div>${tekst}</div>`;
@@ -75,10 +75,10 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     const m = u.match(/open\.spotify\.com\/(?:intl-[a-z]+\/)?(playlist|album|track|artist|show|episode)\/([A-Za-z0-9]+)/);
     if (!m) return "";
     const hoogte = ["track", "episode"].includes(m[1]) ? 152 : 352;
-    return `<iframe class="speler" src="https://open.spotify.com/embed/${m[1]}/${m[2]}?utm_source=generator" title="${esc(titel)} op Spotify" width="100%" height="${hoogte}" loading="lazy" ${allow}></iframe>`;
+    return `<iframe class="speler" src="https://open.spotify.com/embed/${m[1]}/${m[2]}?utm_source=generator" title="${esc(T("algemeen.op-spotify", "{titel} op Spotify").replace("{titel}", titel))}" width="100%" height="${hoogte}" loading="lazy" ${allow}></iframe>`;
   };
   const soundcloud = (u, titel) =>
-    `<iframe class="speler" src="https://w.soundcloud.com/player/?url=${encodeURIComponent(u)}&amp;color=%23e8761a&amp;visual=false" title="${esc(titel)} op SoundCloud" width="100%" height="450" loading="lazy" allow="autoplay"></iframe>`;
+    `<iframe class="speler" src="https://w.soundcloud.com/player/?url=${encodeURIComponent(u)}&amp;color=%23e8761a&amp;visual=false" title="${esc(T("algemeen.op-soundcloud", "{titel} op SoundCloud").replace("{titel}", titel))}" width="100%" height="450" loading="lazy" allow="autoplay"></iframe>`;
 
   // ---------- tekst uit Notion (blokken) ----------
   const tekstHtml = blokken => {
@@ -135,7 +135,7 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
   </section>
   <section class="papier pr-sectie">
     <div class="wrap">
-      <nav class="soorten" aria-label="Soort productie">${groepen.map(g => `<a href="#${g.id}">${g.titel} <span>${g.items.length}</span></a>`).join("")}</nav>
+      <nav class="soorten" aria-label="${esc(T("producties.soort-label", "Soort productie"))}">${groepen.map(g => `<a href="#${g.id}">${g.titel} <span>${g.items.length}</span></a>`).join("")}</nav>
       ${groepen.map(g => `<section class="soort" id="${g.id}"><h2>${g.titel}</h2><p class="soort-intro">${g.intro}</p><ul class="kaarten">${g.items.map(p => kaart(p, g)).join("")}</ul></section>`).join("\n      ")}
     </div>
   </section>`;
