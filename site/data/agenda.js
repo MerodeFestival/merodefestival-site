@@ -139,7 +139,7 @@ window.AGENDA = [
     "village": "Holsbeek",
     "place": "Buurthuis Nieuwrode",
     "artist": "Eriksson Delcroix",
-    "kind": "Sessie, Holsbeek Sessies",
+    "kind": "Concert, Holsbeek Sessies",
     "sites": [
       "Holsbeek Sessies"
     ],
@@ -208,7 +208,7 @@ window.AGENDA = [
     "village": "Holsbeek",
     "place": "Buurthuis Nieuwrode",
     "artist": "Lenny & de Wespen",
-    "kind": "Sessie, Holsbeek Sessies",
+    "kind": "Concert, Holsbeek Sessies",
     "sites": [
       "Holsbeek Sessies"
     ],
@@ -800,7 +800,7 @@ window.AGENDA = [
     "village": "Holsbeek",
     "place": "Buurthuis",
     "artist": "Robb Johnson",
-    "kind": "Sessie, Holsbeek Sessies",
+    "kind": "Concert, Holsbeek Sessies",
     "sites": [
       "Holsbeek Sessies"
     ],
@@ -1056,7 +1056,7 @@ window.AGENDA = [
     "village": "Holsbeek",
     "place": "Buurthuis",
     "artist": "Vera Coomans & Thomas Devos",
-    "kind": "Sessie, Holsbeek Sessies",
+    "kind": "Concert, Holsbeek Sessies",
     "sites": [
       "Holsbeek Sessies"
     ],
@@ -1087,7 +1087,7 @@ window.AGENDA = [
     "village": "Holsbeek",
     "place": "Buurthuis",
     "artist": "John Blek",
-    "kind": "Sessie, Holsbeek Sessies",
+    "kind": "Concert, Holsbeek Sessies",
     "sites": [
       "Holsbeek Sessies"
     ],
