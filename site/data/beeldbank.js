@@ -2464,6 +2464,62 @@ window.BEELDBANK = [
     ]
   },
   {
+    "titel": "Wannes Raps 4",
+    "src": "data/foto/40b77c21f8db8143a983f4ea72cd76ad.jpg",
+    "alt": "Wannes Raps — ensemble",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [
+      "Concertpagina"
+    ],
+    "volgorde": null,
+    "sites": []
+  },
+  {
+    "titel": "Wannes Raps 2",
+    "src": "data/foto/40b77c21f8db818a9068fc9a5cd2fb9e.jpg",
+    "alt": "Wannes Raps — optreden",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [
+      "Concertpagina"
+    ],
+    "volgorde": null,
+    "sites": []
+  },
+  {
+    "titel": "Wannes Raps 3",
+    "src": "data/foto/40b77c21f8db81df92d1f1e06d9fd4ce.jpg",
+    "alt": "Wannes Raps — muzikanten",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [
+      "Concertpagina"
+    ],
+    "volgorde": null,
+    "sites": []
+  },
+  {
+    "titel": "Wannes Raps 1",
+    "src": "data/foto/40b77c21f8db81f68438ffecede5b685.jpg",
+    "alt": "Wannes Raps — concert",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [
+      "Concertpagina"
+    ],
+    "volgorde": null,
+    "sites": []
+  },
+  {
     "titel": "Logo Reinhart",
     "src": "https://beeld.merodefestival.be/partners/t/reinhart.webp",
     "alt": "Handtekening Reinhart",
