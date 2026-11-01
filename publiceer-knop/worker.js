@@ -9,10 +9,13 @@
 //
 // Instellingen (Cloudflare → Worker → Settings → Variables and Secrets, of `npx wrangler secret put`):
 //   KNOP_KEY              geheim woord dat in de link staat
-//   GITHUB_TOKEN_MERODE   fine-grained token van de organisatie MerodeFestival,
-//                         repo merodefestival-site, recht "Actions: Read and write"
-//   GITHUB_TOKEN_JOCHEN   fine-grained token van JochenSmets, repos holsbeeksessies-site
-//                         en limburgsessies-site, recht "Actions: Read and write"
+//   GITHUB_TOKEN          classic token van JochenSmets met scope "repo": werkt voor alle drie
+//                         (JochenSmets is medewerker van MerodeFestival, geen lid, dus een
+//                         fine-grained token van JochenSmets kan niet bij de Merode-repo)
+// Of, nauwer, per eigenaar een fine-grained token met recht "Actions: Read and write":
+//   GITHUB_TOKEN_MERODE   eigenaar MerodeFestival, repo merodefestival-site
+//   GITHUB_TOKEN_JOCHEN   eigenaar JochenSmets, repos holsbeeksessies-site en limburgsessies-site
+// Een token per eigenaar gaat voor op GITHUB_TOKEN.
 
 const SITES = {
   merode: { naam: "Merodefestival", repo: "MerodeFestival/merodefestival-site", token: "GITHUB_TOKEN_MERODE", adres: "https://www.merodefestival.be" },
@@ -56,8 +59,8 @@ export default {
 // Laat de workflow notion.yml van één repo meteen draaien
 async function publiceer(site, env) {
   const { naam, adres } = site;
-  const token = env[site.token];
-  if (!token) return { naam, adres, ok: false, fout: `${site.token} ontbreekt` };
+  const token = env[site.token] || env.GITHUB_TOKEN;
+  if (!token) return { naam, adres, ok: false, fout: "GitHub-token ontbreekt" };
   const res = await fetch(`https://api.github.com/repos/${site.repo}/actions/workflows/notion.yml/dispatches`, {
     method: "POST",
     headers: {

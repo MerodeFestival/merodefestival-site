@@ -101,13 +101,12 @@ methode POST naar dezelfde link met `&site=alle` (of `merode`, `holsbeek`, `limb
 
 Installatie, vanuit de map `publiceer-knop`:
 
-1. Twee **fine-grained tokens** in GitHub (*Settings → Developer settings → Fine-grained tokens*),
-   elk met enkel het recht **Actions: Read and write**:
-   - *Resource owner* **MerodeFestival**, repository `merodefestival-site`
-   - *Resource owner* **JochenSmets**, repositories `holsbeeksessies-site` en `limburgsessies-site`
+1. Een **classic token** van JochenSmets (*Settings → Developer settings → Tokens (classic)*)
+   met enkel de scope **repo**. JochenSmets is medewerker (geen lid) van MerodeFestival, dus een
+   fine-grained token van JochenSmets kan niet bij de Merode-repo. Wie wel lid is, kan in de plaats
+   per eigenaar een fine-grained token maken (zie bovenaan `worker.js`).
 2. `npx wrangler deploy`
-3. `npx wrangler secret put GITHUB_TOKEN_MERODE` en `npx wrangler secret put GITHUB_TOKEN_JOCHEN`
-   (plak telkens het token).
+3. `npx wrangler secret put GITHUB_TOKEN` (plak het token).
 4. Een geheim woord voor de link: `npx wrangler secret put KNOP_KEY`. De link wordt
    `https://publiceer-knop.smetsjochen.workers.dev/?key=<KNOP_KEY>`.
 
