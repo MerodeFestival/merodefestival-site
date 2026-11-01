@@ -1,9 +1,9 @@
 # merodefestival.be
 
 De website leest de **agenda** en de **producties** uit Notion. Elk uur haalt GitHub
-de nieuwste versie op en zet ze online via Cloudflare Pages.
+de nieuwste versie op en zet ze online op Cloudflare (Worker `merodefestival-site`).
 
-    Notion  →  GitHub (elk uur)  →  Cloudflare Pages  →  merodefestival.be
+    Notion  →  GitHub (elk halfuur)  →  Cloudflare Worker  →  merodefestival.be
 
 ## Dagelijks gebruik
 
@@ -58,11 +58,14 @@ Binnen het uur staat alles online. Meteen publiceren: GitHub → **Actions** →
    - `PRODUCTIES_DB` = `ed8cf4efcbc6475fa48c453554aaf010`
 4. **Actions → Notion → website → Run workflow** voor een eerste test.
 
-### 3. Cloudflare Pages
+### 3. Cloudflare
 1. Maak een gratis account op https://dash.cloudflare.com.
-2. **Workers & Pages → Create → Pages → Connect to Git** → kies de repository.
-3. Build command: leeg laten. Build output directory: `site`.
-4. Na de eerste publicatie: **Custom domains** → `merodefestival.be` en `www.merodefestival.be`.
+2. Maak bij *My Profile → API Tokens* een token met het sjabloon **Edit Cloudflare Workers** en zet die
+   in GitHub als secret `CLOUDFLARE_API_TOKEN`. De workflow publiceert dan na elke run zelf met
+   `npx wrangler deploy` (stap *Publiceren op Cloudflare*, instellingen in `wrangler.jsonc`).
+   Zonder die secret wordt er niets gepubliceerd.
+3. Na de eerste publicatie: Worker `merodefestival-site` → **Settings → Domains & Routes** →
+   `merodefestival.be` en `www.merodefestival.be`.
 
 Let op bij het verhuizen van het domein: neem de bestaande **MX-records** (e-mail)
 mee naar de nieuwe DNS, anders komt er geen mail meer binnen.
