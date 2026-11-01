@@ -36,8 +36,8 @@ Alles gebeurt in Notion, op de pagina **Website Merodefestival – beheer**:
   merodefestival.be/concert/the-weaving.html. Leeg = automatisch uit naam en datum.
   Verander een webadres liever niet meer nadat je de link gedeeld hebt.
 
-Binnen het uur staat alles online. Meteen publiceren: GitHub → **Actions** →
-**Notion → website** → **Run workflow**.
+Binnen het uur staat alles online. Meteen publiceren: de link **Publiceer de websites** op de
+Notion-beheerpagina (zie *Publiceerknop* hieronder), of GitHub → **Actions** → **Notion → website** → **Run workflow**.
 
 ## Eenmalige installatie (± 30 minuten)
 
@@ -90,6 +90,26 @@ artwork Reinhart Croon). Alles daarvoor staat in `site/seizoen/`:
 
 Nieuw seizoen? Vervang die vier bestanden; de rest van de site blijft ongemoeid.
 Producties en Over WESP houden altijd de vaste huisstijl.
+
+## Publiceerknop: meteen online vanuit Notion
+
+`publiceer-knop/worker.js` is een kleine Cloudflare Worker met één link. Die toont een knop per site
+(Merodefestival, Holsbeek Sessies, Limburg Sessies of alle drie) en laat de GitHub-workflow meteen
+draaien: binnen 2 à 3 minuten staat de aanpassing online. De link staat in Notion op
+*Website Merodefestival – beheer*. Een Notion-knop of -automatisering met *Send webhook* kan ook:
+methode POST naar dezelfde link met `&site=alle` (of `merode`, `holsbeek`, `limburg`).
+
+Installatie, vanuit de map `publiceer-knop`:
+
+1. Twee **fine-grained tokens** in GitHub (*Settings → Developer settings → Fine-grained tokens*),
+   elk met enkel het recht **Actions: Read and write**:
+   - *Resource owner* **MerodeFestival**, repository `merodefestival-site`
+   - *Resource owner* **JochenSmets**, repositories `holsbeeksessies-site` en `limburgsessies-site`
+2. `npx wrangler deploy`
+3. `npx wrangler secret put GITHUB_TOKEN_MERODE` en `npx wrangler secret put GITHUB_TOKEN_JOCHEN`
+   (plak telkens het token).
+4. Een geheim woord voor de link: `npx wrangler secret put KNOP_KEY`. De link wordt
+   `https://publiceer-knop.smetsjochen.workers.dev/?key=<KNOP_KEY>`.
 
 ## Pierrot-koppeling: Volzet automatisch
 

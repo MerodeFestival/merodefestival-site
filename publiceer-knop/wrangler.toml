@@ -1,0 +1,6 @@
+# Publiceren vanuit deze map: npx wrangler deploy
+# De geheimen (KNOP_KEY en de GitHub-tokens) staan niet hier maar in Cloudflare:
+# npx wrangler secret put <NAAM>
+name = "publiceer-knop"
+main = "worker.js"
+compatibility_date = "2026-09-01"
