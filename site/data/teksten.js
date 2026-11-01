@@ -39,6 +39,7 @@ window.TEKSTEN = {
   "edities.concerten": "Concerten",
   "edities.dank": "Foto’s en video’s: met dank aan",
   "edities.festival": "Festival",
+  "edities.fotos": "Foto’s van",
   "edities.in": "in",
   "edities.intro": "Na de eerste editie in 2015 mocht Merodefestival rustig groeien: elk jaar het beste van de Europese folkscene in de Meroderegio, en sinds 2017 ook een concertreeks door het jaar heen. Grasduin door meer dan tien jaar festival.",
   "edities.kerk-intro": "Sinds 2017 brengt Merodefestival ook buiten het festival wereld- en folkmuziek naar de dorpskerken van de Merode.",
