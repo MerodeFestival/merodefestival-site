@@ -23,6 +23,19 @@ const CSS = String.raw`/* Afwerking: spelers met klik, voettekst */
 iframe.speler-geladen{display:block;width:100%;border:0;border-radius:8px}
 /* Vorige edities en kerkconcerten: eerst een overzicht, het programma klapt open op verzoek */
 .ed-klap:not(.open) .affiche,.ed-klap:not(.open) .tekst,.ed-klap:not(.open) .prog,.ed-klap:not(.open) .videos,.ed-klap:not(.open) .dank{display:none}
+.ed-klap:not(.open) .ed-fotos a:nth-child(n+5){display:none}
+.ed-fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));gap:.5rem;margin:1.25rem 0 0;max-width:44rem}
+.ed-fotos a{display:block;aspect-ratio:4/3;overflow:hidden;border-radius:3px;background:rgba(127,127,127,.15)}
+.ed-fotos img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s}
+.ed-fotos a:hover img,.ed-fotos a:focus-visible img{transform:scale(1.04)}
+.fv{position:fixed;inset:0;z-index:1000;background:rgba(10,7,5,.92);display:flex;align-items:center;justify-content:center}
+.fv img{max-width:92vw;max-height:86vh;object-fit:contain;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.fv button{position:absolute;background:none;border:0;color:#fff;font-size:2.6rem;line-height:1;padding:.6rem 1rem;cursor:pointer;opacity:.85}
+.fv button:hover,.fv button:focus-visible{opacity:1}
+.fv .fv-dicht{top:.5rem;right:.75rem}
+.fv .fv-vorig{left:.25rem;top:50%;transform:translateY(-50%)}
+.fv .fv-volgend{right:.25rem;top:50%;transform:translateY(-50%)}
+.fv .fv-tel{position:absolute;bottom:1rem;left:0;right:0;text-align:center;color:#fff;opacity:.75;font-family:var(--label,system-ui);font-size:.9rem}
 .ks-klap:not(.open) .kcover,.ks-klap:not(.open) .kerk-lijst,.ks-klap:not(.open) .kopm{display:none}
 .ed-knop{margin:.5rem 0 0;background:none;border:0;padding:0;color:inherit;font-family:var(--label,system-ui);font-size:.95rem;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
 .ook-meer{margin:1.25rem 0 0}
@@ -68,7 +81,30 @@ const JS = String.raw`(function () {
     });
     return { lijst: lijst, zet: zet };
   };
-  var ed = klapbaar("article.editie", "ed-klap", ".affiche,.tekst,.prog,.videos,.dank", "Toon minder", "Toon het programma", function (a, knop) {
+  // Foto’s van een editie: groot bekijken, met pijltjes en Esc
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest(".ed-fotos a") : null;
+    if (!a) return;
+    e.preventDefault();
+    var reeks = [].slice.call(a.parentNode.querySelectorAll("a")), i = reeks.indexOf(a), terug = a;
+    var fv = document.createElement("div");
+    fv.className = "fv"; fv.setAttribute("role", "dialog"); fv.setAttribute("aria-modal", "true"); fv.setAttribute("aria-label", "Foto vergroot");
+    fv.innerHTML = '<img alt=""><button type="button" class="fv-vorig" aria-label="Vorige foto">‹</button><button type="button" class="fv-volgend" aria-label="Volgende foto">›</button><button type="button" class="fv-dicht" aria-label="Sluiten">×</button><p class="fv-tel"></p>';
+    var img = fv.querySelector("img"), tel = fv.querySelector(".fv-tel");
+    var toon = function (n) { i = (n + reeks.length) % reeks.length; img.src = reeks[i].href; img.alt = reeks[i].querySelector("img").alt; tel.textContent = (i + 1) + " / " + reeks.length; };
+    var sluit = function () { document.removeEventListener("keydown", toets); fv.remove(); terug.focus(); };
+    var toets = function (k) { if (k.key === "Escape") sluit(); else if (k.key === "ArrowLeft") toon(i - 1); else if (k.key === "ArrowRight") toon(i + 1); };
+    fv.addEventListener("click", function (k) { if (k.target === fv) sluit(); });
+    fv.querySelector(".fv-vorig").addEventListener("click", function () { toon(i - 1); });
+    fv.querySelector(".fv-volgend").addEventListener("click", function () { toon(i + 1); });
+    fv.querySelector(".fv-dicht").addEventListener("click", sluit);
+    document.addEventListener("keydown", toets);
+    document.body.appendChild(fv);
+    toon(i);
+    fv.querySelector(".fv-dicht").focus();
+  });
+
+  var ed = klapbaar("article.editie", "ed-klap", ".affiche,.tekst,.prog,.videos,.dank,.ed-fotos a:nth-child(5)", "Toon minder", "Toon het programma", function (a, knop) {
     var kol = a.children[1];
     kol.insertBefore(knop, kol.querySelector(".tekst,.prog,.videos,.dank") || null);
   });

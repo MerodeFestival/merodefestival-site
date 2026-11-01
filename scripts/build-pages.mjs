@@ -377,8 +377,14 @@ const seizoenen = JSON.parse(await fs.readFile(path.join(ROOT, "data/kerkconcert
 // Affiche tonen als site/img/affiches/<jaar>.jpg bestaat
 const affiche = async j => { try { await fs.access(path.join(ROOT, `img/affiches/${j}.jpg`)); return `img/affiches/${j}.jpg`; } catch { return ""; } };
 for (const x of edities) x._affiche = await affiche(x.jaar);
+// Foto’s per editie: rijen in de Beeldbank met Gebruik = Vorige edities en het Jaar van de editie, in de volgorde van Volgorde
+let beeldbankAlles = [];
+try { beeldbankAlles = JSON.parse(await fs.readFile(path.join(ROOT, "data/beeldbank.json"), "utf8")); } catch { /* nog geen beeldbank */ }
+const thumbVan = src => src.replace(/^(https:\/\/beeld\.merodefestival\.be\/[^/]+\/)/, "$1thumb/");
+for (const x of edities) x._fotos = beeldbankAlles.filter(b => (b.gebruik || []).includes("Vorige edities") && b.jaar === x.jaar)
+  .sort((a, b) => (a.volgorde ?? 999) - (b.volgorde ?? 999));
 const korteDatum = s => { const x = d(s); return `${DAG[x.getUTCDay()].slice(0, 2)} ${x.getUTCDate()} ${MAAND_KORT[x.getUTCMonth()]} ${x.getUTCFullYear()}`; };
-await fs.writeFile(path.join(ROOT, "data/edities.js"), `window.EDITIES = ${JSON.stringify(edities.map(({ _affiche, ...x }) => x), null, 2)};\n`);
+await fs.writeFile(path.join(ROOT, "data/edities.js"), `window.EDITIES = ${JSON.stringify(edities.map(({ _affiche, _fotos, ...x }) => x), null, 2)};\n`);
 const videoKnop = (id, label) => `<div class="video"><button class="yt" type="button" data-id="${id}" aria-label="${esc(label)}" style="background-image:url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div>`;
 const editiesHtml = `<!DOCTYPE html>
 <html lang="nl">
@@ -493,6 +499,7 @@ const editiesHtml = `<!DOCTYPE html>
           ${x.concerten ? `<div class="prog"><strong>${x.onvolledig ? T("edities.programma-onvolledig", "Op het programma onder meer") : T("edities.concerten", "Concerten")}</strong><ul class="namen">${x.concerten.map(n => `<li>${esc(n)}</li>`).join("")}</ul></div>` : ""}
           ${x.wandelingen ? `<div class="prog"><strong>${T("edities.wandelingen", "Muzikale wandelingen")}${x.wandelplekken ? ` ${T("edities.in", "in")} ${esc(x.wandelplekken)}` : ""}</strong><ul class="namen klein">${x.wandelingen.map(n => `<li>${esc(n)}</li>`).join("")}</ul></div>` : ""}
           ${(x.videos || []).length ? `<div class="videos">${x.videos.map((id, i) => videoKnop(id, `Video ${i + 1} van ${x.jaar}`)).join("")}</div>` : ""}
+          ${x._fotos.length ? `<div class="ed-fotos" aria-label="${esc(`${T("edities.fotos", "Foto’s van")} ${x.jaar}`)}">${x._fotos.map(f => `<a href="${esc(f.src)}"><img src="${esc(thumbVan(f.src))}" alt="${esc(f.alt || `Merodefestival ${x.jaar}`)}" loading="lazy"></a>`).join("")}</div>` : ""}
           ${x.fotos ? `<p class="dank">${T("edities.dank", "Foto’s en video’s: met dank aan")} ${esc(x.fotos)}.</p>` : ""}
         </div>
       </article>`).join("\n      ")}
