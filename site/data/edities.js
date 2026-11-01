@@ -33,8 +33,7 @@ window.EDITIES = [
     ],
     "wandelplekken": "Langdonken, Konijnenberg, Demerbroeken en Oosterlo",
     "videos": [
-      "ppZgBCbEFJc",
-      "UL3UIOSGNFA"
+      "ppZgBCbEFJc"
     ]
   },
   {

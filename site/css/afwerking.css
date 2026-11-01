@@ -7,6 +7,19 @@
 iframe.speler-geladen{display:block;width:100%;border:0;border-radius:8px}
 /* Vorige edities en kerkconcerten: eerst een overzicht, het programma klapt open op verzoek */
 .ed-klap:not(.open) .affiche,.ed-klap:not(.open) .tekst,.ed-klap:not(.open) .prog,.ed-klap:not(.open) .videos,.ed-klap:not(.open) .dank{display:none}
+.ed-klap:not(.open) .ed-fotos a:nth-child(n+5){display:none}
+.ed-fotos{display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));gap:.5rem;margin:1.25rem 0 0;max-width:44rem}
+.ed-fotos a{display:block;aspect-ratio:4/3;overflow:hidden;border-radius:3px;background:rgba(127,127,127,.15)}
+.ed-fotos img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s}
+.ed-fotos a:hover img,.ed-fotos a:focus-visible img{transform:scale(1.04)}
+.fv{position:fixed;inset:0;z-index:1000;background:rgba(10,7,5,.92);display:flex;align-items:center;justify-content:center}
+.fv img{max-width:92vw;max-height:86vh;object-fit:contain;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.fv button{position:absolute;background:none;border:0;color:#fff;font-size:2.6rem;line-height:1;padding:.6rem 1rem;cursor:pointer;opacity:.85}
+.fv button:hover,.fv button:focus-visible{opacity:1}
+.fv .fv-dicht{top:.5rem;right:.75rem}
+.fv .fv-vorig{left:.25rem;top:50%;transform:translateY(-50%)}
+.fv .fv-volgend{right:.25rem;top:50%;transform:translateY(-50%)}
+.fv .fv-tel{position:absolute;bottom:1rem;left:0;right:0;text-align:center;color:#fff;opacity:.75;font-family:var(--label,system-ui);font-size:.9rem}
 .ks-klap:not(.open) .kcover,.ks-klap:not(.open) .kerk-lijst,.ks-klap:not(.open) .kopm{display:none}
 .ed-knop{margin:.5rem 0 0;background:none;border:0;padding:0;color:inherit;font-family:var(--label,system-ui);font-size:.95rem;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
 .ook-meer{margin:1.25rem 0 0}

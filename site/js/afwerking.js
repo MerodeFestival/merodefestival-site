@@ -33,7 +33,30 @@
     });
     return { lijst: lijst, zet: zet };
   };
-  var ed = klapbaar("article.editie", "ed-klap", ".affiche,.tekst,.prog,.videos,.dank", "Toon minder", "Toon het programma", function (a, knop) {
+  // Foto’s van een editie: groot bekijken, met pijltjes en Esc
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest(".ed-fotos a") : null;
+    if (!a) return;
+    e.preventDefault();
+    var reeks = [].slice.call(a.parentNode.querySelectorAll("a")), i = reeks.indexOf(a), terug = a;
+    var fv = document.createElement("div");
+    fv.className = "fv"; fv.setAttribute("role", "dialog"); fv.setAttribute("aria-modal", "true"); fv.setAttribute("aria-label", "Foto vergroot");
+    fv.innerHTML = '<img alt=""><button type="button" class="fv-vorig" aria-label="Vorige foto">‹</button><button type="button" class="fv-volgend" aria-label="Volgende foto">›</button><button type="button" class="fv-dicht" aria-label="Sluiten">×</button><p class="fv-tel"></p>';
+    var img = fv.querySelector("img"), tel = fv.querySelector(".fv-tel");
+    var toon = function (n) { i = (n + reeks.length) % reeks.length; img.src = reeks[i].href; img.alt = reeks[i].querySelector("img").alt; tel.textContent = (i + 1) + " / " + reeks.length; };
+    var sluit = function () { document.removeEventListener("keydown", toets); fv.remove(); terug.focus(); };
+    var toets = function (k) { if (k.key === "Escape") sluit(); else if (k.key === "ArrowLeft") toon(i - 1); else if (k.key === "ArrowRight") toon(i + 1); };
+    fv.addEventListener("click", function (k) { if (k.target === fv) sluit(); });
+    fv.querySelector(".fv-vorig").addEventListener("click", function () { toon(i - 1); });
+    fv.querySelector(".fv-volgend").addEventListener("click", function () { toon(i + 1); });
+    fv.querySelector(".fv-dicht").addEventListener("click", sluit);
+    document.addEventListener("keydown", toets);
+    document.body.appendChild(fv);
+    toon(i);
+    fv.querySelector(".fv-dicht").focus();
+  });
+
+  var ed = klapbaar("article.editie", "ed-klap", ".affiche,.tekst,.prog,.videos,.dank,.ed-fotos a:nth-child(5)", "Toon minder", "Toon het programma", function (a, knop) {
     var kol = a.children[1];
     kol.insertBefore(knop, kol.querySelector(".tekst,.prog,.videos,.dank") || null);
   });
