@@ -204,11 +204,19 @@ async function write(name, data) {
 
 await fs.mkdir(FOTO, { recursive: true });
 
+// Artiesten met een eigen website (voorlopig enkel Mandolinman) delen de Agenda en de Beeldbank, maar horen niet op merodefestival.be.
+// Een rij met enkel zo'n site bij Website slaan we over; staat er ook Merodefestival of een reeks bij, dan blijft ze.
+const ANDERE_SITES = ["Mandolinman"];
+const enkelAndereSite = p => {
+  const s = (p.Website?.multi_select || []).map(o => o.name);
+  return s.length > 0 && s.every(x => ANDERE_SITES.includes(x));
+};
+
 // Agenda
 const agenda = [];
 for (const r of await queryAll(AGENDA_DB, [{ property: "Datum", direction: "ascending" }])) {
   const p = r.properties, d = p.Datum?.date;
-  if (!d?.start) continue;
+  if (!d?.start || enkelAndereSite(p)) continue;
   agenda.push({
     start: d.start.slice(0, 10),
     end: d.end ? d.end.slice(0, 10) : undefined,
@@ -295,7 +303,7 @@ await write("teksten", teksten);
 const beeldbank = [];
 for (const r of await queryAll(BEELDBANK_DB, [{ property: "Volgorde", direction: "ascending" }])) {
   const p = r.properties;
-  if (p.Online?.checkbox !== true) continue;
+  if (p.Online?.checkbox !== true || enkelAndereSite(p)) continue;
   const src = (await foto(r, p.Foto, p.Fotolink)) || text(p["Lokaal bestand"]);
   if (!src) continue;
   beeldbank.push({
