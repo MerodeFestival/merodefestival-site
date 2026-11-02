@@ -4423,6 +4423,14 @@
   "h": "fe55d21027b75fed",
   "t": "Fermer"
  },
+ "40c77c21-f8db-8128-b3da-e16d497487af:time:en": {
+  "h": "456dcffeeed4c730",
+  "t": "8 pm"
+ },
+ "40c77c21-f8db-8128-b3da-e16d497487af:time:fr": {
+  "h": "456dcffeeed4c730",
+  "t": "20 h"
+ },
  "40c77c21-f8db-812e-b337-dc11cac5bc2f:tekst:en": {
   "h": "d5dd1c84d4c9ff92",
   "t": "Video {nr} from {jaar}"
@@ -4438,6 +4446,14 @@
  "40c77c21-f8db-8135-922b-f4913faa64d7:tekst:fr": {
   "h": "c55b8d69610b4809",
   "t": "Autour du 11 juillet, WESP programme, à la demande de la ville de Louvain et de l’abbaye du Parc, un festival gratuit de folk et de musiques du monde dans et autour de l’abbaye. Jusqu’en 2022 sous le nom de Vlaanderen Feest, depuis 2023 sous celui de PARK, et depuis 2026 avec les PARK Sessies en juin."
+ },
+ "40c77c21-f8db-814a-bfc3-d74cfc315456:time:en": {
+  "h": "456dcffeeed4c730",
+  "t": "8 pm"
+ },
+ "40c77c21-f8db-814a-bfc3-d74cfc315456:time:fr": {
+  "h": "456dcffeeed4c730",
+  "t": "20 h"
  },
  "40c77c21-f8db-814d-aba4-eeac2f7583bf:tekst:en": {
   "h": "c97e7d8db20d0879",
@@ -4630,6 +4646,14 @@
  "40c77c21-f8db-819e-9a67-f7f094d4dbc1:tekst:fr": {
   "h": "ef46ac2ad4761a07",
   "t": "Lire la vidéo {nr}"
+ },
+ "40c77c21-f8db-819f-8ffe-c51275f45da8:time:en": {
+  "h": "456dcffeeed4c730",
+  "t": "8 pm"
+ },
+ "40c77c21-f8db-819f-8ffe-c51275f45da8:time:fr": {
+  "h": "456dcffeeed4c730",
+  "t": "20 h"
  },
  "40c77c21-f8db-819f-b48b-d3c59fe91fb0:tekst:en": {
   "h": "5d002d5ab9c8d270",

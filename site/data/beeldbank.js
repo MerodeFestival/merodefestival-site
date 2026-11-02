@@ -1,5 +1,19 @@
 window.BEELDBANK = [
   {
+    "titel": "Hoes Old Tunes, Dusted Down",
+    "src": "https://beeld.merodefestival.be/mandolinman/hoes-old-tunes-dusted-down.webp",
+    "alt": "Hoes van het album Old Tunes, Dusted Down: de vier muzikanten wandelen met hun instrumentkoffers door het stof",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Affiche",
+    "uitsnede": "volledig tonen",
+    "gebruik": [],
+    "volgorde": 1,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
     "titel": "Rhagium Inquisitor – voorkant",
     "src": "https://beeld.merodefestival.be/andries-boone/731742-724440.webp",
     "alt": "Cover of the album Rhagium Inquisitor: a greyribbed longhorn beetle on a blue-green background, with the words Andries Boone",
@@ -218,6 +232,20 @@ window.BEELDBANK = [
     ],
     "volgorde": 1,
     "sites": []
+  },
+  {
+    "titel": "Hoes Unfolding the Roots",
+    "src": "https://beeld.merodefestival.be/mandolinman/hoes-unfolding-the-roots.webp",
+    "alt": "Hoes van het album Unfolding the Roots: de vier muzikanten spelen mandoline in het halfdonker",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Affiche",
+    "uitsnede": "volledig tonen",
+    "gebruik": [],
+    "volgorde": 2,
+    "sites": [
+      "Mandolinman"
+    ]
   },
   {
     "titel": "Rhagium Inquisitor – achterkant",
@@ -440,6 +468,20 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "Hoes Bossa Nova",
+    "src": "https://beeld.merodefestival.be/mandolinman/hoes-bossa-nova.webp",
+    "alt": "Hoes van het album Bossa Nova: de vier muzikanten met hun mandolines in blauw licht",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Affiche",
+    "uitsnede": "volledig tonen",
+    "gebruik": [],
+    "volgorde": 3,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
     "titel": "C.O.N.V.E.R.S.A.T.I.O.N.S – voorkant",
     "src": "https://beeld.merodefestival.be/andries-boone/83024-531288.webp",
     "alt": "Cover of the album C.O.N.V.E.R.S.A.T.I.O.N.S: Andries Boone with an electric mandolin on an orange-red background",
@@ -660,6 +702,20 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "Hoes Houtekiet",
+    "src": "https://beeld.merodefestival.be/mandolinman/hoes-houtekiet.webp",
+    "alt": "Hoes van het album Houtekiet van MANdolinMAN en Ansatz Der Maschine: een getekende haan tussen hoge halmen",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Affiche",
+    "uitsnede": "volledig tonen",
+    "gebruik": [],
+    "volgorde": 4,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
     "titel": "C.O.N.V.E.R.S.A.T.I.O.N.S – achterkant",
     "src": "https://beeld.merodefestival.be/andries-boone/767818-818357.webp",
     "alt": "Back cover of C.O.N.V.E.R.S.A.T.I.O.N.S with the tracklist",
@@ -878,6 +934,20 @@ window.BEELDBANK = [
     ],
     "volgorde": 4,
     "sites": []
+  },
+  {
+    "titel": "MANdolinMAN aan tafel",
+    "src": "https://beeld.merodefestival.be/mandolinman/groep-aan-tafel.webp",
+    "alt": "De muzikanten van MANdolinMAN rond een tafel met een staande lamp, in een kamer met donker behang",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Artiest",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 5,
+    "sites": [
+      "Mandolinman"
+    ]
   },
   {
     "titel": "T.I.M.E.L.A.P.S.E – voorkant",
@@ -2016,6 +2086,20 @@ window.BEELDBANK = [
     ]
   },
   {
+    "titel": "De Wolfmens – tent op de heide",
+    "src": "https://beeld.merodefestival.be/mandolinman/wolfmens-tent.webp",
+    "alt": "Tekening uit De Wolfmens: een grote tent met palen in een donker landschap",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 11,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
     "titel": "Andries met de kever in de zaal",
     "src": "https://beeld.merodefestival.be/andries-boone/616183-33200.webp",
     "alt": "Andries met de kever in de zaal",
@@ -2171,6 +2255,20 @@ window.BEELDBANK = [
     "volgorde": 11,
     "sites": [
       "Merodefestival"
+    ]
+  },
+  {
+    "titel": "De Wolfmens – vogelkooien en stoelen",
+    "src": "https://beeld.merodefestival.be/mandolinman/wolfmens-vogelkooien.webp",
+    "alt": "Tekening uit De Wolfmens: lege vogelkooien en twee stoelen voor een raam",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 12,
+    "sites": [
+      "Mandolinman"
     ]
   },
   {
@@ -2332,6 +2430,20 @@ window.BEELDBANK = [
     ]
   },
   {
+    "titel": "De Wolfmens – vrouw aan het raam",
+    "src": "https://beeld.merodefestival.be/mandolinman/wolfmens-vrouw-aan-raam.webp",
+    "alt": "Tekening uit De Wolfmens: een vrouw met een boek bij een klein raam",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 13,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
     "titel": "Portret met viool op de pier",
     "src": "https://beeld.merodefestival.be/andries-boone/279168-31356.webp",
     "alt": "Portret met viool op de pier",
@@ -2458,6 +2570,20 @@ window.BEELDBANK = [
     ]
   },
   {
+    "titel": "De Wolfmens – gang en behang",
+    "src": "https://beeld.merodefestival.be/mandolinman/wolfmens-gang.webp",
+    "alt": "Tekening uit De Wolfmens: een lange gang met licht op de vloer naast bloemetjesbehang",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 14,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
     "titel": "IMG_0997_xnoamc.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/img-0997-xnoamc.webp",
     "alt": "Contrabassist en violist op podium",
@@ -2535,6 +2661,20 @@ window.BEELDBANK = [
     "volgorde": 14,
     "sites": [
       "Merodefestival"
+    ]
+  },
+  {
+    "titel": "De Wolfmens – duiven",
+    "src": "https://beeld.merodefestival.be/mandolinman/wolfmens-duiven.webp",
+    "alt": "Tekening uit De Wolfmens: witte duiven vliegen weg uit een duiventil",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 15,
+    "sites": [
+      "Mandolinman"
     ]
   },
   {
@@ -2618,6 +2758,20 @@ window.BEELDBANK = [
     ]
   },
   {
+    "titel": "De Wolfmens – vrouw met lang haar",
+    "src": "https://beeld.merodefestival.be/mandolinman/wolfmens-vrouw-met-haar.webp",
+    "alt": "Tekening uit De Wolfmens: een vrouw met lang golvend haar dat als een rivier door het landschap stroomt",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 16,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
     "titel": "MERODE_NL_inpsik.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/merode-nl-inpsik.webp",
     "alt": "Publiek bij concert in begroeide kerkruïne",
@@ -2698,6 +2852,20 @@ window.BEELDBANK = [
     ]
   },
   {
+    "titel": "De Wolfmens – dorpelingen",
+    "src": "https://beeld.merodefestival.be/mandolinman/wolfmens-dorpelingen.webp",
+    "alt": "Tekening uit De Wolfmens: vijf portretten van dorpelingen",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 17,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
     "titel": "13178647_10206126478621077_9101503818731564723_n_huk28d.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/13178647-10206126478621077-9101503818731564723-n-huk28d.webp",
     "alt": "Zanger met mandoline zingt aan microfoon",
@@ -2762,6 +2930,20 @@ window.BEELDBANK = [
     ]
   },
   {
+    "titel": "De Wolfmens – heuvel",
+    "src": "https://beeld.merodefestival.be/mandolinman/wolfmens-heuvel.webp",
+    "alt": "Tekening uit De Wolfmens: een lichte heuvel in de nacht",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 18,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
     "titel": "13116515_10206126479901109_6314574499393732924_o_hww8ue.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/13116515-10206126479901109-6314574499393732924-o-hww8ue.webp",
     "alt": "Kwartet speelt voor oude bakstenen kerkmuur met klimop",
@@ -2794,6 +2976,20 @@ window.BEELDBANK = [
     ]
   },
   {
+    "titel": "De Wolfmens – vrouw tussen worsten",
+    "src": "https://beeld.merodefestival.be/mandolinman/wolfmens-slachtkamer.webp",
+    "alt": "Tekening uit De Wolfmens: een vrouw tussen hangende worsten en een geslacht dier",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 19,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
     "titel": "13147690_10206126479941110_1082250286372418128_o_nxdbey.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/13147690-10206126479941110-1082250286372418128-o-nxdbey.webp",
     "alt": "Concert bij nacht in verlichte kerkruïne",
@@ -2807,6 +3003,20 @@ window.BEELDBANK = [
     "volgorde": 19,
     "sites": [
       "Merodefestival"
+    ]
+  },
+  {
+    "titel": "De Wolfmens – haan in het koren",
+    "src": "https://beeld.merodefestival.be/mandolinman/wolfmens-haan.webp",
+    "alt": "Tekening uit De Wolfmens: een haan tussen hoge halmen",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 20,
+    "sites": [
+      "Mandolinman"
     ]
   },
   {
@@ -2826,6 +3036,20 @@ window.BEELDBANK = [
     ]
   },
   {
+    "titel": "De Wolfmens – boerin met ganzen",
+    "src": "https://beeld.merodefestival.be/mandolinman/wolfmens-boerin-met-ganzen.webp",
+    "alt": "Tekening uit De Wolfmens: een boerin met een stok en een rij ganzen",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 21,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
     "titel": "GLJ_Merode_-87_xjzgub.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/glj-merode-87-xjzgub.webp",
     "alt": "Band met zangeres op donker podium",
@@ -2839,6 +3063,146 @@ window.BEELDBANK = [
     "volgorde": 21,
     "sites": [
       "Merodefestival"
+    ]
+  },
+  {
+    "titel": "De Wolfmens – akker",
+    "src": "https://beeld.merodefestival.be/mandolinman/wolfmens-akker.webp",
+    "alt": "Tekening uit De Wolfmens: een omgeploegde akker met knotwilgen en vogels",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 22,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
+    "titel": "De Wolfmens – man voor de kerkramen",
+    "src": "https://beeld.merodefestival.be/mandolinman/wolfmens-kerkramen.webp",
+    "alt": "Tekening uit De Wolfmens: een man met open armen voor drie hoge kerkramen",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "midden",
+    "gebruik": [],
+    "volgorde": 23,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
+    "titel": "Video – De Wolfmens trailer",
+    "src": "https://beeld.merodefestival.be/mandolinman/video-909479924.webp",
+    "alt": "Titelbeeld van de trailer van De Wolfmens",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Sfeer",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 31,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
+    "titel": "Video – De Wolfmens live",
+    "src": "https://beeld.merodefestival.be/mandolinman/video-527211647.webp",
+    "alt": "MANdolinMAN op het podium onder projecties van De Wolfmens",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 32,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
+    "titel": "Video – Houtekiet",
+    "src": "https://beeld.merodefestival.be/mandolinman/video-363846201.webp",
+    "alt": "De muzikanten rond een tafel met een staande lamp",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 33,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
+    "titel": "Video – Inch'Allah",
+    "src": "https://beeld.merodefestival.be/mandolinman/video-243558668.webp",
+    "alt": "Liliane Saint-Pierre zingt aan een microfoon in de studio",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 34,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
+    "titel": "Video – Rumba Del Raval",
+    "src": "https://beeld.merodefestival.be/mandolinman/video-184017376.webp",
+    "alt": "MANdolinMAN speelt in een studio met Stefan Bracaval op de voorgrond",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 35,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
+    "titel": "Video – Schottische Hever",
+    "src": "https://beeld.merodefestival.be/mandolinman/video-186446833.webp",
+    "alt": "De vier muzikanten met hun mandolines in zwart-wit tegenlicht",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 36,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
+    "titel": "Video – Água de beber",
+    "src": "https://beeld.merodefestival.be/mandolinman/video-59018466.webp",
+    "alt": "MANdolinMAN speelt in paars licht",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 37,
+    "sites": [
+      "Mandolinman"
+    ]
+  },
+  {
+    "titel": "Video – Old Tunes, Dusted Down",
+    "src": "https://beeld.merodefestival.be/mandolinman/video-28262024.webp",
+    "alt": "De vier muzikanten spelen in een woonkamer vol kaders",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "Artiest",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 38,
+    "sites": [
+      "Mandolinman"
     ]
   },
   {
