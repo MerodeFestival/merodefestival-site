@@ -202,7 +202,9 @@ for (const r of await queryAll(AGENDA_DB, [{ property: "Datum", direction: "asce
     village: text(p.Dorp),
     place: text(p.Locatie),
     artist: text(p.Artiest),
-    kind: [text(p.Soort), text(p.Reeks)].filter(Boolean).join(", "),
+    // Eigen kerkconcerten (zonder reeks) als "Merodefestival kerkconcert"; die van Holsbeek Sessies blijven "Kerkconcert, Holsbeek Sessies"
+    kind: (text(p.Soort) === "Kerkconcert" && !text(p.Reeks)) ? "Merodefestival kerkconcert"
+      : [text(p.Soort), text(p.Reeks)].filter(Boolean).join(", "),
     sites: (p.Website?.multi_select || []).map(o => o.name),
     reeks: text(p.Reeks),
     price: text(p.Prijs),
