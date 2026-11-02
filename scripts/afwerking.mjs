@@ -46,7 +46,7 @@ footer .foot-links{margin:0;font-family:var(--label,system-ui);font-size:.95rem;
 footer .foot-links a{text-underline-offset:3px}
 `;
 
-const JS = String.raw`(function () {
+const JS = () => String.raw`(function () {
   // Spotify en SoundCloud: de speler wordt pas geladen na een klik
   document.addEventListener("click", function (e) {
     var knop = e.target.closest ? e.target.closest(".speler-knop") : null;
@@ -88,8 +88,8 @@ const JS = String.raw`(function () {
     e.preventDefault();
     var reeks = [].slice.call(a.parentNode.querySelectorAll("a")), i = reeks.indexOf(a), terug = a;
     var fv = document.createElement("div");
-    fv.className = "fv"; fv.setAttribute("role", "dialog"); fv.setAttribute("aria-modal", "true"); fv.setAttribute("aria-label", "Foto vergroot");
-    fv.innerHTML = '<img alt=""><button type="button" class="fv-vorig" aria-label="Vorige foto">‹</button><button type="button" class="fv-volgend" aria-label="Volgende foto">›</button><button type="button" class="fv-dicht" aria-label="Sluiten">×</button><p class="fv-tel"></p>';
+    fv.className = "fv"; fv.setAttribute("role", "dialog"); fv.setAttribute("aria-modal", "true"); fv.setAttribute("aria-label", "${T("algemeen.foto-vergroot", "Foto vergroot")}");
+    fv.innerHTML = '<img alt=""><button type="button" class="fv-vorig" aria-label="${T("algemeen.vorige-foto", "Vorige foto")}">‹</button><button type="button" class="fv-volgend" aria-label="${T("algemeen.volgende-foto", "Volgende foto")}">›</button><button type="button" class="fv-dicht" aria-label="${T("algemeen.sluiten", "Sluiten")}">×</button><p class="fv-tel"></p>';
     var img = fv.querySelector("img"), tel = fv.querySelector(".fv-tel");
     var toon = function (n) { i = (n + reeks.length) % reeks.length; img.src = reeks[i].href; img.alt = reeks[i].querySelector("img").alt; tel.textContent = (i + 1) + " / " + reeks.length; };
     var sluit = function () { document.removeEventListener("keydown", toets); fv.remove(); terug.focus(); };
@@ -104,11 +104,11 @@ const JS = String.raw`(function () {
     fv.querySelector(".fv-dicht").focus();
   });
 
-  var ed = klapbaar("article.editie", "ed-klap", ".affiche,.tekst,.prog,.videos,.dank,.ed-fotos a:nth-child(5)", "Toon minder", "Toon het programma", function (a, knop) {
+  var ed = klapbaar("article.editie", "ed-klap", ".affiche,.tekst,.prog,.videos,.dank,.ed-fotos a:nth-child(5)", "${T("edities.toon-minder", "Toon minder")}", "${T("edities.toon-programma", "Toon het programma")}", function (a, knop) {
     var kol = a.children[1];
     kol.insertBefore(knop, kol.querySelector(".tekst,.prog,.videos,.dank") || null);
   });
-  var ks = klapbaar("article.kseizoen", "ks-klap", ".kerk-lijst", "Toon minder", "Toon het programma", function (a, knop) {
+  var ks = klapbaar("article.kseizoen", "ks-klap", ".kerk-lijst", "${T("edities.toon-minder", "Toon minder")}", "${T("edities.toon-programma", "Toon het programma")}", function (a, knop) {
     var t = a.querySelector(".kt");
     t.parentNode.insertBefore(knop, t.nextSibling);
   });
@@ -138,7 +138,7 @@ const lijstHtml = async (dir, rel = "") => {
   const uit = [];
   for (const e of await fs.readdir(path.join(dir, rel), { withFileTypes: true })) {
     if (e.isDirectory()) {
-      if (!rel && ["data", "fonts", "img", "css", "js", "seizoen"].includes(e.name)) continue;
+      if (!rel && ["data", "fonts", "img", "css", "js", "seizoen", "en", "fr"].includes(e.name)) continue;
       uit.push(...await lijstHtml(dir, path.join(rel, e.name)));
     } else if (e.name.endsWith(".html")) uit.push(path.join(rel, e.name));
   }
@@ -165,7 +165,7 @@ export async function afwerking({ ROOT, SITE }) {
   await fs.mkdir(path.join(ROOT, "img"), { recursive: true });
   await fs.writeFile(path.join(ROOT, "css/fonts.css"), FONTS_CSS);
   await fs.writeFile(path.join(ROOT, "css/afwerking.css"), CSS);
-  await fs.writeFile(path.join(ROOT, "js/afwerking.js"), JS);
+  await fs.writeFile(path.join(ROOT, "js/afwerking.js"), JS());
   await fs.writeFile(path.join(ROOT, "img/vlaanderen-verbeelding-werkt.png"), Buffer.from(VLAANDEREN_PNG, "base64"));
 
   // Lokale kopieën van de voorbeeldafbeeldingen bij video’s
@@ -229,7 +229,7 @@ export async function afwerking({ ROOT, SITE }) {
       if (!/(^|\.)(open\.spotify\.com|w\.soundcloud\.com)$/.test(hostSpeler)) return m;
       nSpelers++;
       const dienst = dienstNaam(hostSpeler);
-      const titel = decode(attr(a, "title")) || `Speler van ${dienst}`;
+      const titel = decode(attr(a, "title")) || T("speler.titel", "Speler van {dienst}").replace("{dienst}", dienst);
       const hoogte = decode(attr(a, "height")) || (/soundcloud/.test(hostSpeler) ? "166" : "152");
       const klasse = decode(attr(a, "class"));
       const allow = decode(attr(a, "allow"));
@@ -265,7 +265,7 @@ export async function afwerking({ ROOT, SITE }) {
 
     // 5. voettekst: logo en links
     if (h.includes("<footer") && !h.includes("steun-logo")) {
-      h = h.replace(/(<h3>Met steun van<\/h3>)/, `$1<a class="steun-link" href="https://www.vlaanderen.be" target="_blank" rel="noopener"><img class="steun-logo" src="${up}img/vlaanderen-verbeelding-werkt.png" alt="${T("footer.logo-alt", "Vlaanderen, verbeelding werkt")}" width="200" height="87" loading="lazy"></a>`);
+      h = h.replace(new RegExp(`(<h3>${T("footer.steun-kop", "Met steun van").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</h3>)`), `$1<a class="steun-link" href="https://www.vlaanderen.be" target="_blank" rel="noopener"><img class="steun-logo" src="${up}img/vlaanderen-verbeelding-werkt.png" alt="${T("footer.logo-alt", "Vlaanderen, verbeelding werkt")}" width="200" height="87" loading="lazy"></a>`);
     }
     if (h.includes("<footer") && !h.includes("foot-onder")) {
       const links = [

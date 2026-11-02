@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:laura-corteses-acoustic-evening-iv-2027-03-20@merodefestival.be
+DTSTAMP:20270320T000000Z
+DTSTART;VALUE=DATE:20270320
+DTEND;VALUE=DATE:20270320
+SUMMARY:Laura Cortese’s Acoustic Evening IV\, met Eliza Carthy\, Jake Blount & Sarah Kate Morgan
+LOCATION:O.L.V. Onbevlekt Ontvangen-kerk\, Blauberg
+URL:https://www.merodefestival.be/en/concert/laura-corteses-acoustic-evening-iv-2027-03-20
+END:VEVENT
+END:VCALENDAR

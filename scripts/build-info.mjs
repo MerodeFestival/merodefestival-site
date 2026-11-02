@@ -6,23 +6,25 @@ import path from "node:path";
 import { T } from "./teksten.mjs";
 import { statistiek } from "./afwerking.mjs";
 import { privacyHtml, PRIVACY_VERSIE } from "./privacy-tekst.mjs";
+import { V } from "./talen.mjs";
 
 const MAIL = "info@merodefestival.be";
 
 export async function bouwInfo({ ROOT, SITE, S, esc, kopEd, voetEd }) {
+  const BASIS = SITE.replace(/\/(en|fr)$/, "");   // adressen van onze eigen site in Notion staan zonder taal
   let rijen = [];
   try { rijen = JSON.parse(await fs.readFile(path.join(ROOT, "data/wesp.json"), "utf8")); } catch { /* nog geen gegevens */ }
   const van = soort => rijen.filter(r => r.soort === soort);
   const href = u => {
     if (!u) return "";
-    if (u.startsWith(SITE)) {
-      const [pad, anker] = u.slice(SITE.length).split("#");
+    if (u.startsWith(BASIS)) {
+      const [pad, anker] = u.slice(BASIS.length).split("#");
       const bestand = !pad || pad === "/" ? "index.html" : pad.replace(/^\//, "").replace(/\/$/, "") + (/\.[a-z]+$/.test(pad) ? "" : ".html");
       return bestand + (anker ? "#" + anker : "");
     }
     return u;
   };
-  const extern = u => /^https?:/.test(u) && !u.startsWith(SITE);
+  const extern = u => /^https?:/.test(u) && !u.startsWith(BASIS);
   const alinea = t => esc(t).split(/\n{2,}/).map(x => `<p>${x.replace(/\n/g, "<br>")}</p>`).join("");
 
   const pagina = async ({ bestand, titel, beschrijving, canonical, body }) => {
@@ -44,7 +46,7 @@ export async function bouwInfo({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     titel: T("privacy.titel", "Privacyverklaring"),
     beschrijving: T("privacy.beschrijving", "Hoe WESP vzw en Merodefestival omgaan met persoonsgegevens, cookies en spelers van andere diensten op deze website."),
     body: hero(T("privacy.label", "WESP vzw"), T("privacy.titel", "Privacyverklaring"), "") +
-      sectie("licht", `<div class="i-tekst"><p class="i-versie">Versie ${PRIVACY_VERSIE}</p>${privacyHtml({ statistiek: statistiek(), esc })}</div>`),
+      sectie("licht", `<div class="i-tekst"><p class="i-versie">${esc(T("privacy.versie", "Versie"))} ${esc(V(PRIVACY_VERSIE))}</p>${V(privacyHtml({ statistiek: statistiek(), esc }))}</div>`),
   });
 
   // ---------- Vrienden van Merodefestival ----------
@@ -71,10 +73,10 @@ export async function bouwInfo({ ROOT, SITE, S, esc, kopEd, voetEd }) {
   });
 
   // ---------- Partners ----------
-  const steun = van("Partner").filter(r => r.label === "Met steun van");
+  const steun = van("Partner").filter(r => (r.labelNl ?? r.label) === "Met steun van");
   // Label “Sponsors” staat in een eigen blok net onder “Met steun van”
-  const sponsors = van("Partner").filter(r => r.label === "Sponsors");
-  const samen = van("Partner").filter(r => r.label !== "Met steun van" && r.label !== "Sponsors");
+  const sponsors = van("Partner").filter(r => (r.labelNl ?? r.label) === "Sponsors");
+  const samen = van("Partner").filter(r => !["Met steun van", "Sponsors"].includes(r.labelNl ?? r.label));
   // Groepen onder “In samenwerking met”: het veld Label is de tussentitel, in de volgorde waarin het eerst voorkomt; zonder label achteraan
   const groepen = [...samen.reduce((m, r) => m.set(r.label, [...(m.get(r.label) || []), r]), new Map())]
     .sort(([a], [b]) => (a ? 0 : 1) - (b ? 0 : 1));

@@ -9,7 +9,7 @@
     secties.forEach(function (s) { totaal += s.querySelectorAll("li").length; });
     var alles = document.createElement("a");
     alles.href = "#alles";
-    alles.innerHTML = "Alles <span>" + totaal + "</span>";
+    alles.innerHTML = "Alles" + " <span>" + totaal + "</span>";
     chips.appendChild(alles);
     links.push(alles);
     var toonRubriek = function (id, bewaar) {

@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:amber-haddad-trio-en-simon-leleux-manuel-hermia-2026-10-17@merodefestival.be
+DTSTAMP:20261017T000000Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261017
+SUMMARY:Amber Haddad Trio en Simon Leleux & Manuel Hermia
+LOCATION:Sint-Luciakerk\, Engsbergen
+URL:https://www.merodefestival.be/fr/concert/amber-haddad-trio-en-simon-leleux-manuel-hermia-2026-10-17
+END:VEVENT
+END:VCALENDAR

@@ -13,9 +13,11 @@ import { bouwWesp } from "./build-wesp.mjs";
 import { bouwInfo } from "./build-info.mjs";
 import { bouw404 } from "./build-404.mjs";
 import { afwerking } from "./afwerking.mjs";
+import { TAAL, DATUM, LOCALE } from "./talen.mjs";
 
 const SITE = (process.env.SITE_URL || "https://www.merodefestival.be").replace(/\/$/, "");
-const ROOT = path.resolve("site");
+// SITE_MAP: een andere map dan site/ (build-talen.mjs bouwt zo de Engelse en Franse versie in een aparte map)
+const ROOT = path.resolve(process.env.SITE_MAP || "site");
 const OUT = path.join(ROOT, "concert");
 
 const alles = JSON.parse(await fs.readFile(path.join(ROOT, "data/agenda.json"), "utf8"));
@@ -38,9 +40,9 @@ const creditHtml = () => {
   return S.creditlink ? c.replace(/^(.*?:\s*)?(.+)$/, (m, voor, naam) => `${voor || ""}<a href="${esc(S.creditlink)}" target="_blank" rel="noopener">${naam}</a>`) : c;
 };
 
-const MAAND = ["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"];
-const MAAND_KORT = ["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"];
-const DAG = ["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"];
+const { maand: MAAND, maandKort: MAAND_KORT, dag: DAG } = DATUM[TAAL];
+// Soort van het concert in het Nederlands (in een vertaalde versie staat de vertaling in kind)
+const soortNl = e => e.kindNl || e.kind || "";
 const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const d = s => { const [y, m, dd] = s.split("-").map(Number); return new Date(Date.UTC(y, m - 1, dd)); };
 const cap = t => t.charAt(0).toUpperCase() + t.slice(1);
@@ -141,15 +143,15 @@ function blokkenHtml(bl) {
 }
 
 function pagina(e, overige) {
-  const datumregel = `${cap(langeDatum(e.start))}${e.end ? ` tot ${langeDatum(e.end)}` : ""}${e.time ? ` · ${e.time}` : ""}`;
+  const datumregel = `${cap(langeDatum(e.start))}${e.end ? ` ${T("algemeen.tot", "tot")} ${langeDatum(e.end)}` : ""}${e.time ? ` · ${e.time}` : ""}`;
   const beeldLokaal = pad("../", e.foto || S.artwork);
   const extraBeelden = (e.beelden || []).filter(b => b.src !== e.foto);
   const beeldAbs = pad(`${SITE}/`, e.foto || S.artwork);
   const alineas = String(e.text || "").split(/\n\s*\n/).filter(Boolean);
-  const omschrijving = (e.sub ? e.sub + ". " : "") + (alineas[0] || `${e.kind} in ${e.place}, ${e.village}.`);
+  const omschrijving = (e.sub ? e.sub + ". " : "") + (alineas[0] || `${e.kind} ${T("algemeen.in", "in")} ${e.place}, ${e.village}.`);
   let yts = (e.videos || []).map(youtubeId).filter(Boolean);
   const sps = (e.spotify || []).map(spotifyEmbed).filter(Boolean);
-  const kerk = /kerkconcert/i.test(e.kind);
+  const kerk = /kerkconcert/i.test(soortNl(e));
   const route = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.adres || [e.place, e.village].filter(Boolean).join(", "))}`;
   const reeks = reeksVan(e);
   // Meer info (enkel bij een andere reeks): het veld Meer info in Notion, anders de website van de reeks
@@ -181,14 +183,14 @@ function pagina(e, overige) {
     const id = v && youtubeId(v[1]);
     if (id) {
       inlineVideos.push(id);
-      return { type: "raw", html: `<div class="videos"><div class="video"><button class="yt" type="button" data-id="${id}" aria-label="Speel video af: ${esc(e.artist)}" style="background-image:url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div></div>` };
+      return { type: "raw", html: `<div class="videos"><div class="video"><button class="yt" type="button" data-id="${id}" aria-label="${T("algemeen.speel-video", "Speel video af")}: ${esc(e.artist)}" style="background-image:url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div></div>` };
     }
     return bl;
   });
   yts = yts.filter(id => !inlineVideos.includes(id));
 
   return `<!DOCTYPE html>
-<html lang="nl">
+<html lang="${TAAL}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -219,7 +221,7 @@ function pagina(e, overige) {
   <div class="wrap bar">
     <a class="brand" href="../index.html"><img src="../${esc(S.logo)}" alt="Merodefestival" width="82" height="56"></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="hoofdmenu">${T("menu.menu", "Menu")}</button>
-    <nav id="hoofdmenu" aria-label="Hoofdmenu">
+    <nav id="hoofdmenu" aria-label="${T("menu.hoofdmenu", "Hoofdmenu")}">
       <ul>
         <li><a href="../index.html#agenda">${T("menu.agenda", "Agenda")}</a></li>
         <li><a href="../index.html#festival">${T("menu.festival", "Festival 2027")}</a></li>
@@ -250,16 +252,16 @@ function pagina(e, overige) {
     </div>
   </section>
 
-  <section class="papier" aria-label="Over dit concert">
+  <section class="papier" aria-label="${T("concert.over", "Over dit concert")}">
     <div class="wrap cgrid">
       <article class="ctekst">
         ${tekstBlokken.length ? blokkenHtml(tekstBlokken)
           : alineas.length ? alineas.map(p => `<p>${esc(p)}</p>`).join("\n        ")
-          : `<p>${esc(e.kind)} in ${esc(e.place)}, ${esc(e.village)}.</p>`}
+          : `<p>${esc(e.kind)} ${T("algemeen.in", "in")} ${esc(e.place)}, ${esc(e.village)}.</p>`}
         ${fotosInTekst ? "" : beeldenHtml}
         ${yts.length || sps.length ? `<section class="luister" id="luister" aria-labelledby="luister-titel">
           <h2 class="label" id="luister-titel">${T("concert.luister", "Kijk en luister")}</h2>
-          ${yts.length ? `<div class="videos${yts.length > 1 ? " meer" : ""}">${yts.map((id, i) => `<div class="video"><button class="yt" type="button" data-id="${id}" aria-label="Speel video ${i + 1} af: ${esc(e.artist)}" style="background-image:url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div>`).join("")}</div>` : ""}
+          ${yts.length ? `<div class="videos${yts.length > 1 ? " meer" : ""}">${yts.map((id, i) => `<div class="video"><button class="yt" type="button" data-id="${id}" aria-label="${T("algemeen.speel-video-nr", "Speel video {nr} af").replace("{nr}", i + 1)}: ${esc(e.artist)}" style="background-image:url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div>`).join("")}</div>` : ""}
           ${sps.length ? `<div class="spotify">${sps.map(x => `<iframe src="https://open.spotify.com/embed/${x.type}/${x.id}?utm_source=generator&amp;theme=0" title="Spotify: ${esc(e.artist)}" height="${/album|playlist|show/.test(x.type) ? 352 : 152}" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`).join("")}</div>` : ""}
         </section>` : ""}
       </article>
@@ -412,14 +414,14 @@ const archiefKaartTitel = (r, k) => k.titel
   : `<span>${esc(r.kaart.filter(Boolean).join(" – "))}</span><span>${esc(k.seizoen).replace(/(\d{3})(\d)/g, "$1<em>$2</em>")}</span>`;
 const videoKnop = (id, label) => `<div class="video"><button class="yt" type="button" data-id="${id}" aria-label="${esc(label)}" style="background-image:url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div>`;
 const editiesHtml = `<!DOCTYPE html>
-<html lang="nl">
+<html lang="${TAAL}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Vorige edities | Merodefestival</title>
-<meta name="description" content="Meer dan tien jaar Merodefestival: alle edities sinds 2015, met programma, foto’s en video’s.">
+<title>${esc(T("edities.tab", "Vorige edities"))} | Merodefestival</title>
+<meta name="description" content="${esc(T("edities.beschrijving", "Meer dan tien jaar Merodefestival: alle edities sinds 2015, met programma, foto’s en video’s."))}">
 <link rel="canonical" href="${SITE}/vorige-edities">
-<meta property="og:title" content="Merodefestival sinds 2015">
+<meta property="og:title" content="${esc(T("edities.titel", "Merodefestival sinds 2015"))}">
 <meta property="og:image" content="${SITE}/${S.artwork}">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="apple-touch-icon" href="img/favicon.png">
@@ -487,7 +489,7 @@ const editiesHtml = `<!DOCTYPE html>
   <div class="wrap bar">
     <a class="brand" href="index.html"><img src="${esc(S.logo)}" alt="Merodefestival" width="82" height="56"></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="hoofdmenu">${T("menu.menu", "Menu")}</button>
-    <nav id="hoofdmenu" aria-label="Hoofdmenu">
+    <nav id="hoofdmenu" aria-label="${T("menu.hoofdmenu", "Hoofdmenu")}">
       <ul>
         <li><a href="index.html#agenda">${T("menu.agenda", "Agenda")}</a></li>
         <li><a href="index.html#festival">${T("menu.festival", "Festival 2027")}</a></li>
@@ -520,14 +522,14 @@ const editiesHtml = `<!DOCTYPE html>
           <span class="jaar">${x.jaar}</span>
           ${x.datum ? `<span class="plek">${esc(x.datum)}</span>` : ""}
           ${x.plek ? `<span class="plek zacht">${esc(x.plek)}</span>` : ""}
-          ${x._affiche ? `<img class="affiche" src="${x._affiche}" alt="Affiche Merodefestival ${x.jaar}" loading="lazy">` : ""}
+          ${x._affiche ? `<img class="affiche" src="${x._affiche}" alt="${esc(T("edities.affiche", "Affiche Merodefestival"))} ${x.jaar}" loading="lazy">` : ""}
         </div>
         <div>
           ${x.titel ? `<h2>${esc(x.titel)}</h2>` : ""}
           ${x.tekst ? `<p class="tekst">${esc(x.tekst)}</p>` : ""}
           ${x.concerten ? `<div class="prog"><strong>${x.onvolledig ? T("edities.programma-onvolledig", "Op het programma onder meer") : T("edities.concerten", "Concerten")}</strong><ul class="namen">${x.concerten.map(n => `<li>${esc(n)}</li>`).join("")}</ul></div>` : ""}
           ${x.wandelingen ? `<div class="prog"><strong>${T("edities.wandelingen", "Muzikale wandelingen")}${x.wandelplekken ? ` ${T("edities.in", "in")} ${esc(x.wandelplekken)}` : ""}</strong><ul class="namen klein">${x.wandelingen.map(n => `<li>${esc(n)}</li>`).join("")}</ul></div>` : ""}
-          ${(x.videos || []).length ? `<div class="videos">${x.videos.map((id, i) => videoKnop(id, `Video ${i + 1} van ${x.jaar}`)).join("")}</div>` : ""}
+          ${(x.videos || []).length ? `<div class="videos">${x.videos.map((id, i) => videoKnop(id, T("edities.video", "Video {nr} van {jaar}").replace("{nr}", i + 1).replace("{jaar}", x.jaar))).join("")}</div>` : ""}
           ${x._fotos.length ? `<div class="ed-fotos" aria-label="${esc(`${T("edities.fotos", "Foto’s van")} ${x.jaar}`)}">${x._fotos.map(f => `<a href="${esc(f.src)}"><img src="${esc(thumbVan(f.src))}" alt="${esc(f.alt || `Merodefestival ${x.jaar}`)}" loading="lazy"></a>`).join("")}</div>` : ""}
           ${x.fotos ? `<p class="dank">${T("edities.dank", "Foto’s en video’s: met dank aan")} ${esc(x.fotos)}.</p>` : ""}
         </div>
@@ -540,7 +542,7 @@ const editiesHtml = `<!DOCTYPE html>
       <p class="kerk-intro">${T("edities.kerk-intro", "Sinds 2017 brengt Merodefestival ook buiten het festival wereld- en folkmuziek naar de dorpskerken van de Merode.")}</p>
       <div class="kgrid">
       ${seizoenen.map(z => `<article class="kseizoen" id="kerk-${z.seizoen.slice(0, 4)}">
-        ${z.brochure ? `<img class="kcover" src="${esc(z.brochure)}" alt="Brochure kerkconcerten ${esc(z.seizoen)}" loading="lazy">` : ""}
+        ${z.brochure ? `<img class="kcover" src="${esc(z.brochure)}" alt="${esc(T("edities.brochure", "Brochure kerkconcerten"))} ${esc(z.seizoen)}" loading="lazy">` : ""}
         <h3 class="kt"><span>${T("edities.kerk-reeks", "kerk – concerten")}</span><span>${esc(z.seizoen).replace(/(\d{3})(\d)/g, "$1<em>$2</em>")}</span></h3>
         ${z.opmerking ? `<p class="kopm">${esc(z.opmerking)}</p>` : ""}
         <ol class="kerk-lijst">${z.concerten.map(k => `<li>
@@ -673,7 +675,7 @@ for (const b of beleef) {
   <section class="papier bl-inhoud">
     <div class="wrap">
       ${(b.blokken || []).length ? `<div class="bl-blokken">${b.blokken.map(k => `<div><h2>${esc(k.titel)}</h2><p>${esc(k.tekst)}</p>${(k.links || []).map(([t, u]) => `<a href="${esc(u)}">${esc(t)}</a>`).join(" · ")}</div>`).join("")}</div>` : ""}
-      ${b.tracklist ? `<div class="bl-sectie" id="luister"><h2>${T("beleef.tracklist", "De tracklist")}</h2><p>${T("beleef.tracklist-uitleg", "Van elk nummer maakte Bert Huysentruyt een video in de abdij.")}</p>${b.spotifyEmbed ? `<iframe class="sp-album" title="${esc(b.titel)} op Spotify" src="${esc(b.spotifyEmbed)}" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>` : ""}<ol class="trackvideos">${b.tracklist.map((t, i) => { const tt = typeof t === "string" ? { titel: t } : t; const [wie, wat] = tt.titel.split(" — "); return `<li>${tt.video ? ytKnop(tt.video, tt.titel) : ""}<span class="tnr">${i + 1}</span><span class="twie">${esc(wie)}</span>${wat ? `<span class="twat">${esc(wat)}</span>` : ""}</li>`; }).join("")}</ol></div>` : ""}
+      ${b.tracklist ? `<div class="bl-sectie" id="luister"><h2>${T("beleef.tracklist", "De tracklist")}</h2><p>${T("beleef.tracklist-uitleg", "Van elk nummer maakte Bert Huysentruyt een video in de abdij.")}</p>${b.spotifyEmbed ? `<iframe class="sp-album" title="${esc(T("algemeen.op-spotify", "{titel} op Spotify").replace("{titel}", b.titel))}" src="${esc(b.spotifyEmbed)}" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>` : ""}<ol class="trackvideos">${b.tracklist.map((t, i) => { const tt = typeof t === "string" ? { titel: t } : t; const [wie, wat] = tt.titel.split(" — "); return `<li>${tt.video ? ytKnop(tt.video, tt.titel) : ""}<span class="tnr">${i + 1}</span><span class="twie">${esc(wie)}</span>${wat ? `<span class="twat">${esc(wat)}</span>` : ""}</li>`; }).join("")}</ol></div>` : ""}
       ${b.afleveringen ? `<div class="bl-sectie"><h2>${T("beleef.afleveringen", "De afleveringen")}</h2>${b.afleveringen.map(a => `<article class="afl">
         <div><span class="nr">${T("beleef.aflevering", "Aflevering")} ${a.nr}</span><h3>${esc(a.titel)}</h3><p class="plek">${esc(a.plek)}</p><p>${esc(a.tekst)}</p>
           ${a.spotify ? `<div class="knoppen"><a class="btn" href="${esc(a.spotify)}">${T("beleef.spotify", "Beluister op Spotify")}</a>${b.apple ? `<a class="btn lijn" href="${esc(b.apple)}">${T("beleef.apple", "Beluister op Apple Podcasts")}</a>` : ""}</div>` : ""}</div>
@@ -681,7 +683,7 @@ for (const b of beleef) {
       </article>`).join("")}</div>` : ""}
       ${b.luister ? `<div class="bl-sectie" id="luister"><h2>${T("beleef.luister", "Kijk en luister")}</h2>
         ${(b.luister.youtube || []).length ? `<div class="videos">${b.luister.youtube.map(id => ytKnop(id, b.titel)).join("")}</div>` : ""}
-        ${b.luister.soundcloud ? `<iframe class="sc" title="${esc(b.titel)} op SoundCloud" loading="lazy" allow="autoplay" src="https://w.soundcloud.com/player/?url=${encodeURIComponent(b.luister.soundcloud)}&color=%23e8761a&visual=false"></iframe>` : ""}
+        ${b.luister.soundcloud ? `<iframe class="sc" title="${esc(T("algemeen.op-soundcloud", "{titel} op SoundCloud").replace("{titel}", b.titel))}" loading="lazy" allow="autoplay" src="https://w.soundcloud.com/player/?url=${encodeURIComponent(b.luister.soundcloud)}&color=%23e8761a&visual=false"></iframe>` : ""}
       </div>` : ""}
       ${beelden.length > 1 ? `<div class="bl-sectie"><h2>${T("beleef.beelden", "Beelden")}</h2><div class="galerij">${beelden.slice(1).map(x => `<img src="${esc(x.src)}" alt="${esc(x.alt || "")}" loading="lazy">`).join("")}</div></div>` : ""}
       ${b.pers ? `<div class="bl-sectie"><h2>${T("beleef.pers", "In de pers")}</h2><p>${b.pers.map(([t, u]) => `<a href="${esc(u)}">${esc(t)}</a>`).join(" · ")}</p></div>` : ""}
@@ -718,7 +720,7 @@ try {
         email: "info@merodefestival.be", telephone: "+32498758296", vatID: "BE0863441738",
         address: { "@type": "PostalAddress", streetAddress: "Jozef Wautersstraat 4", postalCode: "3010", addressLocality: "Kessel-Lo", addressCountry: "BE" },
         sameAs: ["https://www.facebook.com/merodefestival", "https://www.instagram.com/merodefestival/", "https://www.youtube.com/channel/UCahKa1lM3yaWEwXdV_bBJdw"] },
-      { "@type": "WebSite", "@id": `${SITE}/#website`, url: `${SITE}/`, name: "Merodefestival", inLanguage: "nl", publisher: { "@id": `${SITE}/#organisatie` } },
+      { "@type": "WebSite", "@id": `${SITE}/#website`, url: `${SITE}/`, name: "Merodefestival", inLanguage: TAAL, publisher: { "@id": `${SITE}/#organisatie` } },
     ],
   };
   const kopExtra = `<link rel="canonical" href="${SITE}/">
@@ -727,11 +729,11 @@ try {
 <meta property="og:description" content="${esc(beschrijving)}">
 <meta property="og:image" content="${SITE}/${esc(S.artwork)}">
 <meta property="og:url" content="${SITE}/">
-<meta property="og:locale" content="nl_BE">
+<meta property="og:locale" content="${LOCALE[TAAL]}">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">${JSON.stringify(gegevens).replace(/</g, "\\u003c")}</script>
 `;
-  hp = hp.replace("</head>", kopExtra + "</head>");
+  hp = hp.replace(/<html lang="[^"]*">/, `<html lang="${TAAL}">`).replace("</head>", kopExtra + "</head>");
   await fs.writeFile(path.join(ROOT, "index.html"), hp);
 } catch (err) {
   console.warn("Homepage niet bijgewerkt (sjabloon scripts/sjablonen/index.html ontbreekt?):", err.message);
@@ -795,7 +797,7 @@ const PRODUCTIE_EXTRA_JS = String.raw`(function () {
     secties.forEach(function (s) { totaal += s.querySelectorAll("li").length; });
     var alles = document.createElement("a");
     alles.href = "#alles";
-    alles.innerHTML = "Alles <span>" + totaal + "</span>";
+    alles.innerHTML = ${JSON.stringify(T("producties.alles", "Alles"))} + " <span>" + totaal + "</span>";
     chips.appendChild(alles);
     links.push(alles);
     var toonRubriek = function (id, bewaar) {
@@ -848,11 +850,11 @@ const PRODUCTIE_EXTRA_JS = String.raw`(function () {
     lb.hidden = true;
     lb.setAttribute("role", "dialog");
     lb.setAttribute("aria-modal", "true");
-    lb.setAttribute("aria-label", "Foto vergroot");
-    lb.innerHTML = '<button type="button" class="lb-sluit" aria-label="Sluiten">\u00d7</button>' +
-      '<button type="button" class="lb-vorig" aria-label="Vorige foto">\u2039</button>' +
+    lb.setAttribute("aria-label", ${JSON.stringify(T("algemeen.foto-vergroot", "Foto vergroot"))});
+    lb.innerHTML = '<button type="button" class="lb-sluit" aria-label="${esc(T("algemeen.sluiten", "Sluiten")).replace(/'/g, "’")}">\u00d7</button>' +
+      '<button type="button" class="lb-vorig" aria-label="${esc(T("algemeen.vorige-foto", "Vorige foto")).replace(/'/g, "’")}">\u2039</button>' +
       '<img alt="">' +
-      '<button type="button" class="lb-volgend" aria-label="Volgende foto">\u203a</button>';
+      '<button type="button" class="lb-volgend" aria-label="${esc(T("algemeen.volgende-foto", "Volgende foto")).replace(/'/g, "’")}">\u203a</button>';
     document.body.appendChild(lb);
     beeld = lb.querySelector("img");
     lb.addEventListener("click", function (e) { if (e.target === lb || e.target.className === "lb-sluit") sluit(); });
@@ -890,7 +892,7 @@ const PRODUCTIE_EXTRA_JS = String.raw`(function () {
     f.classList.add("lb-klik");
     f.tabIndex = 0;
     f.setAttribute("role", "button");
-    f.setAttribute("aria-label", (f.alt || "Foto") + ", vergroten");
+    f.setAttribute("aria-label", (f.alt || ${JSON.stringify(T("algemeen.foto-kort", "Foto"))}) + ${JSON.stringify(", " + T("algemeen.vergroten", "vergroten"))});
     f.addEventListener("click", function () { open(i); });
     f.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(i); } });
   });
@@ -971,7 +973,7 @@ const llms = [
   "- info@merodefestival.be, 0498 75 82 96",
   "",
 ].join("\n");
-await fs.writeFile(path.join(ROOT, "llms.txt"), llms);
+if (TAAL === "nl") await fs.writeFile(path.join(ROOT, "llms.txt"), llms);
 
 // Oude adressen van de vorige website doorsturen
 await fs.writeFile(path.join(ROOT, "_redirects"), await maakOmleidingen({ agenda, ROOT }));
@@ -987,5 +989,5 @@ https://merodefestival-site.smetsjochen.workers.dev/*
   X-Robots-Tag: noindex
 `);
 
-await schrijfCatalogus(path.resolve(".build/teksten-catalogus.json"));
+if (TAAL === "nl") await schrijfCatalogus(path.resolve(".build/teksten-catalogus.json"));
 console.log(`Concertpagina’s: ${agenda.length}`);

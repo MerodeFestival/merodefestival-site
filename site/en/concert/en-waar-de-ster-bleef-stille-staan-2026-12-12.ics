@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:en-waar-de-ster-bleef-stille-staan-2026-12-12@merodefestival.be
+DTSTAMP:20261212T000000Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261212
+SUMMARY:En waar de ster bleef stille staan
+LOCATION:Abdij van Averbode\, Averbode
+URL:https://www.merodefestival.be/en/concert/en-waar-de-ster-bleef-stille-staan-2026-12-12
+END:VEVENT
+END:VCALENDAR

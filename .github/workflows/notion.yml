@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  models: read     # GitHub Models: automatische vertaling naar het Engels en het Frans, zonder extra sleutel
 
 concurrency:
   group: notion-website
@@ -42,11 +43,23 @@ jobs:
         run: node scripts/vul-teksten.mjs
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+      - name: Vertalen naar het Engels en het Frans
+        continue-on-error: true    # lukt het niet, dan blijft wat nog niet vertaald is voorlopig Nederlands
+        run: node scripts/vertaal.mjs
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # optioneel: dan vertaalt Claude in plaats van GitHub Models
+      - name: Engelse en Franse versie bouwen
+        continue-on-error: true    # mislukt dit, dan gaat de Nederlandse site toch online
+        run: node scripts/build-talen.mjs
+        env:
+          SITE_URL: https://www.merodefestival.be
       - name: Wijzigingen bewaren
         run: |
           git config user.name "website-bot"
           git config user.email "website-bot@users.noreply.github.com"
-          git add site
+          git add site vertalingen
           git diff --cached --quiet || (git commit -m "Update uit Notion" && (git push || (git pull --rebase && git push)))
       - name: Publiceren op Cloudflare
         if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}

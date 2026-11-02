@@ -7,6 +7,7 @@
 
 import fs from "node:fs/promises";
 import path from "node:path";
+import { TAAL, DATUM } from "./talen.mjs";
 
 const register = new Map();
 let TEKSTEN = {};
@@ -77,21 +78,34 @@ const HOMEPAGE = [
   ["menu.edities", "Vorige edities", "", ['<li><a href="vorige-edities.html">{}</a></li>']],
   ["menu.menu", "Menu", "Knop voor het menu op een telefoon", ['<button class="menu-toggle" aria-expanded="false" aria-controls="hoofdmenu">{}</button>']],
   ["menu.tickets", "Tickets", "Oranje knop rechtsboven", ['<a class="btn" id="tickets-top" href="https://wesp-vzw.pierrot.io/">{}</a>']],
+  ["menu.hoofdmenu", "Hoofdmenu", "Naam van het menu voor schermlezers", ['<nav id="hoofdmenu" aria-label="{}">']],
+  ["homepage.art-label", "Seizoensbeeld en foto’s uit de kerken", "Beschrijving van de wisselende beelden voor schermlezers", ['aria-label="{}"']],
+  ["homepage.diavoorstelling", "diavoorstelling", "Soort blok van de wisselende beelden, voor schermlezers", ['aria-roledescription="{}"']],
+  ["homepage.pauzeer", "Wisselende beelden pauzeren", "Knop om de wisselende beelden stil te zetten (voor schermlezers)", ['aria-label="{}">❚❚']],
+  ["homepage.speel", "Wisselende beelden afspelen", "Knop om de wisselende beelden weer te starten (voor schermlezers)", []],
+  ["homepage.filter-label", "Filter op reeks", "Naam van de filterknoppen voor schermlezers", ['aria-label="{}" hidden']],
+  ["homepage.groep-alle", "Alle concerten", "Filterknop boven de agenda", []],
+  ["homepage.groep-kerkconcerten", "Kerkconcerten", "Filterknop boven de agenda", []],
+  ["homepage.groep-festivals", "Festivals", "Filterknop boven de agenda", []],
+  ["homepage.getoond-een", "{n} concert getoond", "Melding voor schermlezers na het filteren ({n} is het aantal)", []],
+  ["homepage.getoond", "{n} concerten getoond", "Melding voor schermlezers na het filteren ({n} is het aantal)", []],
+  ["homepage.festival-alt1", "Wandelaars op een bospad in de Merode", "Beschrijving van de eerste foto van het festival", ['alt="{}"']],
+  ["homepage.festival-alt2", "Muzikanten nemen applaus in ontvangst op een openluchtpodium bij avond", "Beschrijving van de tweede foto van het festival", ['alt="{}"']],
   ["homepage.titel", "Merodefestival – folk en wereldmuziek in de kerken van de Merode", "Titel in het tabblad van de browser en in Google", ["<title>{}</title>"]],
   ["homepage.beschrijving", "Kerkconcerten met folk en wereldmuziek in de dorpskerken van Landschapspark de Merode, en elk Hemelvaartweekend het Merodefestival.", "Korte beschrijving die Google toont", ['<meta name="description" content="{}">']],
   ["homepage.tickets-knop", "Tickets bestellen", "Knop naast de inleiding bij de agenda", ['<a class="btn" id="intro-tickets" href="https://wesp-vzw.pierrot.io/">{}</a>']],
   ["homepage.agenda-kop", "Agenda", "Kop boven de lijst met concerten", ['<h2 class="label" style="font-size:1rem;margin-bottom:1.25rem;color:var(--s-papier-zacht)">{}</h2>']],
-  ["homepage.kaart-tekst", "Korte beschrijving", "Uitklapper bij elk concert in de agenda (toont de korte tekst)", ['<summary>{}</summary>']],
-  ["homepage.kaart-link", "Naar de concertpagina →", "Link onder elk concert in de agenda, naar de volledige pagina", ['<a href="${esc(pagina)}">{}</a>']],
-  ["homepage.eerstvolgende-link", "Meer over dit concert", "Knop naast Tickets bij het eerstvolgende concert", ['<a class="btn ghost" href="concert/${esc(h.slug)}.html">{}</a>']],
-  ["homepage.toon-alles", "Toon de hele agenda", "Knop onder de agenda", ['<button class="btn toon-alles" id="toon-alles" aria-expanded="false">{}</button>', '"{}"']],
-  ["homepage.toon-minder", "Toon minder", "Knop onder de agenda als alles getoond wordt", ['"{}"']],
+  ["homepage.kaart-tekst", "Korte beschrijving", "Uitklapper bij elk concert in de agenda (toont de korte tekst)", []],
+  ["homepage.kaart-link", "Naar de concertpagina →", "Link onder elk concert in de agenda, naar de volledige pagina", []],
+  ["homepage.eerstvolgende-link", "Meer over dit concert", "Knop naast Tickets bij het eerstvolgende concert", []],
+  ["homepage.toon-alles", "Toon de hele agenda", "Knop onder de agenda", ['<button class="btn toon-alles" id="toon-alles" aria-expanded="false">{}</button>']],
+  ["homepage.toon-minder", "Toon minder", "Knop onder de agenda als alles getoond wordt", []],
   ["homepage.ook-kop", "Ook van WESP", "Titel van het blok met concerten uit andere reeksen", ['<h2 id="ook-wesp-titel">{}</h2>']],
   ["homepage.ook-intro", "Concerten in onze andere reeksen, buiten de Merode.", "Tekst naast de titel van dat blok", [P]],
-  ["homepage.ook-meer", "Meer info ↗", "Link onderaan elke kaart in dat blok", ["{}<span class=\"sr\">"]],
-  ["homepage.ook-extern", "(opent een andere website)", "Verborgen tekst voor schermlezers bij die link", ['<span class="sr"> {}</span>']],
+  ["homepage.ook-meer", "Meer info ↗", "Link onderaan elke kaart in dat blok", []],
+  ["homepage.ook-extern", "(opent een andere website)", "Verborgen tekst voor schermlezers bij die link", []],
   ["homepage.festival-datum", "Hemelvaartweekend 2027", "Datumregel boven het festival als de datum nog niet in de agenda staat", ['<p class="label fest-datum" id="fest-datum">{}</p>']],
-  ["homepage.festival-voor", "Hemelvaartweekend", "Begin van de datumregel boven het festival (daarna volgen de datums)", ['"{} · "']],
+  ["homepage.festival-voor", "Hemelvaartweekend", "Begin van de datumregel boven het festival (daarna volgen de datums)", []],
   ["homepage.festival-titel", "Merodefestival 2027", "Titel van het blok over het festival", ['<h2 id="festival-titel">{}</h2>']],
   ["homepage.festival-intro", "Overdag wandel je met muzikanten door de mooiste natuurgebieden van de Merode. ’s Avonds speelt internationale folk op de Citadel van Diest. Het programma volgt in het voorjaar.", "Inleiding bij het festival", ['<p class="fest-intro">{}</p>']],
   ["homepage.festival-knop", "Meer over het festival", "Knop bij het festival", ['<a class="btn" id="fest-link" href="concert/merodefestival-2027.html">{}</a>']],
@@ -100,19 +114,19 @@ const HOMEPAGE = [
   ["homepage.festival-foto2", "’s Avonds: folk op de Citadel", "Onderschrift bij de tweede foto van het festival", ["<figcaption>{}</figcaption>"]],
   ["homepage.nieuws-kop", "Mis geen concert", "Titel van de nieuwsbriefstrook", ['<h2 id="nieuws-titel">{}</h2>']],
   ["homepage.nieuws-tekst", "Nieuwe concerten en het festivalprogramma in je mailbox.", "Tekst in de nieuwsbriefstrook", [P]],
-  ["homepage.nieuws-knop", "Schrijf je in", "Knop in de nieuwsbriefstrook", ['<a class="btn" href="https://eepurl.com/g8U9mX">{}</a>']],
-  ["homepage.volzet", "Volzet", "Label bij een uitverkocht concert in de agenda", [">{}</span>"]],
-  ["homepage.koop", "Koop tickets", "Knop bij het eerstvolgende concert", ['"{}"']],
-  ["homepage.tickets-kort", "Tickets", "Knop bij een concert in de lijst", [' : "{}")']],
-  ["homepage.eerstvolgende", "Eerstvolgende ·", "Begin van de regel boven het eerstvolgende concert", ['"{} "']],
-  ["homepage.nu", "Nu te zien", "Datumregel als een concert bezig is", ['"{}"']],
-  ["homepage.vanavond", "Vanavond", "Datumregel voor een concert van vandaag", ['"{}"']],
-  ["homepage.morgen", "Morgen", "Datumregel voor een concert van morgen", ['"{}"']],
-  ["homepage.deze", "Deze", "Datumregel voor een concert binnen een week (‘Deze zaterdag 7 maart’)", ['"{} "']],
-  ["homepage.meer-concert", "Meer over dit concert", "Link naar de pagina van een concert", [">{}</a>", '"{}"']],
-  ["homepage.meer-info", "Meer info", "Uitklapbare info bij een concert in de lijst", ["<summary>{}</summary>"]],
-  ["homepage.kijk-luister", "Kijk en luister", "Link bij een concert met video of muziek", ['"{}"']],
-  ["algemeen.foto", "Foto:", "Voor de naam van de fotograaf", ['"{} "']],
+  ["homepage.nieuws-knop", "Schrijf je in", "Knop in de nieuwsbriefstrook", ['<a class="btn" href="http://eepurl.com/g8U9mX">{}</a>']],
+  ["homepage.volzet", "Volzet", "Label bij een uitverkocht concert in de agenda", []],
+  ["homepage.koop", "Koop tickets", "Knop bij het eerstvolgende concert", []],
+  ["homepage.tickets-kort", "Tickets", "Knop bij een concert in de lijst", []],
+  ["homepage.eerstvolgende", "Eerstvolgende ·", "Begin van de regel boven het eerstvolgende concert", []],
+  ["homepage.nu", "Nu te zien", "Datumregel als een concert bezig is", []],
+  ["homepage.vanavond", "Vanavond", "Datumregel voor een concert van vandaag", []],
+  ["homepage.morgen", "Morgen", "Datumregel voor een concert van morgen", []],
+  ["homepage.deze", "Deze", "Datumregel voor een concert binnen een week (‘Deze zaterdag 7 maart’)", []],
+  ["homepage.meer-concert", "Meer over dit concert", "Link naar de pagina van een concert", []],
+  ["homepage.meer-info", "Meer info", "Uitklapbare info bij een concert in de lijst", []],
+  ["homepage.kijk-luister", "Kijk en luister", "Link bij een concert met video of muziek", []],
+  ["algemeen.foto", "Foto:", "Voor de naam van de fotograaf", []],
   ["footer.contact", "Contact", "Kop van de eerste kolom onderaan", ["<h3>{}</h3>"]],
   ["footer.organisatie", "Merodefestival is een project van WESP vzw, BE 0863 441 738, Jozef Wautersstraat 4, 3010 Kessel-Lo, IBAN BE50 9731 3542 0118", "Gegevens van de organisatie onderaan", [P]],
   ["footer.volg", "Volg ons", "Kop van de tweede kolom onderaan", ["<h3>{}</h3>"]],
@@ -140,6 +154,21 @@ export function pasHomepage(html) {
     reg(sleutel, standaard, uitleg);
     html = pas(html, sleutel, sjablonen, standaard);
   }
+  // Teksten voor het script van de homepage (agenda, filters, wisselende beelden), in de taal van de bouw
+  const H = Object.fromEntries(HOMEPAGE.map(([k, d, u]) => [k, [d, u]]));
+  const t = k => T(k, ...H[k]);
+  const TXT = {
+    foto: t("algemeen.foto"), pauzeer: t("homepage.pauzeer"), speel: t("homepage.speel"), extern: t("homepage.ook-extern"),
+    volzet: t("homepage.volzet"), koop: t("homepage.koop"), ticketsKort: t("homepage.tickets-kort"),
+    nu: t("homepage.nu"), vanavond: t("homepage.vanavond"), morgen: t("homepage.morgen"), deze: t("homepage.deze"),
+    eerstvolgende: t("homepage.eerstvolgende"), ookMeer: t("homepage.ook-meer"), meerConcert: t("homepage.eerstvolgende-link"),
+    kaartTekst: t("homepage.kaart-tekst"), kaartLink: t("homepage.kaart-link"),
+    toonAlles: t("homepage.toon-alles"), toonMinder: t("homepage.toon-minder"), festivalVoor: t("homepage.festival-voor"),
+    groep: { Alle: t("homepage.groep-alle"), Kerkconcerten: t("homepage.groep-kerkconcerten"), Festivals: t("homepage.groep-festivals") },
+    getoond: t("homepage.getoond"), getoondEen: t("homepage.getoond-een"),
+    ...DATUM[TAAL],
+  };
+  html = html.replace("<script>window.TXT = {};</script>", () => `<script>window.TXT = ${JSON.stringify(TXT).replace(/</g, "\\u003c")};</script>`);
   // Seizoensgegevens (titel, intro, prijzen...) worden in de pagina over de standaardwaarden heen gezet
   if (Object.keys(wijzigingen).length) {
     const inject = `<script>Object.assign(window.SEIZOEN, ${JSON.stringify(wijzigingen).replace(/</g, "\\u003c")});</script>`;

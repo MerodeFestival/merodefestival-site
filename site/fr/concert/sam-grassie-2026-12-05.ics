@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:sam-grassie-2026-12-05@merodefestival.be
+DTSTAMP:20261205T000000Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261205
+SUMMARY:Sam Grassie\, Dylan Fowler & Haroun Iqbal
+LOCATION:Sint-Pieterskerk\, Testelt
+URL:https://www.merodefestival.be/fr/concert/sam-grassie-2026-12-05
+END:VEVENT
+END:VCALENDAR

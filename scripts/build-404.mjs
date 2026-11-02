@@ -4,6 +4,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { T } from "./teksten.mjs";
+import { TAAL } from "./talen.mjs";
 
 export async function bouw404({ ROOT, SITE, esc, kopEd, voetEd }) {
   const zinnen = T("404.zinnen", [
@@ -30,7 +31,7 @@ export async function bouw404({ ROOT, SITE, esc, kopEd, voetEd }) {
   </script>`;
 
   const hoofd = kopEd
-    .replace(/<head>/, '<head>\n<base href="/">\n<meta name="robots" content="noindex">')
+    .replace(/<head>/, `<head>\n<base href="/${TAAL === "nl" ? "" : TAAL + "/"}">\n<meta name="robots" content="noindex">`)
     .replace(/<title>[^<]*<\/title>/, `<title>${esc(T("404.tab", "Pagina niet gevonden"))} | Merodefestival</title>`)
     .replace(/<meta name="description" content="[^"]*">/, "")
     .replace(/<link rel="canonical" href="[^"]*">/, "")

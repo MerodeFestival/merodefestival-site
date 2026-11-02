@@ -27,6 +27,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.merodefestival.be/#organisatie","name":"Merodefestival","legalName":"WESP vzw","url":"https://www.merodefestival.be/","logo":"https://www.merodefestival.be/seizoen/logo-oranje.png","email":"info@merodefestival.be","telephone":"+32498758296","vatID":"BE0863441738","address":{"@type":"PostalAddress","streetAddress":"Jozef Wautersstraat 4","postalCode":"3010","addressLocality":"Kessel-Lo","addressCountry":"BE"},"sameAs":["https://www.facebook.com/merodefestival","https://www.instagram.com/merodefestival/","https://www.youtube.com/channel/UCahKa1lM3yaWEwXdV_bBJdw"]},{"@type":"WebSite","@id":"https://www.merodefestival.be/#website","url":"https://www.merodefestival.be/","name":"Merodefestival","inLanguage":"nl","publisher":{"@id":"https://www.merodefestival.be/#organisatie"}}]}</script>
 <link rel="stylesheet" href="css/afwerking.css">
+<link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/">
+<link rel="alternate" hreflang="en" href="https://www.merodefestival.be/en/">
+<link rel="alternate" hreflang="fr" href="https://www.merodefestival.be/fr/">
+<link rel="alternate" hreflang="x-default" href="https://www.merodefestival.be/">
 </head>
 <body>
 
@@ -41,8 +45,9 @@
         <li><a href="producties.html">Producties</a></li>
         <li><a href="wesp.html">Over ons</a></li>
         <li><a href="vorige-edities.html">Vorige edities</a></li>
-      </ul>
+      <li class="talen-menu"><span aria-current="true" lang="nl" title="Nederlands">NL</span><a href="en/index.html" hreflang="en" lang="en" title="English">EN</a><a href="fr/index.html" hreflang="fr" lang="fr" title="Français">FR</a></li></ul>
     </nav>
+    <div class="talen" role="group" aria-label="Taal"><span aria-current="true" lang="nl" title="Nederlands">NL</span><a href="en/index.html" hreflang="en" lang="en" title="English">EN</a><a href="fr/index.html" hreflang="fr" lang="fr" title="Français">FR</a></div>
     <a class="btn" id="tickets-top" href="https://pierrot.io/wesp-vzw/kerkconcerten-2026-2027">Tickets</a>
   </div>
 </header>
@@ -521,8 +526,11 @@
 <script src="data/edities.js"></script>
 <script src="data/reeksen.js"></script>
 <script src="data/beeldbank.js"></script>
+<script>window.TXT = {"foto":"Foto:","pauzeer":"Wisselende beelden pauzeren","speel":"Wisselende beelden afspelen","extern":"(opent een andere website)","volzet":"Volzet","koop":"Koop tickets","ticketsKort":"Tickets","nu":"Nu te zien","vanavond":"Vanavond","morgen":"Morgen","deze":"Deze","eerstvolgende":"Eerstvolgende ·","ookMeer":"Meer info ↗","meerConcert":"Meer over dit concert","kaartTekst":"Korte beschrijving","kaartLink":"Naar de concertpagina →","toonAlles":"Toon de hele agenda","toonMinder":"Toon minder","festivalVoor":"Hemelvaartweekend","groep":{"Alle":"Alle concerten","Kerkconcerten":"Kerkconcerten","Festivals":"Festivals"},"getoond":"{n} concerten getoond","getoondEen":"{n} concert getoond","maand":["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"],"maandKort":["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"],"dag":["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"]};</script>
 <script>
 const S = window.SEIZOEN || {};
+// Teksten in de taal van de pagina (de bouw vult window.TXT in, zie scripts/teksten.mjs)
+const TXT = window.TXT;
 const ALLES = window.AGENDA || [];
 const isMerode = e => !(e.sites || []).length || e.sites.includes("Merodefestival");
 const events = ALLES.filter(isMerode);
@@ -551,7 +559,7 @@ document.getElementById("credit").textContent = S.credit || "";
     img.className = "dia foto-dia"; img.src = f.src; img.alt = f.alt || ""; img.loading = "lazy";
     if (f.uitsnede === "volledig tonen") img.style.objectFit = "contain";
     else img.style.objectPosition = UITSNEDE[f.uitsnede] || "center";
-    img.dataset.credit = f.fotograaf ? "Foto: " + f.fotograaf : "";
+    img.dataset.credit = f.fotograaf ? TXT.foto + " " + f.fotograaf : "";
     box.insertBefore(img, knop); dias.push(img);
   });
   let i = 0, timer = null;
@@ -559,8 +567,8 @@ document.getElementById("credit").textContent = S.credit || "";
     dias[i].classList.remove("actief"); i = n; dias[i].classList.add("actief");
     credit.textContent = i === 0 ? (S.credit || "") : dias[i].dataset.credit;
   };
-  const start = () => { timer = setInterval(() => toon((i + 1) % dias.length), 6000); knop.textContent = "❚❚"; knop.setAttribute("aria-label", "Wisselende beelden pauzeren"); };
-  const stop = () => { clearInterval(timer); timer = null; knop.textContent = "▶"; knop.setAttribute("aria-label", "Wisselende beelden afspelen"); };
+  const start = () => { timer = setInterval(() => toon((i + 1) % dias.length), 6000); knop.textContent = "❚❚"; knop.setAttribute("aria-label", TXT.pauzeer); };
+  const stop = () => { clearInterval(timer); timer = null; knop.textContent = "▶"; knop.setAttribute("aria-label", TXT.speel); };
   knop.hidden = false;
   knop.addEventListener("click", () => timer ? stop() : start());
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) start(); else stop();
@@ -570,9 +578,9 @@ document.getElementById("intro-tekst").innerHTML = (S.intro || []).map(p => `<p>
 if (S.ticketlink) ["intro-tickets","tickets-top"].forEach(id => document.getElementById(id).href = S.ticketlink);
 
 // ---------- agenda ----------
-const MAAND = ["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"];
-const MAAND_LANG = ["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"];
-const DAG = ["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"];
+const MAAND = TXT.maandKort, MAAND_LANG = TXT.maand, DAG = TXT.dag;
+// Soort in het Nederlands, ook op een vertaalde pagina (daar staat de vertaling in kind)
+const soortNl = e => e.kindNl || e.kind || "";
 const d = s => { const [y,m,dd] = s.split("-").map(Number); return new Date(y,m-1,dd); };
 const today = new Date(); today.setHours(0,0,0,0);
 const upcoming = ALLES.filter(e => d(e.end || e.start) >= today).sort((a,b) => d(a.start) - d(b.start));
@@ -582,42 +590,42 @@ const R = window.REEKSEN || {};
 const linkVan = e => e.slug
   ? { href: `concert/${e.slug}.html`, extern: false }
   : { href: e.info || R[e.reeks] || (e.sites || []).map(x => R[x]).find(Boolean) || "", extern: true };
-const EXT = `<span class="sr"> (opent een andere website)</span>`;
+const EXT = `<span class="sr"> ${esc(TXT.extern)}</span>`;
 // Reeksen voor de filterknoppen: een concert kan bij meer dan één knop horen (een kerkconcert van Holsbeek Sessies staat bij beide)
 const groepenVan = e => {
   const g = [];
-  if (/festival/i.test(e.kind)) g.push("Festivals");
+  if (/festival/i.test(soortNl(e))) g.push("Festivals");
   ["Holsbeek Sessies", "Limburg Sessies", "Klanken van de Steden"].forEach(r => { if (e.reeks === r || (e.sites || []).includes(r)) g.push(r); });
-  if (/kerkconcert/i.test(e.kind) || !g.length) g.push("Kerkconcerten");
+  if (/kerkconcert/i.test(soortNl(e)) || !g.length) g.push("Kerkconcerten");
   return g;
 };
 
 const ticketHtml = (e, groot) => e.volzet
-  ? `<span class="soldout">Volzet</span>`
-  : e.tickets ? `<a class="btn" href="${esc(e.tickets)}">${esc(e.cta || (groot ? "Koop tickets" : "Tickets"))}${groot && e.price ? " (" + esc(e.price) + ")" : ""}</a>` : "";
+  ? `<span class="soldout">${esc(TXT.volzet)}</span>`
+  : e.tickets ? `<a class="btn" href="${esc(e.tickets)}">${esc(e.cta || (groot ? TXT.koop : TXT.ticketsKort))}${groot && e.price ? " (" + esc(e.price) + ")" : ""}</a>` : "";
 
 function whenLabel(e){
   const s = d(e.start);
   const lang = `${DAG[s.getDay()]} ${s.getDate()} ${MAAND_LANG[s.getMonth()]}`;
   const vol = lang.charAt(0).toUpperCase() + lang.slice(1);
   if (window.__PRERENDER) return vol; // vaste pagina: geen ‘vanavond’ of ‘morgen’, dat rekent de browser zelf uit
-  if (e.end && s <= today) return "Nu te zien";
+  if (e.end && s <= today) return TXT.nu;
   const diff = Math.round((s - today)/86400000);
-  if (diff === 0) return "Vanavond";
-  if (diff === 1) return "Morgen";
-  return diff < 7 ? "Deze " + lang : vol;
+  if (diff === 0) return TXT.vanavond;
+  if (diff === 1) return TXT.morgen;
+  return diff < 7 ? TXT.deze + " " + lang : vol;
 }
 
 if (upcoming.length){
   const h = upcoming.find(isMerode) || upcoming[0];   // de Merode is de ingangspoort
   document.getElementById("next").hidden = false;
-  document.getElementById("next-when").textContent = "Eerstvolgende · " + whenLabel(h);
+  document.getElementById("next-when").textContent = TXT.eerstvolgende + " " + whenLabel(h);
   document.getElementById("next-artist").textContent = h.artist;
   document.getElementById("next-where").textContent = [h.place, h.village, h.time].filter(Boolean).join(", ");
   document.getElementById("next-acties").innerHTML = ticketHtml(h, true) +
     (() => { const L = linkVan(h); return L.href ? (L.extern
-      ? `<a class="btn ghost" href="${esc(L.href)}" target="_blank" rel="noopener">Meer info ↗${EXT}</a>`
-      : `<a class="btn ghost" href="${esc(L.href)}">Meer over dit concert</a>`) : ""; })();
+      ? `<a class="btn ghost" href="${esc(L.href)}" target="_blank" rel="noopener">${esc(TXT.ookMeer)}${EXT}</a>`
+      : `<a class="btn ghost" href="${esc(L.href)}">${esc(TXT.meerConcert)}</a>`) : ""; })();
 }
 
 const list = document.getElementById("events");
@@ -638,8 +646,8 @@ function toonLijst(groep) {
       <h3 class="artist">${pagina ? `<a href="${esc(pagina)}"${att}>` : ""}${esc(e.artist)}${pagina ? "</a>" : ""}${e.origin ? ` <span class="herkomst">(${esc(e.origin)})</span>` : ""}</h3>
       <p class="meta"><span class="soort">${esc(e.kind)}</span> · ${esc([e.place, e.village].filter(Boolean).join(", "))}${e.time ? " · " + esc(e.time) : ""}</p>
       <div class="links">
-        ${e.text ? `<details><summary>Korte beschrijving</summary>${String(e.text).split(/\n\s*\n/).map(p => `<p>${esc(p)}</p>`).join("")}</details>` : ""}
-        ${pagina ? `<a href="${esc(pagina)}"${att}>${L.extern ? "Meer info ↗" + EXT : "Naar de concertpagina →"}</a>` : ""}
+        ${e.text ? `<details><summary>${esc(TXT.kaartTekst)}</summary>${String(e.text).split(/\n\s*\n/).map(p => `<p>${esc(p)}</p>`).join("")}</details>` : ""}
+        ${pagina ? `<a href="${esc(pagina)}"${att}>${L.extern ? esc(TXT.ookMeer) + EXT : esc(TXT.kaartLink)}</a>` : ""}
       </div>
     </div>
     <div class="act">${e.price && !e.volzet ? `<span class="price">${esc(e.price)}</span>` : ""}${ticketHtml(e, false)}</div>
@@ -653,29 +661,29 @@ toon.addEventListener("click", () => {
   open = !open;
   list.classList.toggle("alles", open);
   toon.setAttribute("aria-expanded", open);
-  toon.textContent = open ? "Toon minder" : "Toon de hele agenda";
+  toon.textContent = open ? TXT.toonMinder : TXT.toonAlles;
 });
 // Knoppen per reeks
 const GROEPEN = ["Kerkconcerten", "Holsbeek Sessies", "Limburg Sessies", "Klanken van de Steden", "Festivals"].filter(g => upcoming.some(e => groepenVan(e).includes(g)));
 const filtersEl = document.getElementById("filters");
 if (GROEPEN.length > 1) {
   filtersEl.hidden = false;
-  filtersEl.innerHTML = ["Alle", ...GROEPEN].map(g => `<button type="button" class="btn${g === "Alle" ? "" : " ghost"}" data-groep="${esc(g)}" aria-pressed="${g === "Alle"}">${esc(g === "Alle" ? "Alle concerten" : g)}</button>`).join("");
+  filtersEl.innerHTML = ["Alle", ...GROEPEN].map(g => `<button type="button" class="btn${g === "Alle" ? "" : " ghost"}" data-groep="${esc(g)}" aria-pressed="${g === "Alle"}">${esc(TXT.groep[g] || g)}</button>`).join("");
   filtersEl.addEventListener("click", ev => {
     const b = ev.target.closest("button[data-groep]"); if (!b) return;
     filtersEl.querySelectorAll("button").forEach(x => { const aan = x === b; x.classList.toggle("ghost", !aan); x.setAttribute("aria-pressed", aan); });
     toonLijst(b.dataset.groep);
     const n = list.children.length;
-    document.getElementById("filter-melding").textContent = n + (n === 1 ? " concert" : " concerten") + " getoond";
+    document.getElementById("filter-melding").textContent = (n === 1 ? TXT.getoondEen : TXT.getoond).replace("{n}", n);
   });
 }
 toonLijst("Alle");
 
 // ---------- festival en vorige edities ----------
-const fest = events.find(e => /festival/i.test(e.kind) && /merodefestival/i.test(e.artist));
+const fest = events.find(e => /festival/i.test(soortNl(e)) && /merodefestival/i.test(e.artist));
 if (fest) {
   const s1 = d(fest.start), s2 = fest.end ? d(fest.end) : null;
-  document.getElementById("fest-datum").textContent = "Hemelvaartweekend · " +
+  document.getElementById("fest-datum").textContent = TXT.festivalVoor + " · " +
     (s2 ? `${s1.getDate()}–${s2.getDate()} ${MAAND_LANG[s2.getMonth()]} ${s2.getFullYear()}` : `${s1.getDate()} ${MAAND_LANG[s1.getMonth()]} ${s1.getFullYear()}`);
   if (fest.slug) document.getElementById("fest-link").href = `concert/${fest.slug}.html`;
 }

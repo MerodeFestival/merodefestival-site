@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:lydie-thonnard-2026-10-23@merodefestival.be
+DTSTAMP:20261023T000000Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261023
+SUMMARY:Lydie Thonnard
+LOCATION:Kapel Onze-Lieve-Vrouw-ten-Eik\, Geelse Straat 92\, 2260 Westerlo
+URL:https://www.merodefestival.be/fr/concert/lydie-thonnard-2026-10-23
+END:VEVENT
+END:VCALENDAR

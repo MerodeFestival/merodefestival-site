@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:en-waar-de-ster-bleef-stille-staan-2026-12-20@merodefestival.be
+DTSTAMP:20261220T000000Z
+DTSTART;VALUE=DATE:20261220
+DTEND;VALUE=DATE:20261220
+SUMMARY:En waar de ster bleef stille staan
+LOCATION:Strokapel\, Ramsel
+URL:https://www.merodefestival.be/fr/concert/en-waar-de-ster-bleef-stille-staan-2026-12-20
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Merodefestival//NL
+BEGIN:VEVENT
+UID:sara-salverius-blazerskwartet-2027-06-19@merodefestival.be
+DTSTAMP:20270619T000000Z
+DTSTART;VALUE=DATE:20270619
+DTEND;VALUE=DATE:20270619
+SUMMARY:Sara Salvérius & blazerskwartet: Adem
+LOCATION:O.L.V. Onbevlekt Ontvangen-kerk\, Blauberg
+URL:https://www.merodefestival.be/en/concert/sara-salverius-blazerskwartet-2027-06-19
+END:VEVENT
+END:VCALENDAR

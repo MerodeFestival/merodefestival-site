@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Previous editions | Merodefestival</title>
+<meta name="description" content="More than ten years of Merodefestival: every edition since 2015, with programme, photos and videos.">
+<link rel="canonical" href="https://www.merodefestival.be/en/vorige-edities">
+<meta property="og:title" content="Merodefestival since 2015">
+<meta property="og:image" content="https://www.merodefestival.be/seizoen/artwork.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="apple-touch-icon" href="../img/favicon.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
+<link rel="preload" href="../fonts/alegreya-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/alatsi-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../seizoen/seizoen.css">
+<link rel="stylesheet" href="../css/publiek.css">
+<link rel="stylesheet" href="../css/concert.css">
+<style>
+.ed-hero{padding:4rem 0 3rem}
+.ed-hero h1{font-size:clamp(2.6rem,7vw,5rem);margin:.5rem 0 1rem}
+.ed-hero p{max-width:42rem;font-size:1.25rem;color:var(--s-licht)}
+.ed-nav{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;padding:0;margin:2rem 0 0}
+.ed-nav a{display:inline-block;padding:.35rem .8rem;border:1px solid var(--s-zand);border-radius:999px;font-family:var(--label);text-decoration:none}
+.ed-nav a:hover{border-color:var(--s-oranje);color:var(--s-oranje)}
+.editie{display:grid;grid-template-columns:12rem 1fr;gap:2.5rem;padding:3rem 0;border-top:1px solid var(--s-papier-lijn)}
+.editie:first-child{border-top:0}
+.editie>div{min-width:0}
+.editie .jaar{font-family:var(--label);font-size:clamp(3rem,7vw,4.5rem);line-height:.9;color:var(--s-oranje);filter:brightness(.85)}
+.editie .plek{display:block;margin-top:.5rem;font-size:1.15rem}
+.editie h2{font-size:1.5rem;margin:0 0 .75rem}
+.editie .prog{font-size:1.2rem;margin:0 0 1rem;max-width:44rem}
+.editie .prog strong{font-family:var(--label);font-weight:400;font-size:.9rem;color:var(--s-papier-zacht);display:block;margin-bottom:.25rem}
+.editie .tekst{font-style:italic;margin:0 0 1rem}
+.ed-sub{color:var(--s-zand);margin:1.75rem 0 -.75rem}
+.editie .plek.zacht{font-size:.98rem;color:var(--s-papier-zacht);margin-top:.15rem}
+.affiche{display:block;width:100%;max-width:12rem;margin-top:1.25rem;border-radius:2px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.namen{list-style:none;margin:.25rem 0 0;padding:0;columns:2;column-gap:2rem}
+.namen li{break-inside:avoid;padding:.15rem 0}
+.namen.klein{font-size:1rem;columns:3}
+.editie .prog{margin-bottom:1.5rem}
+.kerk-archief{padding:4.5rem 0 5rem;border-top:1px solid var(--s-papier-lijn)}
+.kerk-archief h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:.5rem}
+.kerk-intro{font-style:italic;color:var(--s-papier-zacht);margin:0 0 2.5rem;max-width:40rem}
+.kgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem 3rem;align-items:start}
+.kseizoen{text-align:center;padding:2rem 1.5rem;border:1px solid var(--s-papier-lijn);border-radius:3px}
+.kcover{display:block;width:9rem;margin:0 auto 1.5rem;box-shadow:0 6px 18px rgba(0,0,0,.2);border-radius:2px}
+.kt{font-weight:400;font-size:clamp(1.4rem,2.6vw,1.9rem);letter-spacing:.28em;line-height:1.15;color:var(--s-papier-zacht);margin:0 0 1.5rem}
+.kt span{display:block}
+.kt em{font-style:normal;color:var(--s-oranje)}
+.kopm{font-style:italic;color:var(--s-papier-zacht);font-size:.98rem;margin:0 0 1rem}
+.kerk-lijst{list-style:none;margin:0;padding:0}
+.kerk-lijst li{padding:.2rem 0 .9rem}
+.kerk-lijst li + li::before{content:"× × ×";display:block;letter-spacing:.4em;color:var(--s-papier-zacht);font-family:var(--label);font-size:.85rem;margin-bottom:.9rem}
+.kd{display:block;font-family:var(--label);font-size:.92rem;color:var(--s-papier-inkt)}
+.ka{display:block;font-weight:700;font-size:1.08rem;line-height:1.3;margin:.1rem 0}
+.kk{display:block;font-size:.95rem;color:var(--s-papier-zacht)}
+.kvid{width:13rem;max-width:100%;margin:.6rem auto 0}
+.kvid .play{transform:scale(.7)}
+.ksep{display:block;height:.7rem}
+.kerk-intro a{font-style:normal;text-underline-offset:3px}
+@media (max-width:820px){.kgrid{grid-template-columns:1fr}}
+.editie .dank{font-size:.95rem;color:var(--s-papier-zacht);margin:1rem 0 0}
+.editie .videos{grid-template-columns:repeat(3,1fr)}
+.editie .videos .video:first-child{grid-column:auto}
+@media (max-width:820px){.editie{grid-template-columns:1fr;gap:1rem}.editie .videos{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.editie .videos{grid-template-columns:1fr}}
+</style>
+<link rel="stylesheet" href="../css/afwerking.css">
+<link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/vorige-edities">
+<link rel="alternate" hreflang="en" href="https://www.merodefestival.be/en/vorige-edities">
+<link rel="alternate" hreflang="fr" href="https://www.merodefestival.be/fr/vorige-edities">
+<link rel="alternate" hreflang="x-default" href="https://www.merodefestival.be/vorige-edities">
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><img src="../seizoen/logo-oranje.png" alt="Merodefestival" width="82" height="56"></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="hoofdmenu">Menu</button>
+    <nav id="hoofdmenu" aria-label="Main menu">
+      <ul>
+        <li><a href="index.html#agenda">What's on</a></li>
+        <li><a href="index.html#festival">Festival 2027</a></li>
+        <li><a href="producties.html">Productions</a></li>
+        <li><a href="wesp.html">About us</a></li>
+        <li><a href="vorige-edities.html">Previous editions</a></li>
+      <li class="talen-menu"><a href="../vorige-edities.html" hreflang="nl" lang="nl" title="Nederlands">NL</a><span aria-current="true" lang="en" title="English">EN</span><a href="../fr/vorige-edities.html" hreflang="fr" lang="fr" title="Français">FR</a></li></ul>
+    </nav>
+    <div class="talen" role="group" aria-label="Language"><a href="../vorige-edities.html" hreflang="nl" lang="nl" title="Nederlands">NL</a><span aria-current="true" lang="en" title="English">EN</span><a href="../fr/vorige-edities.html" hreflang="fr" lang="fr" title="Français">FR</a></div>
+    <a class="btn" href="https://pierrot.io/wesp-vzw/kerkconcerten-2026-2027">Tickets</a>
+  </div>
+</header>
+<main>
+  <section class="ed-hero">
+    <div class="wrap">
+      <a class="terug" href="index.html">← Home</a>
+      <h1>Merodefestival since 2015</h1>
+      <p>After its first edition in 2015, Merodefestival was able to grow at its own pace: every year the best of the European folk scene in the Merode region, and since 2017 a concert series throughout the year as well. Browse through more than ten years of festival.</p>
+      <p class="ed-sub label">Festival</p>
+      <ul class="ed-nav"><li><a href="#2026">2026</a></li><li><a href="#2025">2025</a></li><li><a href="#2024">2024</a></li><li><a href="#2023">2023</a></li><li><a href="#2022">2022</a></li><li><a href="#2021">2021</a></li><li><a href="#2020">2020</a></li><li><a href="#2019">2019</a></li><li><a href="#2018">2018</a></li><li><a href="#2017">2017</a></li><li><a href="#2016">2016</a></li><li><a href="#2015">2015</a></li></ul>
+      <p class="ed-sub label">Church concerts</p>
+      <ul class="ed-nav"><li><a href="#kerk-2026">2026–2027</a></li><li><a href="#kerk-2025">2025–2026</a></li><li><a href="#kerk-2024">2024–2025</a></li><li><a href="#kerk-2023">2023–2024</a></li><li><a href="#kerk-2022">2022–2023</a></li><li><a href="#kerk-2021">2021–2022</a></li><li><a href="#kerk-2020">2020–2021</a></li><li><a href="#kerk-2019">2019–2020</a></li><li><a href="#kerk-2018">2018–2019</a></li><li><a href="#kerk-2017">2017–2018</a></li></ul>
+      <p class="ed-sub label">Also from WESP</p>
+      <ul class="ed-nav"><li><a href="#holsbeek">Holsbeek Sessies</a></li><li><a href="#limburg">Limburg Sessies</a></li><li><a href="#park">PARK Festival</a></li><li><a href="#beleuvenissen">Beleuvenissen op het Hogeschoolplein</a></li><li><a href="#producties">Andere producties</a></li></ul>
+    </div>
+  </section>
+  <section class="papier">
+    <div class="wrap" style="display:block">
+      <article class="editie" id="2026">
+        <div>
+          <span class="jaar">2026</span>
+          <span class="plek">13–17 May 2026</span>
+          <span class="plek zacht">Citadel Diest</span>
+          <img class="affiche" src="../img/affiches/2026.jpg" alt="Merodefestival poster 2026" loading="lazy">
+        </div>
+        <div>
+          
+          
+          <div class="prog"><strong>Concerts</strong><ul class="namen"><li>Andries Boone sextet (BE)</li><li>Flook (UK-IRL)</li><li>Macdara Yeates (IRL)</li><li>Bipolar Bows (BE-FR) feat. Vinayak Netke &amp; Sabiha Khan (IN)</li><li>Bamako Express (BE-MALI)</li><li>Sathanao (GEO) &amp; Motyk (BE)</li><li>Saraï (FR)</li><li>Sauvage (FR-BE)</li></ul></div>
+          <div class="prog"><strong>Musical walks in Langdonken, Konijnenberg, Demerbroeken and Oosterlo</strong><ul class="namen klein"><li>Violastravaganza (BE-FR)</li><li>Jeroen Knapen (BE)</li><li>Nette &amp; Hans Mortelmans (BE)</li><li>Katie Spencer (UK)</li><li>Macdara Yeates (IRL)</li><li>Haroun Iqbal (BE)</li><li>Sathanao (GEO)</li><li>Vinayak Netke &amp; Sabiha Khan (IN)</li><li>Rue Pascale (FR)</li><li>Sophie Cavez &amp; Baltazar Montanaro (FR)</li><li>Joël Diarra &amp; Ousmana Diarra (MALI)</li><li>Sally in the Woods (UK)</li><li>Bipolar Bows (BE-FR)</li><li>Melisa Galluzzo (ARG)</li><li>Margaux Lienard &amp; Julien Biget (FR)</li><li>Keun (BE)</li></ul></div>
+          <div class="videos"><div class="video"><button class="yt" type="button" data-id="ppZgBCbEFJc" aria-label="Video 1 from 2026" style="background-image:url(../data/vthumb/1a226fdf3c481b9b.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="cucWKGjmJIw" aria-label="Video 2 from 2026" style="background-image:url(../data/vthumb/162035b0c26e96b6.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="bzOXKNMyU8E" aria-label="Video 3 from 2026" style="background-image:url(../data/vthumb/cae8124362cfd17a.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="BeXoPlvJINA" aria-label="Video 4 from 2026" style="background-image:url(../data/vthumb/84ba7c19afd79e89.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="ncFb57b8b0k" aria-label="Video 5 from 2026" style="background-image:url(../data/vthumb/3aa647c4ec73b61a.jpg)"><span class="play" aria-hidden="true"></span></button></div></div>
+          <div class="ed-fotos" aria-label="Photos by 2026"><a href="https://beeld.merodefestival.be/merodefestival/2026-citadel-publiek.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/2026-citadel-publiek.webp" alt="Volle tribune voor het openluchtpodium in de bakstenen Citadel van Diest, met lichtslingers boven het podium" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/2026-sathanao-weide.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/2026-sathanao-weide.webp" alt="Acht zangeressen in traditionele Georgische jurken staan samen in een hoge grasweide" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/2026-cavez-montanaro-boom.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/2026-cavez-montanaro-boom.webp" alt="Violist en accordeoniste spelen samen aan de voet van een grote boom langs een wandelpad" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/2026-diarra-balafon-tent.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/2026-diarra-balafon-tent.webp" alt="Twee muzikanten met balafoon en djembé onder een witte tent in een groene weide" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/2026-demer-klaprozen.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/2026-demer-klaprozen.webp" alt="Rode klaprozen in het gras langs de oever van de Demer onder een blauwe lucht" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/2026-watermolen-wandelaars.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/2026-watermolen-wandelaars.webp" alt="Wandelaars steken een brugje over naast een oude bakstenen watermolen met schoepenrad" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/2026-wandelaars-weide.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/2026-wandelaars-weide.webp" alt="Een lange rij wandelaars loopt langs een grote boom door een groene weide" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/2026-concert-in-de-wei.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/2026-concert-in-de-wei.webp" alt="Gitarist speelt voor wandelaars die in het gras zitten, met een hond vooraan" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/2026-rue-pascale-kerk-oosterlo.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/2026-rue-pascale-kerk-oosterlo.webp" alt="Drie muzikantes met mandoline en accordeon spelen voor het altaar van een lichte dorpskerk" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/2026-sabiha-khan-podium.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/2026-sabiha-khan-podium.webp" alt="Zangeres in een grijze omslagdoek zingt lachend in rood en blauw licht" loading="lazy"></a></div>
+          
+        </div>
+      </article>
+      <article class="editie" id="2025">
+        <div>
+          <span class="jaar">2025</span>
+          <span class="plek">28 May – 1 June 2025</span>
+          <span class="plek zacht">Citadel Diest</span>
+          <img class="affiche" src="../img/affiches/2025.jpg" alt="Merodefestival poster 2025" loading="lazy">
+        </div>
+        <div>
+          
+          
+          <div class="prog"><strong>Concerts</strong><ul class="namen"><li>Alterne (DK-EST-BE)</li><li>GFVP feat. Cristina Vetrone &amp; Livia Giaffreda (BE-IT)</li><li>Rory McLeod (UK)</li><li>Global Music Ensemble (BE)</li><li>Broes (BE)</li><li>Airboxes feat. Eilidh Shaw, Amy Henderson &amp; Ross Martin (BE-SCO)</li><li>Jacques Stotzem &amp; Dylan Fowler (BE-WAL)</li><li>The Friel Sisters (IRL)</li></ul></div>
+          <div class="prog"><strong>Musical walks in Westmeerbeek, Langdorp, Tongerlo and Veerle-Heide</strong><ul class="namen klein"><li>Akleja (DE)</li><li>Sabrina Dinan (IRL)</li><li>Cristina Vetrone (IT)</li><li>Duo De Schepper / Sanczuk (BE)</li><li>Barbara Ardenois (BE)</li><li>Bellowbow (BE)</li><li>Alterne (DK-BE)</li><li>Rory McLeod (UK)</li><li>Airboxes (BE)</li><li>Charneux, Leleux &amp; Puma (BE)</li><li>Dylan Fowler (WAL)</li><li>Eilidh Shaw, Amy Henderson &amp; Ross Martin (SCO)</li><li>The Friel Sisters (IRL)</li><li>Tilia Tilia (BE)</li><li>Cathal Ó Curráin &amp; Marty Barry (IRL)</li><li>Jacques Stotzem (BE)</li></ul></div>
+          <div class="videos"><div class="video"><button class="yt" type="button" data-id="xA4um3A5Fjk" aria-label="Video 1 from 2025" style="background-image:url(../data/vthumb/e551920bb3a14a64.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="RIK15Pzyyu0" aria-label="Video 2 from 2025" style="background-image:url(../data/vthumb/f3f75cde56414d9d.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="sNKxREvbhnU" aria-label="Video 3 from 2025" style="background-image:url(../data/vthumb/d2d6c59a398311fd.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="HzJnLfiK3tY" aria-label="Video 4 from 2025" style="background-image:url(../data/vthumb/2f8eaff81c69bd29.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="TdBoALRqvY0" aria-label="Video 5 from 2025" style="background-image:url(../data/vthumb/9b093ac510370ece.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="jDtdhJYp0mQ" aria-label="Video 6 from 2025" style="background-image:url(../data/vthumb/d91b04aa401edbde.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="rUmEa1E-3W4" aria-label="Video 7 from 2025" style="background-image:url(../data/vthumb/b6495bd519a245ee.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="yAQTYGF_xeE" aria-label="Video 8 from 2025" style="background-image:url(../data/vthumb/ff1f4cc504f98183.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="-5zb707SD1Q" aria-label="Video 9 from 2025" style="background-image:url(../data/vthumb/01eb42835328d54c.jpg)"><span class="play" aria-hidden="true"></span></button></div></div>
+          <div class="ed-fotos" aria-label="Photos by 2025"><a href="https://beeld.merodefestival.be/merodefestival/535525-796748.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/535525-796748.webp" alt="Gitarist op houten bank onder een eik" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/69173-203609.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/69173-203609.webp" alt="Jonge accordeonist speelt op podium" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/318184-805557.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/318184-805557.webp" alt="Wandelaars luisteren naar muzikanten in kerkruïne" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/267885-879334.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/267885-879334.webp" alt="Folkgroep op podium voor verlichte bakstenen gewelven" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/903899-757648.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/903899-757648.webp" alt="Oudere gitarist speelt buiten" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/403792-110300.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/403792-110300.webp" alt="Duo met mandoline en nyckelharpa voor oude muur" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/740938-941527.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/740938-941527.webp" alt="Zanger met bouzouki op paars verlicht podium" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/779777-579233.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/779777-579233.webp" alt="Lachend en applaudisserend publiek" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/789349-559486.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/789349-559486.webp" alt="Zangeres met accordeon zingt in blauw licht" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/336511-739772.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/336511-739772.webp" alt="Trio met klarinet, contrabas en kaderdrum buiten" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/231866-277331.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/231866-277331.webp" alt="Band speelt voor blauw verlichte bakstenen boog" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/336128-273506.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/336128-273506.webp" alt="Folkband op roze verlicht podium voor bakstenen bogen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/947793-774147.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/947793-774147.webp" alt="Muzikante speelt uilleann pipes op podium" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/133928-967085.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/133928-967085.webp" alt="Publiek in regenjassen kijkt naar optreden in de regen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/471280-591371.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/471280-591371.webp" alt="Gitarist zingt op een tapijtje naast wandelpad" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/330673-150259.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/330673-150259.webp" alt="Drie muzikantes spelen op een boomstam in het bos" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/14276-261596.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/14276-261596.webp" alt="Avondconcert met publiek in regenponcho's voor verlicht podium" loading="lazy"></a></div>
+          <p class="dank">Photos and videos: with thanks to Steven Vanderaspoilden, Achim Kehlenbach, Bert Huysentruyt &amp; Annie Demarsin.</p>
+        </div>
+      </article>
+      <article class="editie" id="2024">
+        <div>
+          <span class="jaar">2024</span>
+          <span class="plek">8–12 May 2024</span>
+          <span class="plek zacht">Beddermolen, Tongerlo</span>
+          <img class="affiche" src="../img/affiches/2024.jpg" alt="Merodefestival poster 2024" loading="lazy">
+        </div>
+        <div>
+          
+          
+          <div class="prog"><strong>Concerts</strong><ul class="namen"><li>Naragonia Quartet (BE) feat. Andy Cutting (UK) &amp; Gudrun Walther (DE)</li><li>Griff Trio (BE) feat. Sutari (PL) &amp; Goran Farkaš (HR)</li><li>WÖR (BE) feat. Kongero (SE)</li><li>Hiraeth</li><li>Ceri Rhys Matthews &amp; Julie Murphy (WAL)</li><li>Peixe é Limão (BE-IT)</li><li>Roseanne Reid (SCO)</li><li>Leana.Island &amp; Kulno Malva (EST)</li></ul></div>
+          <div class="prog"><strong>Musical walks</strong><ul class="namen klein"><li>Esi Nri</li><li>Miro Pauwels</li><li>Josefina Paulson &amp; Sophie Cavez</li><li>Livia Giaffreda</li><li>Bojan Cvetrežnik &amp; Barja Drnovšek</li><li>Nele Uyttendaele &amp; Daan Jacob</li><li>Amber Haddad Trio</li><li>Stefan Bracaval &amp; Stijn Kuppens</li><li>Anmoor</li><li>Nana</li></ul></div>
+          <div class="videos"><div class="video"><button class="yt" type="button" data-id="iEA2GTKrzmY" aria-label="Video 1 from 2024" style="background-image:url(../data/vthumb/1786bdf75acc5f2f.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="HA-FzUvIIjo" aria-label="Video 2 from 2024" style="background-image:url(../data/vthumb/ec9baeab26d87bb8.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="BKpflFLhmfI" aria-label="Video 3 from 2024" style="background-image:url(../data/vthumb/6c622e257b1b2b51.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="bvbE6FQUBzo" aria-label="Video 4 from 2024" style="background-image:url(../data/vthumb/a9c20e354f784f3f.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="hw0FbvRRtoc" aria-label="Video 5 from 2024" style="background-image:url(../data/vthumb/3ad9884074d5a958.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="35vzmNN2dh8" aria-label="Video 6 from 2024" style="background-image:url(../data/vthumb/0eab7763da7fbc43.jpg)"><span class="play" aria-hidden="true"></span></button></div></div>
+          <div class="ed-fotos" aria-label="Photos by 2024"><a href="https://beeld.merodefestival.be/merodefestival/968342-51887.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/968342-51887.webp" alt="Cellist en fluitist spelen in het bos" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/367918-606873.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/367918-606873.webp" alt="Bezoekers aan biertafels op zonnige binnenkoer" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/468463-294332.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/468463-294332.webp" alt="Kaarsjes en lichtslingers op binnenkoer bij avond" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/726393-846860.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/726393-846860.webp" alt="Band groet arm in arm het publiek" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/619876-907499.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/619876-907499.webp" alt="Zangeres met kaderdrum zingt in het groen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/671301-201421.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/671301-201421.webp" alt="Ensemble onder oranje tentdoek voor vol publiek" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/168644-965628.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/168644-965628.webp" alt="Contrabassist en accordeoniste spelen op een bospad" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/728887-122441.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/728887-122441.webp" alt="Lachende oudspeler buiten in de zon" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/763186-922168.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/763186-922168.webp" alt="Groot ensemble onder roze tentdoek voor publiek" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/270678-554090.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/270678-554090.webp" alt="Grote pan met verse salade en kruidenbrood" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/962077-394387.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/962077-394387.webp" alt="Muzikant speelt harpluit op een bospad" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/659646-802134.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/659646-802134.webp" alt="Bezoekers aan biertafels op een hoevebinnenkoer" loading="lazy"></a></div>
+          <p class="dank">Photos and videos: with thanks to Steven Vanderaspoilden, Achim Kehlenbach, Bert Huysentruyt, Annie Demarsin &amp; Jos Maes.</p>
+        </div>
+      </article>
+      <article class="editie" id="2023">
+        <div>
+          <span class="jaar">2023</span>
+          <span class="plek">17–21 May 2023</span>
+          <span class="plek zacht">Dassenaarde nature reserve, near Diest</span>
+          <img class="affiche" src="../img/affiches/2023.jpg" alt="Merodefestival poster 2023" loading="lazy">
+        </div>
+        <div>
+          
+          
+          <div class="prog"><strong>On the programme, among others</strong><ul class="namen"><li>Trials of Cato</li><li>Maria Mazzotta</li><li>Tamala</li><li>Jiraan</li><li>Cathal Ó Curráin</li><li>Tristan Driessens</li><li>Josienne Clarke</li></ul></div>
+          
+          <div class="videos"><div class="video"><button class="yt" type="button" data-id="UXL9Fk6xlTE" aria-label="Video 1 from 2023" style="background-image:url(../data/vthumb/c67d931fb619412c.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="bZY7XHtsGx4" aria-label="Video 2 from 2023" style="background-image:url(../data/vthumb/354d86bb61113dca.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="ox_N4HQmWdk" aria-label="Video 3 from 2023" style="background-image:url(../data/vthumb/506531c01e9be3dd.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="pRVReQQv4Js" aria-label="Video 4 from 2023" style="background-image:url(../data/vthumb/e714c48380581011.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="5mR-dQiHAIU" aria-label="Video 5 from 2023" style="background-image:url(../data/vthumb/b31fea07be7d9d2c.jpg)"><span class="play" aria-hidden="true"></span></button></div></div>
+          <div class="ed-fotos" aria-label="Photos by 2023"><a href="https://beeld.merodefestival.be/merodefestival/297563-397149.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/297563-397149.webp" alt="Vier muzikanten met tamboerijnen en doedelzak in het bos" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/665525-182817.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/665525-182817.webp" alt="Wandelaars luisteren naar muzikanten tussen hoge hagen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/495854-660903.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/495854-660903.webp" alt="Muzikant speelt talking drum in het bos" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/231554-586311.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/231554-586311.webp" alt="Jonge muzikanten spelen voor wandelaars in het bos" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/937818-976445.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/937818-976445.webp" alt="Muzikant speelt kora in een zonnig park" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/277813-290805.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/277813-290805.webp" alt="Trio met viool, oud en kaderdrum in het bos" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/276490-678820.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/276490-678820.webp" alt="Publiek in dennenbos voor podium onder tentdoek" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/928630-300708.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/928630-300708.webp" alt="Duo met viool en gitaar onder een tent" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/64794-510939.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/64794-510939.webp" alt="Trio met banjo, mandoline en gitaar op podium" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/373151-195575.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/373151-195575.webp" alt="Avondconcert in dennenbos onder oranje tentdoek" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/943135-381125.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/943135-381125.webp" alt="Accordeonist speelt pianoaccordeon, close-up" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/878175-302719.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/878175-302719.webp" alt="Trio speelt in het bos voor groot publiek" loading="lazy"></a></div>
+          <p class="dank">Photos and videos: with thanks to Steven Vanderaspoilden &amp; Achim Kehlenbach.</p>
+        </div>
+      </article>
+      <article class="editie" id="2022">
+        <div>
+          <span class="jaar">2022</span>
+          <span class="plek">25–29 May 2022</span>
+          <span class="plek zacht">Beddermolen, Tongerlo</span>
+          <img class="affiche" src="../img/affiches/2022.jpg" alt="Merodefestival poster 2022" loading="lazy">
+        </div>
+        <div>
+          
+          <p class="tekst">The sixth edition, with the programme that was ready in 2020 and had to wait because of COVID.</p>
+          <div class="prog"><strong>Concerts</strong><ul class="namen"><li>John Blek (IRL)</li><li>Ye Vagabonds (IRL)</li><li>Bipolar Bows (BE-FR)</li><li>Spilar &amp; Kardemimmit (BE-FIN)</li><li>Duo Niepold-Cutting (BE-UK)</li><li>Sam Lee (UK)</li><li>Mamaliga Orkestar (BE-IT-RO-FR)</li><li>Elena Ledda (SARD)</li></ul></div>
+          <div class="prog"><strong>Musical walks in Deurne, Scherpenheuvel and Zichem, Eindhout and Asbroek in Herselt</strong><ul class="namen klein"><li>Lennaert Maes (BE)</li><li>Bipolar Bows (BE-FR)</li><li>John Blek (IRL)</li><li>Aëro-Sol (BE)</li><li>Kardemimmit (FIN)</li><li>Solia (BE)</li><li>Duo Kimata (TUN-BE)</li><li>Nils De Caster &amp; Sarah De Smedt (BE)</li><li>Andy Cutting &amp; Anne Niepold (UK-BE)</li><li>French Kiss (BE)</li><li>Hans Mortelmans (BE)</li><li>Mamaliga Orkestar mini (BE)</li><li>Marc Hauman (BE)</li><li>Quetzal Duo (MEX-BE)</li><li>Alexandra Alden (MALTA)</li><li>Jérémie Hakeshimana (BURUNDI)</li></ul></div>
+          <div class="videos"><div class="video"><button class="yt" type="button" data-id="Ri2i__bOk_g" aria-label="Video 1 from 2022" style="background-image:url(../data/vthumb/d9ed79dd1fea5dcc.jpg)"><span class="play" aria-hidden="true"></span></button></div></div>
+          <div class="ed-fotos" aria-label="Photos by 2022"><a href="https://beeld.merodefestival.be/merodefestival/526900-69155.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/526900-69155.webp" alt="Band speelt onder paars verlicht tentdoek" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/694062-269851.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/694062-269851.webp" alt="Verlichte windmolen bij nacht" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/881809-488386.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/881809-488386.webp" alt="Trio onder oranje tentdoek bij avondlucht" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/960818-839510.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/960818-839510.webp" alt="Zanger zingt met uitgestrekte arm in paars licht" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/185533-188700.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/185533-188700.webp" alt="Verlichte hoeve en festivaltent bij avond" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/102997-676802.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/102997-676802.webp" alt="Zangeres zingt in microfoon onder paars podiumlicht" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/847945-111168.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/847945-111168.webp" alt="Groep wandelaars door een dorpsstraat" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/229359-385320.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/229359-385320.webp" alt="Hoeve met tentdoek, podium en lege stoelen op het gras" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/600038-274859.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/600038-274859.webp" alt="Vier zangeressen met citer onder een luifel" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/643214-942677.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/643214-942677.webp" alt="Zangeres spreidt armen voor meezingend publiek" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/270218-715692.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/270218-715692.webp" alt="Stoet wandelaars op een bospad" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/823140-108405.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/823140-108405.webp" alt="Vuurschaal op binnenkoer met lichtslingers" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/379234-781408.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/379234-781408.webp" alt="Klarinettiste en accordeoniste spelen buiten" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/747760-372520.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/747760-372520.webp" alt="Smartphone filmt concert in roze licht" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/989232-313684.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/989232-313684.webp" alt="Wandelaars op veldweg langs akkers" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/438592-825433.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/438592-825433.webp" alt="Zanger met gitaar buiten in het groen" loading="lazy"></a></div>
+          <p class="dank">Photos and videos: with thanks to Steven Vanderaspoilden &amp; Achim Kehlenbach.</p>
+        </div>
+      </article>
+      <article class="editie" id="2021">
+        <div>
+          <span class="jaar">2021</span>
+          
+          
+          
+        </div>
+        <div>
+          <h2>In the footsteps of 900 years of Norbertines</h2>
+          <p class="tekst">The festival was cancelled; an alternative summer programme took its place.</p>
+          
+          
+          <div class="videos"><div class="video"><button class="yt" type="button" data-id="m_nQyvDzZTY" aria-label="Video 1 from 2021" style="background-image:url(../data/vthumb/c070d872d074bcc8.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="NbUuT-BRgeY" aria-label="Video 2 from 2021" style="background-image:url(../data/vthumb/b13f4fdff0676e14.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="w2cjGf6xxqo" aria-label="Video 3 from 2021" style="background-image:url(../data/vthumb/5caa61865718c95f.jpg)"><span class="play" aria-hidden="true"></span></button></div></div>
+          <div class="ed-fotos" aria-label="Photos by 2021"><a href="https://beeld.merodefestival.be/merodefestival/44157-841242.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/44157-841242.webp" alt="Duo met metallofoon en ukelele buiten" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/811219-775628.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/811219-775628.webp" alt="Lachende muzikant met houten snaarinstrument" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/456712-279109.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/456712-279109.webp" alt="Muzikant speelt oud in houten paviljoen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/539355-72998.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/539355-72998.webp" alt="Violist speelt tussen het groen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/628626-724647.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/628626-724647.webp" alt="Accordeonist speelt voor het altaar in een kerk" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/598141-417096.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/598141-417096.webp" alt="Doedelzakspeler en gitarist spelen samen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/58737-951213.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/58737-951213.webp" alt="Violiste en gitarist spelen op een grasveld" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/310452-693816.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/310452-693816.webp" alt="Kwartet speelt op het gras voor groene haag" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/636652-406865.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/636652-406865.webp" alt="Zanger met gitaar bij een vijver" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/62591-447983.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/62591-447983.webp" alt="Accordeonist speelt buiten voor bakstenen bogen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/511503-994513.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/511503-994513.webp" alt="Publiek applaudisseert voor oud bakstenen huis" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/887039-126089.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/887039-126089.webp" alt="Publiek voor historisch gebouw met podium" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/296738-590496.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/296738-590496.webp" alt="Drie zangeressen zingen samen, close-up" loading="lazy"></a></div>
+          <p class="dank">Photos and videos: with thanks to Steven Vanderaspoilden, Bert Huysentruyt &amp; Jos Maes.</p>
+        </div>
+      </article>
+      <article class="editie" id="2020">
+        <div>
+          <span class="jaar">2020</span>
+          <span class="plek">20–24 May 2020</span>
+          <span class="plek zacht">Beddermolen, Tongerlo</span>
+          <img class="affiche" src="../img/affiches/2020.jpg" alt="Merodefestival poster 2020" loading="lazy">
+        </div>
+        <div>
+          
+          <p class="tekst">Cancelled for the well-known reason. This was the programme:</p>
+          <div class="prog"><strong>Concerts</strong><ul class="namen"><li>Lisa O’Neill (IRL)</li><li>Spilar feat. Kardemimmit (BE-FIN)</li><li>Elena Ledda (IT)</li><li>Duo Niepold-Cutting (BE-UK)</li><li>Roseanne Reid (SCO)</li><li>MandolinMan met Wim Claeys</li><li>Raske-Drenge (BE-DK)</li><li>Linde</li><li>Bruno Deneckere</li><li>Marc Hauman</li><li>Bipolar Bows</li><li>Ekko</li><li>Rémi Decker &amp; Lennaert Maes</li></ul></div>
+          
+          
+          
+          
+        </div>
+      </article>
+      <article class="editie" id="2019">
+        <div>
+          <span class="jaar">2019</span>
+          <span class="plek">29 May – 2 June 2019</span>
+          <span class="plek zacht">Warandepark, Diest</span>
+          <img class="affiche" src="../img/affiches/2019.jpg" alt="Merodefestival poster 2019" loading="lazy">
+        </div>
+        <div>
+          
+          <p class="tekst">The fifth edition, with four open-air concerts and four musical walks in Bergom, Engsbergen, Hertberg and Oosterlo.</p>
+          <div class="prog"><strong>Concerts</strong><ul class="namen"><li>Savina Yannatou (GR)</li><li>Ulrika Bodén &amp; Sofia Sandén (SE) feat. MandolinMan</li><li>Kitty Macfarlane &amp; Mohsen Amini (UK) feat. Brisk</li><li>À la Rum</li><li>Alden, Patterson and Dashwood (UK)</li><li>Wim Claeys</li><li>John Blek (IRL)</li><li>Lennaert Maes</li></ul></div>
+          
+          <div class="videos"><div class="video"><button class="yt" type="button" data-id="mFDaodm8bCQ" aria-label="Video 1 from 2019" style="background-image:url(../data/vthumb/adcee813ad371229.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="yo9ISoHempI" aria-label="Video 2 from 2019" style="background-image:url(../data/vthumb/e72818228d6375d0.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="pDGyveYj9S4" aria-label="Video 3 from 2019" style="background-image:url(../data/vthumb/43a7a284b2b0daec.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="yvFbG62JoaA" aria-label="Video 4 from 2019" style="background-image:url(../data/vthumb/5b29e8c6285f2a08.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="TWGTgYT_omo" aria-label="Video 5 from 2019" style="background-image:url(../data/vthumb/ffb56f0d15724095.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="wBWf5or3RT4" aria-label="Video 6 from 2019" style="background-image:url(../data/vthumb/27a840fcf0fbd4ab.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="emg7PlwYz3E" aria-label="Video 7 from 2019" style="background-image:url(../data/vthumb/b25d4218e0a4ae74.jpg)"><span class="play" aria-hidden="true"></span></button></div></div>
+          <div class="ed-fotos" aria-label="Photos by 2019"><a href="https://beeld.merodefestival.be/merodefestival/474334-41445.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/474334-41445.webp" alt="Duo met hommel en viool in het bos" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/125830-353122.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/125830-353122.webp" alt="Vrouw speelt akoestische gitaar voor houten wand" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/898105-229100.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/898105-229100.webp" alt="Vier muzikanten poseren voor kerkaltaar" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/699098-584506.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/699098-584506.webp" alt="Duo met sopraansax en accordeon in het groen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/954475-772052.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/954475-772052.webp" alt="Fles Merodefestival-bier met glas in het gras" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/370869-307318.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/370869-307318.webp" alt="Zanger met akoestische gitaar in het groen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/661536-782154.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/661536-782154.webp" alt="Duo met accordeon en blokfluit" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/108389-269118.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/108389-269118.webp" alt="Bord met gehaktballetjes en verse graansalade" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/892882-255416.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/892882-255416.webp" alt="Violist speelt voor publiek in openluchttheater" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/82160-596104.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/82160-596104.webp" alt="Interview op podium voor groot geprojecteerd portret" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/117945-522249.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/117945-522249.webp" alt="Ensemble speelt op buitenpodium tussen het groen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/131075-254051.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/131075-254051.webp" alt="Oudere violist speelt aan een microfoon" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/576656-232844.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/576656-232844.webp" alt="Gitarist speelt in een groen bos" loading="lazy"></a></div>
+          <p class="dank">Photos and videos: with thanks to Sofie Meelberghs, Steven Vanderaspoilden, Annie Demarsin, Achiel Feyaerts &amp; Jos Maes.</p>
+        </div>
+      </article>
+      <article class="editie" id="2018">
+        <div>
+          <span class="jaar">2018</span>
+          <span class="plek">9–13 May 2018</span>
+          <span class="plek zacht">Diest, Herselt, Aarschot, Laakdal, Westerlo, Scherpenheuvel-Zichem, Geel, Hulshout and Tessenderlo</span>
+          <img class="affiche" src="../img/affiches/2018.jpg" alt="Merodefestival poster 2018" loading="lazy">
+        </div>
+        <div>
+          
+          
+          <div class="prog"><strong>Concerts</strong><ul class="namen"><li>Banditaliana (IT)</li><li>Martin Simpson &amp; Nancy Kerr (UK) feat. MandolinMan</li><li>Wannes Leeft! (Hans Mortelmans, Jan De Smet, Lennaert Maes &amp; Mira)</li><li>Amorroma feat. Sarah Ridy (UK)</li><li>West My Friend (CAN)</li><li>And Then Came Fall</li><li>Jim Boyes (UK)</li><li>Barely Autumn</li><li>Les Guitares Magiques</li><li>Red &amp; Lily</li></ul></div>
+          
+          <div class="videos"><div class="video"><button class="yt" type="button" data-id="RYu6a-G0LRU" aria-label="Video 1 from 2018" style="background-image:url(../data/vthumb/4bc6c722ecdd8c44.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="yEXcojr5Zt8" aria-label="Video 2 from 2018" style="background-image:url(../data/vthumb/28a93b3a7289f4d8.jpg)"><span class="play" aria-hidden="true"></span></button></div></div>
+          <div class="ed-fotos" aria-label="Photos by 2018"><a href="https://beeld.merodefestival.be/merodefestival/32157756-10211924419887855-5698260938419863552-o-e9odso.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/32157756-10211924419887855-5698260938419863552-o-e9odso.webp" alt="Band speelt onder roze tentdoek bij schemering" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/31646778-10155742762353583-7509322997874819072-o-bxkmu5.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/31646778-10155742762353583-7509322997874819072-o-bxkmu5.webp" alt="Vier muzikanten spelen in begroeide kerkruïne" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/32266378-10211352944079447-3326867687363051520-n-kopie-pbyxdz.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/32266378-10211352944079447-3326867687363051520-n-kopie-pbyxdz.webp" alt="Violiste speelt aan een microfoon" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/32267015-10211935814732719-4031225668023877632-o-sjxcft.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/32267015-10211935814732719-4031225668023877632-o-sjxcft.webp" alt="Band speelt 's avonds onder blauw verlicht tentdoek" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/32215517-10211935819412836-6060114737721507840-n-pku7bs.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/32215517-10211935819412836-6060114737721507840-n-pku7bs.webp" alt="Bakstenen tunnel met kaarsjes en doorkijk naar groen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/32349742-10156604893794684-8012747217129439232-o-kopie-nv5iek.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/32349742-10156604893794684-8012747217129439232-o-kopie-nv5iek.webp" alt="Violist en accordeonist spelen samen in het groen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/32411139-10211374287213012-7918231432374255616-o-pumxap.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/32411139-10211374287213012-7918231432374255616-o-pumxap.webp" alt="Harpiste zingt en speelt harp" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/32627634-10211374291933130-3224401759229181952-o-xcbxoi.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/32627634-10211374291933130-3224401759229181952-o-xcbxoi.webp" alt="Koppel danst bij ensemble in een kerk" loading="lazy"></a></div>
+          <p class="dank">Photos and videos: with thanks to Kameleon Klips, Steven Vanderaspoilden, Sabrina Van Exterghem, Annie Demarsin, Achiel Feyaerts &amp; Jos Maes.</p>
+        </div>
+      </article>
+      <article class="editie" id="2017">
+        <div>
+          <span class="jaar">2017</span>
+          <span class="plek">24–28 May 2017</span>
+          <span class="plek zacht">Diest, Herselt, Aarschot, Laakdal, Westerlo, Scherpenheuvel-Zichem, Geel, Hulshout and Tessenderlo</span>
+          <img class="affiche" src="../img/affiches/2017.jpg" alt="Merodefestival poster 2017" loading="lazy">
+        </div>
+        <div>
+          
+          <p class="tekst">The year the monthly concert series was added.</p>
+          <div class="prog"><strong>Concerts</strong><ul class="namen"><li>Muzsikás (HU)</li><li>Tim Eriksen (USA)</li><li>Fay Hield (UK)</li><li>Snaarmaarwaar</li><li>Lennaert Maes</li><li>Astrid Nijgh (NL)</li><li>MandolinMan</li><li>Le Rêve de Flo (FR-BE)</li></ul></div>
+          
+          <div class="videos"><div class="video"><button class="yt" type="button" data-id="Vtd4Xl0Kf6w" aria-label="Video 1 from 2017" style="background-image:url(../data/vthumb/eaf7d2b33a62462f.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="_daGOXr0Fos" aria-label="Video 2 from 2017" style="background-image:url(../data/vthumb/39eca872cb1bc381.jpg)"><span class="play" aria-hidden="true"></span></button></div></div>
+          <div class="ed-fotos" aria-label="Photos by 2017"><a href="https://beeld.merodefestival.be/merodefestival/img-7386-medium-avglmj.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-7386-medium-avglmj.webp" alt="Publiek in een schaduwrijke tuin" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-6948-medium-ko8ace.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-6948-medium-ko8ace.webp" alt="Zanger met ensemble in een kerk" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-7352-medium-cmx83g.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-7352-medium-cmx83g.webp" alt="Wandelaars langs een houten windmolen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-7270-medium-oftnlp.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-7270-medium-oftnlp.webp" alt="Trio met tuba, fluit en gitaar in een schuur" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-7092-medium-uzvypt.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-7092-medium-uzvypt.webp" alt="Zangeres spreidt armen aan de microfoon" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-7195-medium-izye4n.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-7195-medium-izye4n.webp" alt="Drie zingende gitaristen in paars licht" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/43-2-szzjz6.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/43-2-szzjz6.webp" alt="Muzikant speelt zittend in het gras op een banjo" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-7381-medium-fbnkon.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-7381-medium-fbnkon.webp" alt="Muzikanten spelen onder een groen prieel" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/31-wu2oeo.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/31-wu2oeo.webp" alt="Wandelaars stappen naar oude bakstenen hoeve" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-6920-medium-lbeq2l.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-6920-medium-lbeq2l.webp" alt="Zangeres met ensemble voor blauw verlicht altaar" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/44-3-x4mzvl.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/44-3-x4mzvl.webp" alt="Wandelaars langs een beek op zonnige dag" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/dsc01889-qy1sao.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/dsc01889-qy1sao.webp" alt="Violiste en harpiste spelen in een kerk" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/dsc02011-offv8k.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/dsc02011-offv8k.webp" alt="Vibrafonist en accordeoniste spelen onder een boom" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/11-3-mjvtf2.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/11-3-mjvtf2.webp" alt="Wandelaars op zandweg door groene velden" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/p5240022-cohgvm.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/p5240022-cohgvm.webp" alt="Strijkersgroep met zangeres tussen varens" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-8213-su1d4a.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-8213-su1d4a.webp" alt="Twee performers in boerenkostuum naast bord 'BOER!'" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-8132-chzu0z.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-8132-chzu0z.webp" alt="Kinderen bij een voorstelling in bakstenen zaal" loading="lazy"></a></div>
+          <p class="dank">Photos and videos: with thanks to Annie Demarsin, Nel Van Meeuwen, Ruben Goffin, Achiel Feyaerts &amp; Steven Vanderaspoilden.</p>
+        </div>
+      </article>
+      <article class="editie" id="2016">
+        <div>
+          <span class="jaar">2016</span>
+          <span class="plek">5–8 May 2016</span>
+          <span class="plek zacht">Diest, Herselt, Aarschot, Laakdal, Westerlo, Scherpenheuvel-Zichem, Geel, Hulshout and Tessenderlo</span>
+          <img class="affiche" src="../img/affiches/2016.jpg" alt="Merodefestival poster 2016" loading="lazy">
+        </div>
+        <div>
+          
+          
+          <div class="prog"><strong>Concerts</strong><ul class="namen"><li>Lucilla Galeazzi (IT)</li><li>Jan De Wilde</li><li>Corou de Berra (FR)</li><li>Julie Murphy (WAL)</li><li>Naragonia Quartet</li><li>MandolinMan</li><li>Jonas Winterland</li></ul></div>
+          
+          <div class="videos"><div class="video"><button class="yt" type="button" data-id="uKmjMEPyd2k" aria-label="Video 1 from 2016" style="background-image:url(../data/vthumb/1bb0af04ebcbb4db.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="8maBq19JwpM" aria-label="Video 2 from 2016" style="background-image:url(../data/vthumb/94790d41645e1bbb.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="f4KnoYNv0ko" aria-label="Video 3 from 2016" style="background-image:url(../data/vthumb/6101babb7410ea1a.jpg)"><span class="play" aria-hidden="true"></span></button></div></div>
+          <div class="ed-fotos" aria-label="Photos by 2016"><a href="https://beeld.merodefestival.be/merodefestival/glj-merode-20-hv3acb.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/glj-merode-20-hv3acb.webp" alt="Oudspeler speelt voor kerkaltaar" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/glj-merode-26-u9zt77.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/glj-merode-26-u9zt77.webp" alt="Wandelaars met honden op een landweg" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/glj-merode-10-hqnnzk.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/glj-merode-10-hqnnzk.webp" alt="Violist en gitarist spelen, zwart-wit" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/glj-merode-34-fkkkam.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/glj-merode-34-fkkkam.webp" alt="Twee gitaristen en zangeres in een lentebos" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/glj-merode-66-fwbddg.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/glj-merode-66-fwbddg.webp" alt="Verteller en gitarist op podium in groen licht" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/glj-merode-94-shg87x.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/glj-merode-94-shg87x.webp" alt="Vier zangers zingen samen in microfoons" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/glj-merode-103-hnyo0z.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/glj-merode-103-hnyo0z.webp" alt="Kwartet speelt in donker uitgelichte kerk" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/40-x34ez0.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/40-x34ez0.webp" alt="Zangeres zingt met gesloten ogen in het groen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/72-va7eep.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/72-va7eep.webp" alt="Vrouw bespeelt een kleine shrutibox" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/28-uxblfd.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/28-uxblfd.webp" alt="Beek in groen landschap met wandelaars in de verte" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/17-qbaph4.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/17-qbaph4.webp" alt="Gitarist en zangeres musiceren zittend in het gras" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/62-yylk57.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/62-yylk57.webp" alt="Twee zangeressen zingen en tikken ritme op tafel" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/26-fllcuv.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/26-fllcuv.webp" alt="Wandelaars luisteren naar gitarist aan een beek" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/50-sxt0zx.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/50-sxt0zx.webp" alt="Drie gitaristen spelen in een dennenbos" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/lucilla2-vhxetr.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/lucilla2-vhxetr.webp" alt="Zangeres in rode jurk zingt in een kerk" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/merode-nl-inpsik.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/merode-nl-inpsik.webp" alt="Publiek bij concert in begroeide kerkruïne" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/13178647-10206126478621077-9101503818731564723-n-huk28d.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/13178647-10206126478621077-9101503818731564723-n-huk28d.webp" alt="Zanger met mandoline zingt aan microfoon" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/13116515-10206126479901109-6314574499393732924-o-hww8ue.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/13116515-10206126479901109-6314574499393732924-o-hww8ue.webp" alt="Kwartet speelt voor oude bakstenen kerkmuur met klimop" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/13147690-10206126479941110-1082250286372418128-o-nxdbey.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/13147690-10206126479941110-1082250286372418128-o-nxdbey.webp" alt="Concert bij nacht in verlichte kerkruïne" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-7679-j639x7.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-7679-j639x7.webp" alt="Bakstenen kapel tussen bomen, zwart-wit" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/glj-merode-87-xjzgub.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/glj-merode-87-xjzgub.webp" alt="Band met zangeres op donker podium" loading="lazy"></a></div>
+          <p class="dank">Photos and videos: with thanks to Guy Janssens, Achiel Feyaerts &amp; Steven Vanderaspoilden.</p>
+        </div>
+      </article>
+      <article class="editie" id="2015">
+        <div>
+          <span class="jaar">2015</span>
+          <span class="plek">13–17 May 2015</span>
+          <span class="plek zacht">Aarschot, Diest, Scherpenheuvel-Zichem and Herselt</span>
+          <img class="affiche" src="../img/affiches/2015.jpg" alt="Merodefestival poster 2015" loading="lazy">
+        </div>
+        <div>
+          
+          <p class="tekst">The very first edition.</p>
+          <div class="prog"><strong>Concerts</strong><ul class="namen"><li>MandolinMan invites</li><li>Robb Johnson (UK)</li><li>Lennaert Maes</li><li>Eva De Roovere</li><li>Jan De Smet</li><li>Nigel Williams</li><li>Geert Verdickt (Buurman)</li><li>Klaas Delrue (Yevgueni)</li><li>Stoomboot</li><li>Seppe Toremans</li><li>Jackie Oates (UK)</li></ul></div>
+          
+          <div class="videos"><div class="video"><button class="yt" type="button" data-id="IPOvPa8rhD4" aria-label="Video 1 from 2015" style="background-image:url(../data/vthumb/c8394f348590df3f.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="video"><button class="yt" type="button" data-id="hvPT2AgW4nQ" aria-label="Video 2 from 2015" style="background-image:url(../data/vthumb/8468b24554b306a1.jpg)"><span class="play" aria-hidden="true"></span></button></div></div>
+          <div class="ed-fotos" aria-label="Photos by 2015"><a href="https://beeld.merodefestival.be/merodefestival/11074172-835437006537958-4365233726962881765-n-bpeatg.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/11074172-835437006537958-4365233726962881765-n-bpeatg.webp" alt="Vier zangers zingen samen aan microfoons op podium" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/merode6-yi7zpw.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/merode6-yi7zpw.webp" alt="Groepsfoto van tien muzikanten backstage" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/merode4-cvlcid.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/merode4-cvlcid.webp" alt="Acht muzikanten groeten na het concert" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/merode2-jqr3iu.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/merode2-jqr3iu.webp" alt="Band speelt voor bakstenen vestingmuur" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/merode7-ngmltv.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/merode7-ngmltv.webp" alt="Gitarist speelt in een zonnige weide" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/merode3-rkoxgq.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/merode3-rkoxgq.webp" alt="Gitarist speelt voor zittende wandelaars" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/merode5-sggh7a.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/merode5-sggh7a.webp" alt="Gitarist speelt op een bospad" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/merode8-qgeb7j.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/merode8-qgeb7j.webp" alt="Gitarist speelt in historisch interieur" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/merode9-wnoewj.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/merode9-wnoewj.webp" alt="Gitarist met mondharmonica bij een vijver" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/merode12-buuuqw.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/merode12-buuuqw.webp" alt="Wandelaars aan de voet van een heuvel met dennen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-9894-ntv1v2.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-9894-ntv1v2.webp" alt="Wandelaars steken speels de hand op op een erf" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-90063-dlouoq.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-90063-dlouoq.webp" alt="Wandelaars op grindweg langs klaprozen" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-90044-jsmzwi.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-90044-jsmzwi.webp" alt="Zangeres met gitaar onder een boom" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-0997-xnoamc.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-0997-xnoamc.webp" alt="Contrabassist en violist op podium" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-6050-ddp9yo.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-6050-ddp9yo.webp" alt="Zanger met gitaar aan een weidehek" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-6027-wak7if.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-6027-wak7if.webp" alt="Wandelaars luisteren naar gids aan begroeide heuvel" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-6022-j8gm00.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-6022-j8gm00.webp" alt="Zanger met gitaar aan een caféterras" loading="lazy"></a><a href="https://beeld.merodefestival.be/merodefestival/img-6008-ecy3pi.webp"><img src="https://beeld.merodefestival.be/merodefestival/thumb/img-6008-ecy3pi.webp" alt="Gitarist vertelt staand in het bos" loading="lazy"></a></div>
+          
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="papier kerk-archief" aria-labelledby="kerk-titel">
+    <div class="wrap" style="display:block">
+      <h2 id="kerk-titel">Church concerts</h2>
+      <p class="kerk-intro">Since 2017 Merodefestival has also brought world and folk music to the village churches of the Merode outside the festival.</p>
+      <div class="kgrid">
+      <article class="kseizoen" id="kerk-2026">
+        <img class="kcover" src="../img/brochures/2026-2027.jpg" alt="Church concerts brochure 2026–2027" loading="lazy">
+        <h3 class="kt"><span>church – concerts</span><span>202<em>6</em>–202<em>7</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Saturday 26 September 2026</span>
+          <span class="ka">Rioghnach Connolly (NIR), met muzikale wandeling en buffet</span>
+          <span class="kk">Sint-Laurentiuskerk, Zammel</span>
+          
+        </li><li>
+          <span class="kd">Saturday 17 October 2026</span>
+          <span class="ka">Amber Haddad Trio + Simon Leleux &amp; Manuel Hermia</span>
+          <span class="kk">Sint-Luciakerk, Engsbergen</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="U36qzH0NSPg" aria-label="Video: Amber Haddad Trio + Simon Leleux &amp; Manuel Hermia" style="background-image:url(../data/vthumb/681f8534067d36a4.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 14 November 2026</span>
+          <span class="ka">Gwen Cresens &amp; Philippe Thuriot</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 5 December 2026</span>
+          <span class="ka">Sam Grassie, Dylan Fowler &amp; Haroun Iqbal (SCO-WAL-BE)</span>
+          <span class="kk">Sint-Pieterskerk, Testelt</span>
+          
+        </li><li>
+          <span class="kd">Saturday 9 January 2027</span>
+          <span class="ka">Aram: Shahab Azinmehr, Derya Türkan &amp; Robbe Kieckens</span>
+          <span class="kk">Sint-Luciakerk, Engsbergen</span>
+          
+        </li><li>
+          <span class="kd">Saturday 30 January 2027</span>
+          <span class="ka">The Weaving (IRL-ENG)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 20 February 2027</span>
+          <span class="ka">La Mal Coiffée (FR)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 20 March 2027</span>
+          <span class="ka">Laura Cortese’s Acoustic Evening IV met Eliza Carthy, Jake Blount &amp; Sarah Kate Morgan</span>
+          <span class="kk">O.-L.-Vrouw Onbevlekt Ontvangenkerk, Blauberg</span>
+          
+        </li><li>
+          <span class="kd">Saturday 17 April 2027</span>
+          <span class="ka">Livia Giaffreda &amp; Simone Frezza + Katerina Douka &amp; Stamatis Pasopoulos</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 19 June 2027</span>
+          <span class="ka">Sara Salvérius &amp; blazerskwartet: Adem</span>
+          <span class="kk">O.-L.-Vrouw Onbevlekt Ontvangenkerk, Blauberg</span>
+          
+        </li></ol>
+        
+      </article>
+      <article class="kseizoen" id="kerk-2025">
+        
+        <h3 class="kt"><span>church – concerts</span><span>202<em>5</em>–202<em>6</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Saturday 27 September 2025</span>
+          <span class="ka">Enara Navaira (BE), seizoensopener met wandeling, film en maaltijd</span>
+          <span class="kk">O.-L.-Vrouw Onbevlekt Ontvangenkerk, Blauberg</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="xdijUKPdI3E" aria-label="Video: Enara Navaira (BE), seizoensopener met wandeling, film en maaltijd" style="background-image:url(../data/vthumb/625308785e40f4f3.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 18 October 2025</span>
+          <span class="ka">Thalas (BE) &amp; Bao Sissoko (SEN)</span>
+          <span class="kk">Sint-Pieterskerk, Testelt</span>
+          
+        </li><li>
+          <span class="kd">Saturday 15 November 2025</span>
+          <span class="ka">Damast Duo XL: Hoort mi Aen</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 6 December 2025</span>
+          <span class="ka">Triveni (BE-SE-FIN): Two Winters, One Midnight Sun</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="Ep5SUqW6zf8" aria-label="Video: Triveni (BE-SE-FIN): Two Winters, One Midnight Sun" style="background-image:url(../data/vthumb/68fe0a13755d22f1.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 17 January 2026</span>
+          <span class="ka">Myrddin, Helena Casella, Stijn Kuppens &amp; Stefan Bracaval: Sonetos del Amor Oscuro</span>
+          <span class="kk">Sint-Luciakerk, Engsbergen</span>
+          
+        </li><li>
+          <span class="kd">Saturday 7 February 2026</span>
+          <span class="ka">Roseanne Reid (SCO)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 28 February 2026</span>
+          <span class="ka">Ghalia Benali trio</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="q1TWs3xHggM" aria-label="Video: Ghalia Benali trio" style="background-image:url(../data/vthumb/b8f0f85ac3f1592a.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 21 March 2026</span>
+          <span class="ka">Laura Cortese’s Acoustic Evening III met Bruce Molsky, Tyler Ramsey &amp; Mairi Chaimbeul</span>
+          <span class="kk">O.-L.-Vrouw Onbevlekt Ontvangenkerk, Blauberg</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="zE11i25ituo" aria-label="Video: Laura Cortese’s Acoustic Evening III met Bruce Molsky, Tyler Ramsey &amp; Mairi Chaimbeul" style="background-image:url(../data/vthumb/525d6e3a375fb8e7.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 25 April 2026</span>
+          <span class="ka">Angeline Morrison (UK): Sorrow Songs</span>
+          <span class="kk">Sint-Luciakerk, Engsbergen</span>
+          
+        </li><li>
+          <span class="kd">Saturday 20 June 2026</span>
+          <span class="ka">Lia Sampai (ES) + Noemie Palomo &amp; Pascal Chardome</span>
+          <span class="kk">Sint-Pieterskerk, Testelt</span>
+          
+        </li></ol>
+        
+      </article>
+      <article class="kseizoen" id="kerk-2024">
+        
+        <h3 class="kt"><span>church – concerts</span><span>202<em>4</em>–202<em>5</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Saturday 28 September 2024</span>
+          <span class="ka">Flo &amp; Friends (BE-TUR-POR), met muzikale wandeling en avondmaaltijd</span>
+          <span class="kk">Sint-Pieterskerk, Testelt</span>
+          
+        </li><li>
+          <span class="kd">Saturday 19 October 2024</span>
+          <span class="ka">Caamaño &amp; Ameixeiras (ES)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 16 November 2024</span>
+          <span class="ka">Jonas Olsson Tribute band (SE-BE)</span>
+          <span class="kk">O.-L.-Vrouw Onbevlekt Ontvangenkerk, Blauberg</span>
+          
+        </li><li>
+          <span class="kd">Saturday 7 December 2024</span>
+          <span class="ka">Owen Spafford &amp; Louis Campbell (UK)</span>
+          <span class="kk">Sint-Luciakerk, Engsbergen</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="4p7WtYojaXM" aria-label="Video: Owen Spafford &amp; Louis Campbell (UK)" style="background-image:url(../data/vthumb/f675e31199f74481.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 18 January 2025</span>
+          <span class="ka">Rónán Ó Snodaigh &amp; Myles O’Reilly (IRL)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 8 February 2025</span>
+          <span class="ka">Anmoor + Simon Leleux &amp; Berlinde Deman</span>
+          <span class="kk">Sint-Luciakerk, Engsbergen</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="4SdUXvn9OcE" aria-label="Video: Anmoor + Simon Leleux &amp; Berlinde Deman" style="background-image:url(../data/vthumb/e30372459ce5b5f2.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 22 February 2025</span>
+          <span class="ka">Angeline Morrison (UK): Sorrow Songs</span>
+          <span class="kk">Sint-Laurentiuskerk, Zammel</span>
+          
+        </li><li>
+          <span class="kd">Saturday 22 March 2025</span>
+          <span class="ka">Laura Cortese’s Acoustic Evening II met Kaia Kater, Anna Massie &amp; Dirk Powell</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="CPgwtgtKuK0" aria-label="Video: Laura Cortese’s Acoustic Evening II met Kaia Kater, Anna Massie &amp; Dirk Powell" style="background-image:url(../data/vthumb/a9e03b458b0c391f.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 26 April 2025</span>
+          <span class="ka">Landless (IRL)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 21 June 2025</span>
+          <span class="ka">La Bergère (FR)</span>
+          <span class="kk">Sint-Pieterskerk, Testelt</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="y9M2hNjLKTo" aria-label="Video: La Bergère (FR)" style="background-image:url(../data/vthumb/3e9f2d4db2d28b72.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li></ol>
+        
+      </article>
+      <article class="kseizoen" id="kerk-2023">
+        
+        <h3 class="kt"><span>church – concerts</span><span>202<em>3</em>–202<em>4</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Saturday 30 September 2023</span>
+          <span class="ka">Nisia (IT-BE) + Filippo Gambetta &amp; Sergio Caputo (IT), met muzikale wandeling en avondmaaltijd</span>
+          <span class="kk">Sint-Antonius-Abtkerk, Wolfsdonk</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="vzc7LA8SNIc" aria-label="Video: Nisia (IT-BE) + Filippo Gambetta &amp; Sergio Caputo (IT), met muzikale wandeling en avondmaaltijd" style="background-image:url(../data/vthumb/5238ee3fdc335f44.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 21 October 2023</span>
+          <span class="ka">Dunja Knebl (HR)</span>
+          <span class="kk">Sint-Pieterskerk, Testelt</span>
+          
+        </li><li>
+          <span class="kd">Saturday 18 November 2023</span>
+          <span class="ka">Andries Boone (BE) + Erwan Menguy quartet (BRET)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="2Sq07VCyL1c" aria-label="Video: Andries Boone (BE) + Erwan Menguy quartet (BRET)" style="background-image:url(../data/vthumb/42e8d492a8aef2c9.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 9 December 2023</span>
+          <span class="ka">Martin Simpson (UK)</span>
+          <span class="kk">Sint-Luciakerk, Engsbergen</span>
+          
+        </li><li>
+          <span class="kd">Saturday 20 January 2024</span>
+          <span class="ka">Hella + Airboxes (BE)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 3 February 2024</span>
+          <span class="ka">Uxía (ES)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 24 February 2024</span>
+          <span class="ka">Osuna trio (BE)</span>
+          <span class="kk">Sint-Luciakerk, Engsbergen</span>
+          
+        </li><li>
+          <span class="kd">Saturday 9 March 2024</span>
+          <span class="ka">Lyre Lyre (SCO)</span>
+          <span class="kk">Sint-Pieterskerk, Testelt</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="ec_j7fbJEqw" aria-label="Video: Lyre Lyre (SCO)" style="background-image:url(../data/vthumb/4ea6584e2333805c.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 23 March 2024</span>
+          <span class="ka">Laura Cortese’s Acoustic Evening I met Kris Drever, Eli West &amp; Nora Brown</span>
+          <span class="kk">Sint-Servatiuskerk, Herselt</span>
+          
+        </li><li>
+          <span class="kd">Saturday 20 April 2024</span>
+          <span class="ka">Jenn Butterworth &amp; Laura-Beth Salter (UK)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 22 June 2024</span>
+          <span class="ka">Sara Salvérius &amp; SunSunSun: Pendulum</span>
+          <span class="kk">Sint-Antonius-Abtkerk, Wolfsdonk</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="cs3k93iEG8w" aria-label="Video: Sara Salvérius &amp; SunSunSun: Pendulum" style="background-image:url(../data/vthumb/c1ef2b03b757d2b5.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li></ol>
+        
+      </article>
+      <article class="kseizoen" id="kerk-2022">
+        
+        <h3 class="kt"><span>church – concerts</span><span>202<em>2</em>–202<em>3</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Saturday 1 October 2022</span>
+          <span class="ka">Wouter Vandenabeele en vrienden: Hiraeth, met muzikale wandeling en avondmaaltijd</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="PqXd2qimif8" aria-label="Video: Wouter Vandenabeele en vrienden: Hiraeth, met muzikale wandeling en avondmaaltijd" style="background-image:url(../data/vthumb/7d05638739bfea95.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 22 October 2022</span>
+          <span class="ka">Quetzal Duo (BE-MEX) + Las Lloronas (BE-ES-DE)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="zB20Y9nj8MU" aria-label="Video: Quetzal Duo (BE-MEX) + Las Lloronas (BE-ES-DE)" style="background-image:url(../data/vthumb/5c0b6885139ff8bc.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 19 November 2022</span>
+          <span class="ka">Basta² (BE) + Ananta Roosens (BE) &amp; Kaito Winse (BF)</span>
+          <span class="kk">Sint-Luciakerk, Engsbergen</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="fQobL7SM43c" aria-label="Video: Basta² (BE) + Ananta Roosens (BE) &amp; Kaito Winse (BF)" style="background-image:url(../data/vthumb/8032ad641727c6b9.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 3 December 2022</span>
+          <span class="ka">Lady Maisery (UK)</span>
+          <span class="kk">Sint-Servatiuskerk, Herselt</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="NQyy360q16c" aria-label="Video: Lady Maisery (UK)" style="background-image:url(../data/vthumb/75cece4f6c836911.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 21 January 2023</span>
+          <span class="ka">Birds of Passage (BE-SYR-DK)</span>
+          <span class="kk">Sint-Luciakerk, Engsbergen</span>
+          
+        </li><li>
+          <span class="kd">Saturday 4 February 2023</span>
+          <span class="ka">The Breath (NIR)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 4 March 2023</span>
+          <span class="ka">Alasdair Roberts (SCO)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 25 March 2023</span>
+          <span class="ka">Snaarmaarwaar &amp; Sam Kelly (UK)</span>
+          <span class="kk">Sint-Pieterskerk, Testelt</span>
+          
+        </li><li>
+          <span class="kd">Saturday 22 April 2023</span>
+          <span class="ka">Halva: From Kishinev to Constantinople</span>
+          <span class="kk">Sint-Servatiuskerk, Herselt</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="6gx3cZem7L0" aria-label="Video: Halva: From Kishinev to Constantinople" style="background-image:url(../data/vthumb/1dfeee9d3ca2b248.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 24 June 2023</span>
+          <span class="ka">Saraï (FR)</span>
+          <span class="kk">Sint-Pieterskerk, Testelt</span>
+          
+        </li></ol>
+        
+      </article>
+      <article class="kseizoen" id="kerk-2021">
+        
+        <h3 class="kt"><span>church – concerts</span><span>202<em>1</em>–202<em>2</em></span></h3>
+        <p class="kopm">A season with new names and the concerts that had to wait in 2020–2021 because of COVID.</p>
+        <ol class="kerk-lijst"><li>
+          
+          <span class="ka">Lorcan Mac Mathúna trio (IRL)</span>
+          
+          <div class="video kvid"><button class="yt" type="button" data-id="gkTXWCastqM" aria-label="Video: Lorcan Mac Mathúna trio (IRL)" style="background-image:url(../data/vthumb/f47d95782d3a5cf2.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          
+          <span class="ka">Illuminations / Resonance (FR)</span>
+          
+          <div class="video kvid"><button class="yt" type="button" data-id="Dgvdc50htO4" aria-label="Video: Illuminations / Resonance (FR)" style="background-image:url(../data/vthumb/333710fdd1a5cc3e.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          
+          <span class="ka">Trio Tesi, Vaillant, Piccioni (IT-FR)</span>
+          
+          <div class="video kvid"><button class="yt" type="button" data-id="mPXoDBy4RNY" aria-label="Video: Trio Tesi, Vaillant, Piccioni (IT-FR)" style="background-image:url(../data/vthumb/93e1546502ef8574.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          
+          <span class="ka">Laura Cortese &amp; Bert Ruymbeek</span>
+          
+          <div class="video kvid"><button class="yt" type="button" data-id="29GhoC1CFNU" aria-label="Video: Laura Cortese &amp; Bert Ruymbeek" style="background-image:url(../data/vthumb/bff270c24aa799a2.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          
+          <span class="ka">Marvara (BE-SE-DK)</span>
+          
+          
+        </li><li>
+          <span class="kd">Saturday 5 February 2022</span>
+          <span class="ka">EKKO + Jacques Stotzem (BE)</span>
+          
+          
+        </li><li>
+          <span class="kd">Saturday 23 April 2022</span>
+          <span class="ka">Alaw (WAL)</span>
+          
+          <div class="video kvid"><button class="yt" type="button" data-id="Eja7pFZq7aI" aria-label="Video: Alaw (WAL)" style="background-image:url(../data/vthumb/39a018e64241b319.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 18 June 2022</span>
+          <span class="ka">Salt House (SCO)</span>
+          <span class="kk">Sint-Antonius-Abtkerk, Wolfsdonk</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="Eh7hHKT5GHg" aria-label="Video: Salt House (SCO)" style="background-image:url(../data/vthumb/4b067e7a4fc72afd.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li></ol>
+        <p class="kopm">This season's programme is not yet complete.</p>
+      </article>
+      <article class="kseizoen" id="kerk-2020">
+        
+        <h3 class="kt"><span>church – concerts</span><span>202<em>0</em>–202<em>1</em></span></h3>
+        <p class="kopm">Programme as announced in September 2020. Because of the coronavirus measures, most concerts were postponed to 2021–2022.</p>
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Saturday 3 October 2020</span>
+          <span class="ka">Lucilla Galeazzi (IT), seizoensopener met wandeling en maaltijd</span>
+          <span class="kk">Sint-Luciakerk, Engsbergen</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="K3dcYmMNQps" aria-label="Video: Lucilla Galeazzi (IT), seizoensopener met wandeling en maaltijd" style="background-image:url(../data/vthumb/8757eae47974be95.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 24 October 2020</span>
+          <span class="ka">Myrddin &amp; Imre De Cauter (BE) + Antonio Paz (ES)</span>
+          <span class="kk">Sint-Antonius-Abtkerk, Wolfsdonk</span>
+          
+        </li><li>
+          <span class="kd">Saturday 14 November 2020</span>
+          <span class="ka">Whyte (UK) + duo Menneteau-Barbedette (FR)</span>
+          <span class="kk">Sint-Antonius-Abtkerk, Wolfsdonk</span>
+          
+        </li><li>
+          <span class="kd">Saturday 5 December 2020</span>
+          <span class="ka">Trio Tesi, Vaillant, Piccioni (IT-FR)</span>
+          <span class="kk">Sint-Antonius-Abtkerk, Wolfsdonk</span>
+          
+        </li><li>
+          <span class="kd">Saturday 23 January 2021</span>
+          <span class="ka">EKKO + Jacques Stotzem (BE)</span>
+          <span class="kk">Zichem</span>
+          
+        </li><li>
+          <span class="kd">Saturday 6 February 2021</span>
+          <span class="ka">Basta Trio met Berlinde Deman + Ananta Roosens</span>
+          <span class="kk">Ramsel</span>
+          
+        </li><li>
+          <span class="kd">Saturday 27 February 2021</span>
+          <span class="ka">The Rheingans Sisters (UK)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 20 March 2021</span>
+          <span class="ka">Illuminations / Resonance (FR)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li></ol>
+        
+      </article>
+      <article class="kseizoen" id="kerk-2019">
+        
+        <h3 class="kt"><span>church – concerts</span><span>201<em>9</em>–202<em>0</em></span></h3>
+        <p class="kopm">Due to the coronavirus measures, Alaw's concert in March 2020 could not go ahead; it was rescheduled to April 2022.</p>
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Saturday 21 September 2019</span>
+          <span class="ka">Stefan Timmermans &amp; vrienden uit Valencia (ES-GR-BE), met wandeling en maaltijd</span>
+          
+          <div class="video kvid"><button class="yt" type="button" data-id="744t0YoC2Hc" aria-label="Video: Stefan Timmermans &amp; vrienden uit Valencia (ES-GR-BE), met wandeling en maaltijd" style="background-image:url(../data/vthumb/05897666799386ce.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 19 October 2019</span>
+          <span class="ka">Tristan Driessens, Vardan Hovanissian &amp; Emre Gültekin (BE-TUR-ARM)</span>
+          
+          <div class="video kvid"><button class="yt" type="button" data-id="7IFX3WrUHIM" aria-label="Video: Tristan Driessens, Vardan Hovanissian &amp; Emre Gültekin (BE-TUR-ARM)" style="background-image:url(../data/vthumb/6223111a10abd88f.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 16 November 2019</span>
+          <span class="ka">Trio Dhoore (BE) + Tom Moore &amp; Archie Moss (UK)</span>
+          
+          <div class="video kvid"><button class="yt" type="button" data-id="_QiJN2tM5U8" aria-label="Video: Trio Dhoore (BE) + Tom Moore &amp; Archie Moss (UK)" style="background-image:url(../data/vthumb/2dbdefb6755a2b11.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 7 December 2019</span>
+          <span class="ka">Ye Vagabonds (IRL)</span>
+          
+          <div class="video kvid"><button class="yt" type="button" data-id="G_UjLgtSPmo" aria-label="Video: Ye Vagabonds (IRL)" style="background-image:url(../data/vthumb/4f5382a86cd7e2d0.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 18 January 2020</span>
+          <span class="ka">Tcha Limberger Trio</span>
+          
+          <div class="video kvid"><button class="yt" type="button" data-id="j_lvQfQTLQ0" aria-label="Video: Tcha Limberger Trio" style="background-image:url(../data/vthumb/849b5baec7920b17.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 15 February 2020</span>
+          <span class="ka">Leïla Amezian met strijkersensemble</span>
+          
+          <div class="video kvid"><button class="yt" type="button" data-id="Hjl6zqG0sus" aria-label="Video: Leïla Amezian met strijkersensemble" style="background-image:url(../data/vthumb/7c15b1d112e188a0.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 14 March 2020</span>
+          <span class="ka">Alaw (WAL) — uitgesteld naar 23 april 2022</span>
+          
+          
+        </li></ol>
+        <p class="kopm">This season's programme is not yet complete.</p>
+      </article>
+      <article class="kseizoen" id="kerk-2018">
+        
+        <h3 class="kt"><span>church – concerts</span><span>201<em>8</em>–201<em>9</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Saturday 22 September 2018</span>
+          <span class="ka">Ialma: Camino, seizoensopener met wandeling en paella</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="CTR7TtTSAnI" aria-label="Video: Ialma: Camino, seizoensopener met wandeling en paella" style="background-image:url(../data/vthumb/3b69989c294d88d9.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 13 October 2018</span>
+          <span class="ka">Kevin Seddiki (FR) &amp; Ruben Machtelinckx</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="YjEycBU2dlM" aria-label="Video: Kevin Seddiki (FR) &amp; Ruben Machtelinckx" style="background-image:url(../data/vthumb/e0367cdc14abefa2.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 17 November 2018</span>
+          <span class="ka">Bert Van Laethem, Ivica Vucelja (SRB) &amp; Mika Heinczinger (HU)</span>
+          <span class="kk">Sint-Luciakerk, Engsbergen</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="GPC4qeXQoZ0" aria-label="Video: Bert Van Laethem, Ivica Vucelja (SRB) &amp; Mika Heinczinger (HU)" style="background-image:url(../data/vthumb/37485100a73ebcf0.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 8 December 2018</span>
+          <span class="ka">Daoirí Farrell (IRL), Philip Masure &amp; Dave Munnelly</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="wnIS4rckMQg" aria-label="Video: Daoirí Farrell (IRL), Philip Masure &amp; Dave Munnelly" style="background-image:url(../data/vthumb/d8382ac6411aca29.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Friday 25 January 2019</span>
+          <span class="ka">Sirus: Josefina Paulson &amp; Jonas Åkerlund (SE) + Sophie Cavez &amp; Baltazar Montanaro</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="Gn1AOWXDjkQ" aria-label="Video: Sirus: Josefina Paulson &amp; Jonas Åkerlund (SE) + Sophie Cavez &amp; Baltazar Montanaro" style="background-image:url(../data/vthumb/16509188fc55a064.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 16 February 2019</span>
+          <span class="ka">Nawaris (IQ-BE)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="52IlTLd3yQU" aria-label="Video: Nawaris (IQ-BE)" style="background-image:url(../data/vthumb/48f451a9bb9bb305.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 23 March 2019</span>
+          <span class="ka">Martin Simpson (UK) + Les Guitares Magiques</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="Kx4PM8xFx5g" aria-label="Video: Martin Simpson (UK) + Les Guitares Magiques" style="background-image:url(../data/vthumb/a0b7f8d1b8bd592e.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li></ol>
+        
+      </article>
+      <article class="kseizoen" id="kerk-2017">
+        
+        <h3 class="kt"><span>church – concerts</span><span>201<em>7</em>–201<em>8</em></span></h3>
+        <p class="kopm">The first season, in the Sint-Pieterskerk in Langdorp.</p>
+        <ol class="kerk-lijst"><li>
+          
+          <span class="ka">ESTBEL (EST-BE)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 18 November 2017</span>
+          <span class="ka">Nisia + Odessalavie (IT-BE)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 16 December 2017</span>
+          <span class="ka">Griff Trio + Petri Prauda (FIN)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Friday 19 January 2018</span>
+          <span class="ka">Snaarmaarwaar + Ewan McLennan (SCO)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Saturday 24 February 2018</span>
+          <span class="ka">GFVP + Hussein Rassim &amp; Osama Abdulrasol (IQ)</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li><li>
+          <span class="kd">Friday 23 March 2018</span>
+          <span class="ka">Naragonia + Sophie Cavez &amp; Baltazar Montanaro</span>
+          <span class="kk">Sint-Pieterskerk, Langdorp</span>
+          
+        </li></ol>
+        <p class="kopm">This season's programme is not yet complete.</p>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="papier kerk-archief" id="holsbeek" aria-labelledby="holsbeek-titel">
+    <div class="wrap" style="display:block">
+      <h2 id="holsbeek-titel">Holsbeek Sessies</h2>
+      <p class="kerk-intro">Sinds 2019 programmeert WESP in opdracht van de gemeente Holsbeek concerten in het Buurthuis van Nieuwrode, later ook kerkconcerten in Kortrijk-Dutsel, junior- en schoolsessies en wandelsessies. <a href="https://www.holsbeeksessies.be">holsbeeksessies.be</a></p>
+      <div class="kgrid">
+      <article class="kseizoen" id="holsbeek-2026">
+        <h3 class="kt"><span>holsbeek – sessies</span><span>202<em>6</em>–202<em>7</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Saturday 19 September 2026</span>
+          <span class="ka">Wandelsessie met Stoomboot, Wigbert en Jeroen Knapen</span>
+          <span class="kk">Kasteeldomein van Horst, Sint-Pieters-Rode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 4 October 2026</span>
+          <span class="ka">Quentin Dujardin &amp; Didier Laloy</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 29 October 2026</span>
+          <span class="ka">Eriksson-Delcroix</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="holsbeek-2025">
+        <h3 class="kt"><span>holsbeek – sessies</span><span>202<em>5</em>–202<em>6</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Saturday 20 September 2025</span>
+          <span class="ka">Wandelsessie: Wannes Raps (Folkwaarts-productie van Toon Van Mierlo &amp; Reineke Van Hooreweghe, met veertien muzikanten)</span>
+          <span class="kk">Pastorij en Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="OBTDxec_tQg" aria-label="Video: Wandelsessie: Wannes Raps (Folkwaarts-productie van Toon Van Mierlo &amp; Reineke Van Hooreweghe, met veertien muzikanten)" style="background-image:url(../data/vthumb/d8aa067ea7a40abe.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Sunday 5 October 2025</span>
+          <span class="ka">Didier François &amp; Philip Masure</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 16 October 2025</span>
+          <span class="ka">Hans Mortelmans en groep</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 20 November 2025</span>
+          <span class="ka">Cahalen Morrison (USA)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 14 December 2025</span>
+          <span class="ka">Sara Salvérius &amp; Jean-Philippe Poncin</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 25 January 2026</span>
+          <span class="ka">Flo &amp; Eline Duerinck</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 5 February 2026</span>
+          <span class="ka">Peixe é Limão (ITA-BE)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 8 March 2026</span>
+          <span class="ka">Kabál</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Tuesday 10 March 2026</span>
+          <span class="ka">Schoolsessies: Pipa Polo (Tom Theuns &amp; Aurélie Dorzée)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="holsbeek-2024">
+        <h3 class="kt"><span>holsbeek – sessies</span><span>202<em>4</em>–202<em>5</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Saturday 14 September 2024</span>
+          <span class="ka">Wandelsessie: Poorttaal (Toon Van Mierlo, Pascale Rubens, Maarten Decombel, Sophie Janna, Reineke Van Hooreweghe)</span>
+          <span class="kk">Kasteeldomein van Horst, Sint-Pieters-Rode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 6 October 2024</span>
+          <span class="ka">Duo Nous</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 17 October 2024</span>
+          <span class="ka">Spilar</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Tuesday 19 November 2024</span>
+          <span class="ka">Nele needs a holiday – mijn Best!</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Wednesday 20 November 2024</span>
+          <span class="ka">Junior: Pipa Polo (Tom Theuns &amp; Aurélie Dorzée)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 15 December 2024</span>
+          <span class="ka">Hella</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 26 January 2025</span>
+          <span class="ka">Josefina Paulsson &amp; Sophie Cavez</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Wednesday 5 February 2025</span>
+          <span class="ka">Junior: Trop is te veel, en te veel is trop!</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 6 February 2025</span>
+          <span class="ka">Daoiri Farrell (IRL)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 16 March 2025</span>
+          <span class="ka">Edra</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 3 April 2025</span>
+          <span class="ka">Little Kim Quartet</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="holsbeek-2023">
+        <h3 class="kt"><span>holsbeek – sessies</span><span>202<em>3</em>–202<em>4</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Sunday 8 October 2023</span>
+          <span class="ka">Quetzal Duo</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 19 October 2023</span>
+          <span class="ka">Sam Kelly &amp; Jamie Francis (VK)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Wednesday 29 November 2023</span>
+          <span class="ka">Junior: Qui-es-tu? / Wie ben jij? (vervangprogramma voor Red &amp; Lily)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 30 November 2023</span>
+          <span class="ka">Cathal O’Currain &amp; Marty Barry (IRL)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 17 December 2023</span>
+          <span class="ka">Siger</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 28 January 2024</span>
+          <span class="ka">Damast Duo</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 1 February 2024</span>
+          <span class="ka">Old Salt (USA-BE)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 3 March 2024</span>
+          <span class="ka">Bipolar Bows</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Wednesday 20 March 2024</span>
+          <span class="ka">Junior: Rémi Decker – Zigoto</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 21 March 2024</span>
+          <span class="ka">Riccardo Tesi &amp; Maurizio Geri (IT)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="holsbeek-2022">
+        <h3 class="kt"><span>holsbeek – sessies</span><span>202<em>2</em>–202<em>3</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Wednesday 19 October 2022</span>
+          <span class="ka">Junior: Ik en den Theo</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 20 October 2022</span>
+          <span class="ka">French Kiss</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Tuesday 29 November 2022</span>
+          <span class="ka">Sophia Ammann plays Leonard Cohen</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Wednesday 30 November 2022</span>
+          <span class="ka">Junior: Poppentheater Wortel – Vliegen, dat kan ik ook</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 11 December 2022</span>
+          <span class="ka">Tuur Florizoone &amp; Eric Vloeimans</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Wednesday 1 February 2023</span>
+          <span class="ka">Junior: Rémi Decker – Farfelu</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 2 February 2023</span>
+          <span class="ka">Roland &amp; The Believers</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 12 March 2023</span>
+          <span class="ka">Naragonia Quartet</span>
+          <span class="kk">Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Wednesday 22 March 2023</span>
+          <span class="ka">Junior: de ReisRus (Lennaert Maes &amp; Andries Boone)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 23 March 2023</span>
+          <span class="ka">Eva De Roovere</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="holsbeek-2021">
+        <h3 class="kt"><span>holsbeek – sessies</span><span>202<em>1</em>–202<em>2</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Wednesday 20 October 2021</span>
+          <span class="ka">Junior: De Stadsboerin (Lady Angelina)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 21 October 2021</span>
+          <span class="ka">Philippe Robrecht</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 9 December 2021</span>
+          <span class="ka">Wigbert</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Wednesday 2 February 2022</span>
+          <span class="ka">Junior: Sol de Mol (Poppentheater Wortel)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 3 February 2022</span>
+          <span class="ka">Riet</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 24 March 2022</span>
+          <span class="ka">Ronny Mosuse</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="holsbeek-2019">
+        <h3 class="kt"><span>holsbeek – sessies</span><span>201<em>9</em>–202<em>0</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Thursday 17 October 2019</span>
+          <span class="ka">Lieven Tavernier</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 28 November 2019</span>
+          <span class="ka">Neeka</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 13 February 2020</span>
+          <span class="ka">Jonas Winterland</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 12 March 2020</span>
+          <span class="ka">Geert Verdickt (van Buurman)</span>
+          <span class="kk">Zaal Buurthuis, Nieuwrode (Holsbeek)</span>
+          
+        </li></ol>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="papier kerk-archief" id="limburg" aria-labelledby="limburg-titel">
+    <div class="wrap" style="display:block">
+      <h2 id="limburg-titel">Limburg Sessies</h2>
+      <p class="kerk-intro">Sinds 2025 brengen de Limburg Sessies folk en wereldmuziek naar bijzondere plekken in Limburg, van de Academiezaal in Sint-Truiden tot de Abdijsite Herkenrode. <a href="https://www.limburgsessies.be">limburgsessies.be</a></p>
+      <div class="kgrid">
+      <article class="kseizoen" id="limburg-2025">
+        <h3 class="kt"><span>limburg – sessies</span><span>202<em>5</em>–202<em>6</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Friday 5 December 2025</span>
+          <span class="ka">Martin Simpson Trio (ENG)</span>
+          <span class="kk">Abdijsite Herkenrode (Heilig Grafkerk), Hasselt</span>
+          
+        </li><li>
+          <span class="kd">Thursday 15 January 2026</span>
+          <span class="ka">Sonetos del Amor Oscuro (BE)</span>
+          <span class="kk">Ursulinenkloosterkapel, Diepenbeek</span>
+          
+        </li><li>
+          <span class="kd">Thursday 12 February 2026</span>
+          <span class="ka">Sara Salvérius &amp; SunSunSun (BE)</span>
+          <span class="kk">Academiezaal, Sint-Truiden</span>
+          
+        </li><li>
+          <span class="kd">Wednesday 18 March 2026</span>
+          <span class="ka">Laura Cortese's Acoustic Evening met Bruce Molsky, Mairi Chaimbeul en Tyler Ramsey (US-SCO)</span>
+          <span class="kk">Academiezaal, Sint-Truiden</span>
+          
+        </li><li>
+          <span class="kd">Friday 17 April 2026</span>
+          <span class="ka">Naragonia Quartet (BE)</span>
+          <span class="kk">Sint-Pieterskerk Leut, Maasmechelen</span>
+          
+        </li></ol>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="papier kerk-archief" id="park" aria-labelledby="park-titel">
+    <div class="wrap" style="display:block">
+      <h2 id="park-titel">PARK Festival</h2>
+      <p class="kerk-intro">Rond 11 juli programmeert WESP in opdracht van stad Leuven en de Abdij van Park een gratis festival met folk en wereldmuziek in en rond de abdij. Tot 2022 als Vlaanderen Feest, sinds 2023 als PARK, en sinds 2026 met de PARK Sessies in juni.</p>
+      <div class="kgrid">
+      <article class="kseizoen" id="park-2026">
+        <h3 class="kt"><span>park – festival</span><span>202<em>6</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Thursday 11 June 2026</span>
+          <span class="ka">Sara Salvérius &amp; Jean-Philippe Poncin</span><span class="ka">Sonetos del Amor Oscuro (Lorca-programma)</span>
+          <span class="kk">Tuin van de Abt, Abdij van Park, Heverlee (Leuven)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 18 June 2026</span>
+          <span class="ka">Kabál</span><span class="ka">Troissoeur ft. Pieter Thys</span>
+          <span class="kk">Tuin van de Abt, Abdij van Park, Heverlee (Leuven)</span>
+          
+        </li><li>
+          <span class="kd">Thursday 25 June 2026</span>
+          <span class="ka">Trio Charneux-Leleux-Puma</span><span class="ka">Naragonia Quartet</span>
+          <span class="kk">Tuin van de Abt, Abdij van Park, Heverlee (Leuven)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 5 July 2026</span>
+          <span class="ka">Luc Rombouts (vredesbeiaardier)</span>
+          <span class="kk">Abdij van Park, Heverlee (Leuven)</span>
+          <span class="ksep" aria-hidden="true"></span><span class="ka">Triveni trio</span><span class="ka">Tuur Florizoone &amp; Anu Junnonen</span><span class="ka">Hartwin &amp; the Unfolders</span><span class="ka">Amber Haddad trio</span>
+          <span class="kk">Conventstuin, Abdij van Park, Heverlee (Leuven)</span>
+          <span class="ksep" aria-hidden="true"></span><span class="ka">Ayres trio</span><span class="ka">Florian De Schepper</span>
+          <span class="kk">Abdijkerk, Abdij van Park, Heverlee (Leuven)</span>
+          <span class="ksep" aria-hidden="true"></span><span class="ka">Bamako Express</span><span class="ka">MANdolinMAN feat. Laïla Amezian &amp; Léa Besançon</span><span class="ka">Sonico</span><span class="ka">Airboxes feat. Eilidh Shaw, Amy Henderson &amp; Ross Martin (BE-SCO)</span>
+          <span class="kk">Neerhof, Abdij van Park, Heverlee (Leuven)</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="park-2025">
+        <h3 class="kt"><span>park – festival</span><span>202<em>5</em></span></h3>
+        <p class="kopm">Eenmalig in de Abdij van Vlierbeek</p>
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Sunday 6 July 2025</span>
+          <span class="ka">Kabal (BE)</span><span class="ka">3'ain (BE-SYR)</span><span class="ka">Tamala (BE-SEN)</span><span class="ka">The Napoli Sessions (BE-ITA)</span>
+          <span class="kk">Parterretuin (groot podium), Abdij van Vlierbeek, Kessel-Lo (Leuven)</span>
+          <span class="ksep" aria-hidden="true"></span><span class="ka">Trio Charneux-Leleux-Puma (BE)</span><span class="ka">Enara Navaira (BE)</span><span class="ka">Damast Duo XL (BE-SYR-FR)</span><span class="ka">Fluencia Quartet (SE-BE-ES-FIN)</span>
+          <span class="kk">Pandtuin (klein podium), Abdij van Vlierbeek, Kessel-Lo (Leuven)</span>
+          <span class="ksep" aria-hidden="true"></span><span class="ka">Gwen Cresens &amp; Simon Leleux</span>
+          <span class="kk">Abdijkerk, Abdij van Vlierbeek, Kessel-Lo (Leuven)</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="park-2024">
+        <h3 class="kt"><span>park – festival</span><span>202<em>4</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Sunday 7 July 2024</span>
+          <span class="ka">WÖR &amp; Kongero (BE-SWE)</span><span class="ka">Halva</span><span class="ka">Jaqamaz (Hussein Rassim)</span><span class="ka">Peixe e Limão</span>
+          <span class="kk">Neerhof (groot podium), Abdij van Park, Heverlee (Leuven)</span>
+          <span class="ksep" aria-hidden="true"></span><span class="ka">Airboxes</span><span class="ka">Stijn &amp; Myrddin</span><span class="ka">GFVP</span><span class="ka">Renelius Ensemble</span>
+          <span class="kk">Conventstuin, Abdij van Park, Heverlee (Leuven)</span>
+          <span class="ksep" aria-hidden="true"></span><span class="ka">Tuur Florizoone &amp; Kika</span><span class="ka">Tom Theuns &amp; Aurélie Dorzée</span>
+          <span class="kk">Abdijkerk, Abdij van Park, Heverlee (Leuven)</span>
+          <span class="ksep" aria-hidden="true"></span><span class="ka">Solia</span><span class="ka">Esi Nri</span><span class="ka">Bao Sissoko</span>
+          <span class="kk">Aedicula (stilteplek), Abdij van Park, Heverlee (Leuven)</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="park-2023">
+        <h3 class="kt"><span>park – festival</span><span>202<em>3</em></span></h3>
+        <p class="kopm">Eerste editie als PARK</p>
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Sunday 9 July 2023</span>
+          <span class="ka">Old Salt (US-BE)</span><span class="ka">Toasaves (BE)</span><span class="ka">Las Lloronas</span><span class="ka">Sam Lee (UK)</span>
+          <span class="kk">Neerhof, Abdij van Park, Heverlee (Leuven)</span>
+          <span class="ksep" aria-hidden="true"></span><span class="ka">Livia Giaffreda (IT)</span><span class="ka">Carmen Fernandez (SP)</span><span class="ka">Terrafolk (SLOV)</span><span class="ka">Bipolar Bows</span>
+          <span class="kk">Conventstuin, Abdij van Park, Heverlee (Leuven)</span>
+          <span class="ksep" aria-hidden="true"></span><span class="ka">Toon Van Mierlo &amp; Reineke Van Hooreweghe: Poorttaal</span><span class="ka">Sophia Ammann</span><span class="ka">Sara Salvérius</span><span class="ka">Edra (Edwin Van Vinckenroye &amp; Raphaël De Cock)</span><span class="ka">Luc Rombouts (vredesbeiaardier)</span>
+          <span class="kk">Abdij van Park, Heverlee (Leuven)</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="park-2022">
+        <h3 class="kt"><span>park – festival</span><span>202<em>2</em></span></h3>
+        <p class="kopm">Vlaanderen Feest in de Abdij van Park</p>
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Sunday 10 July 2022</span>
+          <span class="ka">Laura Cortese &amp; Bert Ruymbeek</span><span class="ka">Naragonia</span><span class="ka">Trio Pletenitsa</span><span class="ka">Tom Theuns &amp; Aurélie Dorzée</span><span class="ka">Quetzal Duo</span><span class="ka">Refa (ex Refugees for Refugees)</span>
+          <span class="kk">Neerhof en binnentuin, Abdij van Park, Heverlee (Leuven)</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="park-2021">
+        <h3 class="kt"><span>park – festival</span><span>202<em>1</em></span></h3>
+        <p class="kopm">Vlaanderen Feest in de Abdij van Park</p>
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Sunday 11 July 2021</span>
+          <span class="ka">WÖR (BE)</span><span class="ka">Julien Biget</span><span class="ka">Hussein Rassim</span><span class="ka">Rudy Velghe</span>
+          <span class="kk">Abdij van Park, Heverlee (Leuven)</span>
+          
+        </li></ol>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="papier kerk-archief" id="beleuvenissen" aria-labelledby="beleuvenissen-titel">
+    <div class="wrap" style="display:block">
+      <h2 id="beleuvenissen-titel">Beleuvenissen op het Hogeschoolplein</h2>
+      <p class="kerk-intro">Sinds 2017 maakt WESP van het Hogeschoolplein in Leuven tijdens de zomerse Beleuvenissen een luisterplein: gratis vrijdagavonden met folk en wereldmuziek.</p>
+      <div class="kgrid">
+      <article class="kseizoen" id="beleuvenissen-2026">
+        <h3 class="kt"><span>beleuvenissen</span><span>202<em>6</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Friday 10 July 2026</span>
+          <span class="ka">The Wilderness Yet (UK)</span><span class="ka">Mec Yek</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 17 July 2026</span>
+          <span class="ka">Niña Maleza</span><span class="ka">Bruxelles Musette</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 24 July 2026</span>
+          <span class="ka">Thalas</span><span class="ka">Flook (IRL-UK)</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 31 July 2026</span>
+          <span class="ka">Wigbert</span><span class="ka">Lenny &amp; de Wespen met Little Kim, Liliane Saint-Pierre &amp; Nol Havens</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 7 August 2026</span>
+          <span class="ka">Peixe e Limão</span><span class="ka">Global Music Ensemble</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="beleuvenissen-2025">
+        <h3 class="kt"><span>beleuvenissen</span><span>202<em>5</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Friday 11 July 2025</span>
+          <span class="ka">Sophie Janna (NL)</span><span class="ka">Bright Lights Sessions (Pieter Van Dessel, Jaouad, Renata Louisa, Kapinga Gysel, Laura Cortese)</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 18 July 2025</span>
+          <span class="ka">Hartwin &amp; The Waves</span><span class="ka">Cabana Belgicana</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 25 July 2025</span>
+          <span class="ka">Delcroix–Eriksson duo</span><span class="ka">Jaune Toujours</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 1 August 2025</span>
+          <span class="ka">Little Kim</span><span class="ka">Dorpsklap (o.a. Ronny Mosuse, Annelies Tanghe, Stoy Stoffelen)</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 8 August 2025</span>
+          <span class="ka">Las Lloronas (NL-DE)</span><span class="ka">Korrontzi (ES)</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="beleuvenissen-2024">
+        <h3 class="kt"><span>beleuvenissen</span><span>202<em>4</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Friday 12 July 2024</span>
+          <span class="ka">Cathal Ó Curráin &amp; Marty Barry (IRL)</span><span class="ka">100 Voltas</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 19 July 2024</span>
+          <span class="ka">Loogaroo quartet</span><span class="ka">Naragonia quartet – 20 jaar, met gasten</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 26 July 2024</span>
+          <span class="ka">Snaarmaarwaar</span><span class="ka">Góbé (HU) feat. Oscar Beerten</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="beleuvenissen-2023">
+        <h3 class="kt"><span>beleuvenissen</span><span>202<em>3</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Friday 7 July 2023</span>
+          <span class="ka">Jonas Winterland trio: Retrospect</span><span class="ka">Hiraeth (Wouter Vandenabeele, 13-koppig)</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 14 July 2023</span>
+          <span class="ka">Stoomboot</span><span class="ka">Sam Kelly &amp; The Lost Boys (ENG)</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 21 July 2023</span>
+          <span class="ka">EmBRUN</span><span class="ka">Talisk (SCO)</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="beleuvenissen-2022">
+        <h3 class="kt"><span>beleuvenissen</span><span>202<em>2</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Friday 8 July 2022</span>
+          <span class="ka">Tuur Florizoone en vrienden</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 15 July 2022</span>
+          <span class="ka">Brisk</span><span class="ka">Lenny &amp; friends (Jan De Wilde, Rick De Leeuw, Andrea Croonenberghs)</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 22 July 2022</span>
+          <span class="ka">Bansk</span><span class="ka">Broes</span><span class="ka">Euforro</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="beleuvenissen-2019">
+        <h3 class="kt"><span>beleuvenissen</span><span>201<em>9</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Friday 12 July 2019</span>
+          <span class="ka">A la Rum</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 19 July 2019</span>
+          <span class="ka">Koen De Cauter &amp; Fapy Lafertin</span><span class="ka">Banditaliana (IT)</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 26 July 2019</span>
+          <span class="ka">Philip Masure nodigt uit, met Helen Flaherty, Guido Piccard, Bríd Harper en Sylvain Barou</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="beleuvenissen-2018">
+        <h3 class="kt"><span>beleuvenissen</span><span>201<em>8</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Friday 13 July 2018</span>
+          <span class="ka">IALMA en festa! met Lucilla Galeazzi (IT) en Manou Gallo</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 20 July 2018</span>
+          <span class="ka">GFVP met Tamala, Elias Bachoura &amp; Shalan Alhamwy en gasten</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 27 July 2018</span>
+          <span class="ka">Spencer The Rover met Leuvense gasten (o.a. And Then Came Fall, Geert Verdickt)</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="beleuvenissen-2017">
+        <h3 class="kt"><span>beleuvenissen</span><span>201<em>7</em></span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Friday 7 July 2017</span>
+          <span class="ka">Lenny &amp; de Wespen deluxe met gasten Astrid Nijgh (NL), Klaas Delrue, Stoomboot, JackoBond en Hans de Booij (NL)</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 14 July 2017</span>
+          <span class="ka">MANdolinMAN invites: Jan De Smet, Liliane Saint-Pierre, Alain Louie, Stefan Bracaval, Gwen Cresens, Ronny Mosuse en Lennaert Maes</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li><li>
+          <span class="kd">Friday 21 July 2017</span>
+          <span class="ka">Sam Kelly &amp; The Lost Boys (ENG)</span><span class="ka">Oysterband (ENG)</span>
+          <span class="kk">Hogeschoolplein, Leuven</span>
+          
+        </li></ol>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="papier kerk-archief" id="producties" aria-labelledby="producties-titel">
+    <div class="wrap" style="display:block">
+      <h2 id="producties-titel">Andere producties</h2>
+      <p class="kerk-intro">Daarnaast maakte WESP eigen producties en kleine reeksen: met de Folkwaarts-partners in de Meroderegio, solo in kapellen, en rond de muziek van de steden.</p>
+      <div class="kgrid">
+      <article class="kseizoen" id="producties-2026-klanken-in-de-kapel">
+        <h3 class="kt"><span>Klanken in de Kapel</span><span>2026</span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Friday 23 October 2026</span>
+          <span class="ka">Lydie Thonnard</span>
+          <span class="kk">Kapel Onze-Lieve-Vrouw-ten-Eik, Tongerlo</span>
+          
+        </li><li>
+          <span class="kd">Saturday 24 October 2026</span>
+          <span class="ka">Stijn Kuppens</span>
+          <span class="kk">Sint-Bavokapel, Eindhout</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="producties-2026-klanken-van-de-steden">
+        <h3 class="kt"><span>Klanken van de Steden</span><span>2026</span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Saturday 9 May 2026</span>
+          <span class="ka">Kalesma</span>
+          <span class="kk">Bibliotheek Permeke, Antwerpen</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="producties-2025-klanken-in-de-kapel">
+        <h3 class="kt"><span>Klanken in de Kapel</span><span>2025</span></h3>
+        
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Friday 17 October 2025</span>
+          <span class="ka">Stefan Bracaval</span>
+          <span class="kk">Sint-Dimpnakapel, Zammel</span>
+          
+        </li></ol>
+      </article>
+      <article class="kseizoen" id="producties-2025-wannes-raps">
+        <h3 class="kt"><span>Wannes Raps</span><span>2025</span></h3>
+        <p class="kopm">Folkwaarts: vertel- en folkproductie, Toon Van Mierlo &amp; Reineke Van Hooreweghe</p>
+        <ol class="kerk-lijst"><li>
+          <span class="kd">Friday 7 March 2025</span>
+          
+          <span class="kk">Kerk, Webbekom (met Stamineeke)</span>
+          <div class="video kvid"><button class="yt" type="button" data-id="OBTDxec_tQg" aria-label="Video: Kerk, Webbekom (met Stamineeke)" style="background-image:url(../data/vthumb/d8aa067ea7a40abe.jpg)"><span class="play" aria-hidden="true"></span></button></div>
+        </li><li>
+          <span class="kd">Saturday 8 March 2025</span>
+          
+          <span class="kk">Westerlo (met Westelfolk)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 9 March 2025</span>
+          
+          <span class="kk">De Wiekslag, Zelem (met Folkmjuzik)</span>
+          
+        </li><li>
+          <span class="kd">Friday 14 March 2025</span>
+          
+          <span class="kk">Kerk, Genendijk (met Celtic Art Gallery)</span>
+          
+        </li><li>
+          <span class="kd">Saturday 15 March 2025</span>
+          
+          <span class="kk">Strokapel, Ramsel (met Erfgoed Herselt)</span>
+          
+        </li><li>
+          <span class="kd">Sunday 16 March 2025</span>
+          
+          <span class="kk">Zaal Munte, Zichem</span>
+          
+        </li><li>
+          <span class="kd">Saturday 20 September 2025</span>
+          <span class="ka">Wandelsessie van de Holsbeek Sessies</span>
+          <span class="kk">Pastorij en Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)</span>
+          
+        </li></ol>
+      </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap"><img class="foot-logo" src="../seizoen/logo-oranje.png" alt="Merodefestival" width="147" height="100" loading="lazy"></div>
+  <div class="wrap cols">
+    <div><h3>Contact</h3><p><a href="mailto:info@merodefestival.be">info@merodefestival.be</a></p><p><a href="tel:+32498758296">0498 75 82 96</a></p><p>Merodefestival is a project of WESP vzw, BE 0863 441 738, Jozef Wautersstraat 4, 3010 Kessel-Lo, IBAN BE50 9731 3542 0118</p></div>
+    <div><h3>Follow us</h3><ul><li><a href="https://www.facebook.com/merodefestival">Facebook</a></li><li><a href="https://www.instagram.com/merodefestival/">Instagram</a></li><li><a href="https://www.youtube.com/channel/UCahKa1lM3yaWEwXdV_bBJdw">YouTube</a></li></ul></div>
+    <div><h3>With support from</h3><a class="steun-link" href="https://www.vlaanderen.be" target="_blank" rel="noopener"><img class="steun-logo" src="../img/vlaanderen-verbeelding-werkt.png" alt="Vlaanderen, verbeelding werkt" width="200" height="87" loading="lazy"></a><p>The Flemish Government, arts and heritage.</p><p>Artwork: <a href="https://www.reinhart.be" target="_blank" rel="noopener">Reinhart Croon</a></p></div>
+  </div>
+<div class="wrap foot-onder"><p class="foot-links"><a href="partners.html">Partners</a><a href="vrienden-van.html">Friends of Merodefestival</a><a href="index.html#nieuwsbrief">Newsletter</a><a href="privacy.html">Privacy statement</a></p></div>
+</footer>
+<script>
+document.querySelectorAll(".yt").forEach(function (b) {
+  b.addEventListener("click", function () {
+    var id = b.getAttribute("data-id"), vm = b.getAttribute("data-vimeo"), h = b.getAttribute("data-h");
+    if (location.protocol === "file:") { window.open(vm ? "https://vimeo.com/" + vm : "https://www.youtube.com/watch?v=" + id, "_blank", "noopener"); return; }
+    var f = document.createElement("iframe");
+    f.src = vm ? "https://player.vimeo.com/video/" + vm + "?" + (h ? "h=" + h + "&" : "") + "autoplay=1"
+              : "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+    f.title = b.getAttribute("aria-label");
+    f.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture; fullscreen");
+    f.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+    f.allowFullscreen = true;
+    b.replaceWith(f);
+  });
+});
+var t = document.querySelector(".menu-toggle"), n = document.getElementById("hoofdmenu");
+t.addEventListener("click", function () { var o = n.classList.toggle("open"); t.setAttribute("aria-expanded", o); });
+</script>
+<script data-statistiek>(function(){var h=location.hostname;if(h!=="www.merodefestival.be"&&h!=="merodefestival.be")return;function s(src,a){var e=document.createElement("script");e.defer=true;e.src=src;for(var k in a)e.setAttribute(k,a[k]);document.head.appendChild(e)}s("https://static.cloudflareinsights.com/beacon.min.js",{"data-cf-beacon":'{"token":"63300aea96964edfbfcaf3d986cb4628"}'});})();</script>
+<script src="js/afwerking.js" defer></script>
+</body>
+</html>

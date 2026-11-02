@@ -224,3 +224,18 @@ footer ul{list-style:none;margin:0;padding:0}
 
 /* nooit zijwaarts scrollen door een uitstekend element */
 html,body{overflow-x:clip}
+
+/* taalkeuze NL · EN · FR (wordt door scripts/build-talen.mjs in elke pagina gezet) */
+.talen{display:flex;align-items:center;gap:.15rem;font-family:var(--label);font-size:.92rem;line-height:1}
+.talen a,.talen span{display:inline-block;padding:.45rem .4rem;border-radius:4px;text-decoration:none}
+.talen a{color:var(--s-zand)}
+.talen a:hover,.talen a:focus-visible{color:var(--s-oranje)}
+.talen span{color:var(--s-licht);box-shadow:inset 0 -2px 0 var(--s-oranje)}
+.talen-menu{display:none}
+@media (max-width:560px){
+  .bar>.talen{display:none}
+  nav .talen-menu{display:flex;gap:.5rem;padding-top:.6rem;border-top:1px solid var(--s-nacht-2)}
+  .talen-menu a,.talen-menu span{padding:.35rem .5rem;text-decoration:none;border-radius:4px}
+  .talen-menu a{color:var(--s-zand)}
+  .talen-menu span{color:var(--s-licht);box-shadow:inset 0 -2px 0 var(--s-oranje)}
+}

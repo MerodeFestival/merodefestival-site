@@ -19,6 +19,8 @@ const KNOPEN = [
 ];
 
 export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
+  // Adressen van onze eigen site in Notion staan zonder taal (https://www.merodefestival.be/...)
+  const BASIS = SITE.replace(/\/(en|fr)$/, "");
   let rijen = [];
   try { rijen = JSON.parse(await fs.readFile(path.join(ROOT, "data/wesp.json"), "utf8")); } catch { /* nog geen gegevens */ }
   const van = soort => rijen.filter(r => r.soort === soort);
@@ -26,21 +28,21 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
   // Een link uit Notion: adressen van onze eigen site worden interne links.
   const href = u => {
     if (!u) return "";
-    if (u.startsWith(SITE)) {
-      let rest = u.slice(SITE.length);
+    if (u.startsWith(BASIS)) {
+      let rest = u.slice(BASIS.length);
       const [pad, anker] = rest.split("#");
       const bestand = !pad || pad === "/" ? "index.html" : pad.replace(/^\//, "").replace(/\/$/, "") + (/\.[a-z]+$/.test(pad) ? "" : ".html");
       return bestand + (anker ? "#" + anker : "");
     }
     return u;
   };
-  const extern = u => /^https?:/.test(u) && !u.startsWith(SITE);
+  const extern = u => /^https?:/.test(u) && !u.startsWith(BASIS);
   const alinea = t => esc(t).split(/\n{2,}/).map(x => `<p>${x.replace(/\n/g, "<br>")}</p>`).join("");
   const lijstRegels = (sleutel, standaard) => T(sleutel, standaard).split(/\n+/).map(r => r.trim()).filter(Boolean).map(r => {
     const [k, ...rest] = r.split("|");
     return { kop: k.trim(), tekst: rest.join("|").trim() };
   });
-  const link = r => r.link ? `<a class="w-link" href="${esc(href(r.link))}"${extern(r.link) ? ' target="_blank" rel="noopener"' : ""}>${esc(r.linktekst || "Meer info")}${extern(r.link) ? ' ↗' : ' →'}</a>` : "";
+  const link = r => r.link ? `<a class="w-link" href="${esc(href(r.link))}"${extern(r.link) ? ' target="_blank" rel="noopener"' : ""}>${esc(r.linktekst || T("algemeen.meer-info", "Meer info"))}${extern(r.link) ? ' ↗' : ' →'}</a>` : "";
 
   // ---------- onderdelen ----------
   const kaart = `<svg class="radius" viewBox="0 0 500 500" role="img" aria-labelledby="kaart-titel kaart-uitleg">
@@ -51,7 +53,7 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
         <circle class="ring" cx="250" cy="250" r="228"/>
         ${KNOPEN.map((k, i) => `<line class="link" style="--d:${(0.7 + i * 0.22).toFixed(2)}s" x1="250" y1="250" x2="${k.cx}" y2="${k.cy}"/>`).join("\n        ")}
         <circle class="core" cx="250" cy="250" r="52"/>
-        <text class="core-t" x="250" y="246" text-anchor="middle">de</text>
+        <text class="core-t" x="250" y="246" text-anchor="middle">${esc(T("wesp.kaart-de", "de"))}</text>
         <text class="core-t" x="250" y="266" text-anchor="middle">Merode</text>
         ${KNOPEN.map((k, i) => `<g class="knoop" style="--d:${(0.9 + i * 0.22).toFixed(2)}s"><circle class="dot" cx="${k.cx}" cy="${k.cy}" r="7"/>
           <text class="place" x="${k.px}" y="${k.py}"${k.einde ? ' text-anchor="end"' : ""}>${esc(k.naam)}</text>
@@ -67,18 +69,18 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
   const sporenRijen = van("Spoor");
   const sporen = SPOREN.map((d, i) => {
     const r = sporenRijen[i];
-    const titel = r?.titel || d.titel;
+    const titel = r?.titel || T(`wesp.spoor${i + 1}.titel`, d.titel);
     const foto = r?.foto || d.foto;
     const l = r?.link ? href(r.link) : d.link;
-    const lt = r ? (r.linktekst || "Meer info") : d.linktekst;
-    return `<article class="w-spoor"><figure><img src="${esc(foto)}" alt="${esc(r?.foto ? titel : d.alt)}" loading="lazy" width="800" height="600"></figure><div class="w-spoor-tekst"><h3>${esc(titel)}</h3><p>${esc(r?.tekst || d.tekst)}</p>${l ? `<a class="w-link" href="${esc(l)}">${esc(lt)} →</a>` : ""}</div></article>`;
+    const lt = r ? (r.linktekst || T("algemeen.meer-info", "Meer info")) : T(`wesp.spoor${i + 1}.linktekst`, d.linktekst);
+    return `<article class="w-spoor"><figure><img src="${esc(foto)}" alt="${esc(r?.foto ? titel : T(`wesp.spoor${i + 1}.alt`, d.alt))}" loading="lazy" width="800" height="600"></figure><div class="w-spoor-tekst"><h3>${esc(titel)}</h3><p>${esc(r?.tekst || T(`wesp.spoor${i + 1}.tekst`, d.tekst))}</p>${l ? `<a class="w-link" href="${esc(l)}">${esc(lt)} →</a>` : ""}</div></article>`;
   }).join("");
 
   const pijlers = lijstRegels("wesp.pijlers", "Muziek | akoestisch, melodisch, verhalend\nLandschap | wandelingen, natuurgebieden, luisterplekken\nErfgoed | abdijen, kerken, kapellen, volkscafés\nGemeenschap | kerkfabrieken, gemeenten, 40 vrijwilligers");
 
   const projecten = van("Project").map(r => `<article class="w-rij"><p class="label w-label">${esc(r.label)}</p><div><h3>${esc(r.titel)}</h3><p>${esc(r.tekst)}</p></div><div>${link(r)}</div></article>`).join("");
   const opdrachtgevers = van("Opdrachtgever").map(r => `${esc(r.titel)}${r.tekst ? ` (${esc(r.tekst)})` : ""}`).join(", ");
-  const partners = van("Partner").filter(r => r.label !== "Met steun van").map(r => esc(r.titel)).join(", ");
+  const partners = van("Partner").filter(r => (r.labelNl ?? r.label) !== "Met steun van").map(r => esc(r.titel)).join(", ");
   const team = van("Team").map(r => `<div><dt>${esc(r.titel)}</dt><dd>${esc(r.tekst).replace(/\n/g, "<br>")}</dd></div>`).join("");
 
   const sectie = (id, klasse, inhoud, extra = "") => inhoud ? `<section class="w-sec ${klasse}" id="${id}"${extra}><div class="wrap">${inhoud}</div></section>` : "";
@@ -94,13 +96,13 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
 
   const samenwerken = `${kop("wesp.samenwerken.kop", "Samenwerken")}
     <div class="w-twee">
-      <div class="w-col"><figure><img src="img/beeld/ovatie.jpg" alt="Een festivalpodium bij avond met veel publiek" loading="lazy" width="800" height="600"></figure>
+      <div class="w-col"><figure><img src="img/beeld/ovatie.jpg" alt="${esc(T("wesp.foto-organisatoren", "Een festivalpodium bij avond met veel publiek"))}" loading="lazy" width="800" height="600"></figure>
         <h3>${esc(T("wesp.organisatoren.kop", "Voor gemeenten, kerkfabrieken en abdijen"))}</h3>
         <p>${esc(T("wesp.organisatoren.tekst", "Heeft jouw locatie een plek die om muziek vraagt? WESP zet ervaring, artiestennetwerk en productiekennis in: curatie, productie, communicatie en verantwoording, voor één concert, een reeks, een zomerprogrammatie of een festival."))}</p>
         <p class="w-klein">${esc(T("wesp.organisatoren.budget", "Elke samenwerking is anders van schaal en ambitie, en dus ook van budget: we bekijken samen wat mogelijk is."))}</p>
         ${opdrachtgevers ? `<p class="w-klein"><strong>${esc(T("wesp.opdrachtgevers.kop", "Zij werkten al met ons samen:"))}</strong> ${opdrachtgevers}.</p>` : ""}
         <div class="acties">${mailKnop("wesp.organisatoren.knop", "Bespreek jouw locatie", "Locatie voor muziek")}<a class="btn ghost" href="producties.html">${esc(T("wesp.knop-hero2", "Bekijk de producties"))}</a></div></div>
-      <div class="w-col"><figure><img src="img/beeld/trio.jpg" alt="Drie muzikanten spelen in een kapel" loading="lazy" width="800" height="600"></figure>
+      <div class="w-col"><figure><img src="img/beeld/trio.jpg" alt="${esc(T("wesp.foto-muzikanten", "Drie muzikanten spelen in een kapel"))}" loading="lazy" width="800" height="600"></figure>
         <h3>${esc(T("wesp.muzikanten.kop", "Voor muzikanten: een samenwerking, geen boeking"))}</h3>
         <p>${esc(T("wesp.muzikanten.tekst", "Een traject start met een gesprek, niet met een contract. We bespreken eerst wat je artistiek voor ogen hebt en zoeken dan de plek, het moment en de ondersteuning die passen: een residentie in een abdij of in het landschapspark, een concert op een bijzondere plek, hulp bij financiering, spreiding of promotie."))}</p>
         <p class="w-klein">${esc(T("wesp.muzikanten.contact", "We krijgen meer aanvragen dan we aankunnen. Vaker benaderen we zelf een artiest, wanneer plek, moment en artistieke klik samenkomen."))}</p>
@@ -121,7 +123,7 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
       ${kaart}
     </div>
   </section>
-  <nav class="w-ankers" aria-label="Op deze pagina"><div class="wrap">${ankers.map(([id, t]) => `<a href="#${id}">${esc(t)}</a>`).join("")}</div></nav>
+  <nav class="w-ankers" aria-label="${esc(T("algemeen.op-deze-pagina", "Op deze pagina"))}"><div class="wrap">${ankers.map(([id, t]) => `<a href="#${id}">${esc(t)}</a>`).join("")}</div></nav>
   ${sectie("sporen", "licht", `<div class="w-sporen">${sporen}</div>`)}
   ${sectie("methode", "band", `<div class="w-methode"><div>${kop("wesp.methode.kop", "De Merode-methode")}<p class="w-intro">${esc(T("wesp.methode.tekst", "Het landschap is bij ons nooit decor. Een abdij, een dorpskerk of een broekbos is een bewuste artistieke keuze die mee bepaalt hoe muziek klinkt, wat ze vertelt en wie ernaar komt luisteren."))}</p></div><dl class="w-pijlers">${pijlers.map(p => `<div><dt>${esc(p.kop)}</dt><dd>${esc(p.tekst)}</dd></div>`).join("")}</dl></div>`, ' style="--bg:url(img/beeld/demer.jpg)"')}
   ${sectie("samenwerken", "licht", samenwerken)}
@@ -131,7 +133,7 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     ${partners ? `<h3>${esc(T("wesp.partners.kop", "We werken onder meer samen met"))}</h3><p class="w-klein">${partners}. <a href="partners.html">${esc(T("wesp.partners.alle", "Alle partners"))} →</a></p>` : ""}</div></div>`)}`;
 
   // ---------- pagina-opmaak ----------
-  const titel = "Over WESP";
+  const titel = T("wesp.label", "Over WESP");
   const beschrijving = T("wesp.beschrijving", "WESP vzw brengt folk- en wereldmuziek naar erfgoed- en natuurplekken, begeleidt muzikanten en vertelt hun verhaal. De organisatie achter Merodefestival.");
   const hoofd = kopEd
     .replace(/<title>[^<]*<\/title>/, `<title>${esc(titel)} | Merodefestival</title>`)
