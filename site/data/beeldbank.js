@@ -1,5 +1,19 @@
 window.BEELDBANK = [
   {
+    "titel": "Rhagium Inquisitor – voorkant",
+    "src": "https://beeld.merodefestival.be/andries-boone/731742-724440.webp",
+    "alt": "Cover of the album Rhagium Inquisitor: a greyribbed longhorn beetle on a blue-green background, with the words Andries Boone",
+    "fotograaf": "Artwork: Lili Croon, layout: Studio Trad",
+    "jaar": null,
+    "onderwerp": "",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 1,
+    "sites": [
+      "Andries Boone"
+    ]
+  },
+  {
     "titel": "Merodefestival 2026 – Citadel met volle tribune",
     "src": "https://beeld.merodefestival.be/merodefestival/2026-citadel-publiek.webp",
     "alt": "Volle tribune voor het openluchtpodium in de bakstenen Citadel van Diest, met lichtslingers boven het podium",
@@ -204,6 +218,20 @@ window.BEELDBANK = [
     ],
     "volgorde": 1,
     "sites": []
+  },
+  {
+    "titel": "Rhagium Inquisitor – achterkant",
+    "src": "https://beeld.merodefestival.be/andries-boone/130711-937796.webp",
+    "alt": "Back cover of Rhagium Inquisitor with the tracklist next to the beetle",
+    "fotograaf": "Artwork: Lili Croon, layout: Studio Trad",
+    "jaar": null,
+    "onderwerp": "",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 2,
+    "sites": [
+      "Andries Boone"
+    ]
   },
   {
     "titel": "Merodefestival 2026 – Sathanao in de weide",
@@ -412,6 +440,20 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "C.O.N.V.E.R.S.A.T.I.O.N.S – voorkant",
+    "src": "https://beeld.merodefestival.be/andries-boone/83024-531288.webp",
+    "alt": "Cover of the album C.O.N.V.E.R.S.A.T.I.O.N.S: Andries Boone with an electric mandolin on an orange-red background",
+    "fotograaf": "Artwork: Stijn Vandebril, layout: Ward Dhoore",
+    "jaar": null,
+    "onderwerp": "",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 3,
+    "sites": [
+      "Andries Boone"
+    ]
+  },
+  {
     "titel": "Merodefestival 2026 – Sophie Cavez & Baltazar Montanaro onder de boom",
     "src": "https://beeld.merodefestival.be/merodefestival/2026-cavez-montanaro-boom.webp",
     "alt": "Violist en accordeoniste spelen samen aan de voet van een grote boom langs een wandelpad",
@@ -616,6 +658,20 @@ window.BEELDBANK = [
     ],
     "volgorde": 3,
     "sites": []
+  },
+  {
+    "titel": "C.O.N.V.E.R.S.A.T.I.O.N.S – achterkant",
+    "src": "https://beeld.merodefestival.be/andries-boone/767818-818357.webp",
+    "alt": "Back cover of C.O.N.V.E.R.S.A.T.I.O.N.S with the tracklist",
+    "fotograaf": "Artwork: Stijn Vandebril, layout: Ward Dhoore",
+    "jaar": null,
+    "onderwerp": "",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 4,
+    "sites": [
+      "Andries Boone"
+    ]
   },
   {
     "titel": "Merodefestival 2026 – Joël & Ousmana Diarra in het veld",
@@ -824,6 +880,20 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "T.I.M.E.L.A.P.S.E – voorkant",
+    "src": "https://beeld.merodefestival.be/andries-boone/8862-367556.webp",
+    "alt": "Cover of the album T.I.M.E.L.A.P.S.E: a painted portrait of Andries Boone with gears and a clock in his head",
+    "fotograaf": "Artwork: Lot Vandekeybus",
+    "jaar": null,
+    "onderwerp": "",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 5,
+    "sites": [
+      "Andries Boone"
+    ]
+  },
+  {
     "titel": "Merodefestival 2026 – Klaprozen langs de Demer",
     "src": "https://beeld.merodefestival.be/merodefestival/2026-demer-klaprozen.webp",
     "alt": "Rode klaprozen in het gras langs de oever van de Demer onder een blauwe lucht",
@@ -1012,6 +1082,20 @@ window.BEELDBANK = [
     ],
     "volgorde": 5,
     "sites": []
+  },
+  {
+    "titel": "T.I.M.E.L.A.P.S.E – achterkant",
+    "src": "https://beeld.merodefestival.be/andries-boone/717777-545428.webp",
+    "alt": "Back cover of T.I.M.E.L.A.P.S.E with the tracklist",
+    "fotograaf": "Artwork: Lot Vandekeybus",
+    "jaar": null,
+    "onderwerp": "",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 6,
+    "sites": [
+      "Andries Boone"
+    ]
   },
   {
     "titel": "Merodefestival 2026 – Wandelaars bij de watermolen",
@@ -1204,6 +1288,20 @@ window.BEELDBANK = [
     "sites": []
   },
   {
+    "titel": "C.O.L.O.R.S – voorkant",
+    "src": "https://beeld.merodefestival.be/andries-boone/andries-web-artwork-front-etsdrb.webp",
+    "alt": "Cover of the album C.O.L.O.R.S: colourful guitar-shaped artwork with the words Andries Boone",
+    "fotograaf": "Layout & photography: Ward Dhoore (Studio Trad)",
+    "jaar": null,
+    "onderwerp": "",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 7,
+    "sites": [
+      "Andries Boone"
+    ]
+  },
+  {
     "titel": "Merodefestival 2026 – Wandelaars door de weide",
     "src": "https://beeld.merodefestival.be/merodefestival/2026-wandelaars-weide.webp",
     "alt": "Een lange rij wandelaars loopt langs een grote boom door een groene weide",
@@ -1392,6 +1490,20 @@ window.BEELDBANK = [
     ],
     "volgorde": 7,
     "sites": []
+  },
+  {
+    "titel": "C.O.L.O.R.S – achterkant",
+    "src": "https://beeld.merodefestival.be/andries-boone/andries-web-artwork-back-p9vvlq.webp",
+    "alt": "Back cover of C.O.L.O.R.S with the tracklist of colour names",
+    "fotograaf": "Layout & photography: Ward Dhoore (Studio Trad)",
+    "jaar": null,
+    "onderwerp": "",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 8,
+    "sites": [
+      "Andries Boone"
+    ]
   },
   {
     "titel": "Merodefestival 2026 – Concert in de wei",
@@ -1904,6 +2016,20 @@ window.BEELDBANK = [
     ]
   },
   {
+    "titel": "Andries met de kever in de zaal",
+    "src": "https://beeld.merodefestival.be/andries-boone/616183-33200.webp",
+    "alt": "Andries met de kever in de zaal",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 11,
+    "sites": [
+      "Andries Boone"
+    ]
+  },
+  {
     "titel": "IMG_9894_ntv1v2.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/img-9894-ntv1v2.webp",
     "alt": "Wandelaars steken speels de hand op op een erf",
@@ -2048,6 +2174,20 @@ window.BEELDBANK = [
     ]
   },
   {
+    "titel": "Portret met mandoline voor beton",
+    "src": "https://beeld.merodefestival.be/andries-boone/830114-967045.webp",
+    "alt": "Portret met mandoline voor beton",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 12,
+    "sites": [
+      "Andries Boone"
+    ]
+  },
+  {
     "titel": "IMG_90063_dlouoq.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/img-90063-dlouoq.webp",
     "alt": "Wandelaars op grindweg langs klaprozen",
@@ -2189,6 +2329,20 @@ window.BEELDBANK = [
     "volgorde": 12,
     "sites": [
       "Merodefestival"
+    ]
+  },
+  {
+    "titel": "Portret met viool op de pier",
+    "src": "https://beeld.merodefestival.be/andries-boone/279168-31356.webp",
+    "alt": "Portret met viool op de pier",
+    "fotograaf": "",
+    "jaar": null,
+    "onderwerp": "",
+    "uitsnede": "",
+    "gebruik": [],
+    "volgorde": 13,
+    "sites": [
+      "Andries Boone"
     ]
   },
   {
