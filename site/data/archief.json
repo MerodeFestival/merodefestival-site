@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "holsbeek",
+    "titel": "Holsbeek Sessies",
+    "kaart": [
+      "holsbeek",
+      "sessies"
+    ],
+    "intro": "Sinds 2019 programmeert WESP in opdracht van de gemeente Holsbeek concerten in het Buurthuis van Nieuwrode, later ook kerkconcerten in Kortrijk-Dutsel, junior- en schoolsessies en wandelsessies.",
+    "link": "https://www.holsbeeksessies.be",
+    "kaarten": [
+      {
+        "seizoen": "2026–2027",
+        "concerten": [
+          {
+            "datum": "2026-09-19",
+            "artiest": "Wandelsessie met Stoomboot, Wigbert en Jeroen Knapen",
+            "plek": "Kasteeldomein van Horst, Sint-Pieters-Rode (Holsbeek)"
+          },
+          {
+            "datum": "2026-10-04",
+            "artiest": "Quentin Dujardin & Didier Laloy",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2026-10-29",
+            "artiest": "Eriksson-Delcroix",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          }
+        ]
+      },
+      {
+        "seizoen": "2025–2026",
+        "concerten": [
+          {
+            "datum": "2025-09-20",
+            "artiest": "Wandelsessie: Wannes Raps (Folkwaarts-productie van Toon Van Mierlo & Reineke Van Hooreweghe, met veertien muzikanten)",
+            "plek": "Pastorij en Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)",
+            "video": "OBTDxec_tQg"
+          },
+          {
+            "datum": "2025-10-05",
+            "artiest": "Didier François & Philip Masure",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2025-10-16",
+            "artiest": "Hans Mortelmans en groep",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2025-11-20",
+            "artiest": "Cahalen Morrison (USA)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2025-12-14",
+            "artiest": "Sara Salvérius & Jean-Philippe Poncin",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2026-01-25",
+            "artiest": "Flo & Eline Duerinck",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2026-02-05",
+            "artiest": "Peixe é Limão (ITA-BE)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2026-03-08",
+            "artiest": "Kabál",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2026-03-10",
+            "artiest": "Schoolsessies: Pipa Polo (Tom Theuns & Aurélie Dorzée)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          }
+        ]
+      },
+      {
+        "seizoen": "2024–2025",
+        "concerten": [
+          {
+            "datum": "2024-09-14",
+            "artiest": "Wandelsessie: Poorttaal (Toon Van Mierlo, Pascale Rubens, Maarten Decombel, Sophie Janna, Reineke Van Hooreweghe)",
+            "plek": "Kasteeldomein van Horst, Sint-Pieters-Rode (Holsbeek)"
+          },
+          {
+            "datum": "2024-10-06",
+            "artiest": "Duo Nous",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2024-10-17",
+            "artiest": "Spilar",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2024-11-19",
+            "artiest": "Nele needs a holiday – mijn Best!",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2024-11-20",
+            "artiest": "Junior: Pipa Polo (Tom Theuns & Aurélie Dorzée)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2024-12-15",
+            "artiest": "Hella",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2025-01-26",
+            "artiest": "Josefina Paulsson & Sophie Cavez",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2025-02-05",
+            "artiest": "Junior: Trop is te veel, en te veel is trop!",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2025-02-06",
+            "artiest": "Daoiri Farrell (IRL)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2025-03-16",
+            "artiest": "Edra",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2025-04-03",
+            "artiest": "Little Kim Quartet",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          }
+        ]
+      },
+      {
+        "seizoen": "2023–2024",
+        "concerten": [
+          {
+            "datum": "2023-10-08",
+            "artiest": "Quetzal Duo",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2023-10-19",
+            "artiest": "Sam Kelly & Jamie Francis (VK)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2023-11-29",
+            "artiest": "Junior: Qui-es-tu? / Wie ben jij? (vervangprogramma voor Red & Lily)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2023-11-30",
+            "artiest": "Cathal O’Currain & Marty Barry (IRL)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2023-12-17",
+            "artiest": "Siger",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2024-01-28",
+            "artiest": "Damast Duo",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2024-02-01",
+            "artiest": "Old Salt (USA-BE)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2024-03-03",
+            "artiest": "Bipolar Bows",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2024-03-20",
+            "artiest": "Junior: Rémi Decker – Zigoto",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2024-03-21",
+            "artiest": "Riccardo Tesi & Maurizio Geri (IT)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          }
+        ]
+      },
+      {
+        "seizoen": "2022–2023",
+        "concerten": [
+          {
+            "datum": "2022-10-19",
+            "artiest": "Junior: Ik en den Theo",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2022-10-20",
+            "artiest": "French Kiss",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2022-11-29",
+            "artiest": "Sophia Ammann plays Leonard Cohen",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2022-11-30",
+            "artiest": "Junior: Poppentheater Wortel – Vliegen, dat kan ik ook",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2022-12-11",
+            "artiest": "Tuur Florizoone & Eric Vloeimans",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2023-02-01",
+            "artiest": "Junior: Rémi Decker – Farfelu",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2023-02-02",
+            "artiest": "Roland & The Believers",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2023-03-12",
+            "artiest": "Naragonia Quartet",
+            "plek": "Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)"
+          },
+          {
+            "datum": "2023-03-22",
+            "artiest": "Junior: de ReisRus (Lennaert Maes & Andries Boone)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2023-03-23",
+            "artiest": "Eva De Roovere",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          }
+        ]
+      },
+      {
+        "seizoen": "2021–2022",
+        "concerten": [
+          {
+            "datum": "2021-10-20",
+            "artiest": "Junior: De Stadsboerin (Lady Angelina)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2021-10-21",
+            "artiest": "Philippe Robrecht",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2021-12-09",
+            "artiest": "Wigbert",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2022-02-02",
+            "artiest": "Junior: Sol de Mol (Poppentheater Wortel)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2022-02-03",
+            "artiest": "Riet",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2022-03-24",
+            "artiest": "Ronny Mosuse",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          }
+        ]
+      },
+      {
+        "seizoen": "2019–2020",
+        "concerten": [
+          {
+            "datum": "2019-10-17",
+            "artiest": "Lieven Tavernier",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2019-11-28",
+            "artiest": "Neeka",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2020-02-13",
+            "artiest": "Jonas Winterland",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          },
+          {
+            "datum": "2020-03-12",
+            "artiest": "Geert Verdickt (van Buurman)",
+            "plek": "Zaal Buurthuis, Nieuwrode (Holsbeek)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "limburg",
+    "titel": "Limburg Sessies",
+    "kaart": [
+      "limburg",
+      "sessies"
+    ],
+    "intro": "Sinds 2025 brengen de Limburg Sessies folk en wereldmuziek naar bijzondere plekken in Limburg, van de Academiezaal in Sint-Truiden tot de Abdijsite Herkenrode.",
+    "link": "https://www.limburgsessies.be",
+    "kaarten": [
+      {
+        "seizoen": "2025–2026",
+        "concerten": [
+          {
+            "datum": "2025-12-05",
+            "artiest": "Martin Simpson Trio (ENG)",
+            "plek": "Abdijsite Herkenrode (Heilig Grafkerk), Hasselt"
+          },
+          {
+            "datum": "2026-01-15",
+            "artiest": "Sonetos del Amor Oscuro (BE)",
+            "plek": "Ursulinenkloosterkapel, Diepenbeek"
+          },
+          {
+            "datum": "2026-02-12",
+            "artiest": "Sara Salvérius & SunSunSun (BE)",
+            "plek": "Academiezaal, Sint-Truiden"
+          },
+          {
+            "datum": "2026-03-18",
+            "artiest": "Laura Cortese's Acoustic Evening met Bruce Molsky, Mairi Chaimbeul en Tyler Ramsey (US-SCO)",
+            "plek": "Academiezaal, Sint-Truiden"
+          },
+          {
+            "datum": "2026-04-17",
+            "artiest": "Naragonia Quartet (BE)",
+            "plek": "Sint-Pieterskerk Leut, Maasmechelen"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "park",
+    "titel": "PARK Festival",
+    "kaart": [
+      "park",
+      "festival"
+    ],
+    "intro": "Rond 11 juli programmeert WESP in opdracht van stad Leuven en de Abdij van Park een gratis festival met folk en wereldmuziek in en rond de abdij. Tot 2022 als Vlaanderen Feest, sinds 2023 als PARK, en sinds 2026 met de PARK Sessies in juni.",
+    "kaarten": [
+      {
+        "seizoen": "2026",
+        "concerten": [
+          {
+            "datum": "2026-06-11",
+            "artiest": "Sara Salvérius & Jean-Philippe Poncin",
+            "plek": "Tuin van de Abt, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-06-11",
+            "artiest": "Sonetos del Amor Oscuro (Lorca-programma)",
+            "plek": "Tuin van de Abt, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-06-18",
+            "artiest": "Kabál",
+            "plek": "Tuin van de Abt, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-06-18",
+            "artiest": "Troissoeur ft. Pieter Thys",
+            "plek": "Tuin van de Abt, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-06-25",
+            "artiest": "Trio Charneux-Leleux-Puma",
+            "plek": "Tuin van de Abt, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-06-25",
+            "artiest": "Naragonia Quartet",
+            "plek": "Tuin van de Abt, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-07-05",
+            "artiest": "Luc Rombouts (vredesbeiaardier)",
+            "plek": "Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-07-05",
+            "artiest": "Triveni trio",
+            "plek": "Conventstuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-07-05",
+            "artiest": "Ayres trio",
+            "plek": "Abdijkerk, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-07-05",
+            "artiest": "Bamako Express",
+            "plek": "Neerhof, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-07-05",
+            "artiest": "Tuur Florizoone & Anu Junnonen",
+            "plek": "Conventstuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-07-05",
+            "artiest": "Florian De Schepper",
+            "plek": "Abdijkerk, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-07-05",
+            "artiest": "MANdolinMAN feat. Laïla Amezian & Léa Besançon",
+            "plek": "Neerhof, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-07-05",
+            "artiest": "Hartwin & the Unfolders",
+            "plek": "Conventstuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-07-05",
+            "artiest": "Sonico",
+            "plek": "Neerhof, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-07-05",
+            "artiest": "Amber Haddad trio",
+            "plek": "Conventstuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2026-07-05",
+            "artiest": "Airboxes feat. Eilidh Shaw, Amy Henderson & Ross Martin (BE-SCO)",
+            "plek": "Neerhof, Abdij van Park, Heverlee (Leuven)"
+          }
+        ]
+      },
+      {
+        "seizoen": "2025",
+        "concerten": [
+          {
+            "datum": "2025-07-06",
+            "artiest": "Kabal (BE)",
+            "plek": "Parterretuin (groot podium), Abdij van Vlierbeek, Kessel-Lo (Leuven)"
+          },
+          {
+            "datum": "2025-07-06",
+            "artiest": "3'ain (BE-SYR)",
+            "plek": "Parterretuin (groot podium), Abdij van Vlierbeek, Kessel-Lo (Leuven)"
+          },
+          {
+            "datum": "2025-07-06",
+            "artiest": "Tamala (BE-SEN)",
+            "plek": "Parterretuin (groot podium), Abdij van Vlierbeek, Kessel-Lo (Leuven)"
+          },
+          {
+            "datum": "2025-07-06",
+            "artiest": "The Napoli Sessions (BE-ITA)",
+            "plek": "Parterretuin (groot podium), Abdij van Vlierbeek, Kessel-Lo (Leuven)"
+          },
+          {
+            "datum": "2025-07-06",
+            "artiest": "Trio Charneux-Leleux-Puma (BE)",
+            "plek": "Pandtuin (klein podium), Abdij van Vlierbeek, Kessel-Lo (Leuven)"
+          },
+          {
+            "datum": "2025-07-06",
+            "artiest": "Enara Navaira (BE)",
+            "plek": "Pandtuin (klein podium), Abdij van Vlierbeek, Kessel-Lo (Leuven)"
+          },
+          {
+            "datum": "2025-07-06",
+            "artiest": "Damast Duo XL (BE-SYR-FR)",
+            "plek": "Pandtuin (klein podium), Abdij van Vlierbeek, Kessel-Lo (Leuven)"
+          },
+          {
+            "datum": "2025-07-06",
+            "artiest": "Fluencia Quartet (SE-BE-ES-FIN)",
+            "plek": "Pandtuin (klein podium), Abdij van Vlierbeek, Kessel-Lo (Leuven)"
+          },
+          {
+            "datum": "2025-07-06",
+            "artiest": "Gwen Cresens & Simon Leleux",
+            "plek": "Abdijkerk, Abdij van Vlierbeek, Kessel-Lo (Leuven)"
+          }
+        ],
+        "noot": "Eenmalig in de Abdij van Vlierbeek"
+      },
+      {
+        "seizoen": "2024",
+        "concerten": [
+          {
+            "datum": "2024-07-07",
+            "artiest": "WÖR & Kongero (BE-SWE)",
+            "plek": "Neerhof (groot podium), Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2024-07-07",
+            "artiest": "Halva",
+            "plek": "Neerhof (groot podium), Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2024-07-07",
+            "artiest": "Jaqamaz (Hussein Rassim)",
+            "plek": "Neerhof (groot podium), Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2024-07-07",
+            "artiest": "Peixe e Limão",
+            "plek": "Neerhof (groot podium), Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2024-07-07",
+            "artiest": "Airboxes",
+            "plek": "Conventstuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2024-07-07",
+            "artiest": "Stijn & Myrddin",
+            "plek": "Conventstuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2024-07-07",
+            "artiest": "GFVP",
+            "plek": "Conventstuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2024-07-07",
+            "artiest": "Renelius Ensemble",
+            "plek": "Conventstuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2024-07-07",
+            "artiest": "Tuur Florizoone & Kika",
+            "plek": "Abdijkerk, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2024-07-07",
+            "artiest": "Tom Theuns & Aurélie Dorzée",
+            "plek": "Abdijkerk, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2024-07-07",
+            "artiest": "Solia",
+            "plek": "Aedicula (stilteplek), Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2024-07-07",
+            "artiest": "Esi Nri",
+            "plek": "Aedicula (stilteplek), Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2024-07-07",
+            "artiest": "Bao Sissoko",
+            "plek": "Aedicula (stilteplek), Abdij van Park, Heverlee (Leuven)"
+          }
+        ]
+      },
+      {
+        "seizoen": "2023",
+        "concerten": [
+          {
+            "datum": "2023-07-09",
+            "artiest": "Old Salt (US-BE)",
+            "plek": "Neerhof, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2023-07-09",
+            "artiest": "Toasaves (BE)",
+            "plek": "Neerhof, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2023-07-09",
+            "artiest": "Las Lloronas",
+            "plek": "Neerhof, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2023-07-09",
+            "artiest": "Sam Lee (UK)",
+            "plek": "Neerhof, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2023-07-09",
+            "artiest": "Livia Giaffreda (IT)",
+            "plek": "Conventstuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2023-07-09",
+            "artiest": "Carmen Fernandez (SP)",
+            "plek": "Conventstuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2023-07-09",
+            "artiest": "Terrafolk (SLOV)",
+            "plek": "Conventstuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2023-07-09",
+            "artiest": "Bipolar Bows",
+            "plek": "Conventstuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2023-07-09",
+            "artiest": "Toon Van Mierlo & Reineke Van Hooreweghe: Poorttaal",
+            "plek": "Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2023-07-09",
+            "artiest": "Sophia Ammann",
+            "plek": "Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2023-07-09",
+            "artiest": "Sara Salvérius",
+            "plek": "Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2023-07-09",
+            "artiest": "Edra (Edwin Van Vinckenroye & Raphaël De Cock)",
+            "plek": "Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2023-07-09",
+            "artiest": "Luc Rombouts (vredesbeiaardier)",
+            "plek": "Abdij van Park, Heverlee (Leuven)"
+          }
+        ],
+        "noot": "Eerste editie als PARK"
+      },
+      {
+        "seizoen": "2022",
+        "concerten": [
+          {
+            "datum": "2022-07-10",
+            "artiest": "Laura Cortese & Bert Ruymbeek",
+            "plek": "Neerhof en binnentuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2022-07-10",
+            "artiest": "Naragonia",
+            "plek": "Neerhof en binnentuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2022-07-10",
+            "artiest": "Trio Pletenitsa",
+            "plek": "Neerhof en binnentuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2022-07-10",
+            "artiest": "Tom Theuns & Aurélie Dorzée",
+            "plek": "Neerhof en binnentuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2022-07-10",
+            "artiest": "Quetzal Duo",
+            "plek": "Neerhof en binnentuin, Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2022-07-10",
+            "artiest": "Refa (ex Refugees for Refugees)",
+            "plek": "Neerhof en binnentuin, Abdij van Park, Heverlee (Leuven)"
+          }
+        ],
+        "noot": "Vlaanderen Feest in de Abdij van Park"
+      },
+      {
+        "seizoen": "2021",
+        "concerten": [
+          {
+            "datum": "2021-07-11",
+            "artiest": "WÖR (BE)",
+            "plek": "Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2021-07-11",
+            "artiest": "Julien Biget",
+            "plek": "Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2021-07-11",
+            "artiest": "Hussein Rassim",
+            "plek": "Abdij van Park, Heverlee (Leuven)"
+          },
+          {
+            "datum": "2021-07-11",
+            "artiest": "Rudy Velghe",
+            "plek": "Abdij van Park, Heverlee (Leuven)"
+          }
+        ],
+        "noot": "Vlaanderen Feest in de Abdij van Park"
+      }
+    ]
+  },
+  {
+    "id": "beleuvenissen",
+    "titel": "Beleuvenissen op het Hogeschoolplein",
+    "kaart": [
+      "beleuvenissen",
+      ""
+    ],
+    "intro": "Sinds 2017 maakt WESP van het Hogeschoolplein in Leuven tijdens de zomerse Beleuvenissen een luisterplein: gratis vrijdagavonden met folk en wereldmuziek.",
+    "kaarten": [
+      {
+        "seizoen": "2026",
+        "concerten": [
+          {
+            "datum": "2026-07-10",
+            "artiest": "The Wilderness Yet (UK)",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2026-07-10",
+            "artiest": "Mec Yek",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2026-07-17",
+            "artiest": "Niña Maleza",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2026-07-17",
+            "artiest": "Bruxelles Musette",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2026-07-24",
+            "artiest": "Thalas",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2026-07-24",
+            "artiest": "Flook (IRL-UK)",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2026-07-31",
+            "artiest": "Wigbert",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2026-07-31",
+            "artiest": "Lenny & de Wespen met Little Kim, Liliane Saint-Pierre & Nol Havens",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2026-08-07",
+            "artiest": "Peixe e Limão",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2026-08-07",
+            "artiest": "Global Music Ensemble",
+            "plek": "Hogeschoolplein, Leuven"
+          }
+        ]
+      },
+      {
+        "seizoen": "2025",
+        "concerten": [
+          {
+            "datum": "2025-07-11",
+            "artiest": "Sophie Janna (NL)",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2025-07-11",
+            "artiest": "Bright Lights Sessions (Pieter Van Dessel, Jaouad, Renata Louisa, Kapinga Gysel, Laura Cortese)",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2025-07-18",
+            "artiest": "Hartwin & The Waves",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2025-07-18",
+            "artiest": "Cabana Belgicana",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2025-07-25",
+            "artiest": "Delcroix–Eriksson duo",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2025-07-25",
+            "artiest": "Jaune Toujours",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2025-08-01",
+            "artiest": "Little Kim",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2025-08-01",
+            "artiest": "Dorpsklap (o.a. Ronny Mosuse, Annelies Tanghe, Stoy Stoffelen)",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2025-08-08",
+            "artiest": "Las Lloronas (NL-DE)",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2025-08-08",
+            "artiest": "Korrontzi (ES)",
+            "plek": "Hogeschoolplein, Leuven"
+          }
+        ]
+      },
+      {
+        "seizoen": "2024",
+        "concerten": [
+          {
+            "datum": "2024-07-12",
+            "artiest": "Cathal Ó Curráin & Marty Barry (IRL)",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2024-07-12",
+            "artiest": "100 Voltas",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2024-07-19",
+            "artiest": "Loogaroo quartet",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2024-07-19",
+            "artiest": "Naragonia quartet – 20 jaar, met gasten",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2024-07-26",
+            "artiest": "Snaarmaarwaar",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2024-07-26",
+            "artiest": "Góbé (HU) feat. Oscar Beerten",
+            "plek": "Hogeschoolplein, Leuven"
+          }
+        ]
+      },
+      {
+        "seizoen": "2023",
+        "concerten": [
+          {
+            "datum": "2023-07-07",
+            "artiest": "Jonas Winterland trio: Retrospect",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2023-07-07",
+            "artiest": "Hiraeth (Wouter Vandenabeele, 13-koppig)",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2023-07-14",
+            "artiest": "Stoomboot",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2023-07-14",
+            "artiest": "Sam Kelly & The Lost Boys (ENG)",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2023-07-21",
+            "artiest": "EmBRUN",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2023-07-21",
+            "artiest": "Talisk (SCO)",
+            "plek": "Hogeschoolplein, Leuven"
+          }
+        ]
+      },
+      {
+        "seizoen": "2022",
+        "concerten": [
+          {
+            "datum": "2022-07-08",
+            "artiest": "Tuur Florizoone en vrienden",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2022-07-15",
+            "artiest": "Brisk",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2022-07-15",
+            "artiest": "Lenny & friends (Jan De Wilde, Rick De Leeuw, Andrea Croonenberghs)",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2022-07-22",
+            "artiest": "Bansk",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2022-07-22",
+            "artiest": "Broes",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2022-07-22",
+            "artiest": "Euforro",
+            "plek": "Hogeschoolplein, Leuven"
+          }
+        ]
+      },
+      {
+        "seizoen": "2019",
+        "concerten": [
+          {
+            "datum": "2019-07-12",
+            "artiest": "A la Rum",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2019-07-19",
+            "artiest": "Koen De Cauter & Fapy Lafertin",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2019-07-19",
+            "artiest": "Banditaliana (IT)",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2019-07-26",
+            "artiest": "Philip Masure nodigt uit, met Helen Flaherty, Guido Piccard, Bríd Harper en Sylvain Barou",
+            "plek": "Hogeschoolplein, Leuven"
+          }
+        ]
+      },
+      {
+        "seizoen": "2018",
+        "concerten": [
+          {
+            "datum": "2018-07-13",
+            "artiest": "IALMA en festa! met Lucilla Galeazzi (IT) en Manou Gallo",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2018-07-20",
+            "artiest": "GFVP met Tamala, Elias Bachoura & Shalan Alhamwy en gasten",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2018-07-27",
+            "artiest": "Spencer The Rover met Leuvense gasten (o.a. And Then Came Fall, Geert Verdickt)",
+            "plek": "Hogeschoolplein, Leuven"
+          }
+        ]
+      },
+      {
+        "seizoen": "2017",
+        "concerten": [
+          {
+            "datum": "2017-07-07",
+            "artiest": "Lenny & de Wespen deluxe met gasten Astrid Nijgh (NL), Klaas Delrue, Stoomboot, JackoBond en Hans de Booij (NL)",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2017-07-14",
+            "artiest": "MANdolinMAN invites: Jan De Smet, Liliane Saint-Pierre, Alain Louie, Stefan Bracaval, Gwen Cresens, Ronny Mosuse en Lennaert Maes",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2017-07-21",
+            "artiest": "Sam Kelly & The Lost Boys (ENG)",
+            "plek": "Hogeschoolplein, Leuven"
+          },
+          {
+            "datum": "2017-07-21",
+            "artiest": "Oysterband (ENG)",
+            "plek": "Hogeschoolplein, Leuven"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "producties",
+    "titel": "Andere producties",
+    "intro": "Daarnaast maakte WESP eigen producties en kleine reeksen: met de Folkwaarts-partners in de Meroderegio, solo in kapellen, en rond de muziek van de steden.",
+    "kaarten": [
+      {
+        "seizoen": "2026",
+        "concerten": [
+          {
+            "datum": "2026-10-23",
+            "artiest": "Lydie Thonnard",
+            "plek": "Kapel Onze-Lieve-Vrouw-ten-Eik, Tongerlo"
+          },
+          {
+            "datum": "2026-10-24",
+            "artiest": "Stijn Kuppens",
+            "plek": "Sint-Bavokapel, Eindhout"
+          }
+        ],
+        "titel": "Klanken in de Kapel"
+      },
+      {
+        "seizoen": "2026",
+        "concerten": [
+          {
+            "datum": "2026-05-09",
+            "artiest": "Kalesma",
+            "plek": "Bibliotheek Permeke, Antwerpen"
+          }
+        ],
+        "titel": "Klanken van de Steden"
+      },
+      {
+        "seizoen": "2025",
+        "concerten": [
+          {
+            "datum": "2025-10-17",
+            "artiest": "Stefan Bracaval",
+            "plek": "Sint-Dimpnakapel, Zammel"
+          }
+        ],
+        "titel": "Klanken in de Kapel"
+      },
+      {
+        "seizoen": "2025",
+        "concerten": [
+          {
+            "datum": "2025-03-07",
+            "artiest": "",
+            "plek": "Kerk, Webbekom (met Stamineeke)",
+            "video": "OBTDxec_tQg"
+          },
+          {
+            "datum": "2025-03-08",
+            "artiest": "",
+            "plek": "Westerlo (met Westelfolk)",
+            "video": "OBTDxec_tQg"
+          },
+          {
+            "datum": "2025-03-09",
+            "artiest": "",
+            "plek": "De Wiekslag, Zelem (met Folkmjuzik)",
+            "video": "OBTDxec_tQg"
+          },
+          {
+            "datum": "2025-03-14",
+            "artiest": "",
+            "plek": "Kerk, Genendijk (met Celtic Art Gallery)",
+            "video": "OBTDxec_tQg"
+          },
+          {
+            "datum": "2025-03-15",
+            "artiest": "",
+            "plek": "Strokapel, Ramsel (met Erfgoed Herselt)",
+            "video": "OBTDxec_tQg"
+          },
+          {
+            "datum": "2025-03-16",
+            "artiest": "",
+            "plek": "Zaal Munte, Zichem",
+            "video": "OBTDxec_tQg"
+          },
+          {
+            "datum": "2025-09-20",
+            "artiest": "Wandelsessie van de Holsbeek Sessies",
+            "plek": "Pastorij en Sint-Catharinakerk, Kortrijk-Dutsel (Holsbeek)",
+            "video": "OBTDxec_tQg"
+          }
+        ],
+        "titel": "Wannes Raps",
+        "noot": "Folkwaarts: vertel- en folkproductie, Toon Van Mierlo & Reineke Van Hooreweghe"
+      }
+    ]
+  }
+]

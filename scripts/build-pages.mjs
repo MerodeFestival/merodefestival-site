@@ -374,6 +374,9 @@ await fs.writeFile(path.join(ROOT, "data/agenda.js"), `window.AGENDA = ${json};\
 // ---------- Vorige edities (uit site/data/edities.json) ----------
 const edities = JSON.parse(await fs.readFile(path.join(ROOT, "data/edities.json"), "utf8"));
 const seizoenen = JSON.parse(await fs.readFile(path.join(ROOT, "data/kerkconcerten.json"), "utf8"));
+// Archief van de andere WESP-reeksen (gemaakt door scripts/maak-archief.mjs)
+let archief = [];
+try { archief = JSON.parse(await fs.readFile(path.join(ROOT, "data/archief.json"), "utf8")); } catch { /* nog geen archief */ }
 // Affiche tonen als site/img/affiches/<jaar>.jpg bestaat
 const affiche = async j => { try { await fs.access(path.join(ROOT, `img/affiches/${j}.jpg`)); return `img/affiches/${j}.jpg`; } catch { return ""; } };
 for (const x of edities) x._affiche = await affiche(x.jaar);
@@ -385,6 +388,28 @@ for (const x of edities) x._fotos = beeldbankAlles.filter(b => (b.gebruik || [])
   .sort((a, b) => (a.volgorde ?? 999) - (b.volgorde ?? 999));
 const korteDatum = s => { const x = d(s); return `${DAG[x.getUTCDay()].slice(0, 2)} ${x.getUTCDate()} ${MAAND_KORT[x.getUTCMonth()]} ${x.getUTCFullYear()}`; };
 await fs.writeFile(path.join(ROOT, "data/edities.js"), `window.EDITIES = ${JSON.stringify(edities.map(({ _affiche, _fotos, ...x }) => x), null, 2)};\n`);
+// Concerten van een archiefkaart: per dag, en binnen een dag per plek (bv. de podia van PARK)
+const archiefLijst = concerten => {
+  const dagen = [];
+  for (const c of concerten) {
+    let dag = dagen.find(x => x.datum === c.datum);
+    if (!dag) dagen.push(dag = { datum: c.datum, plekken: [] });
+    let p = dag.plekken.find(x => x.plek === c.plek);
+    if (!p) dag.plekken.push(p = { plek: c.plek, namen: [], videos: [] });
+    if (c.artiest) p.namen.push(c.artiest);
+    if (c.video) p.videos.push(c.video);
+  }
+  const gezien = new Set();
+  return `<ol class="kerk-lijst">${dagen.map(dag => `<li>
+          <span class="kd">${esc(cap(langeDatum(dag.datum)))}</span>
+          ${dag.plekken.map(p => `${p.namen.map(n => `<span class="ka">${esc(n)}</span>`).join("")}
+          ${p.plek ? `<span class="kk">${esc(p.plek)}</span>` : ""}
+          ${p.videos.filter(id => !gezien.has(id) && gezien.add(id)).map(id => `<div class="video kvid"><button class="yt" type="button" data-id="${id}" aria-label="Video: ${esc(p.namen[0] || p.plek)}" style="background-image:url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div>`).join("")}`).join(`<span class="ksep" aria-hidden="true"></span>`)}
+        </li>`).join("")}</ol>`;
+};
+const archiefKaartTitel = (r, k) => k.titel
+  ? `<span>${esc(k.titel)}</span><span>${esc(k.seizoen)}</span>`
+  : `<span>${esc(r.kaart.filter(Boolean).join(" – "))}</span><span>${esc(k.seizoen).replace(/(\d{3})(\d)/g, "$1<em>$2</em>")}</span>`;
 const videoKnop = (id, label) => `<div class="video"><button class="yt" type="button" data-id="${id}" aria-label="${esc(label)}" style="background-image:url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div>`;
 const editiesHtml = `<!DOCTYPE html>
 <html lang="nl">
@@ -447,6 +472,8 @@ const editiesHtml = `<!DOCTYPE html>
 .kk{display:block;font-size:.95rem;color:var(--s-papier-zacht)}
 .kvid{width:13rem;max-width:100%;margin:.6rem auto 0}
 .kvid .play{transform:scale(.7)}
+.ksep{display:block;height:.7rem}
+.kerk-intro a{font-style:normal;text-underline-offset:3px}
 @media (max-width:820px){.kgrid{grid-template-columns:1fr}}
 .editie .dank{font-size:.95rem;color:var(--s-papier-zacht);margin:1rem 0 0}
 .editie .videos{grid-template-columns:repeat(3,1fr)}
@@ -482,6 +509,8 @@ const editiesHtml = `<!DOCTYPE html>
       <ul class="ed-nav">${edities.map(x => `<li><a href="#${x.jaar}">${x.jaar}</a></li>`).join("")}</ul>
       <p class="ed-sub label">${T("edities.kerkconcerten", "Kerkconcerten")}</p>
       <ul class="ed-nav">${seizoenen.map(z => `<li><a href="#kerk-${z.seizoen.slice(0, 4)}">${z.seizoen}</a></li>`).join("")}</ul>
+      ${archief.length ? `<p class="ed-sub label">${T("edities.ook-wesp", "Ook van WESP")}</p>
+      <ul class="ed-nav">${archief.map(r => `<li><a href="#${r.id}">${esc(T(`edities.${r.id}-titel`, r.titel))}</a></li>`).join("")}</ul>` : ""}
     </div>
   </section>
   <section class="papier">
@@ -525,6 +554,19 @@ const editiesHtml = `<!DOCTYPE html>
       </div>
     </div>
   </section>
+  ${archief.map(r => `<section class="papier kerk-archief" id="${r.id}" aria-labelledby="${r.id}-titel">
+    <div class="wrap" style="display:block">
+      <h2 id="${r.id}-titel">${T(`edities.${r.id}-titel`, esc(r.titel))}</h2>
+      <p class="kerk-intro">${T(`edities.${r.id}-intro`, esc(r.intro))}${r.link ? ` <a href="${esc(r.link)}">${esc(r.link.replace(/^https:\/\/(www\.)?/, ""))}</a>` : ""}</p>
+      <div class="kgrid">
+      ${r.kaarten.map(k => `<article class="kseizoen" id="${r.id}-${k.seizoen.slice(0, 4)}${k.titel ? `-${k.titel.toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "")}` : ""}">
+        <h3 class="kt">${archiefKaartTitel(r, k)}</h3>
+        ${k.noot ? `<p class="kopm">${esc(k.noot)}</p>` : ""}
+        ${archiefLijst(k.concerten)}
+      </article>`).join("\n      ")}
+      </div>
+    </div>
+  </section>`).join("\n  ")}
 </main>
 <footer>
   <div class="wrap"><img class="foot-logo" src="${esc(S.logo)}" alt="Merodefestival" width="147" height="100" loading="lazy"></div>
@@ -919,7 +961,7 @@ const llms = [
   `- [Over WESP](${SITE}/wesp): de organisatie achter Merodefestival: wat we doen, voor wie, projecten, team en contact`,
   `- [Partners](${SITE}/partners): wie Merodefestival steunt en mee bouwt`,
   `- [Vrienden van Merodefestival](${SITE}/vrienden-van): de werking steunen`,
-  `- [Vorige edities](${SITE}/vorige-edities): alle festivals sinds 2015 en het archief van de kerkconcerten`,
+  `- [Vorige edities](${SITE}/vorige-edities): alle festivals sinds 2015, het archief van de kerkconcerten en de andere WESP-reeksen (Holsbeek Sessies, Limburg Sessies, PARK, Beleuvenissen)`,
   ...beleef.map(x => `- [${x.titel}](${SITE}/${x.slug}): ${x.ondertitel || x.label}`),
   "",
   "## Komende concerten",
