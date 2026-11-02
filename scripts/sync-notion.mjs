@@ -206,7 +206,7 @@ await fs.mkdir(FOTO, { recursive: true });
 
 // Artiesten met een eigen website (Andries Boone, Mandolinman) delen de Agenda en de Beeldbank, maar horen niet op merodefestival.be.
 // Een rij met enkel zo'n site bij Website slaan we over; staat er ook Merodefestival of een reeks bij, dan blijft ze.
-const ANDERE_SITES = ["Andries Boone", "Mandolinman"];
+const ANDERE_SITES = ["Andries Boone", "Mandolinman", "Lenny en de Wespen"];
 const enkelAndereSite = p => {
   const s = (p.Website?.multi_select || []).map(o => o.name);
   return s.length > 0 && s.every(x => ANDERE_SITES.includes(x));
