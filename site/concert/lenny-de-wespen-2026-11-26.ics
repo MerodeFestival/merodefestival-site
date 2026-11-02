@@ -4,8 +4,8 @@ PRODID:-//Merodefestival//NL
 BEGIN:VEVENT
 UID:lenny-de-wespen-2026-11-26@merodefestival.be
 DTSTAMP:20261126T000000Z
-DTSTART;VALUE=DATE:20261126
-DTEND;VALUE=DATE:20261126
+DTSTART;TZID=Europe/Brussels:20261126T200000
+DURATION:PT2H
 SUMMARY:Lenny & de Wespen
 LOCATION:Buurthuis Nieuwrode\, Holsbeek
 URL:https://www.merodefestival.be/concert/lenny-de-wespen-2026-11-26

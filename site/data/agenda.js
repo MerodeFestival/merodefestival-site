@@ -204,13 +204,14 @@ window.AGENDA = [
   },
   {
     "start": "2026-11-26",
-    "time": "",
+    "time": "20.00 uur",
     "village": "Holsbeek",
     "place": "Buurthuis Nieuwrode",
     "artist": "Lenny & de Wespen",
     "kind": "Concert, Holsbeek Sessies",
     "sites": [
-      "Holsbeek Sessies"
+      "Holsbeek Sessies",
+      "Lenny en de Wespen"
     ],
     "reeks": "Holsbeek Sessies",
     "price": "",
