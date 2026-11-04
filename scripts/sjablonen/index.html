@@ -155,11 +155,13 @@ const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const jaren = esc(S.jaren || "").replace(/(\d{3})(\d)/g, "$1<em>$2</em>");
 document.getElementById("seizoen-titel").innerHTML =
   `<span>${esc(S.titel || "")}</span><span>${jaren}</span>`;
-// Beelden uit de beeldbank met een home- of seizoen-naam staan er in drie breedtes (thumb/ 600, m/ 1000, volledig 1600)
+// Beelden uit de beeldbank met een home-, seizoen- of agenda-naam staan er in drie breedtes (thumb/ 600, m/ 1000, volledig 1600)
 const beeldSet = src => {
-  const m = /^(https:\/\/beeld\.merodefestival\.be\/merodefestival\/)((?:home|seizoen)-[\w-]+\.webp)$/.exec(src || "");
+  const m = /^(https:\/\/beeld\.merodefestival\.be\/merodefestival\/)((?:home|seizoen|agenda)-[\w-]+\.webp)$/.exec(src || "");
   return m ? `${m[1]}thumb/${m[2]} 600w, ${m[1]}m/${m[2]} 1000w, ${m[1]}${m[2]} 1600w` : "";
 };
+// Kleine agendafoto: elke foto in de beeldbank heeft een miniatuur in thumb/ (max. 600 px)
+const thumbVan = src => /^https:\/\/beeld\.merodefestival\.be\/[^/]+\/[^/]+\.webp$/.test(src || "") ? src.replace(/\/([^/]+)$/, "/thumb/$1") : src;
 const art = document.getElementById("artwork");
 art.srcset = beeldSet(S.artworkWeb);
 art.src = S.artworkWeb || S.artwork; art.alt = S.artworkAlt || "";
@@ -263,7 +265,7 @@ function toonLijst(groep) {
   const L = linkVan(e), pagina = L.href, att = L.extern ? ' target="_blank" rel="noopener"' : "";
   return `<li class="event${e.volzet ? " is-full" : ""}${i >= 5 ? " extra" : ""}">
     <div class="date"><span class="d">${dag}</span><span class="m">${MAAND[s.getMonth()]}${jaar}</span></div>
-    <div class="thumb">${e.foto ? `${pagina ? `<a href="${esc(pagina)}"${att} tabindex="-1" aria-hidden="true">` : ""}<img src="${esc(e.foto)}" alt="" loading="lazy">${pagina ? "</a>" : ""}` : ""}</div>
+    <div class="thumb">${e.foto ? `${pagina ? `<a href="${esc(pagina)}"${att} tabindex="-1" aria-hidden="true">` : ""}<img src="${esc(thumbVan(e.foto))}" alt="" loading="lazy"${thumbVan(e.foto) !== e.foto ? ` onerror="this.onerror=null;this.src='${esc(e.foto)}'"` : ""}>${pagina ? "</a>" : ""}` : ""}</div>
     <div>
       ${e.sub ? `<p class="sub">${esc(e.sub)}</p>` : ""}
       <h3 class="artist">${pagina ? `<a href="${esc(pagina)}"${att}>` : ""}${esc(e.artist)}${pagina ? "</a>" : ""}${e.origin ? ` <span class="herkomst">(${esc(e.origin)})</span>` : ""}</h3>

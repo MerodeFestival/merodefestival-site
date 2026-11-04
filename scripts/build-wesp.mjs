@@ -60,10 +60,15 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
           <text class="sub" x="${k.sx}" y="${k.sy}"${k.einde ? ' text-anchor="end"' : ""}>${esc(k.sub)}</text></g>`).join("\n        ")}
       </svg>`;
 
+  // Beelden uit de beeldbank met een home-naam staan er in drie breedtes (thumb/ 600, m/ 1000, volledig); zo kiest de browser zelf
+  const beeld = (src, sizes) => {
+    const m = /^(https:\/\/beeld\.merodefestival\.be\/merodefestival\/)((?:home|seizoen)-[\w-]+\.webp)$/.exec(src || "");
+    return m ? `src="${m[1]}m/${m[2]}" srcset="${m[1]}thumb/${m[2]} 600w, ${m[1]}m/${m[2]} 1000w, ${m[1]}${m[2]} 1600w" sizes="${sizes}"` : `src="${esc(src)}"`;
+  };
   // De drie sporen, elk met een beeld. Zonder rijen of foto in Notion gelden deze standaardwaarden.
   const SPOREN = [
-    { titel: "We organiseren op erfgoed- en natuurplekken", tekst: "Zelf, of in opdracht van gemeenten of locaties: Merodefestival, kerkconcerten, zomerprogrammatie in Leuven, muzikale wandelingen.", link: "index.html#agenda", linktekst: "Naar de agenda", foto: "img/beeld/kerk.jpg", alt: "Vier muzikanten spelen in een kerk" },
-    { titel: "We ontwikkelen mee muzikantencarrières", tekst: "We staan naast artiesten: we begeleiden, zoeken mee spreidingskansen, bieden een eerste podium en denken mee na over elk project.", link: "#samenwerken", linktekst: "Voor muzikanten", foto: "img/beeld/jong.jpg", alt: "Jonge muzikanten samen in een café" },
+    { titel: "We organiseren op erfgoed- en natuurplekken", tekst: "Zelf, of in opdracht van gemeenten of locaties: Merodefestival, kerkconcerten, zomerprogrammatie in Leuven, muzikale wandelingen.", link: "index.html#agenda", linktekst: "Naar de agenda", foto: "https://beeld.merodefestival.be/merodefestival/home-kerk.webp", alt: "Vier muzikanten spelen in een kerk" },
+    { titel: "We ontwikkelen mee muzikantencarrières", tekst: "We staan naast artiesten: we begeleiden, zoeken mee spreidingskansen, bieden een eerste podium en denken mee na over elk project.", link: "#samenwerken", linktekst: "Voor muzikanten", foto: "https://beeld.merodefestival.be/merodefestival/home-jong.webp", alt: "Jonge muzikanten samen in een café" },
     { titel: "We vertellen het verhaal van de folk- en wereldmuziekscene", tekst: "Via video, opnames, boeken of podcast leggen we vast wat er op die bijzondere plekken gebeurt, zodat het niet stopt bij het laatste applaus.", link: "index.html#beleef", linktekst: "Beleef de Merode", foto: "img/beleef/podcast-6.webp", alt: "Twee muzikanten met accordeon bij een windmolen" },
   ];
   const sporenRijen = van("Spoor");
@@ -73,7 +78,7 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     const foto = r?.foto || d.foto;
     const l = r?.link ? href(r.link) : d.link;
     const lt = r ? (r.linktekst || T("algemeen.meer-info", "Meer info")) : T(`wesp.spoor${i + 1}.linktekst`, d.linktekst);
-    return `<article class="w-spoor"><figure><img src="${esc(foto)}" alt="${esc(r?.foto ? titel : T(`wesp.spoor${i + 1}.alt`, d.alt))}" loading="lazy" width="800" height="600"></figure><div class="w-spoor-tekst"><h3>${esc(titel)}</h3><p>${esc(r?.tekst || T(`wesp.spoor${i + 1}.tekst`, d.tekst))}</p>${l ? `<a class="w-link" href="${esc(l)}">${esc(lt)} →</a>` : ""}</div></article>`;
+    return `<article class="w-spoor"><figure><img ${beeld(foto, "(max-width:860px) 92vw, 22rem")} alt="${esc(r?.foto ? titel : T(`wesp.spoor${i + 1}.alt`, d.alt))}" loading="lazy" width="800" height="600"></figure><div class="w-spoor-tekst"><h3>${esc(titel)}</h3><p>${esc(r?.tekst || T(`wesp.spoor${i + 1}.tekst`, d.tekst))}</p>${l ? `<a class="w-link" href="${esc(l)}">${esc(lt)} →</a>` : ""}</div></article>`;
   }).join("");
 
   const pijlers = lijstRegels("wesp.pijlers", "Muziek | akoestisch, melodisch, verhalend\nLandschap | wandelingen, natuurgebieden, luisterplekken\nErfgoed | abdijen, kerken, kapellen, volkscafés\nGemeenschap | kerkfabrieken, gemeenten, 40 vrijwilligers");
@@ -96,13 +101,13 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
 
   const samenwerken = `${kop("wesp.samenwerken.kop", "Samenwerken")}
     <div class="w-twee">
-      <div class="w-col"><figure><img src="img/beeld/ovatie.jpg" alt="${esc(T("wesp.foto-organisatoren", "Een festivalpodium bij avond met veel publiek"))}" loading="lazy" width="800" height="600"></figure>
+      <div class="w-col"><figure><img ${beeld("https://beeld.merodefestival.be/merodefestival/home-ovatie.webp", "(max-width:860px) 92vw, 34rem")} alt="${esc(T("wesp.foto-organisatoren", "Een festivalpodium bij avond met veel publiek"))}" loading="lazy" width="800" height="600"></figure>
         <h3>${esc(T("wesp.organisatoren.kop", "Voor gemeenten, kerkfabrieken en abdijen"))}</h3>
         <p>${esc(T("wesp.organisatoren.tekst", "Heeft jouw locatie een plek die om muziek vraagt? WESP zet ervaring, artiestennetwerk en productiekennis in: curatie, productie, communicatie en verantwoording, voor één concert, een reeks, een zomerprogrammatie of een festival."))}</p>
         <p class="w-klein">${esc(T("wesp.organisatoren.budget", "Elke samenwerking is anders van schaal en ambitie, en dus ook van budget: we bekijken samen wat mogelijk is."))}</p>
         ${opdrachtgevers ? `<p class="w-klein"><strong>${esc(T("wesp.opdrachtgevers.kop", "Zij werkten al met ons samen:"))}</strong> ${opdrachtgevers}.</p>` : ""}
         <div class="acties">${mailKnop("wesp.organisatoren.knop", "Bespreek jouw locatie", "Locatie voor muziek")}<a class="btn ghost" href="producties.html">${esc(T("wesp.knop-hero2", "Bekijk de producties"))}</a></div></div>
-      <div class="w-col"><figure><img src="img/beeld/trio.jpg" alt="${esc(T("wesp.foto-muzikanten", "Drie muzikanten spelen in een kapel"))}" loading="lazy" width="800" height="600"></figure>
+      <div class="w-col"><figure><img ${beeld("https://beeld.merodefestival.be/merodefestival/home-trio.webp", "(max-width:860px) 92vw, 34rem")} alt="${esc(T("wesp.foto-muzikanten", "Drie muzikanten spelen in een kapel"))}" loading="lazy" width="800" height="600"></figure>
         <h3>${esc(T("wesp.muzikanten.kop", "Voor muzikanten: een samenwerking, geen boeking"))}</h3>
         <p>${esc(T("wesp.muzikanten.tekst", "Een traject start met een gesprek, niet met een contract. We bespreken eerst wat je artistiek voor ogen hebt en zoeken dan de plek, het moment en de ondersteuning die passen: een residentie in een abdij of in het landschapspark, een concert op een bijzondere plek, hulp bij financiering, spreiding of promotie."))}</p>
         <p class="w-klein">${esc(T("wesp.muzikanten.contact", "We krijgen meer aanvragen dan we aankunnen. Vaker benaderen we zelf een artiest, wanneer plek, moment en artistieke klik samenkomen."))}</p>
@@ -125,7 +130,7 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
   </section>
   <nav class="w-ankers" aria-label="${esc(T("algemeen.op-deze-pagina", "Op deze pagina"))}"><div class="wrap">${ankers.map(([id, t]) => `<a href="#${id}">${esc(t)}</a>`).join("")}</div></nav>
   ${sectie("sporen", "licht", `<div class="w-sporen">${sporen}</div>`)}
-  ${sectie("methode", "band", `<div class="w-methode"><div>${kop("wesp.methode.kop", "De Merode-methode")}<p class="w-intro">${esc(T("wesp.methode.tekst", "Het landschap is bij ons nooit decor. Een abdij, een dorpskerk of een broekbos is een bewuste artistieke keuze die mee bepaalt hoe muziek klinkt, wat ze vertelt en wie ernaar komt luisteren."))}</p></div><dl class="w-pijlers">${pijlers.map(p => `<div><dt>${esc(p.kop)}</dt><dd>${esc(p.tekst)}</dd></div>`).join("")}</dl></div>`, ' style="--bg:url(img/beeld/demer.jpg)"')}
+  ${sectie("methode", "band", `<div class="w-methode"><div>${kop("wesp.methode.kop", "De Merode-methode")}<p class="w-intro">${esc(T("wesp.methode.tekst", "Het landschap is bij ons nooit decor. Een abdij, een dorpskerk of een broekbos is een bewuste artistieke keuze die mee bepaalt hoe muziek klinkt, wat ze vertelt en wie ernaar komt luisteren."))}</p></div><dl class="w-pijlers">${pijlers.map(p => `<div><dt>${esc(p.kop)}</dt><dd>${esc(p.tekst)}</dd></div>`).join("")}</dl></div>`, ' style="--bg:url(https://beeld.merodefestival.be/merodefestival/home-demer.webp)"')}
   ${sectie("samenwerken", "licht", samenwerken)}
   ${sectie("projecten", "donker", projecten && `${kop("wesp.projecten.kop", "Projecten en netwerk")}<div class="w-rijen">${projecten}</div>`)}
   ${sectie("team", "licht", `<div class="w-team"><div>${kop("wesp.team.kop", "Team")}<p class="w-intro">${esc(T("wesp.team.intro", "WESP draait niet op één persoon. Zo’n 40 vrijwilligers zetten mee hun schouders onder elk evenement, project of verhaal."))}</p>${team ? `<dl class="w-lijst">${team}</dl>` : ""}</div>

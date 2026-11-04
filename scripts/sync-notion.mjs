@@ -128,7 +128,7 @@ export function directLink(url) {
 
 // Foto’s uit Notion verlopen na een uur, dus we downloaden ze naar de site.
 // Volgorde: eerst het veld Foto (upload of ingesloten link), anders het veld Fotolink.
-// Enkel echt doorzichtige beelden blijven PNG, de rest wordt JPEG (zie foto.mjs).
+// Enkel echt doorzichtige beelden blijven PNG, de rest wordt WebP (zie foto.mjs).
 // Uitzondering: foto’s in de beeldbank op R2 (beeld.merodefestival.be) blijven daar staan;
 // de site linkt er rechtstreeks naar, en een Fotolink daarheen gaat vóór het veld Foto.
 const BEELDBANK_URL = /^https:\/\/beeld\.merodefestival\.be\//;

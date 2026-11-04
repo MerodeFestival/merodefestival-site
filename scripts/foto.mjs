@@ -1,6 +1,6 @@
 // Foto’s klaarmaken voor de site (gebruikt door sync-notion.mjs).
 //
-// - Gewone foto’s worden JPEG, ook PNG’s en schermafbeeldingen met een alfakanaal dat (bijna)
+// - Gewone foto’s worden WebP, ook PNG’s en schermafbeeldingen met een alfakanaal dat (bijna)
 //   nergens doorzichtig is. Die vullen op de site de kaart, bijgesneden volgens Uitsnede, zonder rand.
 // - Enkel echt doorzichtige beelden (uitgeknipte figuren, logo’s) blijven PNG. De lege doorzichtige
 //   rand rond het beeld wordt weggeknipt, zodat het beeld de kaart zo goed mogelijk vult.
@@ -30,7 +30,7 @@ export async function doorzichtigheid(buf, sharp) {
   return { aandeel: leeg / (W * H), kader, W, H };
 }
 
-// Geeft { buf, ext } terug: verkleind tot maximaal 1600 px breed, als JPEG of (doorzichtig) PNG.
+// Geeft { buf, ext } terug: verkleind tot maximaal 1600 px breed, als WebP of (doorzichtig) PNG.
 export async function verwerkFoto(buf, sharp) {
   const d = await doorzichtigheid(buf, sharp);
   if (d.aandeel >= DREMPEL) {
@@ -40,8 +40,8 @@ export async function verwerkFoto(buf, sharp) {
     return { buf, ext: "png" };
   }
   buf = await sharp(buf).rotate().resize({ width: 1600, withoutEnlargement: true })
-    .flatten({ background: "#ffffff" }).jpeg({ quality: 74, progressive: true }).toBuffer();
-  return { buf, ext: "jpg" };
+    .flatten({ background: "#ffffff" }).webp({ quality: 72 }).toBuffer();
+  return { buf, ext: "webp" };
 }
 
 // Rapport voor bestaande bestanden
@@ -50,6 +50,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   for (const f of process.argv.slice(2)) {
     const d = await doorzichtigheid(await fs.readFile(f), sharp);
     const pct = (100 * d.aandeel).toFixed(1) + "% doorzichtig";
-    console.log(`${f}: ${d.aandeel >= DREMPEL ? `blijft PNG (${pct})` : `wordt JPEG (${pct})`}`);
+    console.log(`${f}: ${d.aandeel >= DREMPEL ? `blijft PNG (${pct})` : `wordt WebP (${pct})`}`);
   }
 }

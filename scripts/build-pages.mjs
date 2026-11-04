@@ -48,6 +48,11 @@ const d = s => { const [y, m, dd] = s.split("-").map(Number); return new Date(Da
 const cap = t => t.charAt(0).toUpperCase() + t.slice(1);
 // Beeldpad vanuit een andere map: volledige adressen (beeldbank op beeld.merodefestival.be) blijven zoals ze zijn
 const pad = (voor, src) => /^https?:\/\//.test(src) ? src : voor + src;
+// Beelden uit de beeldbank met een home-, seizoen- of agenda-naam staan er in drie breedtes (thumb/ 600, m/ 1000, volledig 1600)
+const beeldSet = (src, sizes) => {
+  const m = /^(https:\/\/beeld\.merodefestival\.be\/merodefestival\/)((?:home|seizoen|agenda)-[\w-]+\.webp)$/.exec(src || "");
+  return m ? ` srcset="${m[1]}thumb/${m[2]} 600w, ${m[1]}m/${m[2]} 1000w, ${m[1]}${m[2]} 1600w" sizes="${sizes}"` : "";
+};
 const langeDatum = s => { const x = d(s); return `${DAG[x.getUTCDay()]} ${x.getUTCDate()} ${MAAND[x.getUTCMonth()]} ${x.getUTCFullYear()}`; };
 const slugify = t => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
   .replace(/[’']/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -246,7 +251,7 @@ function pagina(e, overige) {
         <div class="acties" id="acties">${ticket}</div>
       </div>
       <figure class="cbeeld${e.foto ? " foto" : ""}">
-        <img src="${esc(beeldLokaal)}" alt="${e.foto ? esc(e.fotoAlt || e.artist) : esc(S.artworkAlt || "")}">
+        <img src="${esc(beeldLokaal)}"${beeldSet(beeldLokaal, "(max-width:820px) 92vw, 50vw")} alt="${e.foto ? esc(e.fotoAlt || e.artist) : esc(S.artworkAlt || "")}">
         ${e.foto && e.fotograaf ? `<figcaption>${T("algemeen.foto", "Foto:")} ${esc(e.fotograaf)}</figcaption>` : ""}
       </figure>
     </div>
