@@ -4,6 +4,7 @@ window.SEIZOEN = {
   jaren: "2026–2027",
   logo: "seizoen/logo-oranje.png",
   artwork: "seizoen/artwork.jpg",
+  artworkWeb: "https://beeld.merodefestival.be/merodefestival/seizoen-2026-2027-artwork.webp",
   artworkAlt: "Illustratie van een harpiste die boven een dorpskerk in het Merodelandschap uittorent",
   credit: "Artwork: Reinhart Croon",
   creditlink: "https://www.reinhart.be",

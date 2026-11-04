@@ -52,7 +52,7 @@
         </div>
       </div>
       <div class="art" id="art" role="region" aria-roledescription="diavoorstelling" aria-label="Seizoensbeeld en foto’s uit de kerken">
-        <img id="artwork" class="dia actief" alt="">
+        <img id="artwork" class="dia actief" alt="" sizes="(max-width:820px) 26rem, 34rem">
         <button class="art-pauze" id="art-pauze" type="button" hidden aria-label="Wisselende beelden pauzeren">❚❚</button>
       </div>
     </div>
@@ -88,8 +88,8 @@
       </div>
     </div>
     <div class="wrap fest-beelden">
-      <figure><img src="img/wandel.jpg" alt="Wandelaars op een bospad in de Merode" loading="lazy"><figcaption>Overdag: muzikale wandelingen door de natuur</figcaption></figure>
-      <figure><img src="img/ovatie.jpg" alt="Muzikanten nemen applaus in ontvangst op een openluchtpodium bij avond" loading="lazy"><figcaption>’s Avonds: folk op de Citadel</figcaption></figure>
+      <figure><img src="https://beeld.merodefestival.be/merodefestival/m/home-wandel.webp" srcset="https://beeld.merodefestival.be/merodefestival/thumb/home-wandel.webp 600w, https://beeld.merodefestival.be/merodefestival/m/home-wandel.webp 1000w, https://beeld.merodefestival.be/merodefestival/home-wandel.webp 1200w" sizes="(max-width:720px) 92vw, 34rem" width="1200" height="800" alt="Wandelaars op een bospad in de Merode" loading="lazy"><figcaption>Overdag: muzikale wandelingen door de natuur</figcaption></figure>
+      <figure><img src="https://beeld.merodefestival.be/merodefestival/m/home-ovatie.webp" srcset="https://beeld.merodefestival.be/merodefestival/thumb/home-ovatie.webp 600w, https://beeld.merodefestival.be/merodefestival/m/home-ovatie.webp 1000w, https://beeld.merodefestival.be/merodefestival/home-ovatie.webp 1200w" sizes="(max-width:720px) 92vw, 34rem" width="1200" height="782" alt="Muzikanten nemen applaus in ontvangst op een openluchtpodium bij avond" loading="lazy"><figcaption>’s Avonds: folk op de Citadel</figcaption></figure>
     </div>
   </section>
 
@@ -155,8 +155,14 @@ const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const jaren = esc(S.jaren || "").replace(/(\d{3})(\d)/g, "$1<em>$2</em>");
 document.getElementById("seizoen-titel").innerHTML =
   `<span>${esc(S.titel || "")}</span><span>${jaren}</span>`;
+// Beelden uit de beeldbank met een home- of seizoen-naam staan er in drie breedtes (thumb/ 600, m/ 1000, volledig 1600)
+const beeldSet = src => {
+  const m = /^(https:\/\/beeld\.merodefestival\.be\/merodefestival\/)((?:home|seizoen)-[\w-]+\.webp)$/.exec(src || "");
+  return m ? `${m[1]}thumb/${m[2]} 600w, ${m[1]}m/${m[2]} 1000w, ${m[1]}${m[2]} 1600w` : "";
+};
 const art = document.getElementById("artwork");
-art.src = S.artwork; art.alt = S.artworkAlt || "";
+art.srcset = beeldSet(S.artworkWeb);
+art.src = S.artworkWeb || S.artwork; art.alt = S.artworkAlt || "";
 document.getElementById("credit").textContent = S.credit || "";
 
 // ---------- het seizoensbeeld wisselt zacht met foto’s uit de kerken (Beeldbank: onderwerp Kerkconcert + Homepage-carrousel) ----------
@@ -170,7 +176,10 @@ document.getElementById("credit").textContent = S.credit || "";
   const dias = [art];
   fotos.forEach(f => {
     const img = document.createElement("img");
-    img.className = "dia foto-dia"; img.src = f.src; img.alt = f.alt || ""; img.loading = "lazy";
+    img.className = "dia foto-dia"; img.loading = "lazy";
+    const set = beeldSet(f.src);
+    if (set) { img.srcset = set; img.sizes = art.sizes; }
+    img.src = f.src; img.alt = f.alt || "";
     if (f.uitsnede === "volledig tonen") img.style.objectFit = "contain";
     else img.style.objectPosition = UITSNEDE[f.uitsnede] || "center";
     img.dataset.credit = f.fotograaf ? TXT.foto + " " + f.fotograaf : "";
