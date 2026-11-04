@@ -211,7 +211,7 @@ window.AGENDA = [
     "start": "2026-11-26",
     "time": "20 h",
     "village": "Holsbeek",
-    "place": "Buurthuis Nieuwrode",
+    "place": "Buurthuis",
     "artist": "Lenny & de Wespen",
     "kind": "Concert, Holsbeek Sessies",
     "sites": [
@@ -219,7 +219,7 @@ window.AGENDA = [
       "Lenny en de Wespen"
     ],
     "reeks": "Holsbeek Sessies",
-    "price": "",
+    "price": "€ 16",
     "tickets": "https://pierrot.io/wesp-in-holsbeek/holsbeek-sessies-2026-2027",
     "volzet": false,
     "info": "https://www.holsbeeksessies.be",
@@ -244,14 +244,14 @@ window.AGENDA = [
     "start": "2026-11-27",
     "time": "",
     "village": "Antwerpen",
-    "place": "De Studio Antwerpen",
+    "place": "De Studio",
     "artist": "Aram: Shahab Azinmehr, Derya Türkan & Robbe Kieckens",
     "kind": "Concert, Klanken van de Steden",
     "sites": [
       "Klanken van de Steden"
     ],
     "reeks": "Klanken van de Steden",
-    "price": "",
+    "price": "€ 15",
     "tickets": "https://pierrot.io/wesp-vzw/klanken-van-de-steden",
     "volzet": false,
     "info": "https://www.klankenvandesteden.be",
@@ -272,9 +272,9 @@ window.AGENDA = [
   },
   {
     "start": "2026-12-03",
-    "time": "",
+    "time": "20 h",
     "village": "Sint-Truiden",
-    "place": "Academiezaal Sint-Truiden",
+    "place": "Academiezaal",
     "artist": "Sam Grassie, Dylan Fowler & Haroun Iqbal",
     "kind": "Concert, Limburg Sessies",
     "sites": [
@@ -555,16 +555,16 @@ window.AGENDA = [
   },
   {
     "start": "2026-12-13",
-    "time": "",
+    "time": "11.30 uur",
     "village": "Kortrijk-Dutsel",
-    "place": "Kerk",
+    "place": "Sint-Catharinakerk",
     "artist": "Laura Cortese & Bert Ruymbeek",
     "kind": "Concert d'église, Holsbeek Sessies",
     "sites": [
       "Holsbeek Sessies"
     ],
     "reeks": "Holsbeek Sessies",
-    "price": "",
+    "price": "€ 16",
     "tickets": "https://pierrot.io/wesp-in-holsbeek/holsbeek-sessies-2026-2027",
     "volzet": false,
     "info": "https://www.holsbeeksessies.be",
@@ -814,7 +814,7 @@ window.AGENDA = [
   },
   {
     "start": "2027-01-14",
-    "time": "",
+    "time": "20 h",
     "village": "Holsbeek",
     "place": "Buurthuis",
     "artist": "Robb Johnson",
@@ -823,7 +823,7 @@ window.AGENDA = [
       "Holsbeek Sessies"
     ],
     "reeks": "Holsbeek Sessies",
-    "price": "",
+    "price": "€ 16",
     "tickets": "https://pierrot.io/wesp-in-holsbeek/holsbeek-sessies-2026-2027",
     "volzet": false,
     "info": "https://www.holsbeeksessies.be",
@@ -846,16 +846,16 @@ window.AGENDA = [
   },
   {
     "start": "2027-01-24",
-    "time": "",
+    "time": "11.30 uur",
     "village": "Kortrijk-Dutsel",
-    "place": "Kerk",
+    "place": "Sint-Catharinakerk",
     "artist": "Bao Sissoko & Haroun Iqbal",
     "kind": "Concert d'église, Holsbeek Sessies",
     "sites": [
       "Holsbeek Sessies"
     ],
     "reeks": "Holsbeek Sessies",
-    "price": "",
+    "price": "€ 16",
     "tickets": "https://pierrot.io/wesp-in-holsbeek/holsbeek-sessies-2026-2027",
     "volzet": false,
     "info": "https://www.holsbeeksessies.be",
@@ -878,7 +878,7 @@ window.AGENDA = [
   },
   {
     "start": "2027-01-28",
-    "time": "",
+    "time": "20 h",
     "village": "Sint-Truiden",
     "place": "Academiezaal ",
     "artist": "The Weaving",
@@ -958,8 +958,8 @@ window.AGENDA = [
   },
   {
     "start": "2027-02-19",
-    "time": "",
-    "village": "Herkenrode",
+    "time": "20 h",
+    "village": "Hasselt",
     "place": "Abdijsite Herkenrode",
     "artist": "La Mal Coiffée",
     "kind": "Concert, Limburg Sessies",
@@ -1047,7 +1047,7 @@ window.AGENDA = [
   },
   {
     "start": "2027-03-03",
-    "time": "",
+    "time": "20 h",
     "village": "Sint-Truiden",
     "place": "Academiezaal",
     "artist": "Troissoeur",
@@ -1077,7 +1077,7 @@ window.AGENDA = [
   },
   {
     "start": "2027-03-04",
-    "time": "",
+    "time": "20 h",
     "village": "Holsbeek",
     "place": "Buurthuis",
     "artist": "Vera Coomans & Thomas Devos",
@@ -1086,7 +1086,7 @@ window.AGENDA = [
       "Holsbeek Sessies"
     ],
     "reeks": "Holsbeek Sessies",
-    "price": "",
+    "price": "€ 16",
     "tickets": "https://pierrot.io/wesp-in-holsbeek/holsbeek-sessies-2026-2027",
     "volzet": false,
     "info": "https://www.holsbeeksessies.be",
@@ -1109,7 +1109,7 @@ window.AGENDA = [
   },
   {
     "start": "2027-03-05",
-    "time": "",
+    "time": "20 h",
     "village": "Holsbeek",
     "place": "Buurthuis",
     "artist": "John Blek",
@@ -1118,7 +1118,7 @@ window.AGENDA = [
       "Holsbeek Sessies"
     ],
     "reeks": "Holsbeek Sessies",
-    "price": "",
+    "price": "€ 16",
     "tickets": "https://pierrot.io/wesp-in-holsbeek/holsbeek-sessies-2026-2027",
     "volzet": false,
     "info": "https://www.holsbeeksessies.be/john",
@@ -1215,8 +1215,8 @@ window.AGENDA = [
   },
   {
     "start": "2027-04-16",
-    "time": "",
-    "village": "Herkenrode",
+    "time": "20 h",
+    "village": "Hasselt",
     "place": "Abdijsite Herkenrode",
     "artist": "Livia Giaffreda & Nino Conte, Katerina Douka & Stamatis Pasopoulos",
     "kind": "Concert, Limburg Sessies",
@@ -1303,16 +1303,16 @@ window.AGENDA = [
   },
   {
     "start": "2027-04-25",
-    "time": "",
+    "time": "11.30 uur",
     "village": "Kortrijk-Dutsel",
-    "place": "Kerk",
+    "place": "Sint-Catharinakerk",
     "artist": "Liesbeth Devos & Gwen Cresens",
     "kind": "Concert d'église, Holsbeek Sessies",
     "sites": [
       "Holsbeek Sessies"
     ],
     "reeks": "Holsbeek Sessies",
-    "price": "",
+    "price": "€ 16",
     "tickets": "https://pierrot.io/wesp-in-holsbeek/holsbeek-sessies-2026-2027",
     "volzet": false,
     "info": "https://www.holsbeeksessies.be",

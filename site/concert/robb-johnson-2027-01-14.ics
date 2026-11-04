@@ -4,8 +4,8 @@ PRODID:-//Merodefestival//NL
 BEGIN:VEVENT
 UID:robb-johnson-2027-01-14@merodefestival.be
 DTSTAMP:20270114T000000Z
-DTSTART;VALUE=DATE:20270114
-DTEND;VALUE=DATE:20270114
+DTSTART;TZID=Europe/Brussels:20270114T200000
+DURATION:PT2H
 SUMMARY:Robb Johnson
 LOCATION:Buurthuis\, Holsbeek
 URL:https://www.merodefestival.be/concert/robb-johnson-2027-01-14

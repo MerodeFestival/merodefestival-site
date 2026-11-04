@@ -4,10 +4,10 @@ PRODID:-//Merodefestival//NL
 BEGIN:VEVENT
 UID:livia-giaffreda-nino-conte-2027-04-16@merodefestival.be
 DTSTAMP:20270416T000000Z
-DTSTART;VALUE=DATE:20270416
-DTEND;VALUE=DATE:20270416
+DTSTART;TZID=Europe/Brussels:20270416T200000
+DURATION:PT2H
 SUMMARY:Livia Giaffreda & Nino Conte\, Katerina Douka & Stamatis Pasopoulos
-LOCATION:Abdijsite Herkenrode\, Herkenrode
+LOCATION:Abdijsite Herkenrode\, Hasselt
 URL:https://www.merodefestival.be/concert/livia-giaffreda-nino-conte-2027-04-16
 END:VEVENT
 END:VCALENDAR

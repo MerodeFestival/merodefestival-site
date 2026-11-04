@@ -4,10 +4,10 @@ PRODID:-//Merodefestival//NL
 BEGIN:VEVENT
 UID:bao-sissoko-haroun-iqbal-2027-01-24@merodefestival.be
 DTSTAMP:20270124T000000Z
-DTSTART;VALUE=DATE:20270124
-DTEND;VALUE=DATE:20270124
+DTSTART;TZID=Europe/Brussels:20270124T113000
+DURATION:PT2H
 SUMMARY:Bao Sissoko & Haroun Iqbal
-LOCATION:Kerk\, Kortrijk-Dutsel
+LOCATION:Sint-Catharinakerk\, Kortrijk-Dutsel
 URL:https://www.merodefestival.be/fr/concert/bao-sissoko-haroun-iqbal-2027-01-24
 END:VEVENT
 END:VCALENDAR

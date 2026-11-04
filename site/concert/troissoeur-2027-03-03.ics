@@ -4,8 +4,8 @@ PRODID:-//Merodefestival//NL
 BEGIN:VEVENT
 UID:troissoeur-2027-03-03@merodefestival.be
 DTSTAMP:20270303T000000Z
-DTSTART;VALUE=DATE:20270303
-DTEND;VALUE=DATE:20270303
+DTSTART;TZID=Europe/Brussels:20270303T200000
+DURATION:PT2H
 SUMMARY:Troissoeur
 LOCATION:Academiezaal\, Sint-Truiden
 URL:https://www.merodefestival.be/concert/troissoeur-2027-03-03

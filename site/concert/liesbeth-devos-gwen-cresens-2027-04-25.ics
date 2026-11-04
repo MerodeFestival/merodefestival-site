@@ -4,10 +4,10 @@ PRODID:-//Merodefestival//NL
 BEGIN:VEVENT
 UID:liesbeth-devos-gwen-cresens-2027-04-25@merodefestival.be
 DTSTAMP:20270425T000000Z
-DTSTART;VALUE=DATE:20270425
-DTEND;VALUE=DATE:20270425
+DTSTART;TZID=Europe/Brussels:20270425T113000
+DURATION:PT2H
 SUMMARY:Liesbeth Devos & Gwen Cresens
-LOCATION:Kerk\, Kortrijk-Dutsel
+LOCATION:Sint-Catharinakerk\, Kortrijk-Dutsel
 URL:https://www.merodefestival.be/concert/liesbeth-devos-gwen-cresens-2027-04-25
 END:VEVENT
 END:VCALENDAR
