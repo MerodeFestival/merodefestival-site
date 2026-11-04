@@ -84,7 +84,7 @@ window.AGENDA = [
     "videos": [],
     "spotify": [],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db81928bf8f7341dcd158a.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81928bf8f7341dcd158a.webp",
     "slug": "lydie-thonnard-2026-10-23",
     "kindNl": "Kapelconcert, Klanken in de Kapel"
   },
@@ -132,7 +132,7 @@ window.AGENDA = [
     "videos": [],
     "spotify": [],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db81f2bd6dfdb4b6d07ef5.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81f2bd6dfdb4b6d07ef5.webp",
     "slug": "stijn-kuppens-2026-10-24",
     "kindNl": "Kapelconcert, Klanken in de Kapel"
   },
@@ -203,7 +203,7 @@ window.AGENDA = [
       "https://open.spotify.com/artist/7BIJhGB7mt9HoPJZqqostR"
     ],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db817dadeffb7c14864a14.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db817dadeffb7c14864a14.webp",
     "slug": "gwen-cresens-philippe-thuriot-2026-11-14",
     "kindNl": "Merodefestival kerkconcert"
   },
@@ -394,7 +394,7 @@ window.AGENDA = [
       "https://open.spotify.com/artist/2EIip4bHQ5ZRYbO3VXL2xu"
     ],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db81728dffdad5b18abc45.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81728dffdad5b18abc45.webp",
     "slug": "sam-grassie-2026-12-05",
     "kindNl": "Merodefestival kerkconcert"
   },
@@ -468,7 +468,7 @@ window.AGENDA = [
     ],
     "spotify": [],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db81469f3ad2c4779240b6.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81469f3ad2c4779240b6.webp",
     "beelden": [
       {
         "src": "../data/foto/40077c21f8db81469f3ad2c4779240b6-1.jpg",
@@ -549,7 +549,7 @@ window.AGENDA = [
     ],
     "spotify": [],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db81f8a595c6331e265dc7.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81f8a595c6331e265dc7.webp",
     "slug": "en-waar-de-ster-bleef-stille-staan-2026-12-12",
     "kindNl": "Kerstvertelling"
   },
@@ -632,7 +632,7 @@ window.AGENDA = [
     ],
     "spotify": [],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db815ca5bbc629c93cc0f4.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db815ca5bbc629c93cc0f4.webp",
     "slug": "en-waar-de-ster-bleef-stille-staan-2026-12-18",
     "kindNl": "Kerstvertelling"
   },
@@ -683,7 +683,7 @@ window.AGENDA = [
     ],
     "spotify": [],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db81b9966bd2a565de05e8.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81b9966bd2a565de05e8.webp",
     "slug": "en-waar-de-ster-bleef-stille-staan-2026-12-19",
     "kindNl": "Kerstvertelling"
   },
@@ -734,7 +734,7 @@ window.AGENDA = [
     ],
     "spotify": [],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db81a6aaacee216ad9c8e5.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81a6aaacee216ad9c8e5.webp",
     "slug": "en-waar-de-ster-bleef-stille-staan-2026-12-20",
     "kindNl": "Kerstvertelling"
   },
@@ -779,7 +779,7 @@ window.AGENDA = [
     ],
     "spotify": [],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db81258fd6ddd3b41cace3.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81258fd6ddd3b41cace3.webp",
     "slug": "aram-2027-01-09",
     "kindNl": "Merodefestival kerkconcert"
   },
@@ -952,7 +952,7 @@ window.AGENDA = [
       "https://open.spotify.com/artist/19uXXk4wreh3f02OcWZyb5"
     ],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db81f78e40d7de08f22749.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81f78e40d7de08f22749.webp",
     "slug": "the-weaving-2027-01-30",
     "kindNl": "Merodefestival kerkconcert"
   },
@@ -1041,7 +1041,7 @@ window.AGENDA = [
       "https://open.spotify.com/artist/31YQrpDSa3uuLecHuTrZOq"
     ],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db818496b1cf1a87e54e8c.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db818496b1cf1a87e54e8c.webp",
     "slug": "la-mal-coiffee-2027-02-20",
     "kindNl": "Merodefestival kerkconcert"
   },
@@ -1209,7 +1209,7 @@ window.AGENDA = [
       "https://open.spotify.com/artist/4UCdRwhNwF470fGAfVfNQa"
     ],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db817c9c87e2a5913157b9.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db817c9c87e2a5913157b9.webp",
     "slug": "laura-corteses-acoustic-evening-iv-2027-03-20",
     "kindNl": "Merodefestival kerkconcert"
   },
@@ -1297,7 +1297,7 @@ window.AGENDA = [
       "https://open.spotify.com/artist/1687KDBhdbPnWerLxMQbVE"
     ],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db817b8ad0f182f99978be.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db817b8ad0f182f99978be.webp",
     "slug": "livia-giaffreda-nino-conte-2027-04-17",
     "kindNl": "Merodefestival kerkconcert"
   },
@@ -1401,7 +1401,7 @@ window.AGENDA = [
       "https://open.spotify.com/artist/47NEOWW0cCwroElf3j4FR9"
     ],
     "webadres": "",
-    "foto": "../data/foto/40077c21f8db81feab75d31ac8e1fec4.jpg",
+    "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81feab75d31ac8e1fec4.webp",
     "slug": "sara-salverius-blazerskwartet-2027-06-19",
     "kindNl": "Merodefestival kerkconcert"
   },
