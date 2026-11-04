@@ -462,32 +462,32 @@ window.AGENDA = [
     "foto": "https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81469f3ad2c4779240b6.webp",
     "beelden": [
       {
-        "src": "data/foto/40077c21f8db81469f3ad2c4779240b6-1.jpg",
+        "src": "data/foto/40077c21f8db81469f3ad2c4779240b6-1.webp",
         "alt": "Griff Trio: Echo + En waar de ster bleef stille staan, foto 1",
         "fotograaf": ""
       },
       {
-        "src": "data/foto/40077c21f8db81469f3ad2c4779240b6-2.jpg",
+        "src": "data/foto/40077c21f8db81469f3ad2c4779240b6-2.webp",
         "alt": "Griff Trio: Echo + En waar de ster bleef stille staan, foto 2",
         "fotograaf": ""
       },
       {
-        "src": "data/foto/40077c21f8db81469f3ad2c4779240b6-3.jpg",
+        "src": "data/foto/40077c21f8db81469f3ad2c4779240b6-3.webp",
         "alt": "Griff Trio: Echo + En waar de ster bleef stille staan, foto 3",
         "fotograaf": ""
       },
       {
-        "src": "data/foto/40077c21f8db81469f3ad2c4779240b6-4.jpg",
+        "src": "data/foto/40077c21f8db81469f3ad2c4779240b6-4.webp",
         "alt": "Griff Trio: Echo + En waar de ster bleef stille staan, foto 4",
         "fotograaf": ""
       },
       {
-        "src": "data/foto/40077c21f8db81469f3ad2c4779240b6-5.jpg",
+        "src": "data/foto/40077c21f8db81469f3ad2c4779240b6-5.webp",
         "alt": "Griff Trio: Echo + En waar de ster bleef stille staan, foto 5",
         "fotograaf": ""
       },
       {
-        "src": "data/foto/40077c21f8db81469f3ad2c4779240b6-6.jpg",
+        "src": "data/foto/40077c21f8db81469f3ad2c4779240b6-6.webp",
         "alt": "Griff Trio: Echo + En waar de ster bleef stille staan, foto 6",
         "fotograaf": ""
       }
