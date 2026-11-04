@@ -4862,5 +4862,37 @@
  "40c77c21-f8db-81fb-8c9e-e1917b86c0c4:tekst:fr": {
   "h": "b7e6e5298b4eacd2",
   "t": "{n} concert affiché"
+ },
+ "40e77c21-f8db-8181-8c38-d0b9576baac8:tekst:en": {
+  "h": "905a280aafb2eb23",
+  "t": "You are already on our list."
+ },
+ "40e77c21-f8db-8181-8c38-d0b9576baac8:tekst:fr": {
+  "h": "905a280aafb2eb23",
+  "t": "Vous êtes déjà sur notre liste."
+ },
+ "40e77c21-f8db-818e-bb75-d0d15ddbcf68:tekst:en": {
+  "h": "f7275483441f19a8",
+  "t": "Email address"
+ },
+ "40e77c21-f8db-818e-bb75-d0d15ddbcf68:tekst:fr": {
+  "h": "f7275483441f19a8",
+  "t": "Adresse e-mail"
+ },
+ "40e77c21-f8db-81c2-806a-f716e30d9e0b:tekst:en": {
+  "h": "caddf20a1e65b9ca",
+  "t": "That didn’t work. Please try again later or email info@merodefestival.be."
+ },
+ "40e77c21-f8db-81c2-806a-f716e30d9e0b:tekst:fr": {
+  "h": "caddf20a1e65b9ca",
+  "t": "Cela n’a pas fonctionné. Réessayez plus tard ou écrivez à info@merodefestival.be."
+ },
+ "40e77c21-f8db-81e3-b860-d10c409e2d28:tekst:en": {
+  "h": "bd8d4b5f6e9f04fc",
+  "t": "Almost done: please confirm your subscription via the email we have just sent you."
+ },
+ "40e77c21-f8db-81e3-b860-d10c409e2d28:tekst:fr": {
+  "h": "bd8d4b5f6e9f04fc",
+  "t": "Presque fini : confirmez votre inscription via l’e-mail que nous venons de vous envoyer."
  }
 }

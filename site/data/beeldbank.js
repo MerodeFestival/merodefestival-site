@@ -193,7 +193,7 @@ window.BEELDBANK = [
   },
   {
     "titel": "Kwartet voor het barokaltaar",
-    "src": "img/beeld/kerk.jpg",
+    "src": "https://beeld.merodefestival.be/merodefestival/home-kerk.webp",
     "alt": "Vier muzikanten spelen voor een verlicht barokaltaar in een dorpskerk",
     "fotograaf": "",
     "jaar": null,
@@ -399,7 +399,7 @@ window.BEELDBANK = [
   },
   {
     "titel": "Duo aan het altaar",
-    "src": "img/beeld/altaar.jpg",
+    "src": "https://beeld.merodefestival.be/merodefestival/home-altaar.webp",
     "alt": "Twee muzikanten met viool en harp onder een hoog verlicht altaar",
     "fotograaf": "",
     "jaar": null,
@@ -605,7 +605,7 @@ window.BEELDBANK = [
   },
   {
     "titel": "Viool en accordeon",
-    "src": "img/beeld/duo.jpg",
+    "src": "https://beeld.merodefestival.be/merodefestival/home-duo.webp",
     "alt": "Een zangeres met viool en een accordeoniste spelen dicht tegen elkaar aan in blauw licht",
     "fotograaf": "",
     "jaar": null,
@@ -811,7 +811,7 @@ window.BEELDBANK = [
   },
   {
     "titel": "Trio in de kapel",
-    "src": "img/beeld/trio.jpg",
+    "src": "https://beeld.merodefestival.be/merodefestival/home-trio.webp",
     "alt": "Accordeon, zang en viool in een kapel met glas-in-loodramen",
     "fotograaf": "",
     "jaar": null,
@@ -1001,7 +1001,7 @@ window.BEELDBANK = [
   },
   {
     "titel": "Demer in de zomer",
-    "src": "img/beeld/demer.jpg",
+    "src": "https://beeld.merodefestival.be/merodefestival/home-demer.webp",
     "alt": "Kronkelende Demer tussen groene oevers onder een wolkenlucht",
     "fotograaf": "",
     "jaar": null,
@@ -1191,7 +1191,7 @@ window.BEELDBANK = [
   },
   {
     "titel": "Muzikale wandeling",
-    "src": "img/beeld/wandel.jpg",
+    "src": "https://beeld.merodefestival.be/merodefestival/home-wandel.webp",
     "alt": "Wandelaars op een bospad in de Merode",
     "fotograaf": "",
     "jaar": null,
@@ -1381,7 +1381,7 @@ window.BEELDBANK = [
   },
   {
     "titel": "Jonge folkband",
-    "src": "img/beeld/jong.jpg",
+    "src": "https://beeld.merodefestival.be/merodefestival/home-jong.webp",
     "alt": "Vijf jonge muzikanten poseren in een volkscafé",
     "fotograaf": "",
     "jaar": null,
@@ -1571,7 +1571,7 @@ window.BEELDBANK = [
   },
   {
     "titel": "Applaus op de Citadel",
-    "src": "img/beeld/ovatie.jpg",
+    "src": "https://beeld.merodefestival.be/merodefestival/home-ovatie.webp",
     "alt": "Muzikanten nemen applaus in ontvangst op een openluchtpodium bij avond",
     "fotograaf": "",
     "jaar": null,
