@@ -57,6 +57,7 @@ export function privacyHtml({ statistiek, esc }) {
 <p><strong>Lettertypes.</strong> De lettertypes staan op onze eigen server. Er wordt geen verbinding met Google gemaakt om ze te laden.</p>
 ${stats}
 <p><strong>Spelers en video’s van andere diensten.</strong> Op sommige pagina’s staan spelers van Spotify, SoundCloud, YouTube en Vimeo. Die worden pas geladen nadat u op de knop klikt. Pas dan maakt uw browser verbinding met die dienst, die uw IP-adres kan zien en eigen cookies kan plaatsen. Voor die verwerking geldt het privacybeleid van die dienst. De voorbeeldafbeeldingen bij video’s staan op onze eigen server.</p>
+<p><strong>Nieuwsbrief.</strong> Schrijft u zich via het formulier op onze website in op de nieuwsbrief, dan wordt uw e-mailadres rechtstreeks doorgegeven aan onze nieuwsbriefdienst (Mailchimp), die u eerst een bevestigingsmail stuurt. Uw inschrijving is pas definitief nadat u die bevestigt, en u kunt zich via elke nieuwsbrief weer uitschrijven.</p>
 <p><strong>Links naar andere websites.</strong> Via onze website komt u ook op andere websites, zoals het ticketplatform, de nieuwsbriefdienst, formulieren en de websites van onze partners. Voor wat daar met uw gegevens gebeurt, zijn zij zelf verantwoordelijk.</p>
 
 <h2 id="bewaartermijn">Bewaartermijn</h2>

@@ -99,7 +99,13 @@
         <h2 id="nieuws-titel">Mis geen concert</h2>
         <p>Nieuwe concerten en het festivalprogramma in je mailbox.</p>
       </div>
-      <a class="btn" href="http://eepurl.com/g8U9mX">Schrijf je in</a>
+      <form class="nieuws-form" action="https://merodefestival.us8.list-manage.com/subscribe/post?u=292038d88ca5b6efb3f5cb809&amp;id=40a5a2dec9" method="post" target="_blank" data-ok="Bijna klaar: bevestig je inschrijving via de mail die we je net stuurden." data-al="Je staat al op onze lijst." data-fout="Dat lukte niet. Probeer het straks opnieuw of mail naar info@merodefestival.be.">
+        <label class="sr" for="nieuws-email">E-mailadres</label>
+        <input id="nieuws-email" type="email" name="EMAIL" placeholder="E-mailadres" autocomplete="email" required>
+        <div class="nieuws-honing" aria-hidden="true"><input type="text" name="b_292038d88ca5b6efb3f5cb809_40a5a2dec9" tabindex="-1" value="" autocomplete="off"></div>
+        <button class="btn nieuws-knop" type="submit">Schrijf je in</button>
+        <p class="nieuws-melding" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 </main>
@@ -295,6 +301,28 @@ if (fest) {
     (s2 ? `${s1.getDate()}–${s2.getDate()} ${MAAND_LANG[s2.getMonth()]} ${s2.getFullYear()}` : `${s1.getDate()} ${MAAND_LANG[s1.getMonth()]} ${s1.getFullYear()}`);
   if (fest.slug) document.getElementById("fest-link").href = `concert/${fest.slug}.html`;
 }
+
+// ---------- nieuwsbrief: inschrijven zonder de site te verlaten (Mailchimp via post-json); zonder JavaScript opent het gewone formulier ----------
+(function () {
+  const form = document.querySelector(".nieuws-form");
+  if (!form) return;
+  const melding = form.querySelector(".nieuws-melding"), knop = form.querySelector(".nieuws-knop");
+  form.addEventListener("submit", ev => {
+    if (!form.reportValidity()) return;
+    ev.preventDefault();
+    const cb = "mc_" + Date.now();
+    const url = form.action.replace("/subscribe/post", "/subscribe/post-json") + "&c=" + cb + "&" + new URLSearchParams(new FormData(form)).toString();
+    const s = document.createElement("script");
+    const klaar = (ok, tekst) => { knop.disabled = false; melding.textContent = tekst; melding.classList.toggle("fout", !ok); if (ok) form.reset(); delete window[cb]; s.remove(); };
+    window[cb] = r => {
+      const ok = r && r.result === "success", msg = String(r && r.msg || "");
+      klaar(ok, ok ? form.dataset.ok : /already subscribed|already a list member/i.test(msg) ? form.dataset.al : form.dataset.fout);
+    };
+    knop.disabled = true; melding.textContent = "…"; melding.classList.remove("fout");
+    s.src = url; s.onerror = () => klaar(false, form.dataset.fout);
+    document.head.appendChild(s);
+  });
+})();
 
 // ---------- menu ----------
 const toggle = document.querySelector(".menu-toggle"), nav = document.getElementById("hoofdmenu");

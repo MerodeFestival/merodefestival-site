@@ -142,6 +142,16 @@ section.donker{padding:4.5rem 0}
 .nieuws h2{font-size:1.8rem}
 .nieuws p{margin:.25rem 0 0;color:var(--s-papier-zacht)}
 .nieuws .btn{background:var(--s-papier-inkt);color:var(--s-papier)}
+.nieuws-form{position:relative;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;flex:1 1 22rem;max-width:34rem}
+.nieuws-form input[type=email]{flex:1 1 14rem;min-width:0;min-height:44px;padding:.55rem 1.1rem;border-radius:999px;border:1.5px solid var(--s-papier-lijn);background:transparent;color:var(--s-papier-inkt);font-family:inherit;font-size:1.05rem}
+.nieuws-form input[type=email]::placeholder{color:var(--s-papier-zacht);opacity:1}
+.nieuws-form input[type=email]:focus-visible{outline:2px solid var(--s-papier-inkt);outline-offset:2px}
+.nieuws-form .btn{min-height:44px}
+.nieuws-form .btn:disabled{opacity:.6;cursor:wait}
+.nieuws-honing{position:absolute;left:-5000px;width:1px;height:1px;overflow:hidden}
+.nieuws .nieuws-melding{flex-basis:100%;margin:0;color:var(--s-papier-inkt);font-family:var(--label);font-size:.95rem}
+.nieuws .nieuws-melding:empty{display:none}
+.nieuws .nieuws-melding.fout{text-decoration:underline;text-decoration-color:var(--s-papier-lijn);text-underline-offset:3px}
 
 footer{padding:3rem 0;font-size:1rem;color:var(--s-zand)}
 footer .foot-logo{display:block;height:64px;width:auto;margin-bottom:2rem;filter:brightness(0) invert(1);opacity:.9}

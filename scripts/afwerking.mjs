@@ -259,6 +259,7 @@ export async function afwerking({ ROOT, SITE }) {
       if (pl) {
         h = h.replace(/<a\b([^>]*\bhref="[^"]*pierrot\.io[^"]*"[^>]*)>/gi, (m, a) => /plausible-event-name/.test(a) ? m : `<a${eventKlasse(a, "Tickets")}>`);
         h = h.replace(/<a\b([^>]*\bhref="[^"]*eepurl\.com[^"]*"[^>]*)>/gi, (m, a) => /plausible-event-name/.test(a) ? m : `<a${eventKlasse(a, "Nieuwsbrief")}>`);
+        h = h.replace(/<button\b([^>]*\bclass="[^"]*\bnieuws-knop\b[^"]*"[^>]*)>/gi, (m, a) => /plausible-event-name/.test(a) ? m : `<button${eventKlasse(a, "Nieuwsbrief")}>`);
         h = h.replace(/<a\b([^>]*\bhref="mailto:[^"]*"[^>]*)>/gi, (m, a) => /plausible-event-name/.test(a) ? m : `<a${eventKlasse(a, "Mail")}>`);
       }
     }
