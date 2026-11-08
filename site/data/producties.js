@@ -55,7 +55,7 @@ window.PRODUCTIES = [
         "html": "<em>Deze productie kwam tot stand in samenwerking met WESP/Merodefestival en met steun van de Vlaamse overheid.</em>"
       }
     ],
-    "foto": "",
+    "foto": "data/foto/40077c21f8db819fbc38f8b8aa48730b.webp",
     "fotos": [],
     "verborgen": false
   },
