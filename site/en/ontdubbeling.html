@@ -101,7 +101,7 @@
 <footer>
   <div class="wrap"><img class="foot-logo" src="../seizoen/logo-oranje.png" alt="Merodefestival" width="147" height="100" loading="lazy"></div>
   <div class="wrap cols">
-    <div><h3>Contact</h3><p><a href="mailto:info@merodefestival.be">info@merodefestival.be</a></p><p><a href="tel:+32498758296">0498 75 82 96</a></p><p>Merodefestival is a project of WESP vzw, BE 0863 441 738, Jozef Wautersstraat 4, 3010 Kessel-Lo, IBAN BE50 9731 3542 0118</p></div>
+    <div><h3>Contact</h3><p><a href="mailto:info@merodefestival.be">info@merodefestival.be</a></p><p><a href="tel:+32498758296">0498 75 82 96</a></p><p>Merodefestival is a project of WESP vzw, BE 0863 441 738, Jozef Wautersstraat 4, 3010 Kessel-Lo, <button type="button" class="iban-kopie" data-kopie="Je mag storten op rekeningnummer BE50 9731 3542 0118 van WESP vzw, Jozef Wautersstraat 4, 3010 Kessel-Lo." title="Klik om te kopiëren">IBAN BE50 9731 3542 0118</button></p></div>
     <div><h3>Follow us</h3><ul><li><a href="https://www.facebook.com/merodefestival">Facebook</a></li><li><a href="https://www.instagram.com/merodefestival/">Instagram</a></li><li><a href="https://www.youtube.com/channel/UCahKa1lM3yaWEwXdV_bBJdw">YouTube</a></li></ul></div>
     <div><h3>With support from</h3><a class="steun-link" href="https://www.vlaanderen.be" target="_blank" rel="noopener"><img class="steun-logo" src="../img/vlaanderen-verbeelding-werkt.png" alt="Vlaanderen, verbeelding werkt" width="200" height="87" loading="lazy"></a><p>The Flemish Government, arts and heritage.</p><p>Artwork: <a href="https://www.reinhart.be" target="_blank" rel="noopener">Reinhart Croon</a></p></div>
   </div>
@@ -127,5 +127,6 @@ t.addEventListener("click", function () { var o = n.classList.toggle("open"); t.
 </script>
 <script src="js/producties-extra.js" defer></script>
 <script data-statistiek>(function(){var h=location.hostname;if(h!=="www.merodefestival.be"&&h!=="merodefestival.be")return;function s(src,a){var e=document.createElement("script");e.defer=true;e.src=src;for(var k in a)e.setAttribute(k,a[k]);document.head.appendChild(e)}s("https://static.cloudflareinsights.com/beacon.min.js",{"data-cf-beacon":'{"token":"63300aea96964edfbfcaf3d986cb4628"}'});})();</script>
+<script>document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".iban-kopie");if(!b)return;var t=b.getAttribute("data-kopie"),k=function(){b.classList.add("ok");setTimeout(function(){b.classList.remove("ok")},2000)},r=function(){var a=document.createElement("textarea");a.value=t;a.style.position="fixed";a.style.opacity="0";document.body.appendChild(a);a.select();try{document.execCommand("copy");k()}catch(x){}a.remove()};if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(k,r);else r()});</script>
 </body>
 </html>
