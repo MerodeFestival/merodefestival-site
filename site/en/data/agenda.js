@@ -555,7 +555,7 @@ window.AGENDA = [
   },
   {
     "start": "2026-12-13",
-    "time": "11.30 uur",
+    "time": "11.30 am",
     "village": "Kortrijk-Dutsel",
     "place": "Sint-Catharinakerk",
     "artist": "Laura Cortese & Bert Ruymbeek",
@@ -846,7 +846,7 @@ window.AGENDA = [
   },
   {
     "start": "2027-01-24",
-    "time": "11.30 uur",
+    "time": "11.30 am",
     "village": "Kortrijk-Dutsel",
     "place": "Sint-Catharinakerk",
     "artist": "Bao Sissoko & Haroun Iqbal",
@@ -1303,7 +1303,7 @@ window.AGENDA = [
   },
   {
     "start": "2027-04-25",
-    "time": "11.30 uur",
+    "time": "11.30 am",
     "village": "Kortrijk-Dutsel",
     "place": "Sint-Catharinakerk",
     "artist": "Liesbeth Devos & Gwen Cresens",

@@ -4,8 +4,8 @@ PRODID:-//Merodefestival//NL
 BEGIN:VEVENT
 UID:laura-cortese-bert-ruymbeek-2026-12-13@merodefestival.be
 DTSTAMP:20261213T000000Z
-DTSTART;TZID=Europe/Brussels:20261213T113000
-DURATION:PT2H
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20261213
 SUMMARY:Laura Cortese & Bert Ruymbeek
 LOCATION:Sint-Catharinakerk\, Kortrijk-Dutsel
 URL:https://www.merodefestival.be/fr/concert/laura-cortese-bert-ruymbeek-2026-12-13
