@@ -233,6 +233,7 @@ for (const r of await queryAll(AGENDA_DB, [{ property: "Datum", direction: "asce
     tickets: text(p.Ticketlink),
     cta: text(p.Knoptekst) || undefined,
     volzet: p.Volzet?.checkbox === true,
+    capaciteit: p.Capaciteit?.number ?? undefined,   // alleen voor cijfers.merodefestival.be
     info: text(p["Meer info"]),
     sub: text(p.Ondertitel),
     origin: text(p.Herkomst),
