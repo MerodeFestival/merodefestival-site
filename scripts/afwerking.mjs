@@ -44,6 +44,8 @@ footer .steun-logo{display:block;width:200px;max-width:100%;height:auto;margin:.
 footer .foot-onder{margin-top:1.75rem;padding-top:1.1rem;border-top:1px solid rgba(239,231,218,.18)}
 footer .foot-links{margin:0;font-family:var(--label,system-ui);font-size:.95rem;display:flex;flex-wrap:wrap;gap:.35rem 1.5rem}
 footer .foot-links a{text-underline-offset:3px}
+footer .iban-kopie{background:none;border:0;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px;position:relative}
+footer .iban-kopie.ok::after{content:"✓ gekopieerd";position:absolute;left:0;bottom:100%;margin-bottom:.3rem;padding:.15rem .5rem;border-radius:4px;background:#efe7da;color:#1d1611;font-size:.8rem;white-space:nowrap}
 `;
 
 const JS = () => String.raw`(function () {
@@ -276,6 +278,14 @@ export async function afwerking({ ROOT, SITE }) {
         [`${up}privacy.html`, T("footer.link-privacy", "Privacyverklaring")],
       ];
       h = h.replace("</footer>", `<div class="wrap foot-onder"><p class="foot-links">${links.map(([u, t]) => `<a href="${u}">${t}</a>`).join("")}</p></div>\n</footer>`);
+    }
+
+    // 6. rekeningnummer in de voettekst: een klik kopieert een zin om door te geven
+    if (h.includes("<footer") && !h.includes("iban-kopie")) {
+      const zin = "Je mag storten op rekeningnummer BE50 9731 3542 0118 van WESP vzw, Jozef Wautersstraat 4, 3010 Kessel-Lo.";
+      h = h.replace(/<footer[\s\S]*?<\/footer>/, f => f.replace("IBAN BE50 9731 3542 0118",
+        `<button type="button" class="iban-kopie" data-kopie="${zin}" title="Klik om te kopiëren">IBAN BE50 9731 3542 0118</button>`));
+      if (h.includes("iban-kopie")) h = h.replace("</body>", `<script>document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".iban-kopie");if(!b)return;var t=b.getAttribute("data-kopie"),k=function(){b.classList.add("ok");setTimeout(function(){b.classList.remove("ok")},2000)},r=function(){var a=document.createElement("textarea");a.value=t;a.style.position="fixed";a.style.opacity="0";document.body.appendChild(a);a.select();try{document.execCommand("copy");k()}catch(x){}a.remove()};if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(k,r);else r()});</script>\n</body>`);
     }
 
     // stijl en script erbij
