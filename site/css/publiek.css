@@ -12,6 +12,8 @@ body{margin:0;background:var(--s-nacht);color:var(--s-licht);font-family:var(--s
 h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;margin:0}
 a{color:inherit}
 img{max-width:100%}
+/* Foto met width/height in de HTML: hoogte automatisch, zodat de verhouding klopt (een eigen regel met een hoogte gaat altijd voor) */
+:where(img[width][height]){height:auto}
 :focus-visible{outline:3px solid var(--s-oranje);outline-offset:3px;border-radius:2px}
 .wrap{max-width:70rem;margin:0 auto;padding:0 1.25rem}
 .label{font-family:var(--label);font-size:.92rem;letter-spacing:.02em}
