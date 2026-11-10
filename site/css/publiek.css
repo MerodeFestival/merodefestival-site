@@ -200,7 +200,7 @@ footer ul{list-style:none;margin:0;padding:0}
 .fest .acties{display:flex;flex-wrap:wrap;gap:.75rem}
 .fest-beelden{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem}
 .fest-beelden figure{margin:0}
-.fest-beelden img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:3px}
+.fest-beelden img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:3px}
 .fest-beelden figcaption{color:var(--s-zand);font-style:italic;font-size:.98rem;margin-top:.45rem}
 @media (max-width:720px){.fest-beelden{grid-template-columns:1fr}}
 
