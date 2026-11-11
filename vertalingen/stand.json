@@ -560,12 +560,12 @@
   "t": "Centres culturels, églises, clubs de musique"
  },
  "40077c21-f8db-819f-bc38-f8b8aa48730b:knop:en": {
-  "h": "9b2f31b90a9e89b2",
-  "t": "Request your promo card or book the show"
+  "h": "58ee0dc614ea8ba3",
+  "t": "Book or request the tour flyer"
  },
  "40077c21-f8db-819f-bc38-f8b8aa48730b:knop:fr": {
-  "h": "9b2f31b90a9e89b2",
-  "t": "Demandez votre carte de prospection ou réservez le spectacle"
+  "h": "58ee0dc614ea8ba3",
+  "t": "Réserver ou demander la fiche de diffusion"
  },
  "40077c21-f8db-819f-bc38-f8b8aa48730b:label:en": {
   "h": "d75b9e7e221f51f8",
@@ -624,12 +624,12 @@
   "t": "Fiche technique sur demande"
  },
  "40077c21-f8db-819f-bc38-f8b8aa48730b:tekst:en": {
-  "h": "eaa3908243c39043",
-  "t": "On his fourth solo album, Andries Boone fuses acoustic and electronic worlds. Fiddle, octave fiddle, mandolin, nyckelharpa and baroque musette meet synths and sequencers, inspired by Scandinavian and Breton folk music, the hunting horn tradition and the electronica of the eighties and nineties."
+  "h": "6279f59a0c3fe33a",
+  "t": "Violin and mandolin meet synths and sequencers. On his fourth solo album Andries Boone brings Scandinavian and Breton folk together with the electronics of the eighties. Live as a quartet or sextet."
  },
  "40077c21-f8db-819f-bc38-f8b8aa48730b:tekst:fr": {
-  "h": "eaa3908243c39043",
-  "t": "Sur son quatrième album solo, Andries Boone fusionne mondes acoustique et électronique. Violon, violon octave, mandoline, nyckelharpa et musette baroque rencontrent synthés et séquenceurs, inspirés par les musiques traditionnelles scandinaves et bretonnes, la tradition du cor de chasse et l’électronique des années quatre-vingt et nonante."
+  "h": "6279f59a0c3fe33a",
+  "t": "Le violon et la mandoline rencontrent synthés et séquenceurs. Sur son quatrième album solo, Andries Boone réunit folk scandinave et breton et électronique des années quatre-vingt. En quartet ou en sextet."
  },
  "40077c21-f8db-819f-bc38-f8b8aa48730b:titel:en": {
   "h": "496a4edfceafba0f",
@@ -1000,12 +1000,12 @@
   "t": "Festivals, centres culturels et grandes scènes"
  },
  "40277c21-f8db-8128-9845-ea3bb5931bc2:knop:en": {
-  "h": "9b2f31b90a9e89b2",
-  "t": "Request your promo card or book the show"
+  "h": "58ee0dc614ea8ba3",
+  "t": "Book or request the tour flyer"
  },
  "40277c21-f8db-8128-9845-ea3bb5931bc2:knop:fr": {
-  "h": "9b2f31b90a9e89b2",
-  "t": "Demandez votre carte de prospection ou réservez le spectacle"
+  "h": "58ee0dc614ea8ba3",
+  "t": "Réserver ou demander la fiche de diffusion"
  },
  "40277c21-f8db-8128-9845-ea3bb5931bc2:label:en": {
   "h": "8c5acc660078cfb9",
@@ -1095,6 +1095,14 @@
   "h": "d6f20f825131940e",
   "t": "Centres culturels, salles de théâtre, églises, chapelles et abbayes"
  },
+ "40277c21-f8db-8172-9a07-fd13517c7eb2:knop:en": {
+  "h": "58ee0dc614ea8ba3",
+  "t": "Book or request the tour flyer"
+ },
+ "40277c21-f8db-8172-9a07-fd13517c7eb2:knop:fr": {
+  "h": "58ee0dc614ea8ba3",
+  "t": "Réserver ou demander la fiche de diffusion"
+ },
  "40277c21-f8db-8172-9a07-fd13517c7eb2:label:en": {
   "h": "8b5c12f5f3babf8e",
   "t": "Christmas programme 2027, 2028"
@@ -1144,12 +1152,12 @@
   "t": "Formule théâtre : technique selon la fiche technique. Formule in situ : entièrement prise en charge par l'ensemble, seule l'électricité est nécessaire."
  },
  "40277c21-f8db-8172-9a07-fd13517c7eb2:tekst:en": {
-  "h": "2e6fc15e52a7751d",
-  "t": "Medieval Christmas carols in a new light: Eléonor unearths forgotten songs from the Low Countries, in contemporary Dutch, somewhere between early music, jazz and folk."
+  "h": "7ea895f08525b7b7",
+  "t": "Forgotten medieval Christmas songs from the Low Countries, sung again in today’s Dutch, between early music, jazz and folk. In the theatre or all-in in a church."
  },
  "40277c21-f8db-8172-9a07-fd13517c7eb2:tekst:fr": {
-  "h": "2e6fc15e52a7751d",
-  "t": "Des chants de Noël médiévaux sous un jour nouveau : Eléonor exhume des chansons oubliées des anciens Pays-Bas, en néerlandais contemporain, entre musique ancienne, jazz et folk."
+  "h": "7ea895f08525b7b7",
+  "t": "Des chants de Noël médiévaux oubliés des Pays-Bas, chantés à nouveau en néerlandais d’aujourd’hui, entre musique ancienne, jazz et folk. En salle de théâtre ou clé en main dans une église."
  },
  "40277c21-f8db-8172-9a07-fd13517c7eb2:titel:en": {
   "h": "30b4c8cbae46bd78",
@@ -1664,20 +1672,20 @@
   "t": "Administrations communales, chapelles et fabriques d’église, sites patrimoniaux"
  },
  "40377c21-f8db-8134-990e-e04c9a3c9d9c:knop:en": {
-  "h": "690c8404c4db71c1",
-  "t": "Book a Klanken in de Kapel evening"
+  "h": "853b88142311f9b3",
+  "t": "Request an evening of Klanken in de kapel"
  },
  "40377c21-f8db-8134-990e-e04c9a3c9d9c:knop:fr": {
-  "h": "690c8404c4db71c1",
-  "t": "Réservez une soirée Klanken in de Kapel"
+  "h": "853b88142311f9b3",
+  "t": "Demander une soirée Klanken in de kapel"
  },
  "40377c21-f8db-8134-990e-e04c9a3c9d9c:label:en": {
-  "h": "166268a46bd8299a",
-  "t": "Tailor-made concept, solo in a chapel"
+  "h": "0e255191f15e3572",
+  "t": "Solo in a chapel"
  },
  "40377c21-f8db-8134-990e-e04c9a3c9d9c:label:fr": {
-  "h": "166268a46bd8299a",
-  "t": "Concept sur mesure, en solo dans une chapelle"
+  "h": "0e255191f15e3572",
+  "t": "Solo dans une chapelle"
  },
  "40377c21-f8db-8134-990e-e04c9a3c9d9c:lang:en": {
   "h": "629be345ae7403b2",
@@ -1688,12 +1696,12 @@
   "t": "## Le concept\n\nUn musicien professionnel joue en acoustique dans une chapelle ou un autre petit lieu particulier, pour un public restreint. Avec un minimum de moyens naît ainsi une expérience d’écoute intense et recueillie : rien que la musique, l’espace et le public.\n\nLe style peut être musiques du monde, folk, jazz, classique ou un mélange. Une formule accessible et abordable, avec une rémunération équitable pour le musicien.\n\n## Ce dont nous nous occupons\n\nNous prenons en charge toute l’organisation :\n\n- la coordination avec la chapelle ou son gestionnaire\n\n- la promotion et la billetterie\n\n- tous les accords avec le musicien\n\n- la coordination le jour même, pour le musicien et le public\n\n## À quoi cela ressemblait chez nous\n\nSoirées récentes de notre propre programme :\n\n- **Lydie Thonnard**, Kapel Onze-Lieve-Vrouw-ten-Eik, Tongerlo (23 octobre 2026)\n\n- **Stijn Kuppens**, Sint-Bavokapel, Eindhout (24 octobre 2026)\n\n- **Stefan Bracaval**, Sint-Dimpnakapel, Zammel (17 octobre 2025)\n\n*Klanken in de Kapel est une organisation de Merodefestival, en collaboration avec Landschapspark de Merode et vzw Folkmjusic.*"
  },
  "40377c21-f8db-8134-990e-e04c9a3c9d9c:makers:en": {
-  "h": "70197518849fdc9e",
-  "t": "Merodefestival, with solo musicians from folk, world music, jazz and classical"
+  "h": "73aa832d01cf5410",
+  "t": "With solo musicians from folk, world music, jazz and classical"
  },
  "40377c21-f8db-8134-990e-e04c9a3c9d9c:makers:fr": {
-  "h": "70197518849fdc9e",
-  "t": "Merodefestival, avec des musiciens solistes issus du folk, des musiques du monde, du jazz et du classique"
+  "h": "73aa832d01cf5410",
+  "t": "Avec des solistes du folk, des musiques du monde, du jazz et du classique"
  },
  "40377c21-f8db-8134-990e-e04c9a3c9d9c:prijs:en": {
   "h": "df888d5386b7e938",
@@ -2072,20 +2080,20 @@
   "t": "Entreprises, communes et offices du tourisme, sites patrimoniaux et domaines naturels"
  },
  "40377c21-f8db-8166-b0cd-c71b23da9ceb:knop:en": {
-  "h": "a8913511ffc93f50",
-  "t": "Book a musical walk"
+  "h": "50fc43448305a113",
+  "t": "Request a musical walk"
  },
  "40377c21-f8db-8166-b0cd-c71b23da9ceb:knop:fr": {
-  "h": "a8913511ffc93f50",
-  "t": "Réservez une promenade musicale"
+  "h": "50fc43448305a113",
+  "t": "Demander une promenade musicale"
  },
  "40377c21-f8db-8166-b0cd-c71b23da9ceb:label:en": {
-  "h": "8e8f9659fba3bcbe",
-  "t": "Tailor-made concept, walking with live music"
+  "h": "fde52e9358f9ec30",
+  "t": "Walking with live music"
  },
  "40377c21-f8db-8166-b0cd-c71b23da9ceb:label:fr": {
-  "h": "8e8f9659fba3bcbe",
-  "t": "Concept sur mesure, promenade en musique live"
+  "h": "fde52e9358f9ec30",
+  "t": "Marcher en musique live"
  },
  "40377c21-f8db-8166-b0cd-c71b23da9ceb:lang:en": {
   "h": "95d83c2dc4439b36",
@@ -2096,12 +2104,12 @@
   "t": "## Le concept\n\nUne promenade musicale réunit promeneurs et musiciens dans un paysage. Vous parcourez quelques kilomètres à travers bois, landes, villages ou sites patrimoniaux, et en chemin résonnent de courtes prestations acoustiques : au bord d'un ruisseau, près d'une chapelle, sur une colline.\n\nLes promenades musicales font partie de Merodefestival depuis la première édition en 2015. Nous avons appris ce qui fonctionne : de petits groupes, de la musique acoustique et le respect de l'environnement.\n\n## Comment ça marche\n\n**1. Choisissez une promenade.**\n\n- 3 km avec 2 artistes\n\n- 5 km avec 3 artistes\n\n- une promenade festival de 7 à 8 km avec quatre haltes musicales\n\n**2. Choisissez un point de départ.** Nous cherchons ensemble le point de départ idéal, en tenant compte de vos contraintes pratiques.\n\n**3. Profitez.** Nous nous occupons des artistes et de l'organisation : itinéraire, parking, catering et concertation avec les gestionnaires des terrains.\n\n## Déjà réalisé\n\nEn 2025, les promenades passaient par Westmeerbeek, Langdorp, Tongerlo et Veerle-Heide. Pour ‘Ode aan de Merode’, nous avons créé huit promenades dans le parc paysager, et dans notre podcast de promenade, des musiciens folk vous emmènent en chemin.\n\n*Les promenades musicales sont un concept de Merodefestival (WESP vzw), avec le soutien du Gouvernement flamand, arts & patrimoine.*"
  },
  "40377c21-f8db-8166-b0cd-c71b23da9ceb:makers:en": {
-  "h": "38f42dedde57726c",
-  "t": "Merodefestival, with acoustic musicians from folk and world music"
+  "h": "2946712e0a74c4d7",
+  "t": "With acoustic musicians from folk and world music"
  },
  "40377c21-f8db-8166-b0cd-c71b23da9ceb:makers:fr": {
-  "h": "38f42dedde57726c",
-  "t": "Merodefestival, avec des musiciens acoustiques issus du folk et des musiques du monde"
+  "h": "2946712e0a74c4d7",
+  "t": "Avec des musiciens acoustiques du folk et des musiques du monde"
  },
  "40377c21-f8db-8166-b0cd-c71b23da9ceb:prijs:en": {
   "h": "df888d5386b7e938",
@@ -2120,12 +2128,12 @@
   "t": "Uniquement acoustique, dans le respect de l'environnement"
  },
  "40377c21-f8db-8166-b0cd-c71b23da9ceb:tekst:en": {
-  "h": "9302e60b091e251f",
-  "t": "A walk through the landscape, with short performances by acoustic musicians along the way. At your location or in the Merode, fully organised by us, also as a team-building or client event."
+  "h": "11905a16e5c54fc6",
+  "t": "A walk through woods, heath or village, with short acoustic performances along the way. At your place or in the Merode, fully organised by us. Also as an outing for your team or your clients."
  },
  "40377c21-f8db-8166-b0cd-c71b23da9ceb:tekst:fr": {
-  "h": "9302e60b091e251f",
-  "t": "Une promenade à travers le paysage, ponctuée de courtes prestations de musiciens acoustiques. Chez vous ou dans la Merode, entièrement organisée par nos soins, y compris comme team building ou événement clients."
+  "h": "11905a16e5c54fc6",
+  "t": "Une promenade à travers bois, landes ou village, avec de courts concerts acoustiques en chemin. Chez vous ou dans la Merode, entièrement organisée par nous. Aussi comme sortie pour votre équipe ou vos clients."
  },
  "40377c21-f8db-8166-b0cd-c71b23da9ceb:titel:en": {
   "h": "35c4a4383a3c8792",
@@ -2238,6 +2246,14 @@
  "40377c21-f8db-8182-8051-f7388d5b1679:tekst:fr": {
   "h": "f8ce3bef40bfe7ea",
   "t": "Newsletter"
+ },
+ "40377c21-f8db-8191-aa3f-c5bf79beaf80:tekst:en": {
+  "h": "bafb6ef296896524",
+  "t": "Podcast"
+ },
+ "40377c21-f8db-8191-aa3f-c5bf79beaf80:tekst:fr": {
+  "h": "bafb6ef296896524",
+  "t": "Podcast"
  },
  "40377c21-f8db-8192-980a-d1412c0e67b0:tekst:en": {
   "h": "3ada9b06fb013c56",
@@ -2382,6 +2398,14 @@
  "40377c21-f8db-81ba-8b36-fc3a6d3cb498:tekst:fr": {
   "h": "880f00a6820e8550",
   "t": "Regarder et écouter"
+ },
+ "40377c21-f8db-81bb-bd5c-f7821df033a3:tekst:en": {
+  "h": "b5a73e09edf81ed1",
+  "t": "Videos"
+ },
+ "40377c21-f8db-81bb-bd5c-f7821df033a3:tekst:fr": {
+  "h": "b5a73e09edf81ed1",
+  "t": "Vidéos"
  },
  "40377c21-f8db-81bf-84d8-ea7800982057:tekst:en": {
   "h": "c90ae5ff139bac4a",
@@ -3256,20 +3280,20 @@
   "t": "Pour les musiciens"
  },
  "40477c21-f8db-8169-a10f-e17685632ca8:tekst:en": {
-  "h": "c1dd718d8e4fe1bb",
-  "t": "We stand alongside artists and help shape every project."
+  "h": "430be3e6111719be",
+  "t": "Residencies in abbeys, a museum and the landscape, with a premiere on one of our own stages. The musicians remain the makers and authors; we present the work and record it."
  },
  "40477c21-f8db-8169-a10f-e17685632ca8:tekst:fr": {
-  "h": "c1dd718d8e4fe1bb",
-  "t": "Nous accompagnons les artistes et réfléchissons avec eux à chaque projet."
+  "h": "430be3e6111719be",
+  "t": "Des résidences dans des abbayes, un musée et le paysage, avec une première sur l’une de nos scènes. Les musiciens restent créateurs et auteurs ; nous présentons l’œuvre et l’enregistrons."
  },
  "40477c21-f8db-8169-a10f-e17685632ca8:titel:en": {
-  "h": "20606baa3adcdfbe",
-  "t": "We help develop musicians’ careers"
+  "h": "d450671dbd994dcd",
+  "t": "We commission new work for our venues"
  },
  "40477c21-f8db-8169-a10f-e17685632ca8:titel:fr": {
-  "h": "20606baa3adcdfbe",
-  "t": "Nous aidons à développer des carrières de musiciens"
+  "h": "d450671dbd994dcd",
+  "t": "Nous faisons créer de nouvelles œuvres pour nos lieux"
  },
  "40477c21-f8db-816d-9b03-f1ca2b34a97e:tekst:en": {
   "h": "b15d08f0b0e88072",
@@ -3472,12 +3496,12 @@
   "t": "Récits"
  },
  "40477c21-f8db-8199-bf3d-c3f800bca8e5:linktekst:en": {
-  "h": "825f91bcf48f1e94",
-  "t": "Listen and watch"
+  "h": "880f00a6820e8550",
+  "t": "Watch and listen"
  },
  "40477c21-f8db-8199-bf3d-c3f800bca8e5:linktekst:fr": {
-  "h": "825f91bcf48f1e94",
-  "t": "Écouter et regarder"
+  "h": "880f00a6820e8550",
+  "t": "Regarder et écouter"
  },
  "40477c21-f8db-8199-bf3d-c3f800bca8e5:tekst:en": {
   "h": "63211ed44c73e4ea",
@@ -3968,12 +3992,12 @@
   "t": "Demander une journée festival"
  },
  "40777c21-f8db-811c-99f7-fd729c314989:label:en": {
-  "h": "933f89bb5bc5cd26",
-  "t": "Tailor-made concept, a festival day at your heritage site"
+  "h": "05628859072ae37b",
+  "t": "A festival day at your heritage site"
  },
  "40777c21-f8db-811c-99f7-fd729c314989:label:fr": {
-  "h": "933f89bb5bc5cd26",
-  "t": "Concept sur mesure, une journée de festival sur votre site patrimonial"
+  "h": "05628859072ae37b",
+  "t": "Une journée de festival sur votre site patrimonial"
  },
  "40777c21-f8db-811c-99f7-fd729c314989:lang:en": {
   "h": "36890e27ac23b251",
@@ -3984,12 +4008,12 @@
   "t": "## Le concept\n\nUn site patrimonial reçoit sa journée de festival : un programme taillé sur mesure pour le lieu, avec des musiciens folk et des musiques du monde. C'est ainsi que nous travaillons nous-mêmes. PARK festival se déroule à l'Abdij van Park. Merodefestival propose en journée des promenades musicales dans la nature et, le soir, du folk international sur la Citadelle de Diest.\n\nLe lieu détermine le programme. Nous choisissons les artistes et le déroulement de la journée en fonction de l'espace, de l'histoire et du public de votre site.\n\n## Ce dont nous nous chargeons\n\nNous venons avec notre expertise et notre équipe sur votre site patrimonial :\n\n- le programme et les accords avec les artistes\n\n- le déroulement de la journée, par exemple avec des promenades musicales en journée et un concert le soir\n\n- un éclairage et une sonorisation adaptés, ainsi que les techniciens\n\n- le catering pour les artistes\n\n- la concertation avec le site et son gestionnaire\n\n- la coordination le jour même\n\n## Ce dont vous vous chargez\n\n- mettre le site à disposition, ainsi que les autorisations et accords avec le gestionnaire\n\n- l'accueil du public sur place : informer la commune, inviter les associations et les habitants, assurer l'accueil\n\n## À convenir ensemble\n\nNous fixons les coûts ensemble, en fonction du programme et du lieu. La billetterie se décide aussi de commun accord : par vous sur place, ou par notre intermédiaire.\n\n## À quoi cela ressemble chez nous\n\nDeux exemples tirés de notre propre travail :\n\n- **PARK festival**, Abdij van Park\n\n- **Merodefestival**, week-end de l'Ascension (5–9 mai 2027) : en journée, des promenades musicales dans la nature de la Merode ; le soir, du folk international sur la Citadelle de Diest\n\n*Une organisation de Merodefestival, en collaboration avec le gestionnaire du site et le partenaire local.*"
  },
  "40777c21-f8db-811c-99f7-fd729c314989:makers:en": {
-  "h": "8a0c7ebba3c3415c",
-  "t": "Merodefestival, with folk and world musicians"
+  "h": "0bec53bc8d5989ad",
+  "t": "With folk and world musicians"
  },
  "40777c21-f8db-811c-99f7-fd729c314989:makers:fr": {
-  "h": "8a0c7ebba3c3415c",
-  "t": "Merodefestival, avec des musiciens folk et musiques du monde"
+  "h": "0bec53bc8d5989ad",
+  "t": "Avec des musiciens folk et des musiques du monde"
  },
  "40777c21-f8db-811c-99f7-fd729c314989:prijs:en": {
   "h": "770172d91138adea",
@@ -4080,20 +4104,20 @@
   "t": "Administrations communales, partenaires patrimoniaux, fabriques d'église"
  },
  "40777c21-f8db-81f9-89a3-de5fabf608a6:knop:en": {
-  "h": "7bb6d26e42996477",
-  "t": "Request an extra performance"
+  "h": "e8bbb13847e8271a",
+  "t": "Request a second evening"
  },
  "40777c21-f8db-81f9-89a3-de5fabf608a6:knop:fr": {
-  "h": "7bb6d26e42996477",
-  "t": "Demandez une représentation supplémentaire"
+  "h": "e8bbb13847e8271a",
+  "t": "Demander une deuxième soirée"
  },
  "40777c21-f8db-81f9-89a3-de5fabf608a6:label:en": {
-  "h": "809cf98ca1dbe560",
-  "t": "Bespoke concept, a second evening in your church"
+  "h": "57c34569733ade6b",
+  "t": "A second evening in your church"
  },
  "40777c21-f8db-81f9-89a3-de5fabf608a6:label:fr": {
-  "h": "809cf98ca1dbe560",
-  "t": "Concept sur mesure, une deuxième soirée dans votre église"
+  "h": "57c34569733ade6b",
+  "t": "Une deuxième soirée dans votre église"
  },
  "40777c21-f8db-81f9-89a3-de5fabf608a6:lang:en": {
   "h": "a75d7804807bca88",
@@ -4104,12 +4128,12 @@
   "t": "## Le concept\n\nChaque saison, nous programmons des concerts d’église de folk et de musiques du monde. Beaucoup de nos artistes viennent de loin pour l’occasion, parfois de l’étranger. Pour eux, il est bien plus intéressant de pouvoir jouer plus d’une fois pendant leur séjour.\n\nC’est pourquoi chacun de nos concerts d’église peut aussi être présenté dans un second lieu, dans une église située en dehors de notre région : par exemple le jeudi, le concert qui se joue chez nous le samedi. Une tournée compte ainsi plus d’une étape, et votre église accueille une soirée avec des artistes que vous n’auriez pas l’occasion de voir autrement.\n\n## Ce que nous prenons en charge\n\nNous venons dans votre église avec notre expertise et notre équipe :\n\n- le programme et les accords avec les artistes\n\n- un éclairage et une sonorisation adaptés, ainsi que les techniciens\n\n- le catering pour les artistes\n\n- la concertation avec l’église ou le gestionnaire\n\n- la coordination le jour même\n\n## Ce que vous prenez en charge\n\n- la mise à disposition de l’église et les accords avec la fabrique d’église ou le gestionnaire\n\n- la médiation avec le public sur place : informer la commune, inviter les associations et les habitants, l’accueil\n\n## À convenir ensemble\n\nNous fixons les coûts ensemble, en fonction du programme et du lieu. La billetterie se décide également de commun accord : par vous sur place, ou par notre intermédiaire.\n\n## À quoi cela ressemble chez nous\n\nQuelques exemples de notre propre programme :\n\n- **Gwen Cresens & Philippe Thuriot**, Sint-Pieterskerk, Langdorp (14 novembre 2026)\n\n- **Sam Grassie, Dylan Fowler & Haroun Iqbal** : jeudi 3 décembre 2026 à l’Academiezaal de Sint-Truiden (Limburg Sessies) et samedi 5 décembre 2026 à la Sint-Pieterskerk de Testelt\n\n*Une organisation de Merodefestival, en collaboration avec le partenaire local.*"
  },
  "40777c21-f8db-81f9-89a3-de5fabf608a6:makers:en": {
-  "h": "c06fcf792299535d",
-  "t": "Merodefestival, with the artists from our church concerts"
+  "h": "0d76ea87a9495048",
+  "t": "With the artists of our church concerts"
  },
  "40777c21-f8db-81f9-89a3-de5fabf608a6:makers:fr": {
-  "h": "c06fcf792299535d",
-  "t": "Merodefestival, avec les artistes de nos concerts d'église"
+  "h": "0d76ea87a9495048",
+  "t": "Avec les artistes de nos concerts d’église"
  },
  "40777c21-f8db-81f9-89a3-de5fabf608a6:prijs:en": {
   "h": "770172d91138adea",
@@ -4136,12 +4160,12 @@
   "t": "Éclairage et sonorisation adaptés, apportés par nos soins"
  },
  "40777c21-f8db-81f9-89a3-de5fabf608a6:tekst:en": {
-  "h": "893d78f9fd1fde24",
-  "t": "Our church concerts can also come to you. The same artists and the same programme as ours on Saturday, on another evening in a church in your municipality. We bring our team and our technical equipment, you bring the audience."
+  "h": "4b06d16de828260d",
+  "t": "The same artists and the same programme as our church concerts, on another evening in a church in your municipality. We come with team and equipment; you bring the audience."
  },
  "40777c21-f8db-81f9-89a3-de5fabf608a6:tekst:fr": {
-  "h": "893d78f9fd1fde24",
-  "t": "Nos concerts d’église peuvent aussi venir chez vous. Les mêmes artistes et le même programme que chez nous le samedi, un autre soir, dans une église de votre commune. Nous venons avec notre équipe et notre matériel technique, vous vous occupez du public."
+  "h": "4b06d16de828260d",
+  "t": "Les mêmes artistes et le même programme que nos concerts d’église, un autre soir dans une église de votre commune. Nous venons avec l’équipe et la technique ; vous vous occupez du public."
  },
  "40777c21-f8db-81f9-89a3-de5fabf608a6:titel:en": {
   "h": "f6205ff093e5c901",
@@ -4448,12 +4472,12 @@
   "t": "Lire la vidéo"
  },
  "40c77c21-f8db-8104-997d-d65f8b6cf95a:tekst:en": {
-  "h": "a59f070a4a7ef3c1",
-  "t": "Other productions"
+  "h": "40c77ec7e2d8acaa",
+  "t": "Other projects"
  },
  "40c77c21-f8db-8104-997d-d65f8b6cf95a:tekst:fr": {
-  "h": "a59f070a4a7ef3c1",
-  "t": "Autres productions"
+  "h": "40c77ec7e2d8acaa",
+  "t": "Autres projets"
  },
  "40c77c21-f8db-8105-bf12-e38e35003fe3:tekst:en": {
   "h": "9522e6b8747eb4a3",

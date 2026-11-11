@@ -74,7 +74,7 @@ window.TEKSTEN = {
   "edities.park-intro": "Rond 11 juli programmeert WESP in opdracht van stad Leuven en de Abdij van Park een gratis festival met folk en wereldmuziek in en rond de abdij. Tot 2022 als Vlaanderen Feest, sinds 2023 als PARK, en sinds 2026 met de PARK Sessies in juni.",
   "edities.park-titel": "PARK Festival",
   "edities.producties-intro": "Daarnaast maakte WESP eigen producties en kleine reeksen: met de Folkwaarts-partners in de Meroderegio, solo in kapellen, en rond de muziek van de steden.",
-  "edities.producties-titel": "Andere producties",
+  "edities.producties-titel": "Andere projecten",
   "edities.programma-onvolledig": "Op het programma onder meer",
   "edities.tab": "Vorige edities",
   "edities.terug": "← Homepage",

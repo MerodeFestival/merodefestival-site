@@ -5,7 +5,7 @@
     "titel": "Rhagium Inquisitor",
     "label": "Nieuw album en tournee, seizoen 2027–2028",
     "makers": "Andries Boone, live in kwartet- of sextetbezetting",
-    "tekst": "Op zijn vierde soloalbum versmelt Andries Boone akoestische en elektronische werelden. Viool, octaafviool, mandoline, nyckelharpa en barokmusette ontmoeten synths en sequencers, geïnspireerd door Scandinavische en Bretonse volksmuziek, de jachthoorntraditie én de elektronica van de jaren tachtig en negentig.",
+    "tekst": "Viool en mandoline ontmoeten synths en sequencers. Op zijn vierde soloalbum brengt Andries Boone Scandinavische en Bretonse folk samen met de elektronica van de jaren tachtig. Live in kwartet of sextet.",
     "extra": "Het album Rhagium Inquisitor verschijnt op 13 november 2026. Alle speeldata op andriesboone.com.",
     "waar": "",
     "vorm": "Concert",
@@ -17,7 +17,7 @@
     "geschikt": "Cultuurcentra, kerken, muziekclubs",
     "prijs": "Op aanvraag",
     "contact": "boone@merodefestival.be",
-    "knop": "Vraag je prospectiekaart of boek de voorstelling",
+    "knop": "Boek of vraag de prospectiekaart",
     "knoplink": "",
     "uitsnede": "boven",
     "videos": [
@@ -65,7 +65,7 @@
     "titel": "O Kerstnacht",
     "label": "Kerstprogramma 2027, 2028",
     "makers": "Eléonor & ensemble, met Philippe Laloy, Vincent Noiret en Maarten Decombel",
-    "tekst": "Middeleeuwse kerstliederen in een nieuw licht: Eléonor graaft vergeten liederen uit de Lage Landen op, in eigentijds Nederlands, tussen oude muziek, jazz en folk.",
+    "tekst": "Vergeten middeleeuwse kerstliederen uit de Lage Landen, opnieuw gezongen in het Nederlands van vandaag, tussen oude muziek, jazz en folk. In de theaterzaal of all-in in een kerk.",
     "extra": "Drie formules: in de theaterzaal, all-in op een bijzondere locatie, of akoestisch in een kleinere ruimte.",
     "waar": "",
     "vorm": "Concert",
@@ -77,7 +77,7 @@
     "geschikt": "Cultuurcentra, theaterzalen, kerken, kapellen en abdijen",
     "prijs": "Op aanvraag",
     "contact": "okerstnacht@merodefestival.be",
-    "knop": "",
+    "knop": "Boek of vraag de prospectiekaart",
     "knoplink": "",
     "uitsnede": "boven",
     "videos": [
@@ -151,7 +151,7 @@
     "geschikt": "Festivals, culturele centra en grotere podia",
     "prijs": "Op aanvraag",
     "contact": "shipoffools@merodefestival.be",
-    "knop": "Vraag je prospectiekaart of boek de voorstelling",
+    "knop": "Boek of vraag de prospectiekaart",
     "knoplink": "",
     "uitsnede": "",
     "videos": [
@@ -823,8 +823,8 @@
     "slug": "klanken-in-de-kapel",
     "soort": "Concept op maat",
     "titel": "Klanken in de kapel",
-    "label": "Concept op maat, solo in een kapel",
-    "makers": "Merodefestival, met solomuzikanten uit folk, wereldmuziek, jazz en klassiek",
+    "label": "Solo in een kapel",
+    "makers": "Met solomuzikanten uit folk, wereldmuziek, jazz en klassiek",
     "tekst": "Eén muzikant, een kapel en een klein publiek: een korte akoestische avond waarin muziek en stilte samenkomen. Wij regelen alles, van de afstemming met de kapel tot de coördinatie op de dag zelf.",
     "extra": "Wil jij in jouw gemeente een van je beschikbare ruimtes omtoveren voor een unieke akoestische ervaring, bijvoorbeeld voor de Dag van de Stilte?",
     "waar": "In een kapel of bijzondere ruimte in jouw gemeente",
@@ -837,7 +837,7 @@
     "geschikt": "Gemeentebesturen, kapellen en kerkfabrieken, erfgoedsites",
     "prijs": "Op aanvraag",
     "contact": "info@merodefestival.be",
-    "knop": "Boek een klanken in de kapel-avond",
+    "knop": "Vraag een avond Klanken in de kapel aan",
     "knoplink": "",
     "uitsnede": "",
     "videos": [
@@ -921,9 +921,9 @@
     "slug": "muzikale-wandelingen",
     "soort": "Concept op maat",
     "titel": "Muzikale wandelingen",
-    "label": "Concept op maat, wandelen met live muziek",
-    "makers": "Merodefestival, met akoestische muzikanten uit de folk- en wereldmuziek",
-    "tekst": "Wandelen door een landschap, met onderweg korte optredens van akoestische muzikanten. Op jouw plek of in de Merode, door ons volledig georganiseerd, ook als teambuilding of klantenevent.",
+    "label": "Wandelen met live muziek",
+    "makers": "Met akoestische muzikanten uit de folk- en wereldmuziek",
+    "tekst": "Een wandeling door bos, heide of dorp, met onderweg korte akoestische optredens. Op jouw plek of in de Merode, volledig door ons georganiseerd. Ook als uitstap voor je team of je klanten.",
     "extra": "",
     "waar": "Op een plek naar keuze: bos, heide, dorp of erfgoedsite",
     "vorm": "Wandeling van 3 tot 8 kilometer met 2 tot 4 live optredens onderweg, voor maximaal 30 deelnemers",
@@ -935,7 +935,7 @@
     "geschikt": "Bedrijven, gemeenten en toeristische diensten, erfgoedsites en natuurdomeinen",
     "prijs": "Op aanvraag",
     "contact": "info@merodefestival.be",
-    "knop": "Boek een muzikale wandeling",
+    "knop": "Vraag een muzikale wandeling aan",
     "knoplink": "",
     "uitsnede": "",
     "videos": [
@@ -1012,9 +1012,9 @@
     "slug": "ontdubbeling",
     "soort": "Concept op maat",
     "titel": "Ontdubbeling van onze kerkconcerten",
-    "label": "Concept op maat, een tweede avond in jouw kerk",
-    "makers": "Merodefestival, met de artiesten van onze kerkconcerten",
-    "tekst": "Onze kerkconcerten kunnen ook bij jou spelen. Dezelfde artiesten en hetzelfde programma als bij ons op zaterdag, op een andere avond in een kerk in jouw gemeente. Wij komen met ons team en onze techniek, jij zorgt voor het publiek.",
+    "label": "Een tweede avond in jouw kerk",
+    "makers": "Met de artiesten van onze kerkconcerten",
+    "tekst": "Dezelfde artiesten en hetzelfde programma als onze kerkconcerten, op een andere avond in een kerk in jouw gemeente. Wij komen met team en techniek, jij zorgt voor het publiek.",
     "extra": "Heeft jouw gemeente een kerk die een avond muziek verdient?",
     "waar": "Een kerk of erfgoedsite buiten ons eigen werkgebied",
     "vorm": "Kerkconcert met een van onze artiesten",
@@ -1026,7 +1026,7 @@
     "geschikt": "Gemeentebesturen, erfgoedpartners, kerkfabrieken",
     "prijs": "In overleg",
     "contact": "info@merodefestival.be",
-    "knop": "Vraag een ontdubbeling aan",
+    "knop": "Vraag een tweede avond aan",
     "knoplink": "",
     "uitsnede": "",
     "videos": [
@@ -1125,14 +1125,14 @@
       "data/foto/40777c21f8db81f989a3de5fabf608a6-l2.webp",
       "data/foto/40777c21f8db81f989a3de5fabf608a6-l3.webp"
     ],
-    "verborgen": true
+    "verborgen": false
   },
   {
     "slug": "festivaldag",
     "soort": "Concept op maat",
     "titel": "Een festivaldag op een erfgoedsite",
-    "label": "Concept op maat, een festivaldag op jouw erfgoedsite",
-    "makers": "Merodefestival, met folk- en wereldmuzikanten",
+    "label": "Een festivaldag op jouw erfgoedsite",
+    "makers": "Met folk- en wereldmuzikanten",
     "tekst": "Een erfgoedsite, een dag en een programma dat bij de plek past. Wij bouwen een festivaldag rond jouw site, zoals we dat doen in de Abdij van Park en op de Citadel van Diest. Wij zorgen voor het programma en de organisatie, jij voor de plek en het publiek in jouw gemeente.",
     "extra": "Verdient jouw erfgoedsite een festivaldag?",
     "waar": "Een erfgoedsite, zoals een abdij, citadel of kasteel",
@@ -1241,6 +1241,6 @@
     "fotos": [
       "data/foto/40777c21f8db811c99f7fd729c314989-l1.webp"
     ],
-    "verborgen": true
+    "verborgen": false
   }
 ]
