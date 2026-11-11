@@ -1584,22 +1584,6 @@ window.BEELDBANK = [
     "sites": []
   },
   {
-    "titel": "Merodefestival 2026 – Rue Pascale in de kerk van Oosterlo",
-    "src": "https://beeld.merodefestival.be/merodefestival/2026-rue-pascale-kerk-oosterlo.webp",
-    "alt": "Drie muzikantes met mandoline en accordeon spelen voor het altaar van een lichte dorpskerk",
-    "fotograaf": "Annie",
-    "jaar": 2026,
-    "onderwerp": "Kerkconcert",
-    "uitsnede": "",
-    "gebruik": [
-      "Vorige edities"
-    ],
-    "volgorde": 9,
-    "sites": [
-      "Merodefestival"
-    ]
-  },
-  {
     "titel": "MERODE9_wnoewj.jpg",
     "src": "https://beeld.merodefestival.be/merodefestival/merode9-wnoewj.webp",
     "alt": "Gitarist met mondharmonica bij een vijver",
