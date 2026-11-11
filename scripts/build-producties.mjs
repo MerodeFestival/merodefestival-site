@@ -305,18 +305,36 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     const knoppen = [...anders.map(l => `<a href="${esc(eigen(l.url))}"${extern(l.url) ? ' target="_blank" rel="noopener"' : ""}>${esc(l.label)}${extern(l.url) ? " ↗" : " →"}</a>`)];
     return `<li class="${hoofd ? "met-video" : "zonder-video"}">${hoofd}<p class="rs-naam">${esc(naam)}</p>${wat ? `<p class="rs-wat">${esc(wat)}</p>` : ""}${waar ? `<p class="rs-waar">${esc(waar)}</p>` : ""}${knoppen.length ? `<p class="rs-links">${knoppen.join(" ")}</p>` : ""}</li>`;
   }).join("");
+  // Quotes van muzikanten (uit de bevraging van 2026, met toestemming), als "tekst | naam" in Teksten (samen.muzikanten.quoteN)
+  const quote = (n, standaard) => {
+    const [tekst, naam = ""] = T(`samen.muzikanten.quote${n}`, standaard).split("|").map(x => x.trim());
+    return tekst ? `<figure class="rs-quote"><blockquote><p>${esc(tekst)}</p></blockquote>${naam ? `<figcaption>${esc(naam)}</figcaption>` : ""}</figure>` : "";
+  };
+  const Q = {
+    1: quote(1, "Merodefestival boekt niet alleen artiesten, maar gelooft in hen. En net dat geloof maakt voor mij het verschil. | Guus Herremans (Airboxes)"),
+    2: quote(2, "Het antwoord is nooit een direct ‘ja’ of ‘nee’. Het is een ‘vertel meer’. | Laura Cortese"),
+    3: quote(3, "Wat blijft het belangrijkste in muziek? Stilte en tijd… VEEL tijd. | Myrddin De Cauter"),
+    4: quote(4, "Nieuw werk componeren en dat bijna onmiddellijk toetsen aan een live, geoefend publiek: een unieke kans die niet vanzelfsprekend is. | Ward Dhoore"),
+    5: quote(5, "Rhagium Inquisitor is ontstaan door een residentie die ik kon doen. | Andries Boone"),
+    6: quote(6, "Het publiek is hondstrouw en gelooft in de smaak van de organisatie. Maar dan moet je het nog waarmaken natuurlijk… het zijn tamelijk strenge toonrechters. | Hans Mortelmans"),
+    7: quote(7, "De droomfabriek voor de Vlaamse folkmuzikant. | Jeroen Knapen"),
+  };
   const muzTitel = DEUREN[0].titel;
   await schrijf("voor-muzikanten.html", muzTitel,
     T("samen.muzikanten.beschrijving", "Residenties en premières bij WESP en Merodefestival: muzikanten maken nieuw werk voor onze plekken en vinden bij ons een vaste podiumpartner."),
     hero(muzTitel, T("samen.muzikanten.kop", "Een samenwerking, geen boeking"),
       T("samen.muzikanten.intro", "Jij hebt een idee, wij hebben de plekken: abdijen, kapellen, een muziekmuseum en het landschap van de Merode. Je werkt er een week in residentie, speelt de première op een van onze podia en daarna verder, bij ons en elders. Alles begint met een gesprek, niet met een contract."), "home-duo") +
     sectie(`${deurNav("voor-muzikanten.html")}
+      ${Q[1]}
       ${blok("residenties", T("residenties.stappen.kop", "Van residentie tot première, en verder"),
         `<ol class="rs-stappen">${stappen.map(s => `<li><h3>${esc(s.kop)}</h3><p>${esc(s.tekst)}</p></li>`).join("")}</ol>
-        ${fotoband("2026-cavez-montanaro-boom", "home-altaar", "318184-805557")}`)}
+        <div class="rs-quotes">${Q[2]}${Q[3]}</div>
+        ${fotoband("2026-cavez-montanaro-boom", "home-altaar", "318184-805557")}
+        ${Q[4]}`)}
       ${blok("makersplekken", T("residenties.plekken.kop", "Onze makersplekken"), `<dl class="rs-plekken">${plekken.map(s => `<div><dt>${esc(s.kop)}</dt><dd>${esc(s.tekst)}</dd></div>`).join("")}</dl>`)}
       ${jaren.length ? blok("in-residentie", T("samen.muzikanten.jaren", "Wie er al bij ons in residentie was"),
-        jaren.map(r => `<div class="rs-jaar"><h3>${esc(r.titel)}</h3><ul class="rs-res">${residenties(r.tekst)}</ul></div>`).join("")) : ""}
+        Q[5] + jaren.map(r => `<div class="rs-jaar"><h3>${esc(r.titel)}</h3><ul class="rs-res">${residenties(r.tekst)}</ul></div>`).join("") + Q[6]) : ""}
+      ${Q[7]}
       ${actie(T("samen.muzikanten.actie", "Vertel ons je plannen"), T("samen.muzikanten.contact", "Stuur ons een paar zinnen over je plan en een link naar je muziek. We lezen alles, maar kunnen niet op elk voorstel ingaan. Vaak nodigen we zelf muzikanten uit, wanneer plek, moment en muziek samenvallen."),
         mailKnop(T("wesp.muzikanten.knop", "Vertel ons je plannen"), "Projectvoorstel"))}`));
 
