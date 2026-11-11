@@ -145,7 +145,7 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     "268829-462342": "Kwartet speelt voor het altaar in een volle kapel",
     "631059-834612": "Groot publiek op een binnenplein voor een historisch gebouw",
   };
-  const POS = { "268829-462342": "center 45%" };
+  const POS = { "268829-462342": "center 45%", "home-altaar": "center 95%" };
   const foto = naam => ({ src: BEELD + naam + ".webp", alt: T(`beeld.${naam}`, FOTO[naam] || ""), pos: POS[naam] });
   const img = (f, extra = "") => `<img src="${esc(f.src)}" alt="${esc(f.alt)}"${f.pos ? ` style="object-position:${f.pos}"` : ""} width="900" height="675"${extra}>`;
   const fotoband = (...namen) => `<div class="galerij3 fotoband">${namen.map(n => `<figure>${img(foto(n), ' loading="lazy"')}</figure>`).join("")}</div>`;
