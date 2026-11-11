@@ -5127,6 +5127,14 @@
   "h": "60064cd77875fe04",
   "t": "Tous les enregistrements de l’abbaye →"
  },
+ "41577c21-f8db-8132-b1e2-fed944152a3a:tekst:en": {
+  "h": "af9183c7e46f12ea",
+  "t": "The dream factory for Flemish folk musicians. | Jeroen Knapen"
+ },
+ "41577c21-f8db-8132-b1e2-fed944152a3a:tekst:fr": {
+  "h": "af9183c7e46f12ea",
+  "t": "L’usine à rêves des musiciens folk flamands. | Jeroen Knapen"
+ },
  "41577c21-f8db-8135-a312-d184b36905fd:tekst:en": {
   "h": "2f9a186eca73e839",
   "t": "More about this →"
@@ -5198,6 +5206,14 @@
  "41577c21-f8db-814f-ab68-ca01b1608591:tekst:fr": {
   "h": "6ae8f8301df4ebf6",
   "t": "Nos lieux de création"
+ },
+ "41577c21-f8db-814f-bf80-c750b9c49900:tekst:en": {
+  "h": "5ed77f8b67f54f3e",
+  "t": "Merodefestival doesn’t just book artists, it believes in them. And that belief is what makes the difference for me. | Guus Herremans (Airboxes)"
+ },
+ "41577c21-f8db-814f-bf80-c750b9c49900:tekst:fr": {
+  "h": "5ed77f8b67f54f3e",
+  "t": "Le Merodefestival ne se contente pas de programmer des artistes, il croit en eux. Et c’est justement cette confiance qui fait la différence pour moi. | Guus Herremans (Airboxes)"
  },
  "41577c21-f8db-8152-94ac-cfa78e93648b:tekst:en": {
   "h": "b5a73e09edf81ed1",
@@ -5303,6 +5319,22 @@
   "h": "880f00a6820e8550",
   "t": "Regarder et écouter"
  },
+ "41577c21-f8db-816d-8aa7-f665f15c3206:tekst:en": {
+  "h": "d7811793f935ea38",
+  "t": "The answer is never a straight ‘yes’ or ‘no’. It’s a ‘tell me more’. | Laura Cortese"
+ },
+ "41577c21-f8db-816d-8aa7-f665f15c3206:tekst:fr": {
+  "h": "d7811793f935ea38",
+  "t": "La réponse n’est jamais un ‘oui’ ou un ‘non’ immédiat. C’est un ‘dis-m’en plus’. | Laura Cortese"
+ },
+ "41577c21-f8db-8173-ad08-d0f12c85a784:tekst:en": {
+  "h": "533e0e946ba7334f",
+  "t": "What matters most in music? Silence and time… LOTS of time. | Myrddin De Cauter"
+ },
+ "41577c21-f8db-8173-ad08-d0f12c85a784:tekst:fr": {
+  "h": "533e0e946ba7334f",
+  "t": "Qu’est-ce qui compte le plus en musique ? Le silence et le temps… BEAUCOUP de temps. | Myrddin De Cauter"
+ },
  "41577c21-f8db-8173-af53-fccfea44a32b:tekst:en": {
   "h": "e3f96ae6b6d4c37e",
   "t": "Klara, the Flemish classical radio station, regularly records concerts at our venues and broadcasts them in Klara in concert. Listen again on VRT MAX."
@@ -5391,6 +5423,22 @@
   "h": "6e8ec9508efb98c5",
   "t": "Klara in concert, 18 novembre 2026 | Amber Haddad Trio et Simon Leleux & Manuel Hermia | Leur double concert à l’église Sint-Lucia d’Engsbergen (17 octobre 2026), enregistré en exclusivité par Klara : oud, contrebasse, bansuri, saxophone et percussions, entre jazz et traditions arabes et indiennes. | https://www.vrt.be/vrtmax/luister/radio/k/klara-in-concert~31-229/klara-in-concert~31-32819-0/"
  },
+ "41577c21-f8db-8190-a167-d2897c0d4e94:tekst:en": {
+  "h": "08c98e072983a750",
+  "t": "Rhagium Inquisitor came about through a residency I was able to do. | Andries Boone"
+ },
+ "41577c21-f8db-8190-a167-d2897c0d4e94:tekst:fr": {
+  "h": "08c98e072983a750",
+  "t": "Rhagium Inquisitor est né d’une résidence que j’ai pu faire. | Andries Boone"
+ },
+ "41577c21-f8db-8193-b0a1-e7ce3390887f:tekst:en": {
+  "h": "d8cbe70631780669",
+  "t": "Composing new work and testing it almost immediately in front of a live, attentive audience: a unique chance that can’t be taken for granted. | Ward Dhoore"
+ },
+ "41577c21-f8db-8193-b0a1-e7ce3390887f:tekst:fr": {
+  "h": "d8cbe70631780669",
+  "t": "Composer de nouvelles œuvres et les confronter presque aussitôt à un public attentif, en live : une chance unique qui ne va pas de soi. | Ward Dhoore"
+ },
  "41577c21-f8db-8196-b7f7-e870472b7545:tekst:en": {
   "h": "5008eab872cb12b6",
   "t": "At Merodefestival"
@@ -5406,6 +5454,14 @@
  "41577c21-f8db-8198-a4ea-cdf200d21130:tekst:fr": {
   "h": "4d39cd24b42fecc4",
   "t": "Grand ensemble sous une toile rose devant le public"
+ },
+ "41577c21-f8db-819b-bee4-d257baebfff4:tekst:en": {
+  "h": "53d831586d536e4b",
+  "t": "The audience is fiercely loyal and trusts the organisers’ taste. But then you still have to deliver, of course… they’re pretty strict judges. | Hans Mortelmans"
+ },
+ "41577c21-f8db-819b-bee4-d257baebfff4:tekst:fr": {
+  "h": "53d831586d536e4b",
+  "t": "Le public est d’une fidélité absolue et fait confiance aux goûts des organisateurs. Mais encore faut-il être à la hauteur, bien sûr… ce sont des juges assez sévères. | Hans Mortelmans"
  },
  "41577c21-f8db-819d-865a-d132f06f507b:tekst:en": {
   "h": "d3a7e6d73a7444cc",
