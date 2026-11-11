@@ -227,6 +227,7 @@ window.TEKSTEN = {
   "speler.meer": "Meer info",
   "speler.uitleg": "Pas na je klik laden we de speler van {dienst}. Die ziet dan je IP-adres en kan cookies plaatsen.",
   "statistiek.cloudflare-token": "63300aea96964edfbfcaf3d986cb4628",
+  "statistiek.meta-pixel": "262189854320601",
   "veld.bezetting": "Bezetting",
   "veld.contact": "Contact",
   "veld.data": "Data",
