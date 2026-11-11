@@ -2,7 +2,7 @@
 //  1. lettertypes van de eigen server in plaats van Google Fonts
 //  2. Spotify en SoundCloud laden pas na een klik
 //  3. voorbeeldafbeeldingen van YouTube en Vimeo worden lokaal bewaard (er gaat dus niets naar die diensten vóór een klik)
-//  4. statistieken (Cloudflare Web Analytics en/of Plausible), zonder cookies, enkel op het echte domein
+//  4. statistieken (Cloudflare Web Analytics en/of Plausible, zonder cookies) en de Meta-pixel, enkel op het echte domein
 //  5. onderaan elke pagina: logo van de Vlaamse overheid, en links naar Partners, Vrienden en de privacyverklaring
 // Alles is idempotent: een pagina die al bewerkt is, wordt niet nog eens bewerkt.
 
@@ -153,11 +153,21 @@ export function statistiek() {
   return {
     cf: schoon(T("statistiek.cloudflare-token", "", "Token van Cloudflare Web Analytics (Cloudflare, Analytics, Web Analytics, site toevoegen). Leeg laten = uit.")),
     pl: schoon(T("statistiek.plausible-domein", "", "Domein voor Plausible Analytics, bijvoorbeeld merodefestival.be. Leeg laten = uit.")),
+    fb: metaPixel(T("statistiek.meta-pixel", "262189854320601", "ID van de Meta-pixel (advertenties op Facebook en Instagram). Leeg laten = de standaardpixel; typ uit om hem uit te zetten.")),
   };
 }
 
+// Alleen een geldig pixelnummer telt; "uit" of iets anders zet de pixel uit
+function metaPixel(t) {
+  const id = String(t || "").trim();
+  return /^\d{6,20}$/.test(id) ? id : "";
+}
+
+// Meta-pixel (standaardcode van Meta, zonder het noscript-beeldje: dat kan niet beperkt worden tot het echte domein)
+const META_PIXEL = id => `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${id}');fbq('track','PageView');`;
+
 export async function afwerking({ ROOT, SITE }) {
-  const { cf, pl } = statistiek();
+  const { cf, pl, fb } = statistiek();
   const host = new URL(SITE).hostname;
   const kaal = host.replace(/^www\./, "");
 
@@ -255,8 +265,10 @@ export async function afwerking({ ROOT, SITE }) {
     }
 
     // 4. statistieken
-    if ((cf || pl) && !h.includes("data-statistiek")) {
-      const s = `<script data-statistiek>(function(){var h=location.hostname;if(h!=="${host}"&&h!=="${kaal}")return;function s(src,a){var e=document.createElement("script");e.defer=true;e.src=src;for(var k in a)e.setAttribute(k,a[k]);document.head.appendChild(e)}${cf ? `s("https://static.cloudflareinsights.com/beacon.min.js",{"data-cf-beacon":'{"token":"${cf}"}'});` : ""}${pl ? `s("https://plausible.io/js/script.outbound-links.tagged-events.js",{"data-domain":"${pl}"});` : ""}})();</script>\n`;
+    // Een eerder ingevoegd blok wordt telkens vervangen, zodat een gewijzigde instelling ook op oude pagina's komt
+    h = h.replace(/<script data-statistiek>[\s\S]*?<\/script>\n?/, "");
+    if (cf || pl || fb) {
+      const s = `<script data-statistiek>(function(){var h=location.hostname;if(h!=="${host}"&&h!=="${kaal}")return;function s(src,a){var e=document.createElement("script");e.defer=true;e.src=src;for(var k in a)e.setAttribute(k,a[k]);document.head.appendChild(e)}${cf ? `s("https://static.cloudflareinsights.com/beacon.min.js",{"data-cf-beacon":'{"token":"${cf}"}'});` : ""}${pl ? `s("https://plausible.io/js/script.outbound-links.tagged-events.js",{"data-domain":"${pl}"});` : ""}${fb ? META_PIXEL(fb) : ""}})();</script>\n`;
       h = h.replace("</body>", s + "</body>");
       if (pl) {
         h = h.replace(/<a\b([^>]*\bhref="[^"]*pierrot\.io[^"]*"[^>]*)>/gi, (m, a) => /plausible-event-name/.test(a) ? m : `<a${eventKlasse(a, "Tickets")}>`);
@@ -295,5 +307,5 @@ export async function afwerking({ ROOT, SITE }) {
     h = h.replace(/&amp;(amp|lt|gt|quot|#\d+);/g, "&$1;");   // vangnet: een dubbel gecodeerd teken herstellen
     if (h !== voor) { await fs.writeFile(pad, h); nVerwerkt++; }
   }
-  console.log(`Afwerking: ${nVerwerkt} pagina’s bewerkt, ${nSpelers} spelers achter een klik, ${nThumbs} voorbeeldbeelden lokaal${cf || pl ? ", statistieken aan" : ", statistieken uit (nog geen token ingevuld)"}.`);
+  console.log(`Afwerking: ${nVerwerkt} pagina’s bewerkt, ${nSpelers} spelers achter een klik, ${nThumbs} voorbeeldbeelden lokaal${cf || pl ? ", statistieken aan" : ", statistieken uit (nog geen token ingevuld)"}${fb ? ", Meta-pixel aan" : ""}.`);
 }

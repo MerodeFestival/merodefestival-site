@@ -1,10 +1,10 @@
 // Tekst van de privacyverklaring. Basis: het document “Privacystatement uitgebreid” (versie 16/11/2020) van WESP vzw,
 // met kleine tekstuele rechtzettingen, een nieuw onderdeel over deze website en de naam van de huidige toezichthouder.
 
-export const PRIVACY_VERSIE = "25 oktober 2026";
-export const PRIVACY_VORIGE = "16 november 2020";
+export const PRIVACY_VERSIE = "11 november 2026";
+export const PRIVACY_VORIGE = "25 oktober 2026";
 
-// statistiek: { cf, pl } uit afwerking.mjs
+// statistiek: { cf, pl, fb } uit afwerking.mjs
 export function privacyHtml({ statistiek, esc }) {
   const diensten = [statistiek.cf && "Cloudflare Web Analytics", statistiek.pl && "Plausible Analytics"].filter(Boolean);
   const stats = diensten.length ? `<p><strong>Statistieken.</strong> We meten het gebruik van de website met ${diensten.join(" en ")}. Volgens de aanbieder werkt die dienst zonder cookies en volgt ze je niet over andere websites heen. We gebruiken de cijfers (aantal bezoeken, bekeken pagina’s, herkomst, land, toestel en snelheid van de website) om de website te verbeteren, niet om individuele bezoekers te herkennen.</p>` : "";
@@ -52,7 +52,7 @@ export function privacyHtml({ statistiek, esc }) {
 <p>Wij verwerken enkel persoonsgegevens van minderjarigen (personen jonger dan 16 jaar) indien daarvoor schriftelijke toestemming is gegeven door de ouder of wettelijke vertegenwoordiger.</p>
 
 <h2 id="website">Bezoek aan deze website</h2>
-<p><strong>Cookies.</strong> Deze website plaatst zelf geen cookies en gebruikt geen advertentie- of volgcookies.</p>
+${statistiek.fb ? `<p><strong>Cookies en Meta-pixel.</strong> Deze website gebruikt de Meta-pixel van Meta Platforms Ireland Ltd. (Facebook en Instagram). Die plaatst een cookie en stuurt gegevens over uw bezoek naar Meta, zoals de bekeken pagina, uw IP-adres en gegevens over uw browser en toestel. Wij gebruiken dat om te meten hoe onze advertenties op Facebook en Instagram werken en om bezoekers van onze website daar opnieuw te bereiken. Meta kan die gegevens ook voor eigen doeleinden gebruiken; daarvoor geldt het privacybeleid van Meta (<a href="https://www.facebook.com/privacy/policy/">facebook.com/privacy/policy</a>). U kunt dit beperken via de advertentie-instellingen van uw Facebook- of Instagram-account, of door cookies van derden te blokkeren in uw browser. Verder plaatst deze website zelf geen cookies.</p>` : `<p><strong>Cookies.</strong> Deze website plaatst zelf geen cookies en gebruikt geen advertentie- of volgcookies.</p>`}
 <p><strong>Technische gegevens.</strong> Net als elke website verwerkt onze webhost technische gegevens van uw bezoek (zoals uw IP-adres, het tijdstip en de opgevraagde pagina) om de website te laten werken en te beveiligen. Wij gebruiken die gegevens niet om u te identificeren.</p>
 <p><strong>Lettertypes.</strong> De lettertypes staan op onze eigen server. Er wordt geen verbinding met Google gemaakt om ze te laden.</p>
 ${stats}
