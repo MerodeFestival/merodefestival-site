@@ -23,6 +23,8 @@ const SOORTEN = [
     intro: "Concepten die je bij ons kunt boeken, uitgewerkt op jouw plek." },
 ];
 const POSITIE = { boven: "center top", onder: "center bottom", links: "left center", rechts: "right center" };
+// Hoezen en verpakkingen (bv. een plaat naast de hoes) tonen we bovenaan volledig, in een kader
+const KADER = ["the-sound-of-the-abbey"];
 
 export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
   let lijst;
@@ -361,7 +363,7 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
       ? `<a class="btn" href="${esc(p.knoplink)}" target="_blank" rel="noopener">${esc(p.knop || T("producties.knop-standaard", "Vraag een optie"))}</a>`
       : `<a class="btn" href="${mail}">${esc(p.knop || T("producties.knop-standaard", "Vraag een optie"))}</a>`;
     const hero = p.foto
-      ? `<figure class="cbeeld foto${transp(p.foto) ? " transp" : ""}"><img src="${esc(p.foto)}" alt="${esc(p.titel)}"></figure>`
+      ? `<figure class="cbeeld foto${transp(p.foto) ? " transp" : ""}"><img src="${esc(p.foto)}" alt="${esc(p.titel)}"${POSITIE[p.uitsnede] ? ` style="object-position:${POSITIE[p.uitsnede]}"` : ""}></figure>`
       : `<figure class="cbeeld"><img src="${esc(S.artwork)}" alt=""></figure>`;
     const V = (sleutel, standaard) => T(`veld.${sleutel}`, standaard);
     const feiten = [[V("waar", "Waar"), p.waar], [V("vorm", "Vorm"), p.vorm], [V("speelduur", "Speelduur"), p.speelduur], [V("periode", "Periode"), p.periode],
@@ -378,7 +380,7 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
       ? `<div class="galerij3${p.fotos.length < 3 ? " twee" : ""}">${p.fotos.map(f => `<figure><img src="${esc(f)}" alt="${esc(p.titel)}" loading="lazy"></figure>`).join("")}</div>`
       : "";
     const body = `
-  <section class="chero">
+  <section class="chero${p.foto && !transp(p.foto) && p.uitsnede !== "volledig tonen" && !KADER.includes(p.slug) ? " ov-hero" : ""}">
     <div class="wrap">
       <div class="chero-tekst">
         <a class="terug" href="${TERUG[soortVan(p)][0]}">${esc(TERUG[soortVan(p)][1]())}</a>

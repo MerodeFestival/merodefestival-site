@@ -9,6 +9,11 @@ import vm from "node:vm";
 import { T, laadTeksten, pasHomepage, seizoenOverrides, schrijfCatalogus } from "./teksten.mjs";
 import { voorbouwHomepage } from "./voorbouw.mjs";
 import { maakOmleidingen } from "./omleidingen.mjs";
+// Affiches met tekst en collages tonen we bovenaan een concertpagina volledig, in een kader:
+// met een uitsnede die opgaat in de achtergrond vallen namen of beelddelen weg.
+const KADER_BEELDEN = ["holsbeek-sessies/790045-507050", "limburg-sessies/220136-111048", "agenda-40077c21f8db81728dffdad5b18abc45",
+  "holsbeek-sessies/109593-878252", "holsbeek-sessies/118141-707932", "holsbeek-sessies/596939-183992", "agenda-40077c21f8db817c9c87e2a5913157b9",
+  "limburg-sessies/820143-160836", "agenda-40077c21f8db817b8ad0f182f99978be", "holsbeek-sessies/871093-660751", "agenda-40077c21f8db81469f3ad2c4779240b6"];
 import { bouwWesp } from "./build-wesp.mjs";
 import { bouwInfo } from "./build-info.mjs";
 import { bouw404 } from "./build-404.mjs";
@@ -241,7 +246,7 @@ function pagina(e, overige) {
 </header>
 
 <main>
-  <section class="chero" aria-labelledby="titel">
+  <section class="chero${e.foto && !KADER_BEELDEN.some(k => e.foto.includes(k)) ? " ov-hero" : ""}" aria-labelledby="titel">
     <div class="wrap">
       <div class="chero-tekst">
         <a class="terug" href="../index.html#agenda">${T("concert.terug", "← Agenda")}</a>
