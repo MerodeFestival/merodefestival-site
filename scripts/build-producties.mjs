@@ -145,7 +145,7 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     "merode-nl-inpsik": "Publiek bij een concert in een begroeide kerkruïne",
     "2026-watermolen-wandelaars": "Wandelaars steken een brugje over naast een oude watermolen",
     "268829-462342": "Kwartet speelt voor het altaar in een volle kapel",
-    "631059-834612": "Groot publiek op een binnenplein voor een historisch gebouw",
+    "631059-834612": "Groot publiek op het binnenplein van de Abdij van Park",
   };
   const POS = { "268829-462342": "center 45%", "home-altaar": "center 95%" };
   const foto = naam => ({ src: BEELD + naam + ".webp", alt: T(`beeld.${naam}`, FOTO[naam] || ""), pos: POS[naam] });
@@ -345,7 +345,7 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     hero(samenTitel, progTitel, T("samen.programmatoren.intro", "Drie creaties, gemaakt voor onze podia en klaar voor het jouwe. Je boekt ze rechtstreeks bij ons: wij maken de afspraken met de muzikanten."), "2026-citadel-publiek") +
     sectie(`${deurNav("voor-programmatoren.html")}
       ${creaties.length ? blok("creaties", T("residenties.creaties.kop", "Creaties om te boeken"), `<ul class="kaarten">${creaties.map(p => kaart(p, T("residenties.creaties.meer", "Bekijk en boek de creatie →"))).join("")}</ul>`) : ""}
-      ${blok("live", T("samen.programmatoren.live.kop", "Zie ze eerst live"), alinea(T("samen.programmatoren.live", "Op het Merodefestival en Park Festival gaan nieuwe creaties in première. Programmatoren zijn er welkom: laat het ons weten, dan reserveren we een plaats.")) + fotoband("726393-846860", "763186-922168", "671301-201421"))}
+      ${blok("live", T("samen.programmatoren.live.kop", "Zie ze eerst live"), alinea(T("samen.programmatoren.live", "Op het Merodefestival en Park Festival gaan nieuwe creaties in première. Programmatoren zijn er welkom: laat het ons weten, dan reserveren we een plaats.")) + fotoband("726393-846860", "763186-922168", "631059-834612"))}
       ${actie(T("samen.programmatoren.actie", "Een creatie boeken?"), T("samen.programmatoren.actie-tekst", "Op de pagina van elke creatie vind je bezetting, techniek en het contactadres. Vraag er een optie of de prospectiekaart aan."),
         mailKnop(T("samen.programmatoren.knop", "Neem contact op"), "Boeking creatie"))}`),
     creaties[0]?.foto);
