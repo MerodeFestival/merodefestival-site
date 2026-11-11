@@ -340,7 +340,7 @@ function pagina(e, overige) {
       var id = b.getAttribute("data-id");
       if (location.protocol === "file:") { window.open("https://www.youtube.com/watch?v=" + id, "_blank", "noopener"); return; }
       var f = document.createElement("iframe");
-      f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+      f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&cc_load_policy=0&iv_load_policy=3";
       f.title = b.getAttribute("aria-label");
       f.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture; fullscreen");
       f.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
@@ -592,7 +592,7 @@ document.querySelectorAll(".yt").forEach(function (b) {
     if (location.protocol === "file:") { window.open(vm ? "https://vimeo.com/" + vm : "https://www.youtube.com/watch?v=" + id, "_blank", "noopener"); return; }
     var f = document.createElement("iframe");
     f.src = vm ? "https://player.vimeo.com/video/" + vm + "?" + (h ? "h=" + h + "&" : "") + "autoplay=1"
-              : "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+              : "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&cc_load_policy=0&iv_load_policy=3";
     f.title = b.getAttribute("aria-label");
     f.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture; fullscreen");
     f.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
