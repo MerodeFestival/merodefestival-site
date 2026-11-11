@@ -44,3 +44,68 @@
 .galerij3 figure{margin:0}
 .galerij3 img{display:block;width:100%;height:auto;border-radius:3px}
 @media (max-width:560px){.galerij3,.galerij3.twee{grid-template-columns:1fr}}
+/* Residenties en premières */
+.rs-blok{margin:0 0 3.5rem}
+.rs-blok>h2{font-size:clamp(1.6rem,3.2vw,2.2rem);margin:0 0 1rem}
+.rs-stappen{list-style:none;counter-reset:stap;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.5rem 2rem}
+.rs-stappen li{counter-increment:stap;border-top:3px solid var(--s-oranje);padding-top:.6rem}
+.rs-stappen li::before{content:counter(stap);font-family:var(--label);color:var(--s-oranje);font-size:.95rem}
+.rs-stappen h3{font-size:1.2rem;margin:.2rem 0 .4rem}
+.rs-stappen p{margin:0}
+.rs-noot{max-width:44rem;margin:1.5rem 0 0;font-style:italic;color:var(--s-papier-zacht)}
+.rs-plekken{margin:0;max-width:52rem}
+.rs-plekken div{display:grid;grid-template-columns:16rem 1fr;gap:1.25rem;padding:.8rem 0;border-top:1px solid var(--s-papier-lijn)}
+.rs-plekken dt{font-family:var(--label);color:var(--s-papier-zacht)}
+.rs-plekken dd{margin:0}
+.rs-blok>p{max-width:44rem}
+.rs-actie .acties{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+.rs-actie .btn.ghost{color:var(--s-papier-inkt)}
+@media (max-width:640px){.rs-plekken div{grid-template-columns:1fr;gap:.2rem}}
+/* Kijk en luister, Samenwerken */
+.kl-nav{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 2.5rem}
+.kl-nav a{display:inline-flex;align-items:center;padding:.45rem .95rem;border-radius:999px;font-family:var(--label);font-size:.95rem;text-decoration:none;box-shadow:inset 0 0 0 1.5px var(--s-papier-lijn)}
+.kl-nav a:hover,.kl-nav a.actief{background:var(--s-papier-inkt);color:var(--s-papier);box-shadow:none}
+.kl-sub{font-size:1.25rem;margin:1.75rem 0 .25rem}
+.kl-videos{grid-template-columns:repeat(auto-fill,minmax(18rem,1fr))}
+.kl-videos .vblok:first-child{grid-column:auto}
+.kl-lijst{display:grid;grid-template-columns:repeat(auto-fill,minmax(22rem,1fr));gap:2.5rem 2rem}
+.kl-item h3{font-size:1.5rem;margin:.2rem 0 .3rem}
+.kl-item>p{margin:0 0 .75rem;max-width:40rem}
+.kl-item .klabel{margin:0}
+.kl-item .kmakers{font-style:italic}
+.kl-breed{max-width:none}
+.kl-meer{font-family:var(--label);font-size:.95rem;margin:.75rem 0 0}
+.sw-deuren .ktitel{font-size:1.45rem}
+.sw-ref{margin-top:2.5rem}
+@media (max-width:600px){.kl-lijst{grid-template-columns:1fr}}
+/* Beelden op de overzichtspagina’s */
+.ov-hero .cbeeld.foto img{width:100%;max-height:none;aspect-ratio:4/3;object-fit:cover}
+.fotoband{margin:2rem 0 3rem}
+.fotoband img{aspect-ratio:3/2;object-fit:cover}
+.kl-klara{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(20rem,1fr));gap:1.5rem}
+.kl-klara a{display:flex;flex-direction:column;gap:.35rem;height:100%;padding:1.25rem 1.4rem;border-radius:6px;text-decoration:none;box-shadow:inset 0 0 0 1.5px var(--s-papier-lijn)}
+.kl-klara a:hover{box-shadow:inset 0 0 0 2px var(--s-oranje)}
+.kl-klara .ktitel{font-size:1.4rem}
+/* Beelden op Kijk en luister */
+.kl-beeld{display:block;margin:0 0 1rem}
+.kl-beeld img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border-radius:4px}
+.kl-beeld.transp img{object-fit:contain;background:#EEE2CE;padding:1rem}
+.kl-breed .kl-beeld img{aspect-ratio:21/9}
+.kl-klara img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:4px;margin-bottom:.6rem}
+.kl-klara a{padding:0 0 1.25rem;box-shadow:none}
+.kl-klara a:hover{box-shadow:none}
+.kl-klara a:hover .ktitel{text-decoration:underline;text-underline-offset:5px}
+.kl-klara-kop{margin:0 0 1.25rem}
+.kl-logo{display:block;width:3.5rem;height:auto;background:#efe7da;padding:.45rem;border-radius:8px}
+/* Residenties per jaar */
+.rs-jaar{margin:0 0 2.25rem}
+.rs-jaar h3{font-size:1.5rem;margin:0 0 .9rem;color:var(--s-oranje)}
+.rs-res{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr));gap:1.75rem 1.25rem}
+.rs-res li{min-width:0;display:flex;flex-direction:column;gap:.25rem}
+.rs-res .vblok{margin:0 0 .5rem}
+.rs-res .video{margin:0}
+.rs-naam{font-family:var(--serif);font-size:1.2rem;line-height:1.2;margin:0}
+.rs-wat{margin:0;font-style:italic}
+.rs-waar{margin:0;font-family:var(--label);font-size:.9rem;color:var(--s-oranje)}
+.rs-links{margin:.3rem 0 0;display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-family:var(--label);font-size:.9rem}
+.rs-res li.zonder-video{border-top:3px solid var(--s-papier-lijn);padding-top:.6rem}

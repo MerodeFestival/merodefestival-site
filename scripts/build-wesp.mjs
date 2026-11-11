@@ -24,14 +24,16 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
   let rijen = [];
   try { rijen = JSON.parse(await fs.readFile(path.join(ROOT, "data/wesp.json"), "utf8")); } catch { /* nog geen gegevens */ }
   const van = soort => rijen.filter(r => r.soort === soort);
-
   // Een link uit Notion: adressen van onze eigen site worden interne links.
   const href = u => {
     if (!u) return "";
     if (u.startsWith(BASIS)) {
       let rest = u.slice(BASIS.length);
       const [pad, anker] = rest.split("#");
-      const bestand = !pad || pad === "/" ? "index.html" : pad.replace(/^\//, "").replace(/\/$/, "") + (/\.[a-z]+$/.test(pad) ? "" : ".html");
+      let bestand = !pad || pad === "/" ? "index.html" : pad.replace(/^\//, "").replace(/\/$/, "") + (/\.[a-z]+$/.test(pad) ? "" : ".html");
+      // De vroegere rubriek Producties: de link uit Notion (producties#playlists) gaat naar Kijk en luister; productie-<webadres> staat op /<webadres>
+      if (bestand === "producties.html") bestand = "kijk-en-luister.html";
+      bestand = bestand.replace(/^productie-/, "");
       return bestand + (anker ? "#" + anker : "");
     }
     return u;
@@ -99,21 +101,14 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     ["team", T("wesp.nav.team", "Team en contact")],
   ].filter(Boolean);
 
+  // Samenwerken: drie deuren naar de pagina’s per doelgroep (gebouwd in build-producties.mjs)
+  const DEUREN = [
+    ["voor-muzikanten.html", T("samen.muzikanten.titel", "Voor muzikanten"), T("samen.muzikanten.kort", "Maak nieuw werk op een plek die je inspireert, en speel het daarna voor een publiek dat echt luistert."), "https://beeld.merodefestival.be/merodefestival/home-trio.webp"],
+    ["voor-programmatoren.html", T("samen.programmatoren.titel", "Voor festivals en cultuurcentra"), T("samen.programmatoren.kort", "Drie creaties die bij ons in première gingen en nu op tournee zijn. Bekijk ze en boek ze rechtstreeks bij ons."), "https://beeld.merodefestival.be/merodefestival/2026-citadel-publiek.webp"],
+    ["voor-gemeenten.html", T("samen.gemeenten.titel", "Voor gemeenten, kerkfabrieken en erfgoedsites"), T("samen.gemeenten.kort", "Een kapel, kerk of erfgoedsite die om muziek vraagt? Wij brengen de muzikanten, de techniek en de organisatie mee."), "https://beeld.merodefestival.be/merodefestival/268829-462342.webp", "center 45%"],
+  ];
   const samenwerken = `${kop("wesp.samenwerken.kop", "Samenwerken")}
-    <div class="w-twee">
-      <div class="w-col"><figure><img ${beeld("https://beeld.merodefestival.be/merodefestival/home-ovatie.webp", "(max-width:860px) 92vw, 34rem")} alt="${esc(T("wesp.foto-organisatoren", "Een festivalpodium bij avond met veel publiek"))}" loading="lazy" width="800" height="600"></figure>
-        <h3>${esc(T("wesp.organisatoren.kop", "Voor gemeenten, kerkfabrieken en abdijen"))}</h3>
-        <p>${esc(T("wesp.organisatoren.tekst", "Heeft jouw locatie een plek die om muziek vraagt? WESP zet ervaring, artiestennetwerk en productiekennis in: curatie, productie, communicatie en verantwoording, voor één concert, een reeks, een zomerprogrammatie of een festival."))}</p>
-        <p class="w-klein">${esc(T("wesp.organisatoren.budget", "Elke samenwerking is anders van schaal en ambitie, en dus ook van budget: we bekijken samen wat mogelijk is."))}</p>
-        ${opdrachtgevers ? `<p class="w-klein"><strong>${esc(T("wesp.opdrachtgevers.kop", "Zij werkten al met ons samen:"))}</strong> ${opdrachtgevers}.</p>` : ""}
-        <div class="acties">${mailKnop("wesp.organisatoren.knop", "Bespreek jouw locatie", "Locatie voor muziek")}<a class="btn ghost" href="producties.html">${esc(T("wesp.knop-hero2", "Bekijk de producties"))}</a></div></div>
-      <div class="w-col"><figure><img ${beeld("https://beeld.merodefestival.be/merodefestival/home-trio.webp", "(max-width:860px) 92vw, 34rem")} alt="${esc(T("wesp.foto-muzikanten", "Drie muzikanten spelen in een kapel"))}" loading="lazy" width="800" height="600"></figure>
-        <h3>${esc(T("wesp.muzikanten.kop", "Voor muzikanten: een samenwerking, geen boeking"))}</h3>
-        <p>${esc(T("wesp.muzikanten.tekst", "Een traject start met een gesprek, niet met een contract. We bespreken eerst wat je artistiek voor ogen hebt en zoeken dan de plek, het moment en de ondersteuning die passen: een residentie in een abdij of in het landschapspark, een concert op een bijzondere plek, hulp bij financiering, spreiding of promotie."))}</p>
-        <p class="w-klein">${esc(T("wesp.muzikanten.contact", "We krijgen meer aanvragen dan we aankunnen. Vaker benaderen we zelf een artiest, wanneer plek, moment en artistieke klik samenkomen."))}</p>
-        <p class="w-klein"><strong>${esc(T("wesp.artiesten.kop", "We werkten onder meer met"))}</strong> ${esc(T("wesp.artiesten", "Sara Salvérius, Laura Cortese, Andries Boone, Naragonia, Griff Trio, Rénélius Ensemble, Myrddin, Wouter Vandenabeele, Airboxes, Bamako Express, WÖR, Kongero, Shalan Alhamwy en vele anderen."))}</p>
-        <div class="acties">${mailKnop("wesp.muzikanten.knop", "Vertel ons je plannen", "Projectvoorstel")}</div></div>
-    </div>`;
+    <ul class="w-kaarten">${DEUREN.map(([u, t, k, f, pos]) => `<li><a href="${u}">${f ? `<img ${beeld(f, "(max-width:860px) 92vw, 22rem")}${pos ? ` style="object-position:${pos}"` : ""} alt="" width="640" height="480" loading="lazy">` : ""}<span class="w-ktitel">${esc(t)}</span><span class="w-ktekst">${esc(k)}</span><span class="w-kmeer">${esc(T("samen.verder", "Verder →"))}</span></a></li>`).join("")}</ul>`;
 
   const body = `
   <section class="w-hero">
@@ -123,7 +118,7 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
         <p class="w-voorzin">${esc(T("wesp.voorzin", "WESP is het huis achter Merodefestival."))}</p>
         <h1>${esc(T("wesp.titel", "WESP brengt muziek naar plekken die er om vragen"))}</h1>
         <p class="w-lead">${esc(T("wesp.intro", "… en laat beide niet meer los. Een verlaten abdij, een vennengebied waar je de kikkers hoort, een kerk met een akoestiek die geen concertzaal je geeft."))}</p>
-        <div class="acties">${mailKnop("wesp.knop-hero", "Praat met ons", "Samenwerking")}<a class="btn ghost" href="producties.html">${esc(T("wesp.knop-hero2", "Bekijk de producties"))}</a></div>
+        <div class="acties">${mailKnop("wesp.knop-hero", "Praat met ons", "Samenwerking")}<a class="btn ghost" href="samenwerken.html">${esc(T("wesp.knop-samenwerken", "Samenwerken"))}</a></div>
       </div>
       ${kaart}
     </div>
@@ -216,6 +211,17 @@ const CSS = String.raw`/* Pagina Over WESP */
 .w-rij .w-label{opacity:.8}
 .w-rij .w-link{margin-top:0}
 .w-label{margin:0}
+.w-formules{margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--s-papier-lijn)}
+.w-formules h3{font-size:1.6rem;margin:0 0 .5rem}
+.w-kaarten{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(15rem,1fr));gap:2rem 1.5rem}
+.w-kaarten a{display:flex;flex-direction:column;gap:.35rem;color:inherit;text-decoration:none}
+.w-kaarten img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:4px;margin-bottom:.4rem}
+.w-klabel{font-family:var(--label);font-size:.85rem;color:var(--s-papier-zacht)}
+.w-ktitel{font-family:var(--serif);font-size:1.3rem;line-height:1.2}
+.w-kmakers{font-style:italic;font-size:.95rem;color:var(--s-papier-zacht)}
+.w-ktekst{font-size:1rem}
+.w-kmeer{font-family:var(--label);font-size:.95rem;text-decoration:underline;text-underline-offset:4px;margin-top:.2rem}
+.w-kaarten a:hover .w-ktitel{text-decoration:underline}
 .w-team{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem;align-items:start}
 .w-team a{color:inherit}
 @media (max-width:860px){

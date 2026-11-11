@@ -9,22 +9,32 @@ import path from "node:path";
 const REGELS = [
   // vaste pagina’s
   ["/home", ["/"]],
-  ["/muzikale-wandelingen", ["/productie-muzikale-wandelingen", "/producties", "/"]],
-  ["/wandelapp", ["/productie-muzikale-wandelingen", "/producties", "/"]],
-  ["/b2b", ["/productie-muzikale-wandelingen", "/producties", "/"]],
-  ["/klanken", ["/productie-klanken-in-de-kapel", "/producties", "/"]],
-  ["/klanken-systeem", ["/productie-klanken-in-de-kapel", "/producties", "/"]],
+  ["/muzikale-wandelingen", ["/muzikale-wandelingen", "/kijk-en-luister", "/"]],
+  ["/wandelapp", ["/muzikale-wandelingen", "/kijk-en-luister", "/"]],
+  ["/b2b", ["/muzikale-wandelingen", "/kijk-en-luister", "/"]],
+  ["/klanken", ["/klanken-in-de-kapel", "/kijk-en-luister", "/"]],
+  ["/klanken-systeem", ["/klanken-in-de-kapel", "/kijk-en-luister", "/"]],
   ["/klankenvandesteden", ["https://klankenvandesteden.be"]],
-  ["/boek", ["/productie-ode-aan-de-merode", "/producties", "/"]],
-  ["/ode-aan-de-merode", ["/productie-ode-aan-de-merode", "/producties", "/"]],
-  ["/the-sound-of-the-abbey", ["/productie-the-sound-of-the-abbey", "/producties", "/"]],
-  ["/sound", ["/productie-the-sound-of-the-abbey", "/producties", "/"]],
-  ["/volksliekes", ["/productie-volkscafes", "/producties", "/"]],
-  ["/volkscafes", ["/productie-volkscafes", "/producties", "/"]],
-  ["/podcast", ["/productie-wandelpodcast", "/producties", "/"]],
-  ["/creaties", ["/producties", "/"]],
-  ["/projecten", ["/producties", "/"]],
-  ["/in-opdracht", ["/producties", "/"]],
+  ["/boek", ["/ode-aan-de-merode", "/kijk-en-luister", "/"]],
+  ["/ode-aan-de-merode", ["/ode-aan-de-merode", "/kijk-en-luister", "/"]],
+  ["/the-sound-of-the-abbey", ["/the-sound-of-the-abbey", "/kijk-en-luister", "/"]],
+  ["/sound", ["/the-sound-of-the-abbey", "/kijk-en-luister", "/"]],
+  ["/volksliekes", ["/volkscafes", "/kijk-en-luister", "/"]],
+  ["/volkscafes", ["/volkscafes", "/kijk-en-luister", "/"]],
+  ["/podcast", ["/wandelpodcast", "/kijk-en-luister", "/"]],
+  ["/creaties", ["/voor-programmatoren", "/"]],
+  ["/projecten", ["/voor-programmatoren", "/"]],
+  ["/in-opdracht", ["/voor-gemeenten", "/"]],
+  // korte links per doelgroep, om uit te sturen in mails, dossiers en op prospectiekaarten
+  ["/muzikanten", ["/voor-muzikanten", "/samenwerken", "/"]],
+  ["/residenties", ["/voor-muzikanten", "/samenwerken", "/"]],
+  ["/programmatoren", ["/voor-programmatoren", "/samenwerken", "/"]],
+  ["/boeken", ["/voor-programmatoren", "/samenwerken", "/"]],
+  ["/gemeenten", ["/voor-gemeenten", "/samenwerken", "/"]],
+  ["/erfgoed", ["/voor-gemeenten", "/samenwerken", "/"]],
+  ["/kerken", ["/voor-gemeenten", "/samenwerken", "/"]],
+  // de vroegere rubriek Producties (tot november 2026)
+  ["/producties", ["/voor-programmatoren", "/"]],
   // festivals, edities en oude acties
   ["/merodefestival-2023", ["/vorige-edities"]],
   ["/merodefestival-2024", ["/vorige-edities"]],
@@ -73,9 +83,13 @@ const REGELS = [
 ];
 
 export async function maakOmleidingen({ agenda, ROOT }) {
+  // De vroegere productiepagina’s (/productie-<webadres>) staan nu op /<webadres>
+  let items = [];
+  try { items = JSON.parse(await fs.readFile(path.join(ROOT, "data/producties.json"), "utf8")); } catch { /* geen gegevens */ }
+  const extra = items.filter(p => p.slug && !p.verborgen).map(p => [`/productie-${p.slug}`, [`/${p.slug}`, "/kijk-en-luister", "/"]]);
   const bestaat = async pad => {
     if (pad === "/" || /^https?:/.test(pad)) return true;
-    try { await fs.access(path.join(ROOT, pad.replace(/^\//, "") + ".html")); return true; } catch { return false; }
+    try { await fs.access(path.join(ROOT, pad.replace(/^\//, "").replace(/#.*$/, "") + ".html")); return true; } catch { return false; }
   };
   const concertDoel = d => {
     const kand = agenda.filter(e => d.artiest.test(e.artist));
@@ -83,7 +97,7 @@ export async function maakOmleidingen({ agenda, ROOT }) {
     return e ? `/concert/${e.slug}` : null;
   };
   const regels = [];
-  for (const [oud, doelen] of REGELS) {
+  for (const [oud, doelen] of [...REGELS, ...extra]) {
     let doel = null;
     for (const d of doelen) {
       const kandidaat = typeof d === "string" ? ((await bestaat(d)) ? d : null) : concertDoel(d);

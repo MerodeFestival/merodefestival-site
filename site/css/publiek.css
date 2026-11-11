@@ -156,7 +156,7 @@ section.donker{padding:4.5rem 0}
 .nieuws .nieuws-melding.fout{text-decoration:underline;text-decoration-color:var(--s-papier-lijn);text-underline-offset:3px}
 
 footer{padding:3rem 0;font-size:1rem;color:var(--s-zand)}
-footer .foot-logo{display:block;height:64px;width:auto;margin-bottom:2rem;filter:brightness(0) invert(1);opacity:.9}
+footer .foot-logo{display:block;height:64px;width:auto;margin-bottom:2rem}
 footer .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
 footer h3{font-family:var(--label);font-weight:400;font-size:1rem;color:var(--s-licht);margin-bottom:.5rem}
 footer p{margin:0 0 .4rem}

@@ -44,6 +44,7 @@ footer .steun-logo{display:block;width:200px;max-width:100%;height:auto;margin:.
 footer .foot-onder{margin-top:1.75rem;padding-top:1.1rem;border-top:1px solid rgba(239,231,218,.18)}
 footer .foot-links{margin:0;font-family:var(--label,system-ui);font-size:.95rem;display:flex;flex-wrap:wrap;gap:.35rem 1.5rem}
 footer .foot-links a{text-underline-offset:3px}
+footer .foot-samen{margin-bottom:.6rem}
 footer .iban-kopie{background:none;border:0;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px;position:relative}
 footer .iban-kopie.ok::after{content:"✓ gekopieerd";position:absolute;left:0;bottom:100%;margin-bottom:.3rem;padding:.15rem .5rem;border-radius:4px;background:#efe7da;color:#1d1611;font-size:.8rem;white-space:nowrap}
 `;
@@ -280,7 +281,7 @@ export async function afwerking({ ROOT, SITE }) {
 
     // 5. voettekst: logo en links
     if (h.includes("<footer") && !h.includes("steun-logo")) {
-      h = h.replace(new RegExp(`(<h3>${T("footer.steun-kop", "Met steun van").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</h3>)`), `$1<a class="steun-link" href="https://www.vlaanderen.be" target="_blank" rel="noopener"><img class="steun-logo" src="${up}img/vlaanderen-verbeelding-werkt.png" alt="${T("footer.logo-alt", "Vlaanderen, verbeelding werkt")}" width="200" height="87" loading="lazy"></a>`);
+      h = h.replace(new RegExp(`(<h3>${T("footer.steun-kop", "Met steun van").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</h3>)`), `$1<a class="steun-link" href="https://www.vlaanderen.be" target="_blank" rel="noopener"><img class="steun-logo" src="${up}img/vlaanderen-bruin.png" alt="${T("footer.logo-alt", "Vlaanderen, verbeelding werkt")}" width="200" height="87" loading="lazy"></a>`);
     }
     if (h.includes("<footer") && !h.includes("foot-onder")) {
       const links = [
@@ -289,7 +290,12 @@ export async function afwerking({ ROOT, SITE }) {
         [`${up}index.html#nieuwsbrief`, T("footer.link-nieuwsbrief", "Nieuwsbrief")],
         [`${up}privacy.html`, T("footer.link-privacy", "Privacyverklaring")],
       ];
-      h = h.replace("</footer>", `<div class="wrap foot-onder"><p class="foot-links">${links.map(([u, t]) => `<a href="${u}">${t}</a>`).join("")}</p></div>\n</footer>`);
+      const samen = [
+        [`${up}voor-muzikanten.html`, T("footer.link-muzikanten", "Voor muzikanten")],
+        [`${up}voor-programmatoren.html`, T("footer.link-programmatoren", "Voor festivals en cultuurcentra")],
+        [`${up}voor-gemeenten.html`, T("footer.link-gemeenten", "Voor gemeenten en erfgoed")],
+      ];
+      h = h.replace("</footer>", `<div class="wrap foot-onder"><p class="foot-links foot-samen"><a href="${up}samenwerken.html"><strong>${T("footer.link-samenwerken", "Samenwerken")}</strong></a>${samen.map(([u, t]) => `<a href="${u}">${t}</a>`).join("")}</p><p class="foot-links">${links.map(([u, t]) => `<a href="${u}">${t}</a>`).join("")}</p></div>\n</footer>`);
     }
 
     // 6. rekeningnummer in de voettekst: een klik kopieert een zin om door te geven

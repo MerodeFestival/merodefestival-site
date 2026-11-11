@@ -31,7 +31,7 @@ const REEKSEN = [
     intro: "Sinds 2017 maakt WESP van het Hogeschoolplein in Leuven tijdens de zomerse Beleuvenissen een luisterplein: gratis vrijdagavonden met folk en wereldmuziek.",
   },
   {
-    id: "producties", bestand: "extras.json", titel: "Andere producties", perReeks: true,
+    id: "producties", bestand: "extras.json", titel: "Andere projecten", perReeks: true,
     intro: "Daarnaast maakte WESP eigen producties en kleine reeksen: met de Folkwaarts-partners in de Meroderegio, solo in kapellen, en rond de muziek van de steden.",
   },
 ];

@@ -230,9 +230,10 @@ function pagina(e, overige) {
       <ul>
         <li><a href="../index.html#agenda">${T("menu.agenda", "Agenda")}</a></li>
         <li><a href="../index.html#festival">${T("menu.festival", "Festival 2027")}</a></li>
-        <li><a href="../producties.html">${T("menu.producties", "Producties")}</a></li>
-        <li><a href="../wesp.html">${T("menu.wesp", "Over WESP")}</a></li>
+        <li><a href="../kijk-en-luister.html">${T("menu.kijk", "Kijk en luister")}</a></li>
         <li><a href="../vorige-edities.html">${T("menu.edities", "Vorige edities")}</a></li>
+        <li><a href="../wesp.html">${T("menu.wesp", "Over WESP")}</a></li>
+        <li><a href="../samenwerken.html">${T("menu.samenwerken", "Samenwerken")}</a></li>
       </ul>
     </nav>
     <a class="btn" href="${esc((reeks && e.tickets) || S.ticketlink || e.tickets || "#")}">${T("menu.tickets", "Tickets")}</a>
@@ -298,7 +299,7 @@ function pagina(e, overige) {
 </main>
 
 <footer>
-  <div class="wrap"><img class="foot-logo" src="../${esc(S.logo)}" alt="Merodefestival" width="147" height="100" loading="lazy"></div>
+  <div class="wrap"><img class="foot-logo" src="../img/logo-bruin.png" alt="Merodefestival" width="147" height="100" loading="lazy"></div>
   <div class="wrap cols">
     <div>
       <h3>${T("footer.contact", "Contact")}</h3>
@@ -498,9 +499,10 @@ const editiesHtml = `<!DOCTYPE html>
       <ul>
         <li><a href="index.html#agenda">${T("menu.agenda", "Agenda")}</a></li>
         <li><a href="index.html#festival">${T("menu.festival", "Festival 2027")}</a></li>
-        <li><a href="producties.html">${T("menu.producties", "Producties")}</a></li>
-        <li><a href="wesp.html">${T("menu.wesp", "Over WESP")}</a></li>
+        <li><a href="kijk-en-luister.html">${T("menu.kijk", "Kijk en luister")}</a></li>
         <li><a href="vorige-edities.html">${T("menu.edities", "Vorige edities")}</a></li>
+        <li><a href="wesp.html">${T("menu.wesp", "Over WESP")}</a></li>
+        <li><a href="samenwerken.html">${T("menu.samenwerken", "Samenwerken")}</a></li>
       </ul>
     </nav>
     <a class="btn" href="${esc(S.ticketlink || "#")}">${T("menu.tickets", "Tickets")}</a>
@@ -576,7 +578,7 @@ const editiesHtml = `<!DOCTYPE html>
   </section>`).join("\n  ")}
 </main>
 <footer>
-  <div class="wrap"><img class="foot-logo" src="${esc(S.logo)}" alt="Merodefestival" width="147" height="100" loading="lazy"></div>
+  <div class="wrap"><img class="foot-logo" src="img/logo-bruin.png" alt="Merodefestival" width="147" height="100" loading="lazy"></div>
   <div class="wrap cols">
     <div><h3>${T("footer.contact", "Contact")}</h3><p><a href="mailto:info@merodefestival.be">info@merodefestival.be</a></p><p><a href="tel:+32498758296">0498 75 82 96</a></p><p>${T("footer.organisatie", "Merodefestival is een project van WESP vzw, BE 0863 441 738, Jozef Wautersstraat 4, 3010 Kessel-Lo, IBAN BE50 9731 3542 0118")}</p></div>
     <div><h3>${T("footer.volg", "Volg ons")}</h3><ul><li><a href="https://www.facebook.com/merodefestival">Facebook</a></li><li><a href="https://www.instagram.com/merodefestival/">Instagram</a></li><li><a href="https://www.youtube.com/channel/UCahKa1lM3yaWEwXdV_bBJdw">YouTube</a></li></ul></div>
@@ -607,12 +609,12 @@ t.addEventListener("click", function () { var o = n.classList.toggle("open"); t.
 await fs.writeFile(path.join(ROOT, "vorige-edities.html"), editiesHtml);
 // ---------- Beleef de Merode (uit site/data/beleef.json) ----------
 const beleefAlle = JSON.parse(await fs.readFile(path.join(ROOT, "data/beleef.json"), "utf8"));
-// De vroegere Beleef-pagina’s zijn volwaardige producties geworden (pagina’s onder Producties): geen aparte pagina’s meer
+// De vroegere Beleef-pagina’s staan nu onder Luisteren en kijken (uit Producties (website)): geen aparte pagina’s meer
 const NAAR_PRODUCTIE = {
-  "ode-aan-de-merode": "productie-ode-aan-de-merode",
-  "the-sound-of-the-abbey": "productie-the-sound-of-the-abbey",
-  "podcast": "productie-wandelpodcast",
-  "volkscafes": "productie-volkscafes",
+  "ode-aan-de-merode": "ode-aan-de-merode",
+  "the-sound-of-the-abbey": "the-sound-of-the-abbey",
+  "podcast": "wandelpodcast",
+  "volkscafes": "volkscafes",
 };
 const beleef = beleefAlle.filter(b => !NAAR_PRODUCTIE[b.slug]);
 const beleefHref = slug => (NAAR_PRODUCTIE[slug] || slug) + ".html";
@@ -912,7 +914,7 @@ const PRODUCTIE_EXTRA_JS = String.raw`(function () {
 await fs.mkdir(path.join(ROOT, "js"), { recursive: true });
 await fs.writeFile(path.join(ROOT, "css/producties-extra.css"), PRODUCTIE_EXTRA_CSS);
 await fs.writeFile(path.join(ROOT, "js/producties-extra.js"), PRODUCTIE_EXTRA_JS);
-for (const f of [...productiePaginas.filter(x => x.startsWith("productie-") || x === "producties.html"), ...(productiePaginas.verborgen || [])]) {
+for (const f of [...productiePaginas, ...(productiePaginas.verborgen || [])]) {
   const pad = path.join(ROOT, f);
   let h = await fs.readFile(pad, "utf8");
   if (!h.includes("producties-extra.css")) h = h.replace("</head>", '<link rel="stylesheet" href="css/producties-extra.css">\n</head>');
@@ -964,7 +966,8 @@ const llms = [
   "",
   "## Belangrijkste pagina’s",
   `- [Agenda en kerkconcerten](${SITE}/): komende concerten`,
-  `- [Producties](${SITE}/producties): concerten, installaties, playlists en concepten op maat om te boeken`,
+  `- [Kijk en luister](${SITE}/kijk-en-luister): video’s, albums, podcast en films`,
+  `- [Samenwerken](${SITE}/samenwerken): voor muzikanten (residenties en premières), voor festivals en cultuurcentra (creaties om te boeken) en voor gemeenten, kerkfabrieken en erfgoedsites (formules)`,
   `- [Over WESP](${SITE}/wesp): de organisatie achter Merodefestival: wat we doen, voor wie, projecten, team en contact`,
   `- [Partners](${SITE}/partners): wie Merodefestival steunt en mee bouwt`,
   `- [Vrienden van Merodefestival](${SITE}/vrienden-van): de werking steunen`,

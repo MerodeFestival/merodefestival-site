@@ -14,10 +14,10 @@ let TEKSTEN = {};
 let wijzigingen = {};
 
 const PAGINA = { menu: "Footer", footer: "Footer", wesp: "Over WESP", statistiek: "Algemeen", speler: "Algemeen", vrienden: "Algemeen", partners: "Algemeen", privacy: "Algemeen", homepage: "Homepage", seizoen: "Homepage", concert: "Concertpagina",
-  algemeen: "Algemeen", edities: "Vorige edities", beleef: "Beleef de Merode", producties: "Producties", soort: "Producties", veld: "Producties" };
+  algemeen: "Algemeen", edities: "Vorige edities", beleef: "Beleef de Merode", producties: "Producties", soort: "Producties", veld: "Producties", kijk: "Kijk en luister", samen: "Samenwerken", residenties: "Samenwerken", beeld: "Algemeen" };
 const UITLEG = { menu: "Menu bovenaan elke pagina", wesp: "Pagina Over WESP", statistiek: "Statistieken (token invullen om aan te zetten)", speler: "Spelers van Spotify en SoundCloud", vrienden: "Pagina Vrienden van Merodefestival", partners: "Pagina Partners", privacy: "Pagina Privacyverklaring", footer: "Onderaan elke pagina", homepage: "Homepage", seizoen: "Hoofdsectie bovenaan de homepage",
   concert: "Pagina van een concert", algemeen: "Op meerdere pagina’s", edities: "Pagina Vorige edities", beleef: "Pagina’s onder Beleef de Merode",
-  producties: "Pagina’s onder Producties", soort: "Rubrieken op de pagina Producties", veld: "Gegevensblok bij een productie" };
+  producties: "Pagina’s onder Producties", soort: "Rubrieken op de pagina Producties", veld: "Gegevensblok bij een item (luisteren, creatie, concept)", kijk: "Pagina Kijk en luister", samen: "Pagina’s onder Samenwerken", residenties: "Pagina Voor muzikanten (residenties)", beeld: "Beschrijving van een foto, voor wie het beeld niet ziet" };
 
 const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const jsEsc = t => JSON.stringify(String(t)).slice(1, -1);
@@ -73,7 +73,8 @@ const P = "<p>{}</p>";
 const HOMEPAGE = [
   ["menu.agenda", "Agenda", "", ['<li><a href="#agenda">{}</a></li>']],
   ["menu.festival", "Festival 2027", "", ['<li><a href="#festival">{}</a></li>']],
-  ["menu.producties", "Producties", "", ['<li><a href="producties.html">{}</a></li>']],
+  ["menu.kijk", "Kijk en luister", "", ['<li><a href="kijk-en-luister.html">{}</a></li>']],
+  ["menu.samenwerken", "Samenwerken", "", ['<li><a href="samenwerken.html">{}</a></li>']],
   ["menu.wesp", "Over WESP", "", ['<li><a href="wesp.html">{}</a></li>']],
   ["menu.edities", "Vorige edities", "", ['<li><a href="vorige-edities.html">{}</a></li>']],
   ["menu.menu", "Menu", "Knop voor het menu op een telefoon", ['<button class="menu-toggle" aria-expanded="false" aria-controls="hoofdmenu">{}</button>']],
