@@ -101,14 +101,10 @@ export async function bouwWesp({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     ["team", T("wesp.nav.team", "Team en contact")],
   ].filter(Boolean);
 
-  // Samenwerken: drie deuren naar de pagina’s per doelgroep (gebouwd in build-producties.mjs)
-  const DEUREN = [
-    ["voor-muzikanten.html", T("samen.muzikanten.titel", "Voor muzikanten"), T("samen.muzikanten.kort", "Maak nieuw werk op een plek die je inspireert, en speel het daarna voor een publiek dat echt luistert."), "https://beeld.merodefestival.be/merodefestival/home-trio.webp"],
-    ["voor-programmatoren.html", T("samen.programmatoren.titel", "Voor festivals en cultuurcentra"), T("samen.programmatoren.kort", "Drie creaties die bij ons in première gingen en nu op tournee zijn. Bekijk ze en boek ze rechtstreeks bij ons."), "https://beeld.merodefestival.be/merodefestival/2026-citadel-publiek.webp"],
-    ["voor-gemeenten.html", T("samen.gemeenten.titel", "Voor gemeenten, kerkfabrieken en erfgoedsites"), T("samen.gemeenten.kort", "Een kapel, kerk of erfgoedsite die om muziek vraagt? Wij brengen de muzikanten, de techniek en de organisatie mee."), "https://beeld.merodefestival.be/merodefestival/268829-462342.webp", "center 45%"],
-  ];
+  // Samenwerken: korte verwijzing naar de pagina Samenwerken (de drie deuren staan daar)
   const samenwerken = `${kop("wesp.samenwerken.kop", "Samenwerken")}
-    <ul class="w-kaarten">${DEUREN.map(([u, t, k, f, pos]) => `<li><a href="${u}">${f ? `<img ${beeld(f, "(max-width:860px) 92vw, 22rem")}${pos ? ` style="object-position:${pos}"` : ""} alt="" width="640" height="480" loading="lazy">` : ""}<span class="w-ktitel">${esc(t)}</span><span class="w-ktekst">${esc(k)}</span><span class="w-kmeer">${esc(T("samen.verder", "Verder →"))}</span></a></li>`).join("")}</ul>`;
+    <p class="w-intro">${esc(T("wesp.samenwerken.tekst", "Muzikanten, festivals en cultuurcentra, gemeenten, kerkfabrieken en erfgoedsites: voor elk hebben we een eigen manier van samenwerken."))}</p>
+    <div class="acties w-samen-actie"><a class="btn" href="samenwerken.html">${esc(T("wesp.samenwerken.knop", "Bekijk hoe we samenwerken"))}</a></div>`;
 
   const body = `
   <section class="w-hero">

@@ -34,9 +34,9 @@ nav .stil{color:var(--s-zand)}
 .menu-toggle{display:none;background:none;border:0;color:inherit;font-family:var(--label);font-size:1rem;cursor:pointer;padding:.5rem}
 @media (max-width:900px){
   .menu-toggle{display:block}
-  nav{position:absolute;left:0;right:0;top:100%;background:var(--s-nacht);display:none;padding:.5rem 1.25rem 1.25rem}
-  nav.open{display:block}
-  nav ul{flex-direction:column;gap:.9rem}
+  #hoofdmenu{position:absolute;left:0;right:0;top:100%;background:var(--s-nacht);display:none;padding:.5rem 1.25rem 1.25rem}
+  #hoofdmenu.open{display:block}
+  #hoofdmenu ul{flex-direction:column;gap:.9rem}
   .brand img{height:48px}
 }
 

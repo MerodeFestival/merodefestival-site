@@ -86,7 +86,7 @@ const HOMEPAGE = [
   ["homepage.speel", "Wisselende beelden afspelen", "Knop om de wisselende beelden weer te starten (voor schermlezers)", []],
   ["homepage.filter-label", "Filter op reeks", "Naam van de filterknoppen voor schermlezers", ['aria-label="{}" hidden']],
   ["homepage.groep-alle", "Alle concerten", "Filterknop boven de agenda", []],
-  ["homepage.groep-kerkconcerten", "Kerkconcerten", "Filterknop boven de agenda", []],
+  ["homepage.groep-kerkconcerten", "Merodefestival kerkconcerten", "Filterknop boven de agenda", []],
   ["homepage.groep-festivals", "Festivals", "Filterknop boven de agenda", []],
   ["homepage.getoond-een", "{n} concert getoond", "Melding voor schermlezers na het filteren ({n} is het aantal)", []],
   ["homepage.getoond", "{n} concerten getoond", "Melding voor schermlezers na het filteren ({n} is het aantal)", []],

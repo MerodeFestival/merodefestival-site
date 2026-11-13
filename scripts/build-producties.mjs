@@ -20,7 +20,7 @@ const SOORTEN = [
   { naam: "Playlist", id: "playlists", titel: "Playlists", meer: "Bekijk de playlist →", praktisch: "Over deze playlist",
     intro: "Albums en playlists die Merodefestival mee maakte, om te beluisteren en te bestellen." },
   { naam: "Concept op maat", id: "concepten", titel: "Concepten op maat", meer: "Bekijk het concept →", praktisch: "Praktisch",
-    intro: "Concepten die je bij ons kunt boeken, uitgewerkt op jouw plek." },
+    intro: "Concepten die je bij ons kunt boeken, uitgewerkt op jouw locatie." },
 ];
 const POSITIE = { boven: "center top", onder: "center bottom", links: "left center", rechts: "right center" };
 // Hoezen en verpakkingen (bv. een plaat naast de hoes) tonen we bovenaan volledig, in een kader
@@ -228,7 +228,7 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     k.concert = `concert/${e.slug}.html`;
   }
   const KL = [
-    (festivalVideos.length || abdijVideos.length) && ["videos", T("kijk.videos.titel", "Video’s"), T("kijk.videos.intro", "Concerten zoals ze klonken op onze plekken, vastgelegd door onze eigen technici."),
+    (festivalVideos.length || abdijVideos.length) && ["videos", T("kijk.videos.titel", "Video’s"), T("kijk.videos.intro", "Concerten zoals ze klonken in onze kerken, kapellen en abdijen, vastgelegd door onze eigen technici."),
       `${festivalVideos.length ? `<h3 class="kl-sub">${esc(T("kijk.videos.festival", "Op het Merodefestival"))} ${laatste.jaar}</h3><div class="pvideos kl-videos">${festivalVideos.join("")}</div>` : ""}
        ${abdijVideos.length ? `<h3 class="kl-sub">${esc(abdij.titel)}</h3><div class="pvideos kl-videos">${abdijVideos.join("")}</div>${meer(bestand(abdij), T("kijk.videos.abdij-meer", "Alle opnames uit de abdij →"))}` : ""}
        <p class="kl-meer"><a href="https://www.youtube.com/channel/UCahKa1lM3yaWEwXdV_bBJdw" target="_blank" rel="noopener">${esc(T("kijk.videos.youtube", "Alle video’s op ons YouTube-kanaal"))} ↗</a> · <a href="vorige-edities.html">${esc(T("kijk.videos.edities", "Video’s per festivaleditie"))} →</a></p>`],
@@ -236,7 +236,7 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
       `<div class="kl-klara-kop"><img class="kl-logo" src="${BEELD}253924-807552.webp" alt="Klara" width="56" height="59" loading="lazy"></div>
        <ul class="kl-klara">${klara.map(k => `<li><a href="${esc(k.link)}" target="_blank" rel="noopener">${k.beeld ? `<img src="${esc(k.beeld)}" alt="" width="480" height="270" loading="lazy">` : ""}<span class="klabel">${esc(k.label)}</span><span class="ktitel">${esc(k.titel)}</span><span class="ktekst">${esc(k.tekst)}</span><span class="kmeer">${esc(T("kijk.klara.knop", "Luister op VRT MAX"))} ↗</span></a></li>`).join("")}</ul>
        <p class="kl-meer"><a href="https://www.vrt.be/vrtmax/luister/radio/k/klara-in-concert~31-229/" target="_blank" rel="noopener">${esc(T("kijk.klara.programma", "Alle afleveringen van Klara in concert"))} ↗</a></p>`],
-    albums.length && ["albums", T("kijk.albums.titel", "Albums en playlists"), T("kijk.albums.intro", "Muziek die op onze plekken ontstond, om thuis te beluisteren."),
+    albums.length && ["albums", T("kijk.albums.titel", "Albums en playlists"), T("kijk.albums.intro", "Muziek die ontstond in onze kerken, kapellen en abdijen, om thuis te beluisteren."),
       `<div class="kl-lijst">${albums.map(p => mediaKaart(p, speler(p))).join("")}</div>`],
     podcasts.length && ["podcast", T("kijk.podcast.titel", "Podcast"), T("kijk.podcast.intro", "Muzikanten vertellen onderweg over hun muziek, hun traditie en de plek."),
       `<div class="kl-lijst">${podcasts.map(p => mediaKaart(p, speler(p))).join("")}</div>`],
@@ -255,7 +255,7 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
   const luisterplekken = zichtbaar("Installatie");
   const DEUREN = [
     { naam: "voor-muzikanten.html", titel: T("samen.muzikanten.titel", "Voor muzikanten"),
-      tekst: T("samen.muzikanten.kort", "Maak nieuw werk op een plek die je inspireert, en speel het daarna voor een publiek dat echt luistert."),
+      tekst: T("samen.muzikanten.kort", "Maak nieuw werk op een bijzondere locatie, en speel het daarna voor een publiek dat echt luistert."),
       foto: "https://beeld.merodefestival.be/merodefestival/home-trio.webp", alt: T("wesp.foto-muzikanten", "Drie muzikanten spelen in een kapel") },
     { naam: "voor-programmatoren.html", titel: T("samen.programmatoren.titel", "Voor festivals en cultuurcentra"),
       tekst: T("samen.programmatoren.kort", "Drie creaties die bij ons in première gingen en nu op tournee zijn. Bekijk ze en boek ze rechtstreeks bij ons."),
@@ -269,14 +269,14 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     T("samen.beschrijving", "Samenwerken met WESP, het huis achter Merodefestival: voor muzikanten, voor festivals en cultuurcentra, en voor gemeenten, kerkfabrieken en erfgoedsites."),
     hero(T("samen.label", "Met WESP"), samenTitel, T("samen.intro", "Muzikant, programmator of gemeente? Kies je deur. Achter elke deur lees je wat we samen kunnen doen en met wie je contact opneemt."), "home-ovatie") +
     sectie(`<ul class="kaarten sw-deuren">${DEUREN.map(d => kaart({ titel: d.titel, tekst: d.tekst, foto: d.foto, positie: d.positie, alt: d.alt }, T("samen.verder", "Verder →"), d.naam)).join("")}</ul>
-      ${opdrachtgevers ? `<p class="rs-noot sw-ref"><strong>${esc(T("wesp.opdrachtgevers.kop", "Zij werkten al met ons samen:"))}</strong> ${opdrachtgevers}.</p>` : ""}`));
+      ${opdrachtgevers ? `<p class="rs-noot sw-ref"><strong>${esc(T("wesp.opdrachtgevers.kop", "Wij werken onder meer samen met:"))}</strong> ${opdrachtgevers}.</p>` : ""}`));
 
   // Kleine navigatie tussen de drie deuren, bovenaan elke doelgroeppagina
   const deurNav = huidig => `<nav class="kl-nav sw-nav" aria-label="${esc(samenTitel)}"><a href="samenwerken.html">${esc(samenTitel)}</a>${DEUREN.map(d => `<a href="${d.naam}"${d.naam === huidig ? ' aria-current="page" class="actief"' : ""}>${esc(d.titel)}</a>`).join("")}</nav>`;
 
   // ===== 2a. Voor muzikanten =====
   const stappen = regels("samen.muzikanten.stappen", [
-    "Een gesprek | Je vertelt wat je wilt maken. Wij zoeken de plek die erbij past.",
+    "Een gesprek | Je vertelt wat je wilt maken. Wij zoeken de locatie die erbij past.",
     "Een week residentie | In een abdij, een museum of het landschap, met verblijf en techniek.",
     "De première | Op een van onze festivals of reeksen, opgenomen in beeld en geluid, met programmatoren in de zaal.",
     "Verder spelen | Bij ons en elders. Als je dat wilt, boeken wij je creatie mee.",
@@ -321,9 +321,9 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
   };
   const muzTitel = DEUREN[0].titel;
   await schrijf("voor-muzikanten.html", muzTitel,
-    T("samen.muzikanten.beschrijving", "Residenties en premières bij WESP en Merodefestival: muzikanten maken nieuw werk voor onze plekken en vinden bij ons een vaste podiumpartner."),
+    T("samen.muzikanten.beschrijving", "Residenties en premières bij WESP en Merodefestival: muzikanten maken nieuw werk voor onze kerken, abdijen en erfgoedsites en vinden bij ons een vaste podiumpartner."),
     hero(muzTitel, T("samen.muzikanten.kop", "Een samenwerking, geen boeking"),
-      T("samen.muzikanten.intro", "Jij hebt een idee, wij hebben de plekken: abdijen, kapellen, een muziekmuseum en het landschap van de Merode. Je werkt er een week in residentie, speelt de première op een van onze podia en daarna verder, bij ons en elders. Alles begint met een gesprek, niet met een contract."), "home-duo") +
+      T("samen.muzikanten.intro", "Jij hebt een idee, wij hebben de locaties: abdijen, kapellen, een muziekmuseum en het landschap van de Merode. Je werkt er een week in residentie, speelt de première op een van onze podia en daarna verder, bij ons en elders. Alles begint met een gesprek, niet met een contract."), "home-duo") +
     sectie(`${deurNav("voor-muzikanten.html")}
       ${Q[1]}
       ${blok("residenties", T("residenties.stappen.kop", "Van residentie tot première, en verder"),
@@ -356,13 +356,13 @@ export async function bouwProducties({ ROOT, SITE, S, esc, kopEd, voetEd }) {
     T("samen.gemeenten.beschrijving", "Muziek op jouw plek met WESP: formules voor gemeenten, kerkfabrieken en erfgoedsites, van Klanken in de kapel tot een festivaldag."),
     hero(samenTitel, gemTitel, T("samen.gemeenten.intro", "Heb je een kapel, een kerk of een erfgoedsite die om muziek vraagt? Wij brengen er folk- en wereldmuziek naartoe. Wij kiezen de muzikanten, zorgen voor techniek en organisatie, en jij geniet mee met je inwoners. Voor één avond, een reeks of een volledige festivaldag."), "merode-nl-inpsik") +
     sectie(`${deurNav("voor-gemeenten.html")}
-      ${formules.length ? blok("formules", T("wesp.formules.kop", "Formules voor jouw plek"), `<ul class="kaarten">${formules.map(p => kaart(p, T("wesp.formules.meer", "Bekijk de formule →"))).join("")}</ul>`,
-        T("wesp.formules.intro", "Wat we op onze eigen plekken doen, brengen we ook naar jouw plek. Wij zorgen voor de programmatie, de techniek en de omkadering; jij voor een plek die om muziek vraagt.")) : ""}
+      ${formules.length ? blok("formules", T("wesp.formules.kop", "Formules voor jouw locatie"), `<ul class="kaarten">${formules.map(p => kaart(p, T("wesp.formules.meer", "Bekijk de formule →"))).join("")}</ul>`,
+        T("wesp.formules.intro", "Wat we op onze eigen locaties doen, brengen we ook naar jouw gemeente, kerk of erfgoedsite. Wij zorgen voor de programmatie, de techniek en de omkadering; jij voor een ruimte die om muziek vraagt.")) : ""}
       ${fotoband("2026-watermolen-wandelaars", "268829-462342", "631059-834612")}
       ${luisterplekken.length ? blok("luisterplekken", T("samen.gemeenten.luisterplekken", "Luisterplekken"), `<ul class="kaarten">${luisterplekken.map(p => kaart(p, T("samen.gemeenten.luisterplekken-meer", "Bekijk de luisterplek →"))).join("")}</ul>`,
         T("samen.gemeenten.luisterplekken-intro", "Muziek en verhalen die blijven klinken op een erfgoedplek, ook buiten het concert.")) : ""}
-      ${opdrachtgevers ? blok("referenties", T("samen.gemeenten.referenties", "Zij werkten al met ons samen"), `<p>${opdrachtgevers}.</p>`) : ""}
-      ${actie(T("samen.gemeenten.actie", "Bespreek jouw plek"), T("samen.gemeenten.budget", "Wat het kost, hangt af van de plek en van wat je wilt. We maken samen een voorstel op maat."),
+      ${opdrachtgevers ? blok("referenties", T("samen.gemeenten.referenties", "Wij werken onder meer samen met"), `<p>${opdrachtgevers}.</p>`) : ""}
+      ${actie(T("samen.gemeenten.actie", "Bespreek jouw locatie"), T("samen.gemeenten.budget", "Wat het kost, hangt af van de plek en van wat je wilt. We maken samen een voorstel op maat."),
         mailKnop(T("wesp.organisatoren.knop", "Bespreek jouw locatie"), "Locatie voor muziek"))}`));
 
   // Waar een detailpagina naar terugverwijst
