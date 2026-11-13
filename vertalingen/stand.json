@@ -3288,12 +3288,12 @@
   "t": "Des résidences dans des abbayes, un musée et le paysage, avec une première sur l’une de nos scènes. Les musiciens restent créateurs et auteurs ; nous présentons l’œuvre et l’enregistrons."
  },
  "40477c21-f8db-8169-a10f-e17685632ca8:titel:en": {
-  "h": "d450671dbd994dcd",
-  "t": "We commission new work for our venues"
+  "h": "f60090c1af81dcc9",
+  "t": "We commission new work for our churches, abbeys and heritage sites"
  },
  "40477c21-f8db-8169-a10f-e17685632ca8:titel:fr": {
-  "h": "d450671dbd994dcd",
-  "t": "Nous faisons créer de nouvelles œuvres pour nos lieux"
+  "h": "f60090c1af81dcc9",
+  "t": "Nous faisons créer de nouvelles œuvres pour nos églises, abbayes et sites patrimoniaux"
  },
  "40477c21-f8db-816d-9b03-f1ca2b34a97e:tekst:en": {
   "h": "b15d08f0b0e88072",
@@ -5686,5 +5686,21 @@
  "41577c21-f8db-81fe-8642-c67dc928697d:tekst:fr": {
   "h": "69ca7ba75506e0b1",
   "t": "Sur la page de chaque création, vous trouverez la distribution, la technique et l’adresse de contact. Demandez une option ou la fiche de diffusion."
+ },
+ "41777c21-f8db-811f-a072-d0034b9ba4d9:tekst:en": {
+  "h": "e5f062040d242ec3",
+  "t": "See how we work together"
+ },
+ "41777c21-f8db-811f-a072-d0034b9ba4d9:tekst:fr": {
+  "h": "e5f062040d242ec3",
+  "t": "Découvrez comment nous collaborons"
+ },
+ "41777c21-f8db-815d-8a23-cd665c9a3104:tekst:en": {
+  "h": "2cca9bf12d947834",
+  "t": "Musicians, festivals and arts centres, municipalities, church councils and heritage sites: we have a way of working together for each of them."
+ },
+ "41777c21-f8db-815d-8a23-cd665c9a3104:tekst:fr": {
+  "h": "2cca9bf12d947834",
+  "t": "Musiciens, festivals et centres culturels, communes, fabriques d’église et sites patrimoniaux : nous avons pour chacun une manière de collaborer."
  }
 }
