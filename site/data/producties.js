@@ -1119,7 +1119,7 @@ window.PRODUCTIES = [
         "html": "<em>Een organisatie van Merodefestival, samen met de lokale partner.</em>"
       }
     ],
-    "foto": "data/foto/40777c21f8db81f989a3de5fabf608a6.webp",
+    "foto": "",
     "fotos": [
       "data/foto/40777c21f8db81f989a3de5fabf608a6-l1.webp",
       "data/foto/40777c21f8db81f989a3de5fabf608a6-l2.webp",
