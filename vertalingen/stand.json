@@ -5702,5 +5702,13 @@
  "41777c21-f8db-815d-8a23-cd665c9a3104:tekst:fr": {
   "h": "2cca9bf12d947834",
   "t": "Musiciens, festivals et centres culturels, communes, fabriques d’église et sites patrimoniaux : nous avons pour chacun une manière de collaborer."
+ },
+ "41a77c21-f8db-8175-b8dd-c7d6cced0f8f:tekst:en": {
+  "h": "f6de0392774bdcf2",
+  "t": "Extra date in {plaats} on {datum}"
+ },
+ "41a77c21-f8db-8175-b8dd-c7d6cced0f8f:tekst:fr": {
+  "h": "f6de0392774bdcf2",
+  "t": "Date supplémentaire à {plaats} le {datum}"
  }
 }

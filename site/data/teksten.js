@@ -138,6 +138,7 @@ window.TEKSTEN = {
   "homepage.edities-kop": "Sinds 2015",
   "homepage.eerstvolgende": "Eerstvolgende ·",
   "homepage.eerstvolgende-link": "Meer over dit concert",
+  "homepage.extra-datum": "Extra datum in {plaats} op {datum}",
   "homepage.festival-alt1": "Wandelaars op een bospad in de Merode",
   "homepage.festival-alt2": "Muzikanten nemen applaus in ontvangst op een openluchtpodium bij avond",
   "homepage.festival-datum": "Hemelvaartweekend 2027",
