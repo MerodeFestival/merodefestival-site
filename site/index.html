@@ -62,7 +62,7 @@
           <span class="label" id="next-when">Eerstvolgende · Zaterdag 5 december</span>
           <h2 id="next-artist">Sam Grassie, Dylan Fowler &amp; Haroun Iqbal</h2>
           <p class="waar" id="next-where">Sint-Pieterskerk, Testelt, 20.00 uur</p>
-          <div class="acties" id="next-acties"><span class="soldout">Volzet</span><a class="btn ghost" href="concert/sam-grassie-2026-12-05.html">Meer over dit concert</a></div>
+          <div class="acties" id="next-acties"><span class="soldout">Volzet</span><a class="btn" href="concert/sam-grassie-2026-12-03.html">Extra datum in Sint-Truiden op 3 december</a><a class="btn ghost" href="concert/sam-grassie-2026-12-05.html">Meer over dit concert</a></div>
         </div>
       </div>
       <div class="art" id="art" role="region" aria-roledescription="diavoorstelling" aria-label="Seizoensbeeld en foto’s uit de kerken">
@@ -136,7 +136,7 @@
         <a href="concert/sam-grassie-2026-12-05.html">Naar de concertpagina →</a>
       </div>
     </div>
-    <div class="act"><span class="soldout">Volzet</span></div>
+    <div class="act"><span class="soldout">Volzet</span><a class="extra-datum" href="concert/sam-grassie-2026-12-03.html">Extra datum in Sint-Truiden op 3 december →</a></div>
   </li><li class="event">
     <div class="date"><span class="d">11</span><span class="m">dec</span></div>
     <div class="thumb"><a href="concert/griff-trio-2026-12-11.html" tabindex="-1" aria-hidden="true"><img src="https://beeld.merodefestival.be/merodefestival/thumb/agenda-40077c21f8db81469f3ad2c4779240b6.webp" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81469f3ad2c4779240b6.webp'"></a></div>
@@ -520,7 +520,7 @@
 <script src="data/edities.js"></script>
 <script src="data/reeksen.js"></script>
 <script src="data/beeldbank.js"></script>
-<script>window.TXT = {"foto":"Foto:","pauzeer":"Wisselende beelden pauzeren","speel":"Wisselende beelden afspelen","extern":"(opent een andere website)","volzet":"Volzet","koop":"Koop tickets","ticketsKort":"Tickets","nu":"Nu te zien","vanavond":"Vanavond","morgen":"Morgen","deze":"Deze","eerstvolgende":"Eerstvolgende ·","ookMeer":"Meer info ↗","meerConcert":"Meer over dit concert","kaartTekst":"Korte beschrijving","kaartLink":"Naar de concertpagina →","toonAlles":"Toon de hele agenda","toonMinder":"Toon minder","festivalVoor":"Hemelvaartweekend","groep":{"Alle":"Alle concerten","Kerkconcerten":"Merodefestival kerkconcerten","Festivals":"Festivals"},"getoond":"{n} concerten getoond","getoondEen":"{n} concert getoond","maand":["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"],"maandKort":["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"],"dag":["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"]};</script>
+<script>window.TXT = {"foto":"Foto:","pauzeer":"Wisselende beelden pauzeren","speel":"Wisselende beelden afspelen","extern":"(opent een andere website)","volzet":"Volzet","extraDatum":"Extra datum in {plaats} op {datum}","koop":"Koop tickets","ticketsKort":"Tickets","nu":"Nu te zien","vanavond":"Vanavond","morgen":"Morgen","deze":"Deze","eerstvolgende":"Eerstvolgende ·","ookMeer":"Meer info ↗","meerConcert":"Meer over dit concert","kaartTekst":"Korte beschrijving","kaartLink":"Naar de concertpagina →","toonAlles":"Toon de hele agenda","toonMinder":"Toon minder","festivalVoor":"Hemelvaartweekend","groep":{"Alle":"Alle concerten","Kerkconcerten":"Merodefestival kerkconcerten","Festivals":"Festivals"},"getoond":"{n} concerten getoond","getoondEen":"{n} concert getoond","maand":["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"],"maandKort":["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"],"dag":["zondag","maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag"]};</script>
 <script>
 const S = window.SEIZOEN || {};
 // Teksten in de taal van de pagina (de bouw vult window.TXT in, zie scripts/teksten.mjs)
@@ -605,8 +605,19 @@ const groepenVan = e => {
   return g;
 };
 
+// Volzet? Dan een link naar een andere (niet volzette) datum van hetzelfde concert, als die er is
+function extraDatum(e, groot){
+  const x = upcoming.find(o => o !== e && !o.volzet && o.artist === e.artist);
+  if (!x) return "";
+  const L = linkVan(x); if (!L.href) return "";
+  const s = d(x.start);
+  const tekst = (TXT.extraDatum || "Extra datum in {plaats} op {datum}")
+    .replace("{plaats}", x.village || x.place || "").replace("{datum}", `${s.getDate()} ${MAAND_LANG[s.getMonth()]}`);
+  return `<a class="${groot ? "btn" : "extra-datum"}" href="${esc(L.href)}"${L.extern ? ' target="_blank" rel="noopener"' : ""}>${esc(tekst)}${groot ? "" : " →"}${L.extern ? EXT : ""}</a>`;
+}
+
 const ticketHtml = (e, groot) => e.volzet
-  ? `<span class="soldout">${esc(TXT.volzet)}</span>`
+  ? `<span class="soldout">${esc(TXT.volzet)}</span>` + extraDatum(e, groot)
   : e.tickets ? `<a class="btn" href="${esc(e.tickets)}">${esc(e.cta || (groot ? TXT.koop : TXT.ticketsKort))}${groot && e.price ? " (" + esc(e.price) + ")" : ""}</a>` : "";
 
 function whenLabel(e){

@@ -109,12 +109,16 @@ details img{display:block;width:100%;max-width:34rem;border-radius:3px;margin:.2
 .soldout{display:inline-block;padding:.4rem .8rem;border-radius:3px;background:var(--s-papier-lijn);color:var(--s-papier-inkt);font-family:var(--label);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase}
 .hero .soldout{background:rgba(255,255,255,.14);color:var(--s-licht);padding:.55rem .95rem}
 .event.is-full .artist{opacity:.6}
+.act:has(.extra-datum){flex-direction:column;align-items:flex-end;gap:.5rem}
+.extra-datum{font-family:var(--label);font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:inherit;font-weight:600;max-width:13rem;text-align:right}
 .event.extra{display:none}
 .events.alles .event.extra{display:grid}
 .toon-alles{margin-top:1.5rem;background:transparent!important;color:var(--s-papier-inkt)!important;box-shadow:inset 0 0 0 1.5px currentColor}
 @media (max-width:640px){
   .event{grid-template-columns:3.5rem 4rem 1fr}
   .act{grid-column:2 / -1;flex-wrap:wrap}
+  .act:has(.extra-datum){align-items:flex-start}
+  .extra-datum{text-align:left;max-width:none}
   .thumb:empty + div{grid-column:2 / -1}
 }
 

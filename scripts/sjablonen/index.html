@@ -226,8 +226,19 @@ const groepenVan = e => {
   return g;
 };
 
+// Volzet? Dan een link naar een andere (niet volzette) datum van hetzelfde concert, als die er is
+function extraDatum(e, groot){
+  const x = upcoming.find(o => o !== e && !o.volzet && o.artist === e.artist);
+  if (!x) return "";
+  const L = linkVan(x); if (!L.href) return "";
+  const s = d(x.start);
+  const tekst = (TXT.extraDatum || "Extra datum in {plaats} op {datum}")
+    .replace("{plaats}", x.village || x.place || "").replace("{datum}", `${s.getDate()} ${MAAND_LANG[s.getMonth()]}`);
+  return `<a class="${groot ? "btn" : "extra-datum"}" href="${esc(L.href)}"${L.extern ? ' target="_blank" rel="noopener"' : ""}>${esc(tekst)}${groot ? "" : " →"}${L.extern ? EXT : ""}</a>`;
+}
+
 const ticketHtml = (e, groot) => e.volzet
-  ? `<span class="soldout">${esc(TXT.volzet)}</span>`
+  ? `<span class="soldout">${esc(TXT.volzet)}</span>` + extraDatum(e, groot)
   : e.tickets ? `<a class="btn" href="${esc(e.tickets)}">${esc(e.cta || (groot ? TXT.koop : TXT.ticketsKort))}${groot && e.price ? " (" + esc(e.price) + ")" : ""}</a>` : "";
 
 function whenLabel(e){

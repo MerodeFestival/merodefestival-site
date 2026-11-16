@@ -2592,6 +2592,11 @@
   "en": "Second dates for our church concerts",
   "fr": "Doubler nos concerts d’église"
  },
+ "f6de0392774bdcf2": {
+  "en": "Extra date in {plaats} on {datum}",
+  "fr": "Date supplémentaire à {plaats} le {datum}",
+  "handmatig": true
+ },
  "f7275483441f19a8": {
   "en": "Email address",
   "fr": "Adresse e-mail"
