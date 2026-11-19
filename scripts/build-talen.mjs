@@ -93,6 +93,24 @@ for (const taal of VERTAALD) {
     await fs.mkdir(path.dirname(path.join(doel, f)), { recursive: true });
     await fs.copyFile(path.join(map, f), path.join(doel, f));
   }
+  // Met de hand vertaalde pagina’s (bv. /winterstrings): vertalingen/pagina/<naam>.<taal>.html bevat <title>,
+  // <meta name="description"> en <main>…</main>; die vervangen de Nederlandse stukken, kop en voettekst blijven van de bouw.
+  const handMap = path.resolve("vertalingen/pagina");
+  for (const bron of (await bestaat(handMap)) ? await fs.readdir(handMap) : []) {
+    const m = bron.match(/^(.+)\.([a-z]{2})\.html$/);
+    if (!m || m[2] !== taal || !await bestaat(path.join(doel, m[1] + ".html"))) continue;
+    const vert = await fs.readFile(path.join(handMap, bron), "utf8");
+    const pad = path.join(doel, m[1] + ".html");
+    let h = await fs.readFile(pad, "utf8");
+    for (const re of [/<title>[\s\S]*?<\/title>/, /<meta name="description"[^>]*>/, /<main[\s\S]*?<\/main>/]) {
+      const nieuw = vert.match(re);
+      if (nieuw) h = h.replace(re, () => nieuw[0]);
+    }
+    h = h.replace(/<html lang="[^"]*">/, `<html lang="${taal}">`);
+    const titel = vert.match(/<title>([^<|]*?)\s*(?:\|[^<]*)?<\/title>/);
+    if (titel) h = h.replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${titel[1]}">`);
+    await fs.writeFile(pad, h);
+  }
   // Verwijzingen naar bestanden die niet in site/<taal>/ staan (css, beelden, lettertypes...) gaan naar de gedeelde versie
   for (const f of await paginas(doel)) {
     const pad = path.join(doel, f), hier = path.dirname(pad), nl = path.dirname(path.join(ROOT, f));

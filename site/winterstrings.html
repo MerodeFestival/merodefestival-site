@@ -10,7 +10,7 @@
 <link rel="canonical" href="https://www.merodefestival.be/winterstrings">
 <meta property="og:title" content="Winter Strings: Sam Grassie, Dylan Fowler en Haroun Iqbal">
 <meta property="og:description" content="Drie gitaristen uit Schotland, Wales en Vlaanderen. Vijf concerten, 2 tot 6 december 2026.">
-<meta property="og:image" content="https://beeld.merodefestival.be/limburg-sessies/220136-111048.webp">
+<meta property="og:image" content="https://beeld.merodefestival.be/merodefestival/winterstrings-sam-grassie.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="apple-touch-icon" href="img/favicon.png">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -33,9 +33,6 @@
   }
   .ws a { color: inherit; }
   .ws-wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 64px; }
-  .ws-beeld { margin: 0 auto 36px; max-width: 460px; }
-  .ws-beeld img { display: block; width: 100%; height: auto; }
-  .ws-beeld figcaption { color: var(--grey); font-size: 14px; margin-top: 6px; }
   .ws .ws-eyebrow { font-size: 14px; letter-spacing: .28em; text-transform: uppercase; color: var(--grey); margin: 0 0 14px; }
   .ws .ws-eyebrow b { color: var(--accent); font-weight: 600; }
   .ws h1 { font-family: inherit; font-weight: 600; font-size: clamp(40px, 9vw, 68px); line-height: 1.02; margin: 0 0 14px; color: var(--cream); text-wrap: balance; }
@@ -61,7 +58,8 @@
   .ws .ws-tag { display: inline-block; padding: 9px 16px; border: 1px solid var(--grey); letter-spacing: .14em; text-transform: uppercase; font-size: 14px; white-space: nowrap; }
   .ws .ws-note { color: var(--grey); font-size: 16px; margin: 14px 0 0; }
   .ws .ws-people { display: grid; gap: 26px; }
-  .ws .ws-person { padding-left: 18px; border-left: 2px solid var(--accent); }
+    .ws .ws-person { display: grid; grid-template-columns: 120px 1fr; gap: 0 22px; align-items: start; }
+  .ws .ws-foto { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 2px solid var(--accent); }
   .ws .ws-person h3 { font-family: inherit; margin: 0 0 4px; font-size: 24px; font-weight: 600; color: var(--cream); }
   .ws .ws-person .ws-from { color: var(--grey); font-size: 15px; letter-spacing: .18em; text-transform: uppercase; margin: 0 0 6px; }
   .ws .ws-person p { margin: 0; max-width: 62ch; }
@@ -78,12 +76,10 @@
     .ws .ws-concert { grid-template-columns: 70px 1fr; }
     .ws .ws-date .ws-num { font-size: 36px; }
     .ws .ws-cta { grid-column: 2; align-self: start; margin-top: 6px; }
+    .ws .ws-person { grid-template-columns: 84px 1fr; gap: 0 16px; }
+    .ws .ws-foto { width: 84px; height: 84px; }
   }
 </style>
-<link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/winterstrings">
-<link rel="alternate" hreflang="en" href="https://www.merodefestival.be/en/winterstrings">
-<link rel="alternate" hreflang="fr" href="https://www.merodefestival.be/fr/winterstrings">
-<link rel="alternate" hreflang="x-default" href="https://www.merodefestival.be/winterstrings">
 </head>
 <body>
 <header>
@@ -98,19 +94,13 @@
         <li><a href="vorige-edities.html">Vorige edities</a></li>
         <li><a href="wesp.html">Over ons</a></li>
         <li><a href="samenwerken.html">Samenwerken</a></li>
-      <li class="talen-menu"><span aria-current="true" lang="nl" title="Nederlands">NL</span><a href="en/winterstrings.html" hreflang="en" lang="en" title="English">EN</a><a href="fr/winterstrings.html" hreflang="fr" lang="fr" title="Français">FR</a></li></ul>
+      </ul>
     </nav>
-    <div class="talen" role="group" aria-label="Taal"><span aria-current="true" lang="nl" title="Nederlands">NL</span><a href="en/winterstrings.html" hreflang="en" lang="en" title="English">EN</a><a href="fr/winterstrings.html" hreflang="fr" lang="fr" title="Français">FR</a></div>
     <a class="btn" href="https://pierrot.io/wesp-vzw/kerkconcerten-2026-2027">Tickets</a>
   </div>
 </header>
 <main class="ws">
   <div class="ws-wrap">
-
-    <figure class="ws-beeld">
-      <img src="https://beeld.merodefestival.be/limburg-sessies/220136-111048.webp" alt="Sam Grassie, Dylan Fowler &amp; Haroun Iqbal" width="1240" height="1240">
-      <figcaption>Artwork: Reinhart Croon</figcaption>
-    </figure>
 
     <p class="ws-eyebrow">2 <b>&ndash;</b> 6 december 2026 &middot; Vlaanderen &amp; Brussel</p>
     <h1>Winter Strings</h1>
@@ -179,22 +169,31 @@
     <h2>De drie gitaristen</h2>
     <div class="ws-people">
       <article class="ws-person">
+        <img class="ws-foto" src="https://beeld.merodefestival.be/merodefestival/winterstrings-sam-grassie.jpg" alt="Sam Grassie" width="400" height="400" loading="lazy">
+        <div>
         <h3>Sam Grassie</h3>
         <p class="ws-from">Schotland</p>
         <p>Fingerstyle-gitarist en songwriter, opgegroeid in Glasgow en nu gevestigd in Londen. De Bert Jansch Foundation noemde hem een van de beste folkgitaristen van zijn generatie. Op zijn EP <em>Sandwood</em> (2024) ontmoeten Keltische melodie&euml;n het ritme van de woestijnblues.</p>
         <p class="ws-links"><a href="https://www.youtube.com/watch?v=LQYB7dcnsbs" rel="noopener">Kijk op YouTube</a><a href="https://open.spotify.com/album/2exwUhgaSf2Pn8ajk647zn" rel="noopener">Luister op Spotify: <em>Where Two Hawks Fly</em></a></p>
+        </div>
       </article>
       <article class="ws-person">
+        <img class="ws-foto" src="https://beeld.merodefestival.be/merodefestival/winterstrings-dylan-fowler.jpg" alt="Dylan Fowler" width="400" height="400" loading="lazy">
+        <div>
         <h3>Dylan Fowler</h3>
         <p class="ws-from">Wales</p>
         <p>Geboren in Tripoli, opgegroeid in Zuid-Wales en al veertig jaar bezig met akoestische en klassieke gitaar. Zijn werk verbindt Keltische traditie met Europese jazz en invloeden uit de Balkan en Scandinavi&euml;. Hij was de drijvende kracht achter de Welshe band Alaw.</p>
         <p class="ws-links"><a href="https://www.youtube.com/watch?v=KFgCzlQazkQ" rel="noopener">Kijk op YouTube</a><a href="https://open.spotify.com/album/63hJkoE6T7wVVe7gLN4TZS" rel="noopener">Luister op Spotify: <em>A Passionate Landscape</em></a></p>
+        </div>
       </article>
       <article class="ws-person">
+        <img class="ws-foto" src="https://beeld.merodefestival.be/merodefestival/winterstrings-haroun-iqbal.jpg" alt="Haroun Iqbal" width="400" height="400" loading="lazy">
+        <div>
         <h3>Haroun Iqbal</h3>
         <p class="ws-from">Vlaanderen</p>
         <p>Gitarist, componist en multi-instrumentalist. Zijn weg liep van jazz en klassiek naar West-Afrikaanse kora-muziek en uiteindelijk naar de Indiase raga. In 2025 koos Klara hem voor De Twintigers.</p>
         <p class="ws-links"><a href="https://www.youtube.com/watch?v=ykP5RNFEzgw" rel="noopener">Kijk op YouTube</a><a href="https://open.spotify.com/artist/2EIip4bHQ5ZRYbO3VXL2xu" rel="noopener">Luister op Spotify: Iqnovara</a></p>
+        </div>
       </article>
     </div>
 
@@ -222,7 +221,7 @@
 var t = document.querySelector(".menu-toggle"), n = document.getElementById("hoofdmenu");
 t.addEventListener("click", function () { var o = n.classList.toggle("open"); t.setAttribute("aria-expanded", o); });
 </script>
-<script>document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".iban-kopie");if(!b)return;var t=b.getAttribute("data-kopie"),k=function(){b.classList.add("ok");setTimeout(function(){b.classList.remove("ok")},2000)},r=function(){var a=document.createElement("textarea");a.value=t;a.style.position="fixed";a.style.opacity="0";document.body.appendChild(a);a.select();try{document.execCommand("copy");k()}catch(x){}a.remove()};if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(k,r);else r()});</script>
 <script data-statistiek>(function(){var h=location.hostname;if(h!=="www.merodefestival.be"&&h!=="merodefestival.be")return;function s(src,a){var e=document.createElement("script");e.defer=true;e.src=src;for(var k in a)e.setAttribute(k,a[k]);document.head.appendChild(e)}s("https://static.cloudflareinsights.com/beacon.min.js",{"data-cf-beacon":'{"token":"63300aea96964edfbfcaf3d986cb4628"}'});!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','262189854320601');fbq('track','PageView');})();</script>
+<script>document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".iban-kopie");if(!b)return;var t=b.getAttribute("data-kopie"),k=function(){b.classList.add("ok");setTimeout(function(){b.classList.remove("ok")},2000)},r=function(){var a=document.createElement("textarea");a.value=t;a.style.position="fixed";a.style.opacity="0";document.body.appendChild(a);a.select();try{document.execCommand("copy");k()}catch(x){}a.remove()};if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(k,r);else r()});</script>
 </body>
 </html>
