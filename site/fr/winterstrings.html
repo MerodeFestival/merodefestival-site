@@ -63,6 +63,13 @@
   .ws .ws-person h3 { font-family: inherit; margin: 0 0 4px; font-size: 24px; font-weight: 600; color: var(--cream); }
   .ws .ws-person .ws-from { color: var(--grey); font-size: 15px; letter-spacing: .18em; text-transform: uppercase; margin: 0 0 6px; }
   .ws .ws-person p { margin: 0; max-width: 62ch; }
+  .ws .ws-media { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; align-items: start; }
+  .ws .ws-media .speler-wacht { margin: 0; min-height: 0; aspect-ratio: auto; font-size: 16px; }
+  .ws .ws-media .speler-wacht .btn { background: var(--accent); color: var(--ink); border: 0; }
+  .ws .ws-person > div { min-width: 0; }
+  .ws .ws-naar { margin: 18px 0 0; }
+  .ws .ws-naar a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; letter-spacing: .06em; }
+  .ws h2#concerten { scroll-margin-top: 90px; }
   .ws .ws-links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 10px !important; font-size: 16px; }
   .ws .ws-links a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
   .ws .ws-links a:hover { color: var(--cream); }
@@ -78,6 +85,8 @@
     .ws .ws-cta { grid-column: 2; align-self: start; margin-top: 6px; }
     .ws .ws-person { grid-template-columns: 84px 1fr; gap: 0 16px; }
     .ws .ws-foto { width: 84px; height: 84px; }
+    .ws .ws-media { grid-template-columns: 1fr; }
+    .ws .ws-person .ws-media { margin-left: -100px; }
   }
 </style>
 <link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/winterstrings">
@@ -100,7 +109,7 @@
         <li><a href="samenwerken.html">Samenwerken</a></li>
       <li class="talen-menu"><a href="../winterstrings.html" hreflang="nl" lang="nl" title="Nederlands">NL</a><a href="../en/winterstrings.html" hreflang="en" lang="en" title="English">EN</a><span aria-current="true" lang="fr" title="Français">FR</span></li></ul>
     </nav>
-        <div class="talen" role="group" aria-label="Langue"><a href="../winterstrings.html" hreflang="nl" lang="nl" title="Nederlands">NL</a><a href="../en/winterstrings.html" hreflang="en" lang="en" title="English">EN</a><span aria-current="true" lang="fr" title="Français">FR</span></div>
+            <div class="talen" role="group" aria-label="Langue"><a href="../winterstrings.html" hreflang="nl" lang="nl" title="Nederlands">NL</a><a href="../en/winterstrings.html" hreflang="en" lang="en" title="English">EN</a><span aria-current="true" lang="fr" title="Français">FR</span></div>
     <a class="btn" href="https://pierrot.io/wesp-vzw/kerkconcerten-2026-2027">Tickets</a>
   </div>
 </header>
@@ -110,10 +119,47 @@
     <p class="ws-eyebrow">2 <b>&ndash;</b> 6 décembre 2026 &middot; Flandre &amp; Bruxelles</p>
     <h1>Winter Strings</h1>
     <p class="ws-names">Sam Grassie <span class="ws-amp">&middot;</span> Dylan Fowler <span class="ws-amp">&middot;</span> Haroun Iqbal</p>
-    <p class="ws-tagline">Des guitares d’ici et d’ailleurs</p>
+    <p class="ws-tagline">Trois guitares, trois univers, une soirée</p>
     <p class="ws-lead">Trois guitaristes d’Écosse, du pays de Galles et de Flandre partagent la scène. Chacun joue une demi-heure en solo, puis tous trois jouent ensemble pendant 25 minutes, entre pièces écrites et improvisation. Acoustique, intime et pur, dans cinq salles qui ont chacune leur propre atmosphère.</p>
 
-    <h2>Cinq concerts</h2>
+    <p class="ws-naar"><a href="#concerten">Vers les concerts &darr;</a></p>
+
+    <h2>Les trois guitaristes</h2>
+    <div class="ws-people">
+      <article class="ws-person">
+        <img class="ws-foto" src="https://beeld.merodefestival.be/merodefestival/winterstrings-sam-grassie.jpg" alt="Sam Grassie" width="400" height="400" loading="lazy">
+        <div>
+        <h3>Sam Grassie</h3>
+        <p class="ws-from">Écosse</p>
+        <p>Guitariste fingerstyle et auteur-compositeur, il a grandi à Glasgow et vit aujourd’hui à Londres. La Bert Jansch Foundation l’a qualifié de l’un des meilleurs guitaristes folk de sa génération. Sur son EP <em>Sandwood</em> (2024), les mélodies celtiques rencontrent le rythme du blues du désert.</p>
+        <div class="ws-media"><div class="video"><button class="yt" type="button" data-id="LQYB7dcnsbs" aria-label="Lire la vidéo: Sam Grassie" style="background-image:url(../data/vthumb/1f4f5d7172a7c4cb.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="speler-wacht" data-embed="https://open.spotify.com/embed/album/2exwUhgaSf2Pn8ajk647zn?utm_source=generator&amp;theme=0" data-titel="Spotify: Where Two Hawks Fly" data-hoogte="152" data-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"><p class="speler-titel">Spotify: Where Two Hawks Fly</p><button type="button" class="btn speler-knop">▶ Écouter via Spotify</button><p class="speler-uitleg">Le lecteur Spotify ne se charge qu’après votre clic. Spotify voit alors votre adresse IP et peut déposer des cookies. <a href="privacy.html#website">Plus d’infos</a></p></div></div>
+        </div>
+      </article>
+      <article class="ws-person">
+        <img class="ws-foto" src="https://beeld.merodefestival.be/merodefestival/winterstrings-dylan-fowler.jpg" alt="Dylan Fowler" width="400" height="400" loading="lazy">
+        <div>
+        <h3>Dylan Fowler</h3>
+        <p class="ws-from">Pays de Galles</p>
+        <p>Né à Tripoli, il a grandi dans le sud du pays de Galles et se consacre depuis quarante ans à la guitare acoustique et classique. Son travail relie la tradition celtique au jazz européen et à des influences des Balkans et de Scandinavie. Il a été la force motrice du groupe gallois Alaw.</p>
+        <div class="ws-media"><div class="video"><button class="yt" type="button" data-id="KFgCzlQazkQ" aria-label="Lire la vidéo: Dylan Fowler" style="background-image:url(../data/vthumb/53baa3cc1d12ba85.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="speler-wacht" data-embed="https://open.spotify.com/embed/album/63hJkoE6T7wVVe7gLN4TZS?utm_source=generator&amp;theme=0" data-titel="Spotify: A Passionate Landscape" data-hoogte="152" data-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"><p class="speler-titel">Spotify: A Passionate Landscape</p><button type="button" class="btn speler-knop">▶ Écouter via Spotify</button><p class="speler-uitleg">Le lecteur Spotify ne se charge qu’après votre clic. Spotify voit alors votre adresse IP et peut déposer des cookies. <a href="privacy.html#website">Plus d’infos</a></p></div></div>
+        </div>
+      </article>
+      <article class="ws-person">
+        <img class="ws-foto" src="https://beeld.merodefestival.be/merodefestival/winterstrings-haroun-iqbal.jpg" alt="Haroun Iqbal" width="400" height="400" loading="lazy">
+        <div>
+        <h3>Haroun Iqbal</h3>
+        <p class="ws-from">Flandre</p>
+        <p>Guitariste, compositeur et multi-instrumentiste. Son parcours l’a mené du jazz et du classique à la musique de kora d’Afrique de l’Ouest, puis au raga indien. En 2025, la radio flamande Klara l’a choisi pour De Twintigers.</p>
+        <div class="ws-media"><div class="video"><button class="yt" type="button" data-id="ykP5RNFEzgw" aria-label="Lire la vidéo: Haroun Iqbal" style="background-image:url(../data/vthumb/48b27a2c519af29c.jpg)"><span class="play" aria-hidden="true"></span></button></div><div class="speler-wacht" data-embed="https://open.spotify.com/embed/artist/2EIip4bHQ5ZRYbO3VXL2xu?utm_source=generator&amp;theme=0" data-titel="Spotify: Iqnovara" data-hoogte="152" data-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"><p class="speler-titel">Spotify: Iqnovara</p><button type="button" class="btn speler-knop">▶ Écouter via Spotify</button><p class="speler-uitleg">Le lecteur Spotify ne se charge qu’après votre clic. Spotify voit alors votre adresse IP et peut déposer des cookies. <a href="privacy.html#website">Plus d’infos</a></p></div></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="ws-programme">
+      <p>Chaque soirée suit le même schéma : trois sets solo d’une demi-heure, puis 25 minutes ensemble. Vous entendez trois univers de guitare très différents, et ce qui se passe quand ils se rencontrent.</p>
+    </div>
+
+    <h2 id="concerten">Cinq concerts</h2>
 
     <section class="ws-concert" aria-label="Bruxelles, mercredi 2 décembre">
       <div class="ws-date"><span class="ws-day">mer</span><span class="ws-num">2</span><span class="ws-mon">déc</span></div>
@@ -171,40 +217,6 @@
 
     <p class="ws-note">Les billets sont vendus par l’organisateur de chaque concert. Les prix et la disponibilité peuvent changer ; la page de billetterie fait toujours foi.</p>
 
-    <h2>Les trois guitaristes</h2>
-    <div class="ws-people">
-      <article class="ws-person">
-        <img class="ws-foto" src="https://beeld.merodefestival.be/merodefestival/winterstrings-sam-grassie.jpg" alt="Sam Grassie" width="400" height="400" loading="lazy">
-        <div>
-        <h3>Sam Grassie</h3>
-        <p class="ws-from">Écosse</p>
-        <p>Guitariste fingerstyle et auteur-compositeur, il a grandi à Glasgow et vit aujourd’hui à Londres. La Bert Jansch Foundation l’a qualifié de l’un des meilleurs guitaristes folk de sa génération. Sur son EP <em>Sandwood</em> (2024), les mélodies celtiques rencontrent le rythme du blues du désert.</p>
-        <p class="ws-links"><a href="https://www.youtube.com/watch?v=LQYB7dcnsbs" rel="noopener">Voir sur YouTube</a><a href="https://open.spotify.com/album/2exwUhgaSf2Pn8ajk647zn" rel="noopener">Écouter sur Spotify&nbsp;: <em>Where Two Hawks Fly</em></a></p>
-        </div>
-      </article>
-      <article class="ws-person">
-        <img class="ws-foto" src="https://beeld.merodefestival.be/merodefestival/winterstrings-dylan-fowler.jpg" alt="Dylan Fowler" width="400" height="400" loading="lazy">
-        <div>
-        <h3>Dylan Fowler</h3>
-        <p class="ws-from">Pays de Galles</p>
-        <p>Né à Tripoli, il a grandi dans le sud du pays de Galles et se consacre depuis quarante ans à la guitare acoustique et classique. Son travail relie la tradition celtique au jazz européen et à des influences des Balkans et de Scandinavie. Il a été la force motrice du groupe gallois Alaw.</p>
-        <p class="ws-links"><a href="https://www.youtube.com/watch?v=KFgCzlQazkQ" rel="noopener">Voir sur YouTube</a><a href="https://open.spotify.com/album/63hJkoE6T7wVVe7gLN4TZS" rel="noopener">Écouter sur Spotify&nbsp;: <em>A Passionate Landscape</em></a></p>
-        </div>
-      </article>
-      <article class="ws-person">
-        <img class="ws-foto" src="https://beeld.merodefestival.be/merodefestival/winterstrings-haroun-iqbal.jpg" alt="Haroun Iqbal" width="400" height="400" loading="lazy">
-        <div>
-        <h3>Haroun Iqbal</h3>
-        <p class="ws-from">Flandre</p>
-        <p>Guitariste, compositeur et multi-instrumentiste. Son parcours l’a mené du jazz et du classique à la musique de kora d’Afrique de l’Ouest, puis au raga indien. En 2025, la radio flamande Klara l’a choisi pour De Twintigers.</p>
-        <p class="ws-links"><a href="https://www.youtube.com/watch?v=ykP5RNFEzgw" rel="noopener">Voir sur YouTube</a><a href="https://open.spotify.com/artist/2EIip4bHQ5ZRYbO3VXL2xu" rel="noopener">Écouter sur Spotify&nbsp;: Iqnovara</a></p>
-        </div>
-      </article>
-    </div>
-
-    <div class="ws-programme">
-      <p>Chaque soirée suit le même schéma : trois sets solo d’une demi-heure, puis 25 minutes ensemble. Vous entendez trois univers de guitare très différents, et ce qui se passe quand ils se rencontrent.</p>
-    </div>
 
     <div class="ws-partners">
       <p>Une collaboration entre Muziekpublique, Limburg Sessies (WESP vzw), 'Nouter Club, Merodefestival et Muziekclub 't Ey.</p>
@@ -223,10 +235,22 @@
 <div class="wrap foot-onder"><p class="foot-links foot-samen"><a href="samenwerken.html"><strong>Samenwerken</strong></a><a href="voor-muzikanten.html">Voor muzikanten</a><a href="voor-programmatoren.html">Voor festivals en cultuurcentra</a><a href="voor-gemeenten.html">Voor gemeenten en erfgoed</a></p><p class="foot-links"><a href="partners.html">Partners</a><a href="vrienden-van.html">Vrienden van Merodefestival</a><a href="index.html#nieuwsbrief">Nieuwsbrief</a><a href="privacy.html">Privacyverklaring</a></p></div>
 </footer>
 <script>
+document.querySelectorAll(".yt").forEach(function (b) {
+  b.addEventListener("click", function () {
+    var f = document.createElement("iframe");
+    f.src = "https://www.youtube-nocookie.com/embed/" + b.getAttribute("data-id") + "?autoplay=1&rel=0";
+    f.title = b.getAttribute("aria-label");
+    f.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture; fullscreen");
+    f.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+    f.allowFullscreen = true;
+    b.replaceWith(f);
+  });
+});
 var t = document.querySelector(".menu-toggle"), n = document.getElementById("hoofdmenu");
 t.addEventListener("click", function () { var o = n.classList.toggle("open"); t.setAttribute("aria-expanded", o); });
 </script>
 <script>document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".iban-kopie");if(!b)return;var t=b.getAttribute("data-kopie"),k=function(){b.classList.add("ok");setTimeout(function(){b.classList.remove("ok")},2000)},r=function(){var a=document.createElement("textarea");a.value=t;a.style.position="fixed";a.style.opacity="0";document.body.appendChild(a);a.select();try{document.execCommand("copy");k()}catch(x){}a.remove()};if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(k,r);else r()});</script>
+<script src="js/afwerking.js" defer></script>
 <script data-statistiek>(function(){var h=location.hostname;if(h!=="www.merodefestival.be"&&h!=="merodefestival.be")return;function s(src,a){var e=document.createElement("script");e.defer=true;e.src=src;for(var k in a)e.setAttribute(k,a[k]);document.head.appendChild(e)}s("https://static.cloudflareinsights.com/beacon.min.js",{"data-cf-beacon":'{"token":"63300aea96964edfbfcaf3d986cb4628"}'});!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','262189854320601');fbq('track','PageView');})();</script>
 </body>
 </html>
