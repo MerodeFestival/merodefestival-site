@@ -5710,5 +5710,29 @@
  "41a77c21-f8db-8175-b8dd-c7d6cced0f8f:tekst:fr": {
   "h": "f6de0392774bdcf2",
   "t": "Date supplémentaire à {plaats} le {datum}"
+ },
+ "41e77c21-f8db-812c-b282-d78ef061a027:tekst:en": {
+  "h": "64ce3852ff14b0a5",
+  "t": "Integrity contact person"
+ },
+ "41e77c21-f8db-812c-b282-d78ef061a027:tekst:fr": {
+  "h": "64ce3852ff14b0a5",
+  "t": "Personne de confiance intégrité"
+ },
+ "41e77c21-f8db-819e-9bd7-fb6ccd6ca003:tekst:en": {
+  "h": "f711113e61db645b",
+  "t": "Inappropriate behaviour, or in doubt? Talk in confidence to our integrity contact person, Jolan Huygens."
+ },
+ "41e77c21-f8db-819e-9bd7-fb6ccd6ca003:tekst:fr": {
+  "h": "f711113e61db645b",
+  "t": "Comportement inapproprié, ou un doute ? Parlez en toute confidentialité à notre personne de confiance intégrité, Jolan Huygens."
+ },
+ "41e77c21-f8db-81a2-8157-ff6caae7a9bf:tekst:en": {
+  "h": "989006bc387fe73b",
+  "t": "More about the contact person"
+ },
+ "41e77c21-f8db-81a2-8157-ff6caae7a9bf:tekst:fr": {
+  "h": "989006bc387fe73b",
+  "t": "En savoir plus"
  }
 }

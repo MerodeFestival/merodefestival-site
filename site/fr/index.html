@@ -59,10 +59,10 @@
       <div class="hero-text">
         <h1 class="seizoen" id="seizoen-titel"><span>agenda des concerts</span><span>202<em>6</em>–202<em>7</em></span></h1>
         <div class="next" id="next">
-          <span class="label" id="next-when">Prochainement · Samedi 5 décembre</span>
-          <h2 id="next-artist">Sam Grassie, Dylan Fowler &amp; Haroun Iqbal</h2>
-          <p class="waar" id="next-where">Sint-Pieterskerk, Testelt, 20 h</p>
-          <div class="acties" id="next-acties"><span class="soldout">Complet</span><a class="btn" href="concert/sam-grassie-2026-12-03.html">Date supplémentaire à Sint-Truiden le 3 décembre</a><a class="btn ghost" href="concert/sam-grassie-2026-12-05.html">En savoir plus sur ce concert</a></div>
+          <span class="label" id="next-when">Prochainement · Jeudi 26 novembre</span>
+          <h2 id="next-artist">Lenny &amp; de Wespen</h2>
+          <p class="waar" id="next-where">Buurthuis, Holsbeek, 20 h</p>
+          <div class="acties" id="next-acties"><a class="btn" href="https://pierrot.io/wesp-in-holsbeek/holsbeek-sessies-2026-2027">Acheter des billets (€ 16)</a><a class="btn ghost" href="concert/lenny-de-wespen-2026-11-26.html">En savoir plus sur ce concert</a></div>
         </div>
       </div>
       <div class="art" id="art" role="region" aria-roledescription="diaporama" aria-label="Visuel de la saison et photos des églises">
@@ -596,12 +596,15 @@ const linkVan = e => e.slug
   ? { href: `concert/${e.slug}.html`, extern: false }
   : { href: e.info || R[e.reeks] || (e.sites || []).map(x => R[x]).find(Boolean) || "", extern: true };
 const EXT = `<span class="sr"> ${esc(TXT.extern)}</span>`;
-// Reeksen voor de filterknoppen: een concert kan bij meer dan één knop horen (een kerkconcert van Holsbeek Sessies staat bij beide)
+// Reeksen voor de filterknoppen. Festivals = enkel echte festivals (soort begint met ‘Festival’, dus niet
+// ‘Merodefestival kerkconcert’). Kerkconcerten = de concerten van Merodefestival zelf (ook docuconcert en kerstvertelling),
+// niet de kerkconcerten van Holsbeek Sessies: die staan alleen bij hun eigen reeks.
 const groepenVan = e => {
   const g = [];
-  if (/festival/i.test(soortNl(e))) g.push("Festivals");
+  const festival = /\bfestival\b/i.test(soortNl(e));
+  if (festival) g.push("Festivals");
   ["Holsbeek Sessies", "Limburg Sessies", "Klanken van de Steden"].forEach(r => { if (e.reeks === r || (e.sites || []).includes(r)) g.push(r); });
-  if (/kerkconcert/i.test(soortNl(e)) || !g.length) g.push("Kerkconcerten");
+  if ((isMerode(e) && !festival) || !g.length) g.push("Kerkconcerten");
   return g;
 };
 
@@ -633,7 +636,8 @@ function whenLabel(e){
 }
 
 if (upcoming.length){
-  const h = upcoming.find(isMerode) || upcoming[0];   // de Merode is de ingangspoort
+  // Het eerstvolgende concert van alle reeksen waarvoor nog plaatsen zijn (volzette blijven gewoon in de agenda staan)
+  const h = upcoming.find(e => !e.volzet) || upcoming[0];
   document.getElementById("next").hidden = false;
   document.getElementById("next-when").textContent = TXT.eerstvolgende + " " + whenLabel(h);
   document.getElementById("next-artist").textContent = h.artist;
