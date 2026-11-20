@@ -289,6 +289,7 @@ export async function afwerking({ ROOT, SITE }) {
         [`${up}vrienden-van.html`, T("footer.link-vrienden", "Vrienden van Merodefestival")],
         [`${up}index.html#nieuwsbrief`, T("footer.link-nieuwsbrief", "Nieuwsbrief")],
         [`${up}privacy.html`, T("footer.link-privacy", "Privacyverklaring")],
+        [`${up}integriteit.html`, T("footer.link-integriteit", "Aanspreekpunt integriteit")],
       ];
       const samen = [
         [`${up}voor-muzikanten.html`, T("footer.link-muzikanten", "Voor muzikanten")],

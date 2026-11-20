@@ -1028,6 +1028,10 @@
   "en": "Programme as announced in September 2020. Because of the coronavirus measures, most concerts were postponed to 2021–2022.",
   "fr": "Programme tel qu’annoncé en septembre 2020. En raison des mesures sanitaires liées au coronavirus, la plupart des concerts ont été reportés à 2021–2022."
  },
+ "64ce3852ff14b0a5": {
+  "en": "Integrity contact person",
+  "fr": "Personne de confiance intégrité"
+ },
  "6544213347876545": {
   "en": "Two musicians with violin and harp beneath a tall lit altar",
   "fr": "Deux musiciens au violon et à la harpe sous un haut autel éclairé"
@@ -1615,6 +1619,10 @@
  "9889b9ada7b7150f": {
   "en": "Cultural centres and cities",
   "fr": "Centres culturels et villes"
+ },
+ "989006bc387fe73b": {
+  "en": "More about the contact person",
+  "fr": "En savoir plus"
  },
  "98f27eff9931e143": {
   "en": "Photo:",
@@ -2596,6 +2604,10 @@
   "en": "Extra date in {plaats} on {datum}",
   "fr": "Date supplémentaire à {plaats} le {datum}",
   "handmatig": true
+ },
+ "f711113e61db645b": {
+  "en": "Inappropriate behaviour, or in doubt? Talk in confidence to our integrity contact person, Jolan Huygens.",
+  "fr": "Comportement inapproprié, ou un doute ? Parlez en toute confidentialité à notre personne de confiance intégrité, Jolan Huygens."
  },
  "f7275483441f19a8": {
   "en": "Email address",
