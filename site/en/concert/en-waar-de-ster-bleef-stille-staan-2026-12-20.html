@@ -59,7 +59,20 @@
         <p class="csub">A Christmas tale after Felix Timmermans</p>
         <h1 id="titel">En waar de ster bleef stille staan</h1>
         <p class="waar">Strokapel, Ramsel</p>
-        <div class="acties" id="acties"><span class="soldout">Sold out</span></div>
+        <div class="acties" id="acties"><span class="soldout">Sold out</span><form class="wachtlijst" id="wachtlijst" data-k="2026-12-20|eldr" novalidate>
+          <p class="wl-kop">Join the waiting list</p>
+          <div class="wl-rij">
+            <label class="wl-veld"><span>Your email address</span><input id="wl-mail" type="email" required autocomplete="email"></label>
+            <label class="wl-veld wl-klein"><span>Seats</span><select id="wl-aantal"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+            <input class="wl-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn" type="submit">Join the list</button>
+          </div>
+          <p class="wl-uitleg">We only use your address to let you know if a seat becomes available or an extra performance is added.</p>
+          <p class="wl-melding" role="status" aria-live="polite"></p>
+          <p class="wl-ok" hidden>Thank you! You are on the waiting list. We will let you know if a seat becomes available.</p>
+          <p class="wl-foutmail" hidden>That email address does not look right.</p>
+          <p class="wl-fout" hidden>Something went wrong. Please try again later.</p>
+        </form></div>
       </div>
       <figure class="cbeeld foto">
         <img src="https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81a6aaacee216ad9c8e5.webp" srcset="https://beeld.merodefestival.be/merodefestival/thumb/agenda-40077c21f8db81a6aaacee216ad9c8e5.webp 600w, https://beeld.merodefestival.be/merodefestival/m/agenda-40077c21f8db81a6aaacee216ad9c8e5.webp 1000w, https://beeld.merodefestival.be/merodefestival/agenda-40077c21f8db81a6aaacee216ad9c8e5.webp 1600w" sizes="(max-width:820px) 92vw, 50vw" alt="En waar de ster bleef stille staan">
@@ -89,7 +102,7 @@
           
           
         </dl>
-        <div class="acties" id="acties-2"><span class="soldout">Sold out</span></div>
+        <div class="acties" id="acties-2"><span class="soldout">Sold out</span><a class="btn ghost" href="#wachtlijst">Waiting list ↑</a></div>
         <p class="ics"><a href="en-waar-de-ster-bleef-stille-staan-2026-12-20.ics" download>Save the date</a></p>
       </aside>
     </div>
@@ -144,6 +157,20 @@
       if (el) el.innerHTML = '<span class="soldout">This concert has ended</span>';
     });
   }
+  // Wachtlijst bij een volzet concert: mailadres + aantal naar de cijfersite (geen andere gegevens)
+  var wl = document.getElementById("wachtlijst");
+  if (wl) wl.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var mel = wl.querySelector(".wl-melding"), knop = wl.querySelector("button"), mail = wl.querySelector("#wl-mail").value.trim();
+    var tekst = function (c) { return wl.querySelector(c).textContent; };
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail)) { mel.textContent = tekst(".wl-foutmail"); return; }
+    knop.disabled = true; mel.textContent = "";
+    fetch("https://cijfers.merodefestival.be/api/wachtlijst", { method: "POST", headers: { "Content-Type": "text/plain" },
+      body: JSON.stringify({ k: wl.getAttribute("data-k"), m: mail, a: Number(wl.querySelector("#wl-aantal").value), website: wl.querySelector(".wl-hp").value }) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (d.ok) { wl.querySelector(".wl-rij").hidden = true; mel.textContent = tekst(".wl-ok"); } else { mel.textContent = tekst(d.fout === "mail" ? ".wl-foutmail" : ".wl-fout"); knop.disabled = false; } })
+      .catch(function () { mel.textContent = tekst(".wl-fout"); knop.disabled = false; });
+  });
   // Video's laden pas bij een klik (sneller, en geen YouTube-cookies vooraf).
   // Vanaf je eigen computer (file://) weigert YouTube in te sluiten: dan openen we YouTube zelf.
   document.querySelectorAll(".yt").forEach(function (b) {

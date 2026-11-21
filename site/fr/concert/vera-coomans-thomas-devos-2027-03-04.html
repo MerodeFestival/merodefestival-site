@@ -145,6 +145,20 @@
       if (el) el.innerHTML = '<span class="soldout">Ce concert est terminé</span>';
     });
   }
+  // Wachtlijst bij een volzet concert: mailadres + aantal naar de cijfersite (geen andere gegevens)
+  var wl = document.getElementById("wachtlijst");
+  if (wl) wl.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var mel = wl.querySelector(".wl-melding"), knop = wl.querySelector("button"), mail = wl.querySelector("#wl-mail").value.trim();
+    var tekst = function (c) { return wl.querySelector(c).textContent; };
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail)) { mel.textContent = tekst(".wl-foutmail"); return; }
+    knop.disabled = true; mel.textContent = "";
+    fetch("https://cijfers.merodefestival.be/api/wachtlijst", { method: "POST", headers: { "Content-Type": "text/plain" },
+      body: JSON.stringify({ k: wl.getAttribute("data-k"), m: mail, a: Number(wl.querySelector("#wl-aantal").value), website: wl.querySelector(".wl-hp").value }) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (d.ok) { wl.querySelector(".wl-rij").hidden = true; mel.textContent = tekst(".wl-ok"); } else { mel.textContent = tekst(d.fout === "mail" ? ".wl-foutmail" : ".wl-fout"); knop.disabled = false; } })
+      .catch(function () { mel.textContent = tekst(".wl-fout"); knop.disabled = false; });
+  });
   // Video's laden pas bij een klik (sneller, en geen YouTube-cookies vooraf).
   // Vanaf je eigen computer (file://) weigert YouTube in te sluiten: dan openen we YouTube zelf.
   document.querySelectorAll(".yt").forEach(function (b) {
