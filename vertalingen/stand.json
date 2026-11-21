@@ -5734,5 +5734,77 @@
  "41e77c21-f8db-81a2-8157-ff6caae7a9bf:tekst:fr": {
   "h": "989006bc387fe73b",
   "t": "En savoir plus"
+ },
+ "41f77c21-f8db-8123-9c65-fea594811371:tekst:en": {
+  "h": "827812c21c06ab78",
+  "t": "Join the waiting list"
+ },
+ "41f77c21-f8db-8123-9c65-fea594811371:tekst:fr": {
+  "h": "827812c21c06ab78",
+  "t": "Inscrivez-vous sur la liste d’attente"
+ },
+ "41f77c21-f8db-8146-8f2c-ea2627cdbe6a:tekst:en": {
+  "h": "bcda7d832344e72d",
+  "t": "Something went wrong. Please try again later."
+ },
+ "41f77c21-f8db-8146-8f2c-ea2627cdbe6a:tekst:fr": {
+  "h": "bcda7d832344e72d",
+  "t": "Une erreur s’est produite. Veuillez réessayer plus tard."
+ },
+ "41f77c21-f8db-8184-8ff8-e770ceb08ae0:tekst:en": {
+  "h": "79f9f8a472f0b524",
+  "t": "Your email address"
+ },
+ "41f77c21-f8db-8184-8ff8-e770ceb08ae0:tekst:fr": {
+  "h": "79f9f8a472f0b524",
+  "t": "Votre adresse e-mail"
+ },
+ "41f77c21-f8db-81cb-8412-c93122ff9dbc:tekst:en": {
+  "h": "7c2eb70399aea034",
+  "t": "Waiting list ↑"
+ },
+ "41f77c21-f8db-81cb-8412-c93122ff9dbc:tekst:fr": {
+  "h": "7c2eb70399aea034",
+  "t": "Liste d’attente ↑"
+ },
+ "41f77c21-f8db-81ce-80fa-e041572c823d:tekst:en": {
+  "h": "a36764fd4cf47e5a",
+  "t": "Join the list"
+ },
+ "41f77c21-f8db-81ce-80fa-e041572c823d:tekst:fr": {
+  "h": "a36764fd4cf47e5a",
+  "t": "M’inscrire"
+ },
+ "41f77c21-f8db-81d3-8a09-e691c6c991af:tekst:en": {
+  "h": "f527fdaa6b40e800",
+  "t": "Seats"
+ },
+ "41f77c21-f8db-81d3-8a09-e691c6c991af:tekst:fr": {
+  "h": "f527fdaa6b40e800",
+  "t": "Places"
+ },
+ "41f77c21-f8db-81d8-a833-eabf7b3db0d1:tekst:en": {
+  "h": "b0104774f6ae9069",
+  "t": "We only use your address to let you know if a seat becomes available or an extra performance is added."
+ },
+ "41f77c21-f8db-81d8-a833-eabf7b3db0d1:tekst:fr": {
+  "h": "b0104774f6ae9069",
+  "t": "Nous utilisons votre adresse uniquement pour vous prévenir si une place se libère ou si une représentation supplémentaire est ajoutée."
+ },
+ "41f77c21-f8db-81e1-974c-e597a1699236:tekst:en": {
+  "h": "13db0011a122a18c",
+  "t": "That email address does not look right."
+ },
+ "41f77c21-f8db-81e1-974c-e597a1699236:tekst:fr": {
+  "h": "13db0011a122a18c",
+  "t": "Cette adresse e-mail ne semble pas correcte."
+ },
+ "41f77c21-f8db-81ee-afbc-d86b3a996625:tekst:en": {
+  "h": "b2a5c325d92739df",
+  "t": "Thank you! You are on the waiting list. We will let you know if a seat becomes available."
+ },
+ "41f77c21-f8db-81ee-afbc-d86b3a996625:tekst:fr": {
+  "h": "b2a5c325d92739df",
+  "t": "Merci ! Vous êtes sur la liste d’attente. Nous vous préviendrons si une place se libère."
  }
 }
