@@ -170,6 +170,25 @@ function pagina(e, overige) {
   const ticket = e.volzet ? `<span class="soldout">${T("concert.volzet", "Volzet")}</span>`
     : e.tickets ? `<a class="btn" href="${esc(e.tickets)}">${esc(e.cta || T("concert.koop", "Koop tickets"))}${e.price ? ` (${esc(e.price)})` : ""}</a>`
     : meerInfo ? `<a class="btn ghost" href="${esc(meerInfo)}" target="_blank" rel="noopener">${T("concert.meer-info", "Meer info")} ↗</a>` : "";
+  // Volzet: wachtlijst (mailadres + aantal plaatsen), bewaard in de cijfersite. Bovenaan het formulier, onderaan een link ernaartoe.
+  const pierrotSlug = (String(e.tickets || "").match(/pierrot\.io\/[^/]+\/([^/?#]+)/) || [])[1];
+  const wachtK = `${e.start}|${pierrotSlug || e.slug}`;
+  const wachtlijst = e.volzet ? `<form class="wachtlijst" id="wachtlijst" data-k="${esc(wachtK)}" novalidate>
+          <p class="wl-kop">${T("concert.wachtlijst-kop", "Zet je op de wachtlijst")}</p>
+          <div class="wl-rij">
+            <label class="wl-veld"><span>${T("concert.wachtlijst-mail", "Je mailadres")}</span><input id="wl-mail" type="email" required autocomplete="email"></label>
+            <label class="wl-veld wl-klein"><span>${T("concert.wachtlijst-aantal", "Plaatsen")}</span><select id="wl-aantal">${[1, 2, 3, 4, 5, 6].map(n => `<option>${n}</option>`).join("")}</select></label>
+            <input class="wl-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn" type="submit">${T("concert.wachtlijst-knop", "Op de wachtlijst")}</button>
+          </div>
+          <p class="wl-uitleg">${T("concert.wachtlijst-uitleg", "We gebruiken je adres alleen om je te verwittigen als er een plaats vrijkomt of een extra voorstelling komt.")}</p>
+          <p class="wl-melding" role="status" aria-live="polite"></p>
+          <p class="wl-ok" hidden>${T("concert.wachtlijst-ok", "Dank je! Je staat op de wachtlijst. We laten het weten als er een plaats vrijkomt.")}</p>
+          <p class="wl-foutmail" hidden>${T("concert.wachtlijst-foutmail", "Dat mailadres lijkt niet te kloppen.")}</p>
+          <p class="wl-fout" hidden>${T("concert.wachtlijst-fout", "Er ging iets mis. Probeer het later opnieuw.")}</p>
+        </form>` : "";
+  const ticketBoven = e.volzet ? ticket + wachtlijst : ticket;
+  const ticketOnder = e.volzet ? ticket + `<a class="btn ghost" href="#wachtlijst">${T("concert.wachtlijst-link", "Op de wachtlijst ↑")}</a>` : ticket;
 
   // Foto’s en video’s midden in de tekst: een alinea [foto’s] of [video: adres] in de Notion-pagina bepaalt waar ze komen.
   // Zonder zo’n alinea staan de foto’s en video’s onder de tekst, zoals voorheen.
@@ -254,7 +273,7 @@ function pagina(e, overige) {
         ${e.sub ? `<p class="csub">${esc(e.sub)}</p>` : ""}
         <h1 id="titel">${esc(e.artist)}${e.origin ? ` <span class="herkomst">(${esc(e.origin)})</span>` : ""}</h1>
         <p class="waar">${esc([e.place, e.village].filter(Boolean).join(", "))}</p>
-        <div class="acties" id="acties">${ticket}</div>
+        <div class="acties" id="acties">${ticketBoven}</div>
       </div>
       <figure class="cbeeld${e.foto ? " foto" : ""}">
         <img src="${esc(beeldLokaal)}"${beeldSet(beeldLokaal, "(max-width:820px) 92vw, 50vw")} alt="${e.foto ? esc(e.fotoAlt || e.artist) : esc(S.artworkAlt || "")}">
@@ -286,7 +305,7 @@ function pagina(e, overige) {
           ${e.price ? `<div><dt>${T("concert.prijs", "Prijs")}</dt><dd>${esc(e.price)}</dd></div>` : ""}
           ${kerk ? (S.tickets || []).filter(([k]) => /combi/i.test(k)).map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("") : ""}
         </dl>
-        <div class="acties" id="acties-2">${ticket}</div>
+        <div class="acties" id="acties-2">${ticketOnder}</div>
         <p class="ics"><a href="${e.slug}.ics" download>${T("concert.ics", "Zet in je agenda")}</a></p>
       </aside>
     </div>
@@ -338,6 +357,20 @@ function pagina(e, overige) {
       if (el) el.innerHTML = '<span class="soldout">${esc(T("concert.voorbij", "Dit concert is voorbij")).replace(/\\/g, "\\\\").replace(/'/g, "\\'")}</span>';
     });
   }
+  // Wachtlijst bij een volzet concert: mailadres + aantal naar de cijfersite (geen andere gegevens)
+  var wl = document.getElementById("wachtlijst");
+  if (wl) wl.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var mel = wl.querySelector(".wl-melding"), knop = wl.querySelector("button"), mail = wl.querySelector("#wl-mail").value.trim();
+    var tekst = function (c) { return wl.querySelector(c).textContent; };
+    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/.test(mail)) { mel.textContent = tekst(".wl-foutmail"); return; }
+    knop.disabled = true; mel.textContent = "";
+    fetch("https://cijfers.merodefestival.be/api/wachtlijst", { method: "POST", headers: { "Content-Type": "text/plain" },
+      body: JSON.stringify({ k: wl.getAttribute("data-k"), m: mail, a: Number(wl.querySelector("#wl-aantal").value), website: wl.querySelector(".wl-hp").value }) })
+      .then(function (r) { return r.json(); })
+      .then(function (d) { if (d.ok) { wl.querySelector(".wl-rij").hidden = true; mel.textContent = tekst(".wl-ok"); } else { mel.textContent = tekst(d.fout === "mail" ? ".wl-foutmail" : ".wl-fout"); knop.disabled = false; } })
+      .catch(function () { mel.textContent = tekst(".wl-fout"); knop.disabled = false; });
+  });
   // Video's laden pas bij een klik (sneller, en geen YouTube-cookies vooraf).
   // Vanaf je eigen computer (file://) weigert YouTube in te sluiten: dan openen we YouTube zelf.
   document.querySelectorAll(".yt").forEach(function (b) {

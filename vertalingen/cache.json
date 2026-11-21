@@ -2743,5 +2743,50 @@
  "ff05f3976aa42eb4": {
   "en": "Sara Salvérius, Laura Cortese, Andries Boone, Naragonia, Griff Trio, Rénélius Ensemble, Myrddin, Wouter Vandenabeele, Airboxes, Bamako Express, WÖR, Kongero, Shalan Alhamwy and many others.",
   "fr": "Sara Salvérius, Laura Cortese, Andries Boone, Naragonia, Griff Trio, Rénélius Ensemble, Myrddin, Wouter Vandenabeele, Airboxes, Bamako Express, WÖR, Kongero, Shalan Alhamwy et bien d’autres."
+ },
+ "827812c21c06ab78": {
+  "en": "Join the waiting list",
+  "fr": "Inscrivez-vous sur la liste d’attente",
+  "handmatig": true
+ },
+ "79f9f8a472f0b524": {
+  "en": "Your email address",
+  "fr": "Votre adresse e-mail",
+  "handmatig": true
+ },
+ "f527fdaa6b40e800": {
+  "en": "Seats",
+  "fr": "Places",
+  "handmatig": true
+ },
+ "a36764fd4cf47e5a": {
+  "en": "Join the list",
+  "fr": "M’inscrire",
+  "handmatig": true
+ },
+ "b0104774f6ae9069": {
+  "en": "We only use your address to let you know if a seat becomes available or an extra performance is added.",
+  "fr": "Nous utilisons votre adresse uniquement pour vous prévenir si une place se libère ou si une représentation supplémentaire est ajoutée.",
+  "handmatig": true
+ },
+ "b2a5c325d92739df": {
+  "en": "Thank you! You are on the waiting list. We will let you know if a seat becomes available.",
+  "fr": "Merci ! Vous êtes sur la liste d’attente. Nous vous préviendrons si une place se libère.",
+  "handmatig": true
+ },
+ "13db0011a122a18c": {
+  "en": "That email address does not look right.",
+  "fr": "Cette adresse e-mail ne semble pas correcte.",
+  "handmatig": true
+ },
+ "bcda7d832344e72d": {
+  "en": "Something went wrong. Please try again later.",
+  "fr": "Une erreur s’est produite. Veuillez réessayer plus tard.",
+  "handmatig": true
+ },
+ "7c2eb70399aea034": {
+  "en": "Waiting list ↑",
+  "fr": "Liste d’attente ↑",
+  "handmatig": true
  }
 }
