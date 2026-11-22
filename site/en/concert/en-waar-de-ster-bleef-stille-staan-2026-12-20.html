@@ -67,7 +67,8 @@
             <input class="wl-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
             <button class="btn" type="submit">Join the list</button>
           </div>
-          <p class="wl-uitleg">We only use your address to let you know if a seat becomes available or an extra performance is added.</p>
+          <label class="wl-nb"><input id="wl-nb" type="checkbox"> <span>Yes, also send me the newsletter with new concerts</span></label>
+          <p class="wl-uitleg">Without the tick, we only use your address to let you know if a seat becomes available or an extra performance is added.</p>
           <p class="wl-melding" role="status" aria-live="polite"></p>
           <p class="wl-ok" hidden>Thank you! You are on the waiting list. We will let you know if a seat becomes available.</p>
           <p class="wl-foutmail" hidden>That email address does not look right.</p>
@@ -166,9 +167,9 @@
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail)) { mel.textContent = tekst(".wl-foutmail"); return; }
     knop.disabled = true; mel.textContent = "";
     fetch("https://cijfers.merodefestival.be/api/wachtlijst", { method: "POST", headers: { "Content-Type": "text/plain" },
-      body: JSON.stringify({ k: wl.getAttribute("data-k"), m: mail, a: Number(wl.querySelector("#wl-aantal").value), website: wl.querySelector(".wl-hp").value }) })
+      body: JSON.stringify({ k: wl.getAttribute("data-k"), m: mail, a: Number(wl.querySelector("#wl-aantal").value), nb: wl.querySelector("#wl-nb").checked, website: wl.querySelector(".wl-hp").value }) })
       .then(function (r) { return r.json(); })
-      .then(function (d) { if (d.ok) { wl.querySelector(".wl-rij").hidden = true; mel.textContent = tekst(".wl-ok"); } else { mel.textContent = tekst(d.fout === "mail" ? ".wl-foutmail" : ".wl-fout"); knop.disabled = false; } })
+      .then(function (d) { if (d.ok) { wl.querySelector(".wl-rij").hidden = true; wl.querySelector(".wl-nb").hidden = true; mel.textContent = tekst(".wl-ok"); } else { mel.textContent = tekst(d.fout === "mail" ? ".wl-foutmail" : ".wl-fout"); knop.disabled = false; } })
       .catch(function () { mel.textContent = tekst(".wl-fout"); knop.disabled = false; });
   });
   // Video's laden pas bij een klik (sneller, en geen YouTube-cookies vooraf).

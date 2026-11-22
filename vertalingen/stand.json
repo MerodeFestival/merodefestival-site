@@ -5806,5 +5806,13 @@
  "41f77c21-f8db-81ee-afbc-d86b3a996625:tekst:fr": {
   "h": "b2a5c325d92739df",
   "t": "Merci ! Vous êtes sur la liste d’attente. Nous vous préviendrons si une place se libère."
+ },
+ "42077c21-f8db-8189-9e7f-ee406f33e70f:tekst:en": {
+  "h": "a36764fd4cf47e5a",
+  "t": "Join the list"
+ },
+ "42077c21-f8db-8189-9e7f-ee406f33e70f:tekst:fr": {
+  "h": "a36764fd4cf47e5a",
+  "t": "M’inscrire"
  }
 }

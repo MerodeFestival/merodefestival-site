@@ -663,6 +663,11 @@
   "en": "Between County Kerry and Yorkshire",
   "fr": "Entre le comté de Kerry et le Yorkshire"
  },
+ "4034944cccf031e2": {
+  "en": "Yes, also send me the newsletter with new concerts",
+  "fr": "Oui, envoyez-moi aussi la newsletter avec les nouveaux concerts",
+  "handmatig": true
+ },
  "40399c949d54fb44": {
   "en": "Music: Toon Van Mierlo\nNarrator: Reineke Van Hooreweghe\nVocals: Sophie Janna",
   "fr": "Musique : Toon Van Mierlo\nVoix : Reineke Van Hooreweghe\nChant : Sophie Janna"
@@ -1762,6 +1767,11 @@
   "en": "Large audience in the courtyard of Park Abbey",
   "fr": "Un large public dans la cour de l’abbaye de Parc"
  },
+ "a0e84239360edc24": {
+  "en": "Without the tick, we only use your address to let you know if a seat becomes available or an extra performance is added.",
+  "fr": "Sans coche, nous utilisons votre adresse uniquement pour vous prévenir si une place se libère ou si une représentation supplémentaire est ajoutée.",
+  "handmatig": true
+ },
  "a194b32c227b2cde": {
   "en": "As a Friend, you support the work of WESP vzw, the organisation behind Merodefestival, the Holsbeek and Limburg Sessions and our church concerts. We ask for a gift of €40. You get nothing in return except our sincere thanks. But your gift does make a difference.",
   "fr": "En tant qu’ami, vous soutenez le travail de WESP asbl, l’organisation derrière Merodefestival, les Holsbeek et Limburg Sessies et nos concerts d’église. Nous demandons un don de 40 €. Vous ne recevez rien en échange, si ce n’est notre sincère gratitude. Mais votre don fait vraiment la différence.",
@@ -2013,6 +2023,11 @@
  "b6bfa436f76312cb": {
   "en": "concert listings",
   "fr": "agenda des concerts"
+ },
+ "b6e175841ce35a48": {
+  "en": "Also keep me informed through the newsletter",
+  "fr": "Tenez-moi aussi informé(e) via la newsletter",
+  "handmatig": true
  },
  "b7a94fb5fddebfd8": {
   "en": "Videos, albums, a podcast and films from Merodefestival: folk and world music as it sounded in abbeys, churches and the Merode landscape.",
@@ -2788,20 +2803,5 @@
  "ff05f3976aa42eb4": {
   "en": "Sara Salvérius, Laura Cortese, Andries Boone, Naragonia, Griff Trio, Rénélius Ensemble, Myrddin, Wouter Vandenabeele, Airboxes, Bamako Express, WÖR, Kongero, Shalan Alhamwy and many others.",
   "fr": "Sara Salvérius, Laura Cortese, Andries Boone, Naragonia, Griff Trio, Rénélius Ensemble, Myrddin, Wouter Vandenabeele, Airboxes, Bamako Express, WÖR, Kongero, Shalan Alhamwy et bien d’autres."
- },
- "b6e175841ce35a48": {
-  "en": "Also keep me informed through the newsletter",
-  "fr": "Tenez-moi aussi informé(e) via la newsletter",
-  "handmatig": true
- },
- "a0e84239360edc24": {
-  "en": "Without the tick, we only use your address to let you know if a seat becomes available or an extra performance is added.",
-  "fr": "Sans coche, nous utilisons votre adresse uniquement pour vous prévenir si une place se libère ou si une représentation supplémentaire est ajoutée.",
-  "handmatig": true
- },
- "4034944cccf031e2": {
-  "en": "Yes, also send me the newsletter with new concerts",
-  "fr": "Oui, envoyez-moi aussi la newsletter avec les nouveaux concerts",
-  "handmatig": true
  }
 }

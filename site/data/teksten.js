@@ -193,6 +193,7 @@ window.TEKSTEN = {
   "homepage.toon-minder": "Toon minder",
   "homepage.vanavond": "Vanavond",
   "homepage.volzet": "Volzet",
+  "homepage.wachtlijst": "Op de wachtlijst",
   "homepage.wesp-knop": "Ontdek wat WESP doet",
   "homepage.wesp-tekst": "Merodefestival is meer dan concerten. Als folkincubator creëren, begeleiden en verbinden we folk- en wereldmuziek in Vlaanderen, met het landschap als vertrekpunt.",
   "kijk.albums.intro": "Muziek die ontstond in onze kerken, kapellen en abdijen, om thuis te beluisteren.",
