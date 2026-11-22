@@ -121,6 +121,7 @@ const HOMEPAGE = [
   ["homepage.nieuws-al", "Je staat al op onze lijst.", "Melding als het e-mailadres al ingeschreven is", ['data-al="{}"']],
   ["homepage.nieuws-fout", "Dat lukte niet. Probeer het straks opnieuw of mail naar info@merodefestival.be.", "Melding als de inschrijving op de nieuwsbrief mislukt", ['data-fout="{}"']],
   ["homepage.volzet", "Volzet", "Label bij een uitverkocht concert in de agenda", []],
+  ["homepage.wachtlijst", "Op de wachtlijst", "Link naast Volzet in de agenda, naar de wachtlijst op de concertpagina", []],
   ["homepage.extra-datum", "Extra datum in {plaats} op {datum}", "Link naast Volzet naar een andere datum van hetzelfde concert ({plaats} en {datum} vult de site zelf in)", []],
   ["homepage.koop", "Koop tickets", "Knop bij het eerstvolgende concert", []],
   ["homepage.tickets-kort", "Tickets", "Knop bij een concert in de lijst", []],
@@ -165,7 +166,7 @@ export function pasHomepage(html) {
   const t = k => T(k, ...H[k]);
   const TXT = {
     foto: t("algemeen.foto"), pauzeer: t("homepage.pauzeer"), speel: t("homepage.speel"), extern: t("homepage.ook-extern"),
-    volzet: t("homepage.volzet"), extraDatum: t("homepage.extra-datum"), koop: t("homepage.koop"), ticketsKort: t("homepage.tickets-kort"),
+    volzet: t("homepage.volzet"), wachtlijst: t("homepage.wachtlijst"), extraDatum: t("homepage.extra-datum"), koop: t("homepage.koop"), ticketsKort: t("homepage.tickets-kort"),
     nu: t("homepage.nu"), vanavond: t("homepage.vanavond"), morgen: t("homepage.morgen"), deze: t("homepage.deze"),
     eerstvolgende: t("homepage.eerstvolgende"), ookMeer: t("homepage.ook-meer"), meerConcert: t("homepage.eerstvolgende-link"),
     kaartTekst: t("homepage.kaart-tekst"), kaartLink: t("homepage.kaart-link"),

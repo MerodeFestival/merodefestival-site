@@ -240,8 +240,14 @@ function extraDatum(e, groot){
   return `<a class="${groot ? "btn" : "extra-datum"}" href="${esc(L.href)}"${L.extern ? ' target="_blank" rel="noopener"' : ""}>${esc(tekst)}${groot ? "" : " →"}${L.extern ? EXT : ""}</a>`;
 }
 
+// Volzet en een eigen concertpagina? Dan ook een link naar de wachtlijst op die pagina
+function wachtlijstLink(e, groot){
+  const L = linkVan(e); if (!L.href || L.extern) return "";
+  return `<a class="${groot ? "btn ghost" : "extra-datum"}" href="${esc(L.href)}#wachtlijst">${esc(TXT.wachtlijst || "Op de wachtlijst")}${groot ? "" : " →"}</a>`;
+}
+
 const ticketHtml = (e, groot) => e.volzet
-  ? `<span class="soldout">${esc(TXT.volzet)}</span>` + extraDatum(e, groot)
+  ? `<span class="soldout">${esc(TXT.volzet)}</span>` + wachtlijstLink(e, groot) + extraDatum(e, groot)
   : e.tickets ? `<a class="btn" href="${esc(e.tickets)}">${esc(e.cta || (groot ? TXT.koop : TXT.ticketsKort))}${groot && e.price ? " (" + esc(e.price) + ")" : ""}</a>` : "";
 
 function whenLabel(e){
