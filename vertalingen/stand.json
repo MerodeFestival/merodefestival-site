@@ -5807,6 +5807,22 @@
   "h": "b2a5c325d92739df",
   "t": "Merci ! Vous êtes sur la liste d’attente. Nous vous préviendrons si une place se libère."
  },
+ "42077c21-f8db-8133-aa3f-d2b0e293ea6f:tekst:en": {
+  "h": "a0e84239360edc24",
+  "t": "Without the tick, we only use your address to let you know if a seat becomes available or an extra performance is added."
+ },
+ "42077c21-f8db-8133-aa3f-d2b0e293ea6f:tekst:fr": {
+  "h": "a0e84239360edc24",
+  "t": "Sans coche, nous utilisons votre adresse uniquement pour vous prévenir si une place se libère ou si une représentation supplémentaire est ajoutée."
+ },
+ "42077c21-f8db-8180-951d-dbc0debd42db:tekst:en": {
+  "h": "4034944cccf031e2",
+  "t": "Yes, also send me the newsletter with new concerts"
+ },
+ "42077c21-f8db-8180-951d-dbc0debd42db:tekst:fr": {
+  "h": "4034944cccf031e2",
+  "t": "Oui, envoyez-moi aussi la newsletter avec les nouveaux concerts"
+ },
  "42077c21-f8db-8189-9e7f-ee406f33e70f:tekst:en": {
   "h": "a36764fd4cf47e5a",
   "t": "Join the list"
