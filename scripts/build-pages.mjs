@@ -181,7 +181,7 @@ function pagina(e, overige) {
             <input class="wl-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
             <button class="btn" type="submit">${T("concert.wachtlijst-knop", "Op de wachtlijst")}</button>
           </div>
-          <label class="wl-nb"><input id="wl-nb" type="checkbox"> <span>${T("concert.wachtlijst-nieuwsbrief", "Ja, stuur me ook de nieuwsbrief met nieuwe concerten")}</span></label>
+          <label class="wl-nb"><input id="wl-nb" type="checkbox"> <span>${T("concert.wachtlijst-nieuwsbrief", "Ja, stuur me de nieuwsbrief, zodat ik er de volgende keer op tijd bij ben. Afmelden kan altijd.")}</span></label>
           <p class="wl-uitleg">${T("concert.wachtlijst-uitleg2", "Zonder vinkje gebruiken we je adres alleen om je te verwittigen als er een plaats vrijkomt of een extra voorstelling komt.")}</p>
           <p class="wl-melding" role="status" aria-live="polite"></p>
           <p class="wl-ok" hidden>${T("concert.wachtlijst-ok", "Dank je! Je staat op de wachtlijst. We laten het weten als er een plaats vrijkomt.")}</p>
