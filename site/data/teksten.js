@@ -70,7 +70,7 @@ window.TEKSTEN = {
   "concert.wachtlijst-kop": "Zet je op de wachtlijst",
   "concert.wachtlijst-link": "Op de wachtlijst ↑",
   "concert.wachtlijst-mail": "Je mailadres",
-  "concert.wachtlijst-nieuwsbrief": "Ja, stuur me ook de nieuwsbrief met nieuwe concerten",
+  "concert.wachtlijst-nieuwsbrief": "Ja, stuur me de nieuwsbrief, zodat ik er de volgende keer op tijd bij ben. Afmelden kan altijd.",
   "concert.wachtlijst-ok": "Dank je! Je staat op de wachtlijst. We laten het weten als er een plaats vrijkomt.",
   "concert.wachtlijst-uitleg": "We gebruiken je adres alleen om je te verwittigen als er een plaats vrijkomt of een extra voorstelling komt.",
   "concert.wachtlijst-uitleg2": "Zonder vinkje gebruiken we je adres alleen om je te verwittigen als er een plaats vrijkomt of een extra voorstelling komt.",
