@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<!-- Met de hand gemaakte pagina: documentatie bij het beleidsplan 2028–2032 (KIOSK-dossier 139871). Niet gegenereerd uit Notion. Online laten tot minstens 30 juni 2027. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beleidsplan 2028–2032: documentatie | Merodefestival</title>
+<meta name="description" content="Documentatie bij het beleidsplan 2028–2032 van WESP vzw: kaart van onze locaties, beeld en geluid van concerten en premières, en stemmen van muzikanten.">
+<link rel="canonical" href="https://www.merodefestival.be/beleid">
+<meta property="og:title" content="Beleidsplan 2028–2032: documentatie">
+<meta property="og:image" content="https://www.merodefestival.be/seizoen/artwork.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
+<link rel="preload" href="fonts/alegreya-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/alatsi-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="seizoen/seizoen.css">
+<link rel="stylesheet" href="css/publiek.css">
+<link rel="stylesheet" href="css/concert.css">
+<link rel="stylesheet" href="css/info.css">
+<link rel="stylesheet" href="css/afwerking.css">
+<link rel="stylesheet" href="js/leaflet/leaflet.css">
+<style>
+.bp-nav{display:flex;flex-wrap:wrap;gap:.4rem .6rem;margin:1.6rem 0 0;padding:0;list-style:none}
+.bp-nav a{display:inline-block;font-family:var(--label);font-size:.95rem;text-decoration:none;color:inherit;border:1px solid currentColor;border-radius:999px;padding:.25rem .8rem;opacity:.85}
+.bp-nav a:hover,.bp-nav a:focus-visible{opacity:1;background:var(--s-oranje);border-color:var(--s-oranje);color:var(--s-op-oranje)}
+.bp-sec{padding:3.5rem 0}
+.bp-sec.licht{background:var(--s-papier);color:var(--s-papier-inkt)}
+.bp-sec.donker{background:var(--s-nacht);color:var(--s-licht)}
+.bp-sec.donker2{background:var(--s-nacht-2);color:var(--s-licht)}
+.bp-sec h2{font-size:clamp(1.6rem,3.2vw,2.3rem);margin:0 0 .4rem}
+.bp-sec h3{font-size:1.35rem;margin:2.2rem 0 .7rem}
+.bp-nr{display:block;font-family:var(--label);font-size:.92rem;color:var(--s-oranje);margin-bottom:.3rem}
+.bp-sec.licht .bp-nr{color:var(--s-papier-zacht)}
+.bp-intro{max-width:46rem;font-size:1.12rem}
+.bp-uit{max-width:46rem;font-style:italic;font-size:1.2rem;border-left:3px solid var(--s-oranje);padding:.1rem 0 .1rem 1rem;margin:1rem 0 1.6rem}
+.bp-klein{font-size:.95rem;opacity:.85}
+/* kaart */
+.bp-kaartvak{display:grid;grid-template-columns:minmax(0,1fr) 17rem;gap:1.2rem;margin-top:1.5rem}
+#bp-kaart{height:clamp(420px,70vh,640px);border-radius:3px;background:#e9e2d6;z-index:0}
+.bp-legende{font-family:var(--label);font-size:.92rem}
+.bp-legende fieldset{border:0;margin:0 0 1rem;padding:0}
+.bp-legende legend{font-weight:600;margin-bottom:.4rem;padding:0}
+.bp-legende label{display:flex;align-items:center;gap:.5rem;margin:.25rem 0;cursor:pointer;line-height:1.25}
+.bp-legende input{accent-color:var(--s-oranje);width:1rem;height:1rem;flex:none}
+.bp-stip{flex:none;display:inline-block;width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.35)}
+.bp-stip.ruit{border-radius:2px;transform:rotate(45deg) scale(.85);background:#1C140F}
+.bp-stip.ring{background:#fff;border:3px solid #0E7C7B;box-shadow:none}
+.bp-stip.ring.aanvraag{border:2px dashed #6b6b6b;width:12px;height:12px}
+.leaflet-container{font-family:var(--serif);font-size:1rem}
+.leaflet-popup-content{margin:.8rem 1rem;line-height:1.35;color:#2B1D14}
+.leaflet-popup-content strong{font-size:1.05rem}
+.bp-pop-rol{display:block;font-family:var(--label);font-size:.85rem;margin-top:.35rem}
+.bp-ruit{width:14px;height:14px;background:#1C140F;border:2px solid #fff;transform:rotate(45deg);box-shadow:0 0 0 1px rgba(0,0,0,.4)}
+.bp-ring{width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid #0E7C7B;box-shadow:0 0 0 1px rgba(255,255,255,.9)}
+.bp-ring.aanvraag{border-style:dashed;border-color:#6b6b6b}
+.bp-lijst{margin-top:1.4rem}
+.bp-lijst summary{cursor:pointer;font-family:var(--label)}
+.bp-lijst table{margin-top:.8rem}
+/* tabellen */
+.bp-tabel{width:100%;border-collapse:collapse;font-size:1rem;margin:.6rem 0 1rem}
+.bp-tabel th,.bp-tabel td{text-align:left;vertical-align:top;padding:.55rem .7rem .55rem 0;border-bottom:1px solid var(--s-papier-lijn)}
+.bp-sec.donker .bp-tabel th,.bp-sec.donker .bp-tabel td,.bp-sec.donker2 .bp-tabel th,.bp-sec.donker2 .bp-tabel td{border-bottom-color:rgba(239,231,218,.18)}
+.bp-tabel th{font-family:var(--label);font-weight:400;font-size:.92rem}
+.bp-tabel-wrap{overflow-x:auto}
+.bp-label{display:inline-block;font-family:var(--label);font-size:.8rem;padding:.05rem .5rem;border-radius:999px;border:1px dashed currentColor;white-space:nowrap}
+/* video's */
+.bp-videos{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr));gap:1.4rem;margin-top:1.4rem}
+.bp-videos figure{margin:0}
+.bp-videos figcaption{font-size:1rem;margin-top:.45rem;line-height:1.35}
+.bp-videos figcaption strong{display:block;font-family:var(--label);font-weight:400;color:var(--s-oranje);font-size:.92rem}
+.bp-sec.licht .bp-videos figcaption strong{color:var(--s-papier-zacht)}
+/* citaten */
+.bp-citaten{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,21rem),1fr));gap:1.2rem;margin-top:1.4rem}
+.bp-citaten blockquote{margin:0;padding:1.2rem 1.3rem;background:rgba(239,231,218,.06);border-left:3px solid var(--s-oranje);border-radius:2px}
+.bp-citaten p{margin:0 0 .7rem;font-style:italic;font-size:1.08rem}
+.bp-citaten footer{font-family:var(--label);font-size:.92rem;color:var(--s-zand);background:none;padding:0;margin:0}
+.bp-sec.licht .bp-citaten blockquote{background:rgba(43,29,20,.05)}
+.bp-sec.licht .bp-citaten footer{color:var(--s-papier-zacht)}
+.bp-bevinding li{margin:.7rem 0}
+/* cijfers */
+.bp-cijfers{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,13rem),1fr));gap:1rem;margin:1.4rem 0}
+.bp-cijfer{padding:1rem 1.1rem;border:1px solid var(--s-papier-lijn);border-radius:3px}
+.bp-cijfer b{display:block;font-family:var(--label);font-weight:400;font-size:2rem;line-height:1.1}
+.bp-cijfer span{font-size:1rem}
+/* lijsten */
+.bp-links{list-style:none;padding:0;margin:1rem 0;max-width:46rem}
+.bp-links li{margin:.55rem 0;font-size:1.08rem}
+.bp-partners{columns:2 16rem;column-gap:2rem;padding-left:1.1rem;max-width:46rem}
+.bp-partners li{margin:.25rem 0;break-inside:avoid}
+.bp-kop{margin-left:auto;text-align:right;color:var(--s-zand)}
+footer .steun-logo.bp-geel{height:160px;width:auto;max-width:100%;object-fit:contain;filter:none;opacity:1}
+@media (max-width:860px){.bp-kaartvak{grid-template-columns:1fr}#bp-kaart{height:60vh;min-height:380px}.bp-legende{columns:2 12rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.leaflet-fade-anim .leaflet-popup,.leaflet-zoom-anim .leaflet-zoom-animated{transition:none!important}}
+</style>
+<link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/beleid">
+<link rel="alternate" hreflang="x-default" href="https://www.merodefestival.be/beleid">
+</head>
+<body id="top">
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Naar boven"><img src="seizoen/logo-oranje.png" alt="Merodefestival, WESP vzw" width="82" height="56"></a>
+    <span class="label bp-kop">Beleidsplan 2028–2032 · documentatie</span>
+  </div>
+</header>
+<main>
+<section class="i-hero"><div class="wrap">
+<p class="label">WESP vzw · Kunstendecreet, werkingssubsidie 2028–2032</p>
+<h1>Beleidsplan 2028–2032: documentatie</h1>
+<p class="i-lead">WESP vzw, het huis achter het Merodefestival, vraagt een werkingssubsidie aan voor 2028–2032 binnen het Kunstendecreet, voor de functie presentatie. Op deze pagina bundelen we wat ons plan zichtbaar en hoorbaar maakt: waar we spelen, wat er bij ons ontstaat, wie het maakt en voor wie.</p>
+<ul class="bp-nav" aria-label="Op deze pagina">
+<li><a href="#kaart">Waar we spelen</a></li>
+<li><a href="#methode">De Merode-methode</a></li>
+<li><a href="#nieuw-werk">Nieuw werk</a></li>
+<li><a href="#muzikanten">Muzikanten</a></li>
+<li><a href="#publiek">Publiek</a></li>
+<li><a href="#vertellen">Vertellen</a></li>
+<li><a href="#fair">Fair practices</a></li>
+<li><a href="#partners">Partners</a></li>
+</ul>
+</div></section>
+
+<section class="bp-sec licht" id="kaart"><div class="wrap">
+<span class="bp-nr">1</span>
+<h2>Waar we spelen</h2>
+<p class="bp-intro">Onze concertlocaties, makersplekken en luisterplekken in Vlaams-Brabant, Antwerpen en Limburg, met Landschapspark de Merode als basis. Elke reeks heeft een eigen kleur. Klik op een markering voor de naam, de reeks en het startjaar.</p>
+<div class="bp-kaartvak">
+<div id="bp-kaart" role="region" aria-label="Kaart met de locaties van WESP vzw. De volledige lijst staat onder de kaart."></div>
+<form class="bp-legende" id="bp-legende" aria-label="Toon op de kaart"></form>
+</div>
+<p class="bp-klein">Vanaf 2028 komt er met LOV2030 (Leuven &amp; Beyond) een nieuwe concertlocatie bij in de ruime regio rond Leuven, met 2030 als ankerjaar. Die locatie is nog niet gekozen en staat daarom niet op de kaart.</p>
+<details class="bp-lijst"><summary>Alle locaties als lijst</summary><div class="bp-tabel-wrap"><table class="bp-tabel" id="bp-tabel"><thead><tr><th scope="col">Locatie</th><th scope="col">Wat</th><th scope="col">Sinds</th></tr></thead><tbody></tbody></table></div></details>
+</div></section>
+
+<section class="bp-sec donker" id="methode"><div class="wrap">
+<span class="bp-nr">2</span>
+<h2>De Merode-methode in beeld</h2>
+<p class="bp-uit">De keuze van de locatie is telkens een artistieke keuze: muziek, landschap, erfgoed en gemeenschap horen samen. Die aanpak noemen we de Merode-methode.</p>
+<p class="bp-intro">Per reeks een korte video, opgenomen door onze eigen technici en videograaf Bert Huysentruyt. Een video start pas als je erop klikt.</p>
+<div class="bp-videos">
+<figure><div class="video"><button class="yt" type="button" data-id="ppZgBCbEFJc" aria-label="Speel video af: Merodefestival 2026" style="background-image:url(https://i.ytimg.com/vi/ppZgBCbEFJc/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Merodefestival</strong>Citadel van Diest, 2026</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="w2cjGf6xxqo" aria-label="Speel video af: Muzikale wandelingen tijdens het Merodefestival" style="background-image:url(https://i.ytimg.com/vi/w2cjGf6xxqo/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Merodefestival</strong>Muzikale wandelingen door Landschapspark de Merode</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="2bTz7QzuGV4" aria-label="Speel video af: Park Festival 2024" style="background-image:url(https://i.ytimg.com/vi/2bTz7QzuGV4/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Park Festival</strong>Abdij van Park, Leuven, 2024</figcaption></figure>
+<figure><div class="video"><img src="https://beeld.merodefestival.be/wesp/187635-335477.webp" alt="Groot orkest speelt 's avonds in de verlichte witte muziekkiosk op het Hogeschoolplein in Leuven, met publiek op de voorgrond" width="1200" height="675" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div><figcaption><strong>Beleuvenissen</strong>Muziekkiosk op het Hogeschoolplein, Leuven. Foto: Karel Uyttendaele</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="4SdUXvn9OcE" aria-label="Speel video af: Anmoor in de Sint-Luciakerk van Engsbergen" style="background-image:url(https://i.ytimg.com/vi/4SdUXvn9OcE/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Kerkconcerten</strong>Anmoor, Sint-Luciakerk Engsbergen, 2025</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="YaFQ066EP5Y" aria-label="Speel video af: Hussein Rassim, Binti Shalabiya" style="background-image:url(https://i.ytimg.com/vi/YaFQ066EP5Y/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Klanken in de kapel</strong>Hussein Rassim, Binti Shalabiya</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="OBTDxec_tQg" aria-label="Speel video af: Wannes Raps, door Reineke Van Hooreweghe en het orkest van Toon Van Mierlo" style="background-image:url(https://i.ytimg.com/vi/OBTDxec_tQg/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Holsbeek Sessies</strong>Wannes Raps, door Reineke Van Hooreweghe en het orkest van Toon Van Mierlo</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="jxhoaAOEEN4" aria-label="Speel video af: Limburg Sessies 2025–2026" style="background-image:url(https://i.ytimg.com/vi/jxhoaAOEEN4/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Limburg Sessies</strong>Seizoen 2025–2026</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="jSRciSIWTPo" aria-label="Speel video af: Silhouette, Shalan Alhamwy, Jonas Malfliet, Sophie Vanden Eynde en Léa Besançon in de Abdij van Averbode" style="background-image:url(https://i.ytimg.com/vi/jSRciSIWTPo/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Abdij van Averbode</strong>Silhouette: Shalan Alhamwy, Jonas Malfliet, Sophie Vanden Eynde en Léa Besançon</figcaption></figure>
+<figure><div class="video"><img src="https://beeld.merodefestival.be/merodefestival/dodenhuisje-langdorp.webp" alt="Binnenin het Dodenhuisje van Langdorp: houten latwerk, een scherm met de film van Huis der Weemoed en een luidspreker" width="1600" height="1312" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div><figcaption><strong>Huis der Weemoed</strong>Het Dodenhuisje in Langdorp, de eerste luisterplek (juni 2026)</figcaption></figure>
+</div>
+</div></section>
+
+<section class="bp-sec donker2" id="nieuw-werk"><div class="wrap">
+<span class="bp-nr">3</span>
+<h2>Nieuw werk voor onze podia</h2>
+<p class="bp-uit">De muzikant maakt het werk en blijft er auteur en producent van; wij brengen ruimte, techniek, opname en speelkansen in.</p>
+<h3>Premières tot nu toe</h3>
+<p class="bp-intro">Na een abdijresidentie gingen Airboxes, Myrddin &amp; Stijn Kuppens en het Rénélius Ensemble op Park Festival in première. Bij het Merodefestival begonnen Rhagium Inquisitor van Andries Boone, WÖR &amp; Kongero, Spilar &amp; Kardemimmit, Siger &amp; Northern Resonance, Mandolinman en Hoort mi aen met Shalan Alhamwy. In juni 2026 opende de eerste luisterplek, in het Dodenhuisje van Langdorp.</p>
+<div class="bp-videos">
+<figure><div class="video"><button class="yt" type="button" data-id="4-dyAtbNobY" aria-label="Speel video af: Airboxes in de Abdij van Park" style="background-image:url(https://i.ytimg.com/vi/4-dyAtbNobY/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Park Festival</strong>Airboxes in de Abdij van Park</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="il73pPsPlzA" aria-label="Speel video af: Myrddin &amp; Stijn Kuppens in de Abdij van Park" style="background-image:url(https://i.ytimg.com/vi/il73pPsPlzA/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Park Festival</strong>Myrddin &amp; Stijn Kuppens in de Abdij van Park</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="C5LGKSbTt8A" aria-label="Speel video af: Rénélius Ensemble in de Abdij van Park" style="background-image:url(https://i.ytimg.com/vi/C5LGKSbTt8A/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Park Festival</strong>Rénélius Ensemble in de Abdij van Park</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="2GTFShR22vE" aria-label="Speel video af: Rhagium Inquisitor van Andries Boone" style="background-image:url(https://i.ytimg.com/vi/2GTFShR22vE/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Merodefestival</strong>Rhagium Inquisitor, Andries Boone</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="35vzmNN2dh8" aria-label="Speel video af: WÖR &amp; Kongero, Om jag hade vingar" style="background-image:url(https://i.ytimg.com/vi/35vzmNN2dh8/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Merodefestival</strong>WÖR &amp; Kongero, ‘Om jag hade vingar’</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="Ri2i__bOk_g" aria-label="Speel video af: Spilar feat. Kardemimmit op het Merodefestival 2022" style="background-image:url(https://i.ytimg.com/vi/Ri2i__bOk_g/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Merodefestival</strong>Spilar &amp; Kardemimmit</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="OE1Ky0ks-Tw" aria-label="Speel video af: Siger &amp; Northern Resonance, Trail Up North, live op het Merodefestival" style="background-image:url(https://i.ytimg.com/vi/OE1Ky0ks-Tw/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Merodefestival</strong>Siger &amp; Northern Resonance, ‘Trail Up North’</figcaption></figure>
+<figure><div class="video"><button class="yt" type="button" data-id="pDGyveYj9S4" aria-label="Speel video af: Mandolinman feat. Sofia Sandén &amp; Ulrika Bodén op het Merodefestival 2019" style="background-image:url(https://i.ytimg.com/vi/pDGyveYj9S4/hqdefault.jpg)"><span class="play" aria-hidden="true"></span></button></div><figcaption><strong>Merodefestival</strong>Mandolinman feat. Sofia Sandén &amp; Ulrika Bodén, 2019</figcaption></figure>
+</div>
+
+<h3>De acht residenties van 2028</h3>
+<div class="bp-tabel-wrap"><table class="bp-tabel">
+<thead><tr><th scope="col">Residentie</th><th scope="col">Wie en wat</th><th scope="col">Première</th></tr></thead>
+<tbody>
+<tr><td>Linushoeve Herselt, 19–24 mei</td><td><strong>WÖR feat. Maria San Miguel</strong>: Vlaanderen × Spanje, nieuw repertoire</td><td>wo 24 mei, Merodefestival</td></tr>
+<tr><td>Vijver Wolfsdonk, 3–9 april</td><td><strong>Levende Klankenatlas</strong>: werk voor een luisterplek, o.l.v. Toon Van Mierlo <span class="bp-label">in aanvraag</span></td><td>opening luisterplek zo 28 mei</td></tr>
+<tr><td>Abdij van Park, januari</td><td><strong>Duo Raas</strong>: Balkan</td><td>Park Festival zo 2 juli</td></tr>
+<tr><td>Abdij van Park, februari</td><td><strong>Anouk Sanczuk &amp; Pieter Thys</strong>: nyckelharpa &amp; gitaar</td><td>Park Festival zo 2 juli</td></tr>
+<tr><td>Abdij van Park, februari–maart</td><td><strong>Adriaan Lauwers &amp; Margaux Liénard (FR)</strong>: oude muziek × folk</td><td>Park Festival zo 2 juli</td></tr>
+<tr><td>Abdij van Park, maart</td><td><strong>Naomi Vercauteren trio</strong></td><td>Park Festival zo 2 juli</td></tr>
+<tr><td>Antwerpen, februari</td><td><strong>De Antwerpse Stadsgitaar</strong>: Jeroen Knapen als Klankmeester</td><td>maart 2028, Antwerpen</td></tr>
+<tr><td>Abdij van Averbode, 6–12 november</td><td><strong>Vrouwenstemmen in de abdij</strong>: Ríoghnach Connolly (IRL), Ana Vaga, Lydie Thonnard</td><td>za 2 december</td></tr>
+</tbody></table></div>
+</div></section>
+
+<section class="bp-sec donker" id="muzikanten"><div class="wrap">
+<span class="bp-nr">4</span>
+<h2>Muzikanten aan het woord</h2>
+<p class="bp-intro">In juni en juli 2026 bevroegen we 34 muzikanten met wie we samenwerkten, van vaste partners tot internationale gasten. Kort samengevat:</p>
+<ul class="bp-links bp-bevinding">
+<li><strong>Warm en professioneel.</strong> Duidelijke afspraken vooraf, correcte gages, gastvrijheid en een technische ploeg die de akoestiek van elke plek kent.</li>
+<li><strong>De plek is geen decor.</strong> Kerk, abdij of landschap verandert hoe de muzikant speelt en hoe het publiek luistert.</li>
+<li><strong>Residenties geven rust en tijd.</strong> Vrijheid binnen een inspirerend kader; het werk blijft van de maker, met meteen een podium en een geoefend publiek.</li>
+<li><strong>Een trouw en nieuwsgierig publiek</strong> dat vertrouwt op de programmatie en openstaat voor nieuw werk.</li>
+<li><strong>Wat ze vragen:</strong> meer speelkansen voor een creatie na de première (5 muzikanten), een jonger en breder publiek (8), verdiepen eerder dan uitbreiden, en de aanpak doorgeven aan andere regio's (4).</li>
+</ul>
+<div class="bp-citaten">
+<blockquote><p>“Het is niet alleen podium, stoelen, gordijnen… het is glasramen, geschiedenis, geluid van de vogels.”</p><footer>Laura Cortese</footer></blockquote>
+<blockquote><p>“Dit alles gebeurt met een heel dichte nabijheid en bijna familiale vibe. Zowel op de as organisator-muzikanten, als de as organisator-publiek. … Misschien is ‘betrokkenheid’ een woord dat ook op al die assen van toepassing is.”</p><footer>Maarten Decombel</footer></blockquote>
+<blockquote><p>“Merodefestival speelt een belangrijke rol door ruimte te geven aan folk die vandaag soms minder commercieel of minder zichtbaar is. Het biedt deze muziek een mooi podium en toont dat er een publiek voor bestaat.”</p><footer>Wouter Vandenabeele</footer></blockquote>
+<blockquote><p>“Er is ruimte voor toegankelijke en vertrouwde folkprogrammering, maar ook voor projecten die grenzen verkennen of verschillende genres met elkaar verbinden. Die open en tegelijk zorgvuldige programmatie geeft de werking een eigen identiteit.”</p><footer>Stefan Bracaval</footer></blockquote>
+<blockquote><p>“Hierdoor krijg je als muzikant de unieke mogelijkheid waarbij creatieruimte en een aantal speelmogelijkheden elkaar van bij het begin aanreiken.”</p><footer>Bert Ruymbeek</footer></blockquote>
+<blockquote><p>“…wat blijft het belangrijkste in muziek? Stilte en tijd… VEEL tijd.”</p><footer>Myrddin De Cauter</footer></blockquote>
+<blockquote><p>“…nieuw werk te componeren of nieuwe samenwerkingen op te starten, en dat bijna onmiddellijk te toetsen aan een live, geoefend publiek, een unieke kans die niet vanzelfsprekend is.”</p><footer>Ward Dhoore</footer></blockquote>
+<blockquote><p>“Het publiek is hondstrouw, gelooft in de smaak van de organisatie en is al overtuigd van je talent nog voor je een noot hebt gespeeld. Maar dan moet je het nog waarmaken natuurlijk… en het zijn tamelijk strenge toonrechters, die Merode-aanhangers.”</p><footer>Hans Mortelmans</footer></blockquote>
+</div>
+</div></section>
+
+<section class="bp-sec licht" id="publiek"><div class="wrap">
+<span class="bp-nr">5</span>
+<h2>Publiek</h2>
+<div class="bp-cijfers">
+<div class="bp-cijfer"><b>215</b><span>muzikanten, goed voor 269 optredens (2022–2026)</span></div>
+<div class="bp-cijfer"><b>ca. 13.000</b><span>bezoekers in 2026, bij ca. 35 concerten en twee festivals</span></div>
+<div class="bp-cijfer"><b>ca. 16.000</b><span>bezoekers per jaar vanaf 2028, bij minstens 40 concerten en twee festivals</span></div>
+<div class="bp-cijfer"><b>40 %</b><span>nieuw publiek, elk jaar minstens; twee derde via gratis formats</span></div>
+<div class="bp-cijfer"><b>&gt; 80 %</b><span>gemiddelde bezetting van de betalende concerten</span></div>
+</div>
+<h3>Bereik 2028 per format</h3>
+<div class="bp-tabel-wrap"><table class="bp-tabel">
+<thead><tr><th scope="col">Format</th><th scope="col">Bereik</th></tr></thead>
+<tbody>
+<tr><td>Merodefestival</td><td>ca. 1.400, betalend</td></tr>
+<tr><td>Park Festival</td><td>ca. 3.000, gratis</td></tr>
+<tr><td>Beleuvenissen</td><td>ca. 1.500 per avond, gratis</td></tr>
+<tr><td>Seizoensreeksen (Kerkconcerten, Holsbeek Sessies, Limburg Sessies, Lier)</td><td>gemiddeld 100 per concert</td></tr>
+<tr><td>Abdij- en museumconcerten</td><td>gemiddeld 150</td></tr>
+<tr><td>Klanken in de kapel</td><td>gemiddeld 70</td></tr>
+<tr><td>Muzikale wandelingen</td><td>maximaal 35 per keer</td></tr>
+</tbody></table></div>
+<h3>Wat de cijfers 2023–2026 tonen</h3>
+<p class="bp-intro">Uit onze ticketgegevens per reeks en het jaarlijkse publieksonderzoek van het Merodefestival.</p>
+<div class="bp-tabel-wrap"><table class="bp-tabel">
+<thead><tr><th scope="col">Reeks</th><th scope="col">Publiek</th></tr></thead>
+<tbody>
+<tr><td>Merodefestival</td><td>Van 853 deelnames (2023) naar 1.411 (2025); 1.272 in het natte en koude 2026. Ongeveer twee derde komt van buiten de Merode, ook uit Nederland.</td></tr>
+<tr><td>Kerkconcerten</td><td>Rond 1.000 tickets per seizoen over tien à elf concerten, gemiddeld 100 per concert.</td></tr>
+<tr><td>Holsbeek Sessies</td><td>760 tot 985 tickets per seizoen; meer dan de helft komt uit de gemeente Holsbeek zelf.</td></tr>
+<tr><td>Limburg Sessies</td><td>Eerste seizoen 2025–2026: 480 tickets over vijf concerten, gemiddeld 96 per concert; 82 % uit Limburg, een grotendeels nieuw publiek.</td></tr>
+<tr><td>Beleuvenissen</td><td>Gegroeid van drie naar vijf gratis avonden op het Hogeschoolplein, voor een stedelijk publiek.</td></tr>
+</tbody></table></div>
+<h3>Hoe het festivalpubliek ons beoordeelt</h3>
+<p class="bp-intro">Alle onderdelen scoren elk jaar tussen 8 en 9,5 op 10. Artistieke kwaliteit haalt 8,8 tot 9,1, de wandellocaties 9,1 tot 9,2. Op de vraag of het festival goesting gaf om de Merode te ontdekken, antwoordt het publiek gemiddeld met 9 op 10.</p>
+<div class="bp-citaten bp-publiek">
+<blockquote><p>“Dit is een festival op mensenmaat en ik mag hopen dat het zo zal blijven. Deze schaal past het best bij de pure en authentieke muziek.”</p><footer>Bezoeker, 2024</footer></blockquote>
+<blockquote><p>“Eindelijk eens een concert waar je oren niet daveren en waar het vogelgezang extra sfeer brengt.”</p><footer>Bezoeker, 2025</footer></blockquote>
+<blockquote><p>“Hulde voor jullie durf in de programmatie!”</p><footer>Bezoeker, 2026</footer></blockquote>
+</div>
+</div></section>
+
+<section class="bp-sec donker2" id="vertellen"><div class="wrap">
+<span class="bp-nr">6</span>
+<h2>Vertellen</h2>
+<p class="bp-intro">Wat op onze podia klinkt, leggen we vast en brengen we verder, ook voor wie nooit een concert bijwoonde.</p>
+<ul class="bp-links">
+<li><a href="the-sound-of-the-abbey.html"><em>The Sound of the Abbey</em></a>: opnames uit de residenties in de Abdij van Park (<a href="https://open.spotify.com/album/56VHc6R5ZEgncAgRFlj41s" target="_blank" rel="noopener">op Spotify</a>)</li>
+<li><a href="ode-aan-de-merode.html"><em>Ode aan de Merode</em></a>: boek en cd</li>
+<li><a href="https://open.spotify.com/show/6J6idgbWpyW4UWitT4aWie" target="_blank" rel="noopener">De wandelpodcast</a> op Spotify</li>
+<li><a href="https://www.vrt.be/vrtmax/luister/radio/k/klara-in-concert~31-229/" target="_blank" rel="noopener">Klara in concert</a>: concertuitzendingen via Klara en het EBU-netwerk</li>
+<li><a href="huis-der-weemoed-project.html">Huis der Weemoed</a>: zeven luisterplekken in Landschapspark de Merode, met <a href="huis-der-weemoed.html">het Dodenhuisje in Langdorp</a> als eerste</li>
+<li><a href="kijk-en-luister.html">Kijk en luister</a>: alle video's, albums en podcasts op één pagina</li>
+</ul>
+</div></section>
+
+<section class="bp-sec licht" id="fair"><div class="wrap">
+<span class="bp-nr">7</span>
+<h2>Fair practices en integriteit</h2>
+<ul class="bp-links">
+<li>Elke muzikant krijgt minstens <strong>€ 350 per optreden</strong>, volgens de cao en Juist is Juist.</li>
+<li><strong>Vertrouwenspersoon</strong> voor medewerkers, tijdelijke krachten en vrijwilligers: Isabel Devriendt (bestuurslid).</li>
+<li><strong>Aanspreekpunt integriteit</strong> voor muzikanten, publiek en partners: Jolan Huygens, extern aan de organisatie. <a href="integriteit.html">Meer over het aanspreekpunt integriteit</a>.</li>
+<li>Personeel volgens PC 329.01. In 2026 werkt de organisatie met 1 vte; vanaf 2028 met 1,5 vte, met een halftijdse ondersteunend medewerker.</li>
+</ul>
+</div></section>
+
+<section class="bp-sec donker" id="partners"><div class="wrap">
+<span class="bp-nr">8</span>
+<h2>Partners</h2>
+<p class="bp-intro">Partners met een getekende intentieverklaring of overeenkomst bij dit dossier.</p>
+<ul class="bp-partners">
+<li>Brosella</li>
+<li>Cluster</li>
+<li>De Centrale</li>
+<li>Klara</li>
+<li>Landschapspark de Merode</li>
+<li>LOV2030 (Leuven &amp; Beyond)</li>
+<li>Muziekcentrum Dranouter</li>
+<li>Muziekclub 't Ey</li>
+<li>Prolier / Stad Lier</li>
+<li>Stad Leuven</li>
+</ul>
+</div></section>
+
+</main>
+<footer>
+  <div class="wrap cols">
+    <div><h3>Contact</h3><p>WESP vzw, BE 0863 441 738<br>Jozef Wautersstraat 4, 3010 Kessel-Lo</p><p><a href="mailto:info@merodefestival.be">info@merodefestival.be</a> · <a href="tel:+32498758296">0498 75 82 96</a></p></div>
+    <div><h3>Met steun van</h3><a class="steun-link" href="https://www.vlaanderen.be" target="_blank" rel="noopener"><img class="steun-logo bp-geel" src="img/vlaanderen-verbeelding-werkt-geel.webp" alt="Vlaanderen verbeelding werkt" width="411" height="160" loading="lazy"></a></div>
+  </div>
+<div class="wrap foot-onder"><p class="foot-links"><a href="integriteit.html">Aanspreekpunt integriteit</a><a href="privacy.html">Privacyverklaring</a></p></div>
+</footer>
+<script src="js/leaflet/leaflet.js"></script>
+<script>
+(function () {
+  // Reeksen en soorten plekken, elk met een eigen kleur of vorm
+  var SOORT = {
+    merode:  { naam: "Merodefestival", kleur: "#F47815" },
+    kerk:    { naam: "Kerkconcerten", kleur: "#9C2F1F" },
+    kapel:   { naam: "Klanken in de kapel", kleur: "#B5649A" },
+    beleu:   { naam: "Beleuvenissen", kleur: "#C99A00" },
+    holsbeek:{ naam: "Holsbeek Sessies", kleur: "#2E7D4F" },
+    park:    { naam: "Park Festival en Park Sessies", kleur: "#2F5FA8" },
+    limburg: { naam: "Limburg Sessies", kleur: "#7A8F1C" },
+    averbode:{ naam: "Abdij van Averbode", kleur: "#5B3F8C" },
+    lier:    { naam: "Lier (vanaf 2028)", kleur: "#D81B60" },
+    makers:  { naam: "Makersplek (residenties)", vorm: "ruit" },
+    luister: { naam: "Luisterplek Huis der Weemoed", vorm: "ring" },
+    aanvraag:{ naam: "Luisterplek in aanvraag", vorm: "ring aanvraag" }
+  };
+  // [naam, breedte, lengte, [[soort, omschrijving, sinds], ...]]
+  var PLEKKEN = [
+    ["Citadel van Diest", 50.98302, 5.04464, [["merode", "Merodefestival, avondconcerten", "2015"]]],
+    ["Landschapspark de Merode", 51.0185, 4.9655, [["merode", "Merodefestival, muzikale wandelingen", "2015"]]],
+    ["Sint-Pieterskerk, Langdorp", 50.99324, 4.87051, [["kerk", "Kerkconcerten", "2017"]]],
+    ["Het Dodenhuisje, Langdorp", 50.99290, 4.87110, [["luister", "Huis der Weemoed: rouw en hoop", "juni 2026"]]],
+    ["Kerk van Wolfsdonk", 51.02952, 4.91735, [["kerk", "Kerkconcerten", "2017"]]],
+    ["Onze-Lieve-Vrouw Onbevlekt Ontvangenkerk, Blauberg", 51.04415, 4.92921, [["kerk", "Kerkconcerten", "2017"]]],
+    ["Sint-Luciakerk, Engsbergen", 51.02952, 5.04423, [["kerk", "Kerkconcerten", "2017"]]],
+    ["Kerk van Zammel", 51.09888, 4.94895, [["kerk", "Kerkconcerten", "2017"]]],
+    ["Sint-Pieterskerk, Testelt", 51.0086, 4.95199, [["kerk", "Kerkconcerten", "2017"]]],
+    ["Kapel Onze-Lieve-Vrouw-ten-Eik, Tongerlo", 51.10886, 4.92098, [["kapel", "Klanken in de kapel", "2025"]]],
+    ["Sint-Bavokapel, Eindhout (Laakdal)", 51.08873, 4.97766, [["kapel", "Klanken in de kapel", "2025"], ["luister", "Huis der Weemoed: ziekte en zorg", "2028"]]],
+    ["Sint-Dimpnakapel, Zammel (Geel)", 51.10038, 4.95985, [["kapel", "Klanken in de kapel", "2025"], ["luister", "Huis der Weemoed: geestelijke gezondheid", "2028"]]],
+    ["Hogeschoolplein, Leuven", 50.87748, 4.70186, [["beleu", "Beleuvenissen, gratis zomerconcerten", "2017"]]],
+    ["Sint-Catharinakerk, Kortrijk-Dutsel", 50.92541, 4.8072, [["holsbeek", "Holsbeek Sessies", "2019"]]],
+    ["Abdij van Park, Leuven", 50.86451, 4.71774, [["park", "Park Festival", "2023"], ["park", "Park Sessies, drie avonden in openlucht", "2026"], ["makers", "Makersplek: vier residenties per jaar", ""]]],
+    ["Academiezaal, Sint-Truiden", 50.81636, 5.18792, [["limburg", "Limburg Sessies", "2025"]]],
+    ["Abdij van Herkenrode, Hasselt", 50.95623, 5.27776, [["limburg", "Limburg Sessies", "2025"]]],
+    ["Abdij van Averbode", 51.03344, 4.97948, [["averbode", "Trouwe partner: concerten en residentie", ""], ["makers", "Makersplek: vrouwenstemmen in de abdij", ""], ["luister", "Huis der Weemoed: transcendentie", "2028"]]],
+    ["Begijnhof, Neteoever en kerken, Lier", 51.12836, 4.56832, [["lier", "Jaarlijkse reeks met Stad Lier", "vanaf 2028"]]],
+    ["Linushoeve, Herselt", 51.04114, 4.88223, [["makers", "Makersplek: residentie voor het Merodefestival", ""]]],
+    ["Vijver Wolfsdonk", 51.02514, 4.90907, [["makers", "Makersplek: werk vanuit de natuur van het landschapspark", ""]]],
+    ["Gerhagen, Tessenderlo-Ham", 51.05218, 5.03081, [["luister", "Huis der Weemoed: natuur, leven en geboorte", "2028"]]],
+    ["Sint-Jan-Berchmanshuis, Diest", 50.98372, 5.05159, [["luister", "Huis der Weemoed: jeugd, leren, verdwalen en terugvinden", "2028"]]],
+    ["Oude Dekenij, Westerlo", 51.09243, 4.92031, [["luister", "Huis der Weemoed: oud en wijs, rechtvaardigheid", "2028"]]],
+    ["Molenstede (Diest)", 51.00401, 5.01652, [["aanvraag", "Luisterplek, in aanvraag (Levende Klankenatlas, Toerisme Vlaanderen)", ""]]],
+    ["Zichem", 51.00142, 4.9857, [["aanvraag", "Luisterplek, in aanvraag (Levende Klankenatlas, Toerisme Vlaanderen)", ""]]]
+  ];
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function regel(r) { return esc(r[1]) + (r[2] ? " · " + (/^\d{4}$/.test(r[2]) ? "sinds " : "") + esc(r[2]) : ""); }
+
+  // Lijst onder de kaart (werkt ook zonder kaart)
+  var tb = document.querySelector("#bp-tabel tbody");
+  PLEKKEN.forEach(function (p) {
+    p[3].forEach(function (r, i) {
+      var tr = document.createElement("tr");
+      tr.innerHTML = "<td>" + (i ? "" : esc(p[0])) + "</td><td>" + esc(r[1]) + "</td><td>" + esc(r[2] || "") + "</td>";
+      tb.appendChild(tr);
+    });
+  });
+
+  // Legende met vinkjes
+  var lg = document.getElementById("bp-legende");
+  var groepen = [["Concertreeksen", ["merode", "kerk", "kapel", "beleu", "holsbeek", "park", "limburg", "averbode", "lier"]], ["Plekken", ["makers", "luister", "aanvraag"]]];
+  groepen.forEach(function (g) {
+    var fs = document.createElement("fieldset");
+    fs.innerHTML = "<legend>" + g[0] + "</legend>" + g[1].map(function (k) {
+      var s = SOORT[k];
+      var stip = s.vorm ? '<span class="bp-stip ' + s.vorm + '" aria-hidden="true"></span>' : '<span class="bp-stip" style="background:' + s.kleur + '" aria-hidden="true"></span>';
+      return '<label><input type="checkbox" name="soort" value="' + k + '" checked>' + stip + esc(s.naam) + "</label>";
+    }).join("");
+    lg.appendChild(fs);
+  });
+
+  if (!window.L) return;
+  var kaart = L.map("bp-kaart", { scrollWheelZoom: false, zoomSnap: 0.5 });
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(kaart);
+
+  var lagen = [];
+  PLEKKEN.forEach(function (p) {
+    var eerste = p[3][0][0], s = SOORT[eerste], m;
+    if (s.vorm) {
+      var cls = s.vorm === "ruit" ? "bp-ruit" : "bp-ring" + (eerste === "aanvraag" ? " aanvraag" : "");
+      m = L.marker([p[1], p[2]], { icon: L.divIcon({ className: "", html: '<div class="' + cls + '"></div>', iconSize: [18, 18], iconAnchor: [9, 9] }), title: p[0], alt: p[0], keyboard: true });
+    } else {
+      m = L.circleMarker([p[1], p[2]], { radius: 8, color: "#fff", weight: 2, fillColor: s.kleur, fillOpacity: 1 });
+    }
+    m.bindPopup("<strong>" + esc(p[0]) + "</strong>" + p[3].map(function (r) { return '<span class="bp-pop-rol">' + regel(r) + "</span>"; }).join(""));
+    lagen.push({ m: m, soorten: p[3].map(function (r) { return r[0]; }) });
+    m.addTo(kaart);
+  });
+  var grens = L.latLngBounds(PLEKKEN.map(function (p) { return [p[1], p[2]]; }));
+  kaart.fitBounds(grens, { padding: [24, 24] });
+
+  lg.addEventListener("change", function () {
+    var aan = [].slice.call(lg.querySelectorAll("input:checked")).map(function (i) { return i.value; });
+    lagen.forEach(function (l) {
+      var tonen = l.soorten.some(function (s) { return aan.indexOf(s) > -1; });
+      if (tonen && !kaart.hasLayer(l.m)) l.m.addTo(kaart);
+      if (!tonen && kaart.hasLayer(l.m)) kaart.removeLayer(l.m);
+    });
+  });
+  // Scrollen met het muiswiel pas na een klik in de kaart, zodat de pagina gewoon blijft scrollen
+  kaart.on("click focus", function () { kaart.scrollWheelZoom.enable(); });
+  kaart.on("mouseout", function () { kaart.scrollWheelZoom.disable(); });
+})();
+</script>
+<script>
+document.querySelectorAll(".yt").forEach(function (b) {
+  b.addEventListener("click", function () {
+    var id = b.getAttribute("data-id");
+    if (location.protocol === "file:") { window.open("https://www.youtube.com/watch?v=" + id, "_blank", "noopener"); return; }
+    var f = document.createElement("iframe");
+    f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&cc_load_policy=0&iv_load_policy=3";
+    f.title = b.getAttribute("aria-label");
+    f.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture; fullscreen");
+    f.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+    f.allowFullscreen = true;
+    b.replaceWith(f);
+  });
+});
+</script>
+</body>
+</html>
