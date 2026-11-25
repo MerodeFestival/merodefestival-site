@@ -113,6 +113,18 @@
 .bp-reeks b{display:block;font-family:var(--label);font-weight:400;font-size:.95rem}
 .bp-reeks strong{display:block;font-family:var(--label);font-weight:400;font-size:1.9rem;line-height:1.15;margin:.2rem 0 .3rem}
 .bp-reeks span{font-size:.98rem}
+.bp-heatmaps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;margin:.8rem 0 .4rem}
+.bp-hm{margin:0}
+.bp-hm a{display:block;border-radius:3px;overflow:hidden;background:#f4f2ee;cursor:zoom-in}
+.bp-hm img{display:block;width:100%;height:auto;aspect-ratio:5/4;object-fit:cover;object-position:center top;transition:transform .25s}
+.bp-hm a:hover img,.bp-hm a:focus-visible img{transform:scale(1.03)}
+.bp-hm figcaption{margin-top:.45rem;font-size:.95rem;line-height:1.35}
+.bp-hm figcaption strong{display:block;font-family:var(--label);font-weight:400}
+.bp-hm-groot{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:clamp(.5rem,3vw,2rem);background:rgba(12,8,5,.9);cursor:zoom-out}
+.bp-hm-groot[hidden]{display:none}
+.bp-hm-groot img{max-width:100%;max-height:calc(100vh - 5rem);border-radius:4px}
+.bp-hm-groot button{position:absolute;top:1rem;right:1rem;padding:.45rem .9rem;border:1px solid rgba(239,231,218,.5);border-radius:999px;background:transparent;color:#EFE7DA;font:inherit;font-family:var(--label);cursor:pointer}
+@media (max-width:760px){.bp-heatmaps{grid-template-columns:1fr}}
 .bp-cijfer.bp-antwoord{border-color:var(--s-oranje);border-width:2px}
 @media (max-width:760px){.bp-grafieken{grid-template-columns:1fr;gap:3rem}.bp-staven{height:11rem}}
 /* lijsten */
@@ -126,6 +138,10 @@ footer .steun-logo.bp-geel{height:160px;width:auto;max-width:100%;object-fit:con
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 <link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/beleid">
+<link rel="alternate" hreflang="x-default" href="https://www.merodefestival.be/beleid">
+<link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/beleid">
+<link rel="alternate" hreflang="en" href="https://www.merodefestival.be/en/beleid">
+<link rel="alternate" hreflang="fr" href="https://www.merodefestival.be/fr/beleid">
 <link rel="alternate" hreflang="x-default" href="https://www.merodefestival.be/beleid">
 <link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/beleid">
 <link rel="alternate" hreflang="en" href="https://www.merodefestival.be/en/beleid">
@@ -357,6 +373,10 @@ footer .steun-logo.bp-geel{height:160px;width:auto;max-width:100%;object-fit:con
 <div class="bp-reeks"><b>Beleuvenissen</b><strong>ca. 1.500</strong><span>per avond. Vijf gratis avonden op het Hogeschoolplein; gegroeid van drie naar vijf avonden, voor een stedelijk publiek.</span></div>
 </div>
 
+<p class="bp-klein bp-hm-intro">Waar het publiek vandaan komt, per reeks (postcodes van de tickets). Klik op een kaart om ze groot te zien.</p>
+<div class="bp-heatmaps"><figure class="bp-hm"><a href="https://beeld.merodefestival.be/merodefestival/heatmap-festival-2023-2026.webp" class="bp-hm-link" aria-label="Toon groot: Merodefestival 2023–2026"><img src="https://beeld.merodefestival.be/merodefestival/thumb/heatmap-festival-2023-2026.webp" alt="Heatmap van de herkomst van het festivalpubliek 2023–2026: een kern in de Merode tussen Antwerpen, Leuven en Hasselt, met uitlopers naar Gent, Brussel, Limburg en Nederland." width="700" height="545" loading="lazy"></a><figcaption><strong>Merodefestival 2023–2026</strong>4.020 tickets, ook 177 uit Nederland</figcaption></figure><figure class="bp-hm"><a href="https://beeld.merodefestival.be/merodefestival/heatmap-kerkconcerten-2023-2026.webp" class="bp-hm-link" aria-label="Toon groot: Kerkconcerten 2023–2026"><img src="https://beeld.merodefestival.be/merodefestival/thumb/heatmap-kerkconcerten-2023-2026.webp" alt="Heatmap van de herkomst van het kerkconcertpubliek 2023–2026: een sterke kern in de Merode, met uitlopers naar Gent, Brussel en Maastricht." width="700" height="634" loading="lazy"></a><figcaption><strong>Kerkconcerten 2023–2026</strong>2.905 tickets over vier seizoenen</figcaption></figure><figure class="bp-hm"><a href="https://beeld.merodefestival.be/merodefestival/heatmap-limburg-sessies-2025-2026.webp" class="bp-hm-link" aria-label="Toon groot: Limburg Sessies 2025–2026"><img src="https://beeld.merodefestival.be/merodefestival/thumb/heatmap-limburg-sessies-2025-2026.webp" alt="Heatmap van de herkomst van het publiek van de Limburg Sessies 2025–2026: rond Hasselt, Genk, Sint-Truiden, Beringen en Maasland, grotendeels buiten het Merode-gebied." width="700" height="573" loading="lazy"></a><figcaption><strong>Limburg Sessies 2025–2026</strong>441 tickets in het eerste seizoen</figcaption></figure></div>
+<p class="bp-klein">Kaartgegevens © OpenStreetMap-bijdragers, © CARTO.</p>
+
 <h3>De uitdaging: nieuw publiek blijven aantrekken</h3>
 <p class="bp-intro">Het publiek wordt trouwer, en dat is goed nieuws. Maar in de vaste reeksen daalt het aandeel nieuwe bezoekers.</p>
 <div class="bp-cijfers">
@@ -471,6 +491,12 @@ document.querySelectorAll(".yt").forEach(function (b) {
 });
 </script>
 <style>.vg{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:clamp(.5rem,3vw,2.5rem);background:rgba(12,8,5,.88)}.vg[hidden]{display:none}.vg-doos{position:relative;width:min(1200px,100%,calc((100vh - 7rem) * 16 / 9))}.vg-beeld{aspect-ratio:16/9;background:#000;border-radius:6px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5)}.vg-beeld iframe{display:block;width:100%;height:100%;border:0}.vg-kop{display:flex;align-items:center;gap:1rem;margin-bottom:.6rem;color:#EFE7DA;font-family:var(--label,system-ui);font-size:.95rem}.vg-titel{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.vg-sluit{flex:none;display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .9rem;border:1px solid rgba(239,231,218,.5);border-radius:999px;background:transparent;color:#EFE7DA;font:inherit;cursor:pointer}.vg-sluit:hover,.vg-sluit:focus-visible{background:#F47815;border-color:#F47815;color:#1C140F}html.vg-open{overflow:hidden}</style><script data-video-groot>(function(){if(location.protocol==="file:")return;var lang=(document.documentElement.lang||"nl").slice(0,2),dicht={nl:"Sluiten",en:"Close",fr:"Fermer",de:"Schließen"}[lang]||"Sluiten",vg,beeld,titel,terug;function bouw(){vg=document.createElement("div");vg.className="vg";vg.hidden=true;vg.setAttribute("role","dialog");vg.setAttribute("aria-modal","true");vg.innerHTML='<div class="vg-doos"><div class="vg-kop"><span class="vg-titel"></span><button type="button" class="vg-sluit">\u2715 '+dicht+'</button></div><div class="vg-beeld"></div></div>';document.body.appendChild(vg);beeld=vg.querySelector(".vg-beeld");titel=vg.querySelector(".vg-titel");vg.addEventListener("click",function(e){if(e.target===vg||e.target.closest(".vg-sluit"))sluit()});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!vg.hidden)sluit()})}function sluit(){vg.hidden=true;beeld.innerHTML="";document.documentElement.classList.remove("vg-open");if(terug)terug.focus()}document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest(".yt");if(!b)return;e.preventDefault();e.stopPropagation();if(!vg)bouw();var id=b.getAttribute("data-id"),vm=b.getAttribute("data-vimeo"),h=b.getAttribute("data-h"),f=document.createElement("iframe");f.src=vm?"https://player.vimeo.com/video/"+vm+"?"+(h?"h="+h+"&":"")+"autoplay=1":"https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1&rel=0&cc_load_policy=0&iv_load_policy=3";var t=b.getAttribute("aria-label")||"";f.title=t;f.setAttribute("allow","autoplay; encrypted-media; picture-in-picture; fullscreen");f.setAttribute("referrerpolicy","strict-origin-when-cross-origin");f.allowFullscreen=true;titel.textContent=t.replace(/^[^:]{0,40}:\s*/,"");vg.setAttribute("aria-label",t);beeld.innerHTML="";beeld.appendChild(f);terug=b;vg.hidden=false;document.documentElement.classList.add("vg-open");vg.querySelector(".vg-sluit").focus()},true)})();</script>
+<script>
+(function(){var v;document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest(".bp-hm-link");if(!a)return;e.preventDefault();
+if(!v){v=document.createElement("div");v.className="bp-hm-groot";v.setAttribute("role","dialog");v.setAttribute("aria-modal","true");v.innerHTML='<img alt=""><button type="button">\u2715 Sluiten</button>';document.body.appendChild(v);
+var dicht=function(){v.hidden=true;document.documentElement.classList.remove("vg-open")};v.addEventListener("click",dicht);document.addEventListener("keydown",function(k){if(k.key==="Escape"&&!v.hidden)dicht()})}
+var i=v.querySelector("img");i.src=a.href;i.alt=a.querySelector("img").alt;v.hidden=false;document.documentElement.classList.add("vg-open");v.querySelector("button").focus()});})();
+</script>
 <script data-statistiek>(function(){var h=location.hostname;if(h!=="www.merodefestival.be"&&h!=="merodefestival.be")return;function s(src,a){var e=document.createElement("script");e.defer=true;e.src=src;for(var k in a)e.setAttribute(k,a[k]);document.head.appendChild(e)}s("https://static.cloudflareinsights.com/beacon.min.js",{"data-cf-beacon":'{"token":"63300aea96964edfbfcaf3d986cb4628"}'});!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','262189854320601');fbq('track','PageView');})();</script>
 </body>
 </html>
