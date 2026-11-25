@@ -21,7 +21,6 @@
 <link rel="stylesheet" href="../css/concert.css">
 <link rel="stylesheet" href="../css/info.css">
 <link rel="stylesheet" href="../css/afwerking.css">
-<link rel="stylesheet" href="../js/leaflet/leaflet.css">
 <style>
 .bp-nav{display:flex;flex-wrap:wrap;gap:.4rem .6rem;margin:1.6rem 0 0;padding:0;list-style:none}
 .bp-nav a{display:inline-block;font-family:var(--label);font-size:.95rem;text-decoration:none;color:inherit;border:1px solid currentColor;border-radius:999px;padding:.25rem .8rem;opacity:.85}
@@ -38,24 +37,8 @@
 .bp-uit{max-width:46rem;font-style:italic;font-size:1.2rem;border-left:3px solid var(--s-oranje);padding:.1rem 0 .1rem 1rem;margin:1rem 0 1.6rem}
 .bp-klein{font-size:.95rem;opacity:.85}
 /* kaart */
-.bp-kaartvak{display:grid;grid-template-columns:minmax(0,1fr) 17rem;gap:1.2rem;margin-top:1.5rem}
-#bp-kaart{height:clamp(420px,70vh,640px);border-radius:3px;background:#e9e2d6;z-index:0}
-.bp-legende{font-family:var(--label);font-size:.92rem}
-.bp-legende fieldset{border:0;margin:0 0 1rem;padding:0}
-.bp-legende legend{font-weight:600;margin-bottom:.4rem;padding:0}
-.bp-legende label{display:flex;align-items:center;gap:.5rem;margin:.25rem 0;cursor:pointer;line-height:1.25}
-.bp-legende input{accent-color:var(--s-oranje);width:1rem;height:1rem;flex:none}
-.bp-stip{flex:none;display:inline-block;width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.35)}
-.bp-stip.ruit{border-radius:2px;transform:rotate(45deg) scale(.85);background:#1C140F}
-.bp-stip.ring{background:#fff;border:3px solid #0E7C7B;box-shadow:none}
-.bp-stip.ring.aanvraag{border:2px dashed #6b6b6b;width:12px;height:12px}
-.leaflet-container{font-family:var(--serif);font-size:1rem}
-.leaflet-popup-content{margin:.8rem 1rem;line-height:1.35;color:#2B1D14}
-.leaflet-popup-content strong{font-size:1.05rem}
-.bp-pop-rol{display:block;font-family:var(--label);font-size:.85rem;margin-top:.35rem}
-.bp-ruit{width:14px;height:14px;background:#1C140F;border:2px solid #fff;transform:rotate(45deg);box-shadow:0 0 0 1px rgba(0,0,0,.4)}
-.bp-ring{width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid #0E7C7B;box-shadow:0 0 0 1px rgba(255,255,255,.9)}
-.bp-ring.aanvraag{border-style:dashed;border-color:#6b6b6b}
+.bp-kaartvak{margin-top:1.5rem}
+#bp-kaart{display:block;width:100%;height:clamp(460px,75vh,720px);border:0;border-radius:3px;background:#e9e2d6}
 .bp-lijst{margin-top:1.4rem}
 .bp-lijst summary{cursor:pointer;font-family:var(--label)}
 .bp-lijst table{margin-top:.8rem}
@@ -92,10 +75,14 @@
 .bp-partners li{margin:.25rem 0;break-inside:avoid}
 .bp-kop{margin-left:auto;text-align:right;color:var(--s-zand)}
 footer .steun-logo.bp-geel{height:160px;width:auto;max-width:100%;object-fit:contain;filter:none;opacity:1}
-@media (max-width:860px){.bp-kaartvak{grid-template-columns:1fr}#bp-kaart{height:60vh;min-height:380px}.bp-legende{columns:2 12rem}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.leaflet-fade-anim .leaflet-popup,.leaflet-zoom-anim .leaflet-zoom-animated{transition:none!important}}
+@media (max-width:860px){#bp-kaart{height:70vh;min-height:420px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 <link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/beleid">
+<link rel="alternate" hreflang="x-default" href="https://www.merodefestival.be/beleid">
+<link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/beleid">
+<link rel="alternate" hreflang="en" href="https://www.merodefestival.be/en/beleid">
+<link rel="alternate" hreflang="fr" href="https://www.merodefestival.be/fr/beleid">
 <link rel="alternate" hreflang="x-default" href="https://www.merodefestival.be/beleid">
 <link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/beleid">
 <link rel="alternate" hreflang="en" href="https://www.merodefestival.be/en/beleid">
@@ -165,11 +152,8 @@ footer .steun-logo.bp-geel{height:160px;width:auto;max-width:100%;object-fit:con
 <section class="bp-sec licht" id="kaart"><div class="wrap">
 <span class="bp-nr">1</span>
 <h2>Waar we spelen</h2>
-<p class="bp-intro">Onze concertlocaties, makersplekken en luisterplekken in Vlaams-Brabant, Antwerpen en Limburg, met Landschapspark de Merode als basis. Elke reeks heeft een eigen kleur. Klik op een markering voor de naam, de reeks en het startjaar.</p>
-<div class="bp-kaartvak">
-<div id="bp-kaart" role="region" aria-label="Kaart met de locaties van WESP vzw. De volledige lijst staat onder de kaart."></div>
-<form class="bp-legende" id="bp-legende" aria-label="Toon op de kaart"></form>
-</div>
+<p class="bp-intro">Onze concertlocaties, makersplekken en luisterplekken in Vlaams-Brabant, Antwerpen en Limburg, met Landschapspark de Merode als basis. Ook de muzikale wandelingen staan erop. Zoom in voor meer detail en klik op een markering of route voor de naam.</p>
+<div class="bp-kaartvak"><iframe id="bp-kaart" src="https://www.google.com/maps/d/embed?mid=1XDlKzMubSq-SPb7Cdih0s7vULYmerw8&amp;ll=51.01888%2C4.83894&amp;z=10" title="Kaart met de werking van WESP vzw: concertlocaties, Huis der Weemoed, Levende Klankenatlas en muzikale wandelingen. De lijst staat onder de kaart." loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
 <p class="bp-klein">Vanaf 2028 komt er met LOV2030 (Leuven &amp; Beyond) een nieuwe concertlocatie bij in de ruime regio rond Leuven, met 2030 als ankerjaar. Die locatie is nog niet gekozen en staat daarom niet op de kaart.</p>
 <details class="bp-lijst"><summary>Alle locaties als lijst</summary><div class="bp-tabel-wrap"><table class="bp-tabel" id="bp-tabel"><thead><tr><th scope="col">Locatie</th><th scope="col">Wat</th><th scope="col">Sinds</th></tr></thead><tbody></tbody></table></div></details>
 </div></section>
@@ -341,7 +325,6 @@ footer .steun-logo.bp-geel{height:160px;width:auto;max-width:100%;object-fit:con
   </div>
 <div class="wrap foot-onder"><p class="foot-links"><a href="integriteit.html">Aanspreekpunt integriteit</a><a href="privacy.html">Privacyverklaring</a></p></div>
 </footer>
-<script src="../js/leaflet/leaflet.js"></script>
 <script>
 (function () {
   // Reeksen en soorten plekken, elk met een eigen kleur of vorm
@@ -401,53 +384,6 @@ footer .steun-logo.bp-geel{height:160px;width:auto;max-width:100%;object-fit:con
     });
   });
 
-  // Legende met vinkjes
-  var lg = document.getElementById("bp-legende");
-  var groepen = [["Concertreeksen", ["merode", "kerk", "kapel", "beleu", "holsbeek", "park", "limburg", "averbode", "lier"]], ["Plekken", ["makers", "luister", "aanvraag"]]];
-  groepen.forEach(function (g) {
-    var fs = document.createElement("fieldset");
-    fs.innerHTML = "<legend>" + g[0] + "</legend>" + g[1].map(function (k) {
-      var s = SOORT[k];
-      var stip = s.vorm ? '<span class="bp-stip ' + s.vorm + '" aria-hidden="true"></span>' : '<span class="bp-stip" style="background:' + s.kleur + '" aria-hidden="true"></span>';
-      return '<label><input type="checkbox" name="soort" value="' + k + '" checked>' + stip + esc(s.naam) + "</label>";
-    }).join("");
-    lg.appendChild(fs);
-  });
-
-  if (!window.L) return;
-  var kaart = L.map("bp-kaart", { scrollWheelZoom: false, zoomSnap: 0.5 });
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 18,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(kaart);
-
-  var lagen = [];
-  PLEKKEN.forEach(function (p) {
-    var eerste = p[3][0][0], s = SOORT[eerste], m;
-    if (s.vorm) {
-      var cls = s.vorm === "ruit" ? "bp-ruit" : "bp-ring" + (eerste === "aanvraag" ? " aanvraag" : "");
-      m = L.marker([p[1], p[2]], { icon: L.divIcon({ className: "", html: '<div class="' + cls + '"></div>', iconSize: [18, 18], iconAnchor: [9, 9] }), title: p[0], alt: p[0], keyboard: true });
-    } else {
-      m = L.circleMarker([p[1], p[2]], { radius: 8, color: "#fff", weight: 2, fillColor: s.kleur, fillOpacity: 1 });
-    }
-    m.bindPopup("<strong>" + esc(p[0]) + "</strong>" + p[3].map(function (r) { return '<span class="bp-pop-rol">' + regel(r) + "</span>"; }).join(""));
-    lagen.push({ m: m, soorten: p[3].map(function (r) { return r[0]; }) });
-    m.addTo(kaart);
-  });
-  var grens = L.latLngBounds(PLEKKEN.map(function (p) { return [p[1], p[2]]; }));
-  kaart.fitBounds(grens, { padding: [24, 24] });
-
-  lg.addEventListener("change", function () {
-    var aan = [].slice.call(lg.querySelectorAll("input:checked")).map(function (i) { return i.value; });
-    lagen.forEach(function (l) {
-      var tonen = l.soorten.some(function (s) { return aan.indexOf(s) > -1; });
-      if (tonen && !kaart.hasLayer(l.m)) l.m.addTo(kaart);
-      if (!tonen && kaart.hasLayer(l.m)) kaart.removeLayer(l.m);
-    });
-  });
-  // Scrollen met het muiswiel pas na een klik in de kaart, zodat de pagina gewoon blijft scrollen
-  kaart.on("click focus", function () { kaart.scrollWheelZoom.enable(); });
-  kaart.on("mouseout", function () { kaart.scrollWheelZoom.disable(); });
 })();
 </script>
 <script>
