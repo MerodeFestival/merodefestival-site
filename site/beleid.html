@@ -92,6 +92,29 @@
 .bp-cijfer{padding:1rem 1.1rem;border:1px solid var(--s-papier-lijn);border-radius:3px}
 .bp-cijfer b{display:block;font-family:var(--label);font-weight:400;font-size:2rem;line-height:1.1}
 .bp-cijfer span{font-size:1rem}
+.bp-grafieken{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;margin:1.2rem 0 .6rem}
+.bp-gr{margin:0}
+.bp-gr figcaption{font-family:var(--label);font-size:1.05rem;margin-bottom:.6rem;min-height:2.6rem}
+.bp-leg{display:block;font-size:.85rem;opacity:.8}
+.bp-leg i{display:inline-block;width:.8rem;height:.8rem;margin:0 .3rem 0 0;vertical-align:-1px}
+.bp-leg i+i{margin-left:.8rem}
+.bp-terug-k{background:#B8862F}.bp-nieuw-k{background:#2E6F5E}
+.bp-staven{display:flex;align-items:flex-end;gap:.6rem;height:13rem;border-bottom:1px solid var(--s-papier-lijn);padding-top:1.6rem}
+.bp-st{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}
+.bp-st-w{font-size:.9rem;white-space:nowrap;margin-bottom:.25rem}
+.bp-st-b{width:100%;display:flex;flex-direction:column;justify-content:flex-end}
+.bp-st-j{position:absolute;bottom:-1.6rem;font-family:var(--label);font-size:.88rem}
+.bp-nieuw{background:#2E6F5E}.bp-tk{background:#80A899}.bp-eu{background:#B9D0C4}
+.bp-terug{background:#B8862F;display:flex;align-items:center;justify-content:center}
+.bp-terug i{font-style:normal;color:#fff;font-size:.82rem}
+.bp-grafieken+.bp-klein{margin-top:2.2rem}
+.bp-reeksen{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,15rem),1fr));gap:1rem;margin:1rem 0 1.4rem}
+.bp-reeks{padding:1rem 1.1rem;border-top:3px solid var(--s-oranje);background:rgba(43,29,20,.04)}
+.bp-reeks b{display:block;font-family:var(--label);font-weight:400;font-size:.95rem}
+.bp-reeks strong{display:block;font-family:var(--label);font-weight:400;font-size:1.9rem;line-height:1.15;margin:.2rem 0 .3rem}
+.bp-reeks span{font-size:.98rem}
+.bp-cijfer.bp-antwoord{border-color:var(--s-oranje);border-width:2px}
+@media (max-width:760px){.bp-grafieken{grid-template-columns:1fr;gap:3rem}.bp-staven{height:11rem}}
 /* lijsten */
 .bp-links{list-style:none;padding:0;margin:1rem 0;max-width:46rem}
 .bp-links li{margin:.55rem 0;font-size:1.08rem}
@@ -281,7 +304,7 @@ footer .steun-logo.bp-geel{height:160px;width:auto;max-width:100%;object-fit:con
 </div>
 <h3 class="bp-mz-kop">Wie keert terug</h3>
 <p class="bp-intro">128 muzikanten speelden tussen 2023 en 2026 minstens twee keer bij ons, vaak in verschillende reeksen en bezettingen. Klik op een naam om te zien waar.</p>
-<p class="bp-klein">De 215 muzikanten bij Publiek zijn iedereen die van 2022 tot 2026 minstens één keer speelde; hier staan alleen wie sinds 2023 terugkwam.</p>
+<p class="bp-klein">Van 2022 tot 2026 speelden in totaal 215 muzikanten bij ons, goed voor 269 optredens; hier staan alleen wie sinds 2023 terugkwam.</p>
 <div class="bp-mz-lijst"><div class="bp-mz-groep"><p class="bp-mz-aantal">12×</p><div class="bp-mz-namen"><details class="bp-mz"><summary>Anouk Sanczuk</summary><ul><li>Beleuvenissen 2026 <span class="bp-mz-via">met Global Music Ensemble</span></li><li>Merodefestival 2025 <span class="bp-mz-via">met Broes</span></li><li>Merodefestival 2025 <span class="bp-mz-via">met GFVP</span></li><li>Merodefestival 2025 <span class="bp-mz-via">met Global Music Ensemble</span></li><li>Merodefestival 2026 <span class="bp-mz-via">met Andries Boone sextet</span></li><li>Merodefestival 2026 <span class="bp-mz-via">met Bamako Express</span></li><li>Merodefestival 2026 <span class="bp-mz-via">met MOTYK</span></li><li>Kerkconcerten 2022–23 <span class="bp-mz-via">met Global Music Ensemble</span></li><li>Park Festival 2024 <span class="bp-mz-via">met GFVP</span></li><li>Park Festival 2026 <span class="bp-mz-via">met Bamako Express</span></li><li>Kerstconcert Abdij van Park 2025 <span class="bp-mz-via">met GFVP</span></li><li>Muzikale wandeling 2025, Westmeerbeek</li></ul></details></div></div>
 <div class="bp-mz-groep"><p class="bp-mz-aantal">10×</p><div class="bp-mz-namen"><details class="bp-mz"><summary>Maarten Decombel</summary><ul><li>Beleuvenissen 2024 <span class="bp-mz-via">met Naragonia Quartet</span></li><li>Beleuvenissen 2024 <span class="bp-mz-via">met Snaarmaarwaar</span></li><li>Merodefestival 2024 <span class="bp-mz-via">met Naragonia Quartet</span></li><li>Merodefestival 2026 <span class="bp-mz-via">met Sauvage</span></li><li>Holsbeek Sessies 2022–23 <span class="bp-mz-via">met Naragonia Quartet</span></li><li>Holsbeek Sessies 2024–25 <span class="bp-mz-via">met Spilar</span></li><li>Kerkconcerten 2022–23 <span class="bp-mz-via">met Snaarmaarwaar</span></li><li>Limburg Sessies 2025–26 <span class="bp-mz-via">met Naragonia Quartet</span></li><li>Park Festival 2026 <span class="bp-mz-via">met MANdolinMAN</span></li><li>Park Sessies 2026 <span class="bp-mz-via">met Naragonia Quartet</span></li></ul></details></div></div>
 <div class="bp-mz-groep"><p class="bp-mz-aantal">9×</p><div class="bp-mz-namen"><details class="bp-mz"><summary>Florian De Schepper</summary><ul><li>Beleuvenissen 2024 <span class="bp-mz-via">met Loogaroo quartet</span></li><li>Beleuvenissen 2025 <span class="bp-mz-via">met Hartwin &amp; the Waves</span></li><li>Merodefestival 2025 <span class="bp-mz-via">met Broes</span></li><li>Merodefestival 2026 <span class="bp-mz-via">met Bamako Express</span></li><li>Holsbeek Sessies 2025–26 <span class="bp-mz-via">met Flo</span></li><li>Kerkconcerten 2024–25 <span class="bp-mz-via">met Flo</span></li><li>Park Festival 2026 <span class="bp-mz-via">met Bamako Express</span></li><li>Park Festival 2026 <span class="bp-mz-via">met Flo</span></li><li>Muzikale wandeling 2025, Westmeerbeek</li></ul></details><details class="bp-mz"><summary>Lotte Remmen</summary><ul><li>Merodefestival 2025 <span class="bp-mz-via">met GFVP</span></li><li>Merodefestival 2026 <span class="bp-mz-via">met Bipolar Bows</span></li><li>Holsbeek Sessies 2023–24 <span class="bp-mz-via">met Bipolar Bows</span></li><li>Holsbeek Sessies 2023–24 <span class="bp-mz-via">met Old Salt</span></li><li>Park Festival 2023 <span class="bp-mz-via">met Bipolar Bows</span></li><li>Park Festival 2023 <span class="bp-mz-via">met Old Salt</span></li><li>Park Festival 2024 <span class="bp-mz-via">met GFVP</span></li><li>Kerstconcert Abdij van Park 2025 <span class="bp-mz-via">met GFVP</span></li><li>Muzikale wandeling 2026, Oosterlo <span class="bp-mz-via">met Bipolar Bows</span></li></ul></details></div></div>
@@ -297,15 +320,53 @@ footer .steun-logo.bp-geel{height:160px;width:auto;max-width:100%;object-fit:con
 <section class="bp-sec licht" id="publiek"><div class="wrap">
 <span class="bp-nr">4</span>
 <h2>Publiek</h2>
+<p class="bp-intro">Ons publiek groeit, en we kennen het: per reeks weten we wie komt, van waar, en hoeveel er nieuw is. Daar vertrekken de keuzes in het beleidsplan van.</p>
+
+<h3>Vier jaar groei</h3>
+<div class="bp-grafieken" role="img" aria-label="Kopers groeiden van 767 in 2023 naar 1.110 in 2026, waarvan telkens 33 tot 42 procent terugkerend. Betaalde tickets van 2.960 naar 3.827. Ticketopbrengst van 53.182 naar 80.157 euro.">
+<figure class="bp-gr"><figcaption>Kopers <span class="bp-leg"><i class="bp-terug-k"></i>terugkerend <i class="bp-nieuw-k"></i>nieuw</span></figcaption><div class="bp-staven"><div class="bp-st"><span class="bp-st-w">767</span><span class="bp-st-b bp-nieuw" style="height:69.1%"><span class="bp-terug" style="height:33%"><i>33%</i></span></span><span class="bp-st-j">2023</span></div><div class="bp-st"><span class="bp-st-w">706</span><span class="bp-st-b bp-nieuw" style="height:63.6%"><span class="bp-terug" style="height:42%"><i>42%</i></span></span><span class="bp-st-j">2024</span></div><div class="bp-st"><span class="bp-st-w">945</span><span class="bp-st-b bp-nieuw" style="height:85.1%"><span class="bp-terug" style="height:41%"><i>41%</i></span></span><span class="bp-st-j">2025</span></div><div class="bp-st"><span class="bp-st-w">1.110</span><span class="bp-st-b bp-nieuw" style="height:100.0%"><span class="bp-terug" style="height:42%"><i>42%</i></span></span><span class="bp-st-j">2026*</span></div></div></figure>
+<figure class="bp-gr"><figcaption>Betaalde tickets</figcaption><div class="bp-staven"><div class="bp-st"><span class="bp-st-w">2.960</span><span class="bp-st-b bp-tk" style="height:77.3%"></span><span class="bp-st-j">2023</span></div><div class="bp-st"><span class="bp-st-w">3.038</span><span class="bp-st-b bp-tk" style="height:79.4%"></span><span class="bp-st-j">2024</span></div><div class="bp-st"><span class="bp-st-w">3.710</span><span class="bp-st-b bp-tk" style="height:96.9%"></span><span class="bp-st-j">2025</span></div><div class="bp-st"><span class="bp-st-w">3.827</span><span class="bp-st-b bp-tk" style="height:100.0%"></span><span class="bp-st-j">2026*</span></div></div></figure>
+<figure class="bp-gr"><figcaption>Ticketopbrengst (incl. btw)</figcaption><div class="bp-staven"><div class="bp-st"><span class="bp-st-w">€ 53.182</span><span class="bp-st-b bp-eu" style="height:66.3%"></span><span class="bp-st-j">2023</span></div><div class="bp-st"><span class="bp-st-w">€ 60.102</span><span class="bp-st-b bp-eu" style="height:75.0%"></span><span class="bp-st-j">2024</span></div><div class="bp-st"><span class="bp-st-w">€ 72.385</span><span class="bp-st-b bp-eu" style="height:90.3%"></span><span class="bp-st-j">2025</span></div><div class="bp-st"><span class="bp-st-w">€ 80.157</span><span class="bp-st-b bp-eu" style="height:100.0%"></span><span class="bp-st-j">2026*</span></div></div></figure>
+</div>
+<p class="bp-klein">* 2026 tot 13 november (zelfde periode 2025: 868 kopers, 3.467 tickets, € 67.448). Betaalde tickets via onze eigen ticketing; zonder tickets via cultuurcentra en aan de kassa. % = aandeel terugkerende kopers. Bron: WESP vzw.</p>
+
+<h3>Elke reeks een eigen publiek</h3>
+<p class="bp-intro">De reeksen delen niet hetzelfde publiek, ze vullen elkaar aan.</p>
+<div class="bp-reeksen">
+<div class="bp-reeks"><b>Merodefestival</b><strong>2/3</strong><span>komt van buiten de Merode. Van 853 deelnames (2023) naar 1.411 (2025); het zwaartepunt schuift oostwaarts, Limburg groeit van 12 naar 18 %.</span></div>
+<div class="bp-reeks"><b>Kerkconcerten</b><strong>± 1.000</strong><span>tickets per seizoen, gemiddeld 100 per concert. Het meest lokaal: ruim vier op de tien uit de Merode zelf.</span></div>
+<div class="bp-reeks"><b>Holsbeek Sessies</b><strong>56–75 %</strong><span>uit de gemeente Holsbeek zelf. Een buurtgedragen reeks die nu doorgroeit naar het Hageland.</span></div>
+<div class="bp-reeks"><b>Limburg Sessies</b><strong>82 %</strong><span>uit Limburg, in het eerste seizoen (480 tickets, 96 per concert). Een nieuw publiek dat weinig overlapt met de Merode.</span></div>
+<div class="bp-reeks"><b>Beleuvenissen &amp; Park Festival</b><strong>gratis</strong><span>in de stad en in de abdij: van drie naar vijf avonden op het Hogeschoolplein, en jaarlijks een festivaldag in de Abdij van Park.</span></div>
+</div>
+
+<h3>De uitdaging: nieuw publiek blijven aantrekken</h3>
+<p class="bp-intro">Het publiek wordt trouwer, en dat is goed nieuws. Maar in de vaste reeksen daalt het aandeel nieuwe bezoekers.</p>
 <div class="bp-cijfers">
-<div class="bp-cijfer"><b>215</b><span>muzikanten, goed voor 269 optredens (2022–2026)</span></div>
+<div class="bp-cijfer"><b>± 40 % → 20 %</b><span>nieuwe bezoekers bij de kerkconcerten (tot 2023–24, naar 2025–26)</span></div>
+<div class="bp-cijfer"><b>44 % → 28 %</b><span>nieuwe bezoekers op het Merodefestival (2022 naar 2026)</span></div>
+<div class="bp-cijfer bp-antwoord"><b>40 %</b><span>nieuw publiek per jaar is daarom ons doel vanaf 2028: twee derde via gratis formats, de rest via nieuwe reeksen in Limburg, Lier en rond Leuven.</span></div>
+</div>
+
+<h3>Een hefboom voor de streek</h3>
+<div class="bp-cijfers">
+<div class="bp-cijfer"><b>9 / 10</b><span>gemiddeld op de vraag of het festival goesting gaf om de Merode te ontdekken</span></div>
+<div class="bp-cijfer"><b>1 op 3</b><span>festivalbezoekers combineert het bezoek met de lokale horeca</span></div>
+<div class="bp-cijfer"><b>8 – 9,5</b><span>op 10 voor alle onderdelen van het festival, elk jaar; artistieke kwaliteit 8,8 tot 9,1</span></div>
+</div>
+<div class="bp-citaten bp-publiek">
+<blockquote><p>“Dit is een festival op mensenmaat en ik mag hopen dat het zo zal blijven. Deze schaal past het best bij de pure en authentieke muziek.”</p><footer>Bezoeker, 2024</footer></blockquote>
+<blockquote><p>“Eindelijk eens een concert waar je oren niet daveren en waar het vogelgezang extra sfeer brengt.”</p><footer>Bezoeker, 2025</footer></blockquote>
+<blockquote><p>“Hulde voor jullie durf in de programmatie!”</p><footer>Bezoeker, 2026</footer></blockquote>
+</div>
+
+<h3>Waar we naartoe gaan</h3>
+<div class="bp-cijfers">
 <div class="bp-cijfer"><b>ca. 13.000</b><span>bezoekers in 2026, bij ca. 35 concerten en twee festivals</span></div>
 <div class="bp-cijfer"><b>ca. 16.000</b><span>bezoekers per jaar vanaf 2028, bij minstens 40 concerten en twee festivals</span></div>
-<div class="bp-cijfer"><b>40 %</b><span>nieuw publiek, elk jaar minstens; twee derde via gratis formats</span></div>
 <div class="bp-cijfer"><b>&gt; 80 %</b><span>gemiddelde bezetting van de betalende concerten</span></div>
 </div>
-<h3>Bereik 2028 per format</h3>
-<div class="bp-tabel-wrap"><table class="bp-tabel">
+<details class="bp-lijst"><summary>Bereik 2028 per format</summary><div class="bp-tabel-wrap"><table class="bp-tabel">
 <thead><tr><th scope="col">Format</th><th scope="col">Bereik</th></tr></thead>
 <tbody>
 <tr><td>Merodefestival</td><td>ca. 1.400, betalend</td></tr>
@@ -315,25 +376,7 @@ footer .steun-logo.bp-geel{height:160px;width:auto;max-width:100%;object-fit:con
 <tr><td>Abdij- en museumconcerten</td><td>gemiddeld 150</td></tr>
 <tr><td>Klanken in de kapel</td><td>gemiddeld 70</td></tr>
 <tr><td>Muzikale wandelingen</td><td>maximaal 35 per keer</td></tr>
-</tbody></table></div>
-<h3>Wat de cijfers 2023–2026 tonen</h3>
-<p class="bp-intro">Uit onze ticketgegevens per reeks en het jaarlijkse publieksonderzoek van het Merodefestival.</p>
-<div class="bp-tabel-wrap"><table class="bp-tabel">
-<thead><tr><th scope="col">Reeks</th><th scope="col">Publiek</th></tr></thead>
-<tbody>
-<tr><td>Merodefestival</td><td>Van 853 deelnames (2023) naar 1.411 (2025); 1.272 in het natte en koude 2026. Ongeveer twee derde komt van buiten de Merode, ook uit Nederland.</td></tr>
-<tr><td>Kerkconcerten</td><td>Rond 1.000 tickets per seizoen over tien à elf concerten, gemiddeld 100 per concert.</td></tr>
-<tr><td>Holsbeek Sessies</td><td>760 tot 985 tickets per seizoen; meer dan de helft komt uit de gemeente Holsbeek zelf.</td></tr>
-<tr><td>Limburg Sessies</td><td>Eerste seizoen 2025–2026: 480 tickets over vijf concerten, gemiddeld 96 per concert; 82 % uit Limburg, een grotendeels nieuw publiek.</td></tr>
-<tr><td>Beleuvenissen</td><td>Gegroeid van drie naar vijf gratis avonden op het Hogeschoolplein, voor een stedelijk publiek.</td></tr>
-</tbody></table></div>
-<h3>Hoe het festivalpubliek ons beoordeelt</h3>
-<p class="bp-intro">Alle onderdelen scoren elk jaar tussen 8 en 9,5 op 10. Artistieke kwaliteit haalt 8,8 tot 9,1, de wandellocaties 9,1 tot 9,2. Op de vraag of het festival goesting gaf om de Merode te ontdekken, antwoordt het publiek gemiddeld met 9 op 10.</p>
-<div class="bp-citaten bp-publiek">
-<blockquote><p>“Dit is een festival op mensenmaat en ik mag hopen dat het zo zal blijven. Deze schaal past het best bij de pure en authentieke muziek.”</p><footer>Bezoeker, 2024</footer></blockquote>
-<blockquote><p>“Eindelijk eens een concert waar je oren niet daveren en waar het vogelgezang extra sfeer brengt.”</p><footer>Bezoeker, 2025</footer></blockquote>
-<blockquote><p>“Hulde voor jullie durf in de programmatie!”</p><footer>Bezoeker, 2026</footer></blockquote>
-</div>
+</tbody></table></div></details>
 </div></section>
 
 <section class="bp-sec donker" id="kaart"><div class="wrap">
