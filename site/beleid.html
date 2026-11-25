@@ -37,8 +37,8 @@
 .bp-uit{max-width:46rem;font-style:italic;font-size:1.2rem;border-left:3px solid var(--s-oranje);padding:.1rem 0 .1rem 1rem;margin:1rem 0 1.6rem}
 .bp-klein{font-size:.95rem;opacity:.85}
 /* kaart */
-.bp-kaartvak{margin-top:1.5rem}
-#bp-kaart{display:block;width:100%;height:clamp(460px,75vh,720px);border:0;border-radius:3px;background:#e9e2d6}
+.bp-kaartvak{margin-top:1.5rem;height:clamp(460px,75vh,720px);overflow:hidden;border-radius:3px;background:#e9e2d6}
+#bp-kaart{display:block;width:100%;height:calc(100% + 68px);margin-top:-68px;border:0}
 .bp-lijst{margin-top:1.4rem}
 .bp-lijst summary{cursor:pointer;font-family:var(--label)}
 .bp-lijst table{margin-top:.8rem}
@@ -134,7 +134,7 @@
 .bp-partners li{margin:.25rem 0;break-inside:avoid}
 .bp-kop{margin-left:auto;text-align:right;color:var(--s-zand)}
 footer .steun-logo.bp-geel{height:160px;width:auto;max-width:100%;object-fit:contain;filter:none;opacity:1}
-@media (max-width:860px){.bp-videos.bp-twee{grid-template-columns:1fr}#bp-kaart{height:70vh;min-height:420px}}
+@media (max-width:860px){.bp-videos.bp-twee{grid-template-columns:1fr}.bp-kaartvak{height:70vh;min-height:420px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 <link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/beleid">
