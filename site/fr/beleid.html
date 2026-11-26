@@ -102,12 +102,25 @@
 .bp-staven{display:flex;align-items:flex-end;gap:.6rem;height:13rem;border-bottom:1px solid var(--s-papier-lijn);padding-top:1.6rem}
 .bp-st{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;position:relative}
 .bp-st-w{font-size:.9rem;white-space:nowrap;margin-bottom:.25rem}
-.bp-st-b{width:100%;display:flex;flex-direction:column;justify-content:flex-end}
+.bp-st-b{width:100%;display:flex;flex-direction:column;justify-content:flex-end;flex:none}
 .bp-st-j{position:absolute;bottom:-1.6rem;font-family:var(--label);font-size:.88rem}
 .bp-nieuw{background:#2E6F5E}.bp-tk{background:#80A899}.bp-eu{background:#B9D0C4}
 .bp-terug{background:#B8862F;display:flex;align-items:center;justify-content:center}
 .bp-terug i{font-style:normal;color:#fff;font-size:.82rem}
 .bp-grafieken+.bp-klein{margin-top:2.2rem}
+.bp-groei-intro{margin-bottom:.8rem}
+.bp-groei{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:0 0 2.4rem}
+.bp-gw{background:color-mix(in srgb,currentColor 7%,transparent);border-left:6px solid var(--s-oranje);border-radius:0 10px 10px 0;padding:1rem 1.2rem}
+.bp-gw-l{display:block;font-family:var(--label);font-size:1rem}
+.bp-gw-p{display:block;font-family:var(--label);font-size:clamp(2.4rem,5vw,3.4rem);line-height:1;color:var(--s-oranje);margin:.3rem 0 .4rem}
+.bp-gw-v{font-size:.95rem}.bp-gw-v b{font-size:1.05rem}
+.bp-oud-v{background:#9DB8AD}.bp-nu-v{background:var(--s-oranje)}
+.bp-st-nu .bp-st-w{font-weight:700;color:var(--s-oranje)}
+.bp-nu{outline:3px solid var(--s-oranje);outline-offset:-1px}
+.bp-merk{position:absolute;left:-6%;right:-6%;height:0;border-top:3px dashed currentColor;z-index:2;opacity:.85}
+.bp-merk-leg{display:inline-block;width:1.6rem;border-top:3px dashed currentColor;vertical-align:middle;margin-right:.3rem}
+@media (max-width:760px){.bp-groei{grid-template-columns:1fr}}
+
 .bp-reeksen{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,15rem),1fr));gap:1rem;margin:1rem 0 1.4rem}
 .bp-reeks{padding:1rem 1.1rem;border-top:3px solid var(--s-oranje);background:rgba(43,29,20,.04)}
 .bp-reeks b{display:block;font-family:var(--label);font-weight:400;font-size:.95rem}
@@ -138,6 +151,10 @@ footer .steun-logo.bp-geel{height:160px;width:auto;max-width:100%;object-fit:con
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 <link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/beleid">
+<link rel="alternate" hreflang="x-default" href="https://www.merodefestival.be/beleid">
+<link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/beleid">
+<link rel="alternate" hreflang="en" href="https://www.merodefestival.be/en/beleid">
+<link rel="alternate" hreflang="fr" href="https://www.merodefestival.be/fr/beleid">
 <link rel="alternate" hreflang="x-default" href="https://www.merodefestival.be/beleid">
 <link rel="alternate" hreflang="nl" href="https://www.merodefestival.be/beleid">
 <link rel="alternate" hreflang="en" href="https://www.merodefestival.be/en/beleid">
@@ -407,12 +424,10 @@ footer .steun-logo.bp-geel{height:160px;width:auto;max-width:100%;object-fit:con
 <p class="bp-intro">Ons publiek groeit, en we kennen het: per reeks weten we wie komt, van waar, en hoeveel er nieuw is. Daar vertrekken de keuzes in het beleidsplan van.</p>
 
 <h3>Vier jaar groei</h3>
-<div class="bp-grafieken" role="img" aria-label="Kopers groeiden van 767 in 2023 naar 1.110 in 2026, waarvan telkens 33 tot 42 procent terugkerend. Betaalde tickets van 2.960 naar 3.827. Ticketopbrengst van 53.182 naar 80.157 euro.">
-<figure class="bp-gr"><figcaption>Kopers <span class="bp-leg"><i class="bp-terug-k"></i>terugkerend <i class="bp-nieuw-k"></i>nieuw</span></figcaption><div class="bp-staven"><div class="bp-st"><span class="bp-st-w">767</span><span class="bp-st-b bp-nieuw" style="height:69.1%"><span class="bp-terug" style="height:33%"><i>33%</i></span></span><span class="bp-st-j">2023</span></div><div class="bp-st"><span class="bp-st-w">706</span><span class="bp-st-b bp-nieuw" style="height:63.6%"><span class="bp-terug" style="height:42%"><i>42%</i></span></span><span class="bp-st-j">2024</span></div><div class="bp-st"><span class="bp-st-w">945</span><span class="bp-st-b bp-nieuw" style="height:85.1%"><span class="bp-terug" style="height:41%"><i>41%</i></span></span><span class="bp-st-j">2025</span></div><div class="bp-st"><span class="bp-st-w">1.110</span><span class="bp-st-b bp-nieuw" style="height:100.0%"><span class="bp-terug" style="height:42%"><i>42%</i></span></span><span class="bp-st-j">2026*</span></div></div></figure>
-<figure class="bp-gr"><figcaption>Betaalde tickets</figcaption><div class="bp-staven"><div class="bp-st"><span class="bp-st-w">2.960</span><span class="bp-st-b bp-tk" style="height:77.3%"></span><span class="bp-st-j">2023</span></div><div class="bp-st"><span class="bp-st-w">3.038</span><span class="bp-st-b bp-tk" style="height:79.4%"></span><span class="bp-st-j">2024</span></div><div class="bp-st"><span class="bp-st-w">3.710</span><span class="bp-st-b bp-tk" style="height:96.9%"></span><span class="bp-st-j">2025</span></div><div class="bp-st"><span class="bp-st-w">3.827</span><span class="bp-st-b bp-tk" style="height:100.0%"></span><span class="bp-st-j">2026*</span></div></div></figure>
-<figure class="bp-gr"><figcaption>Ticketopbrengst (incl. btw)</figcaption><div class="bp-staven"><div class="bp-st"><span class="bp-st-w">€ 53.182</span><span class="bp-st-b bp-eu" style="height:66.3%"></span><span class="bp-st-j">2023</span></div><div class="bp-st"><span class="bp-st-w">€ 60.102</span><span class="bp-st-b bp-eu" style="height:75.0%"></span><span class="bp-st-j">2024</span></div><div class="bp-st"><span class="bp-st-w">€ 72.385</span><span class="bp-st-b bp-eu" style="height:90.3%"></span><span class="bp-st-j">2025</span></div><div class="bp-st"><span class="bp-st-w">€ 80.157</span><span class="bp-st-b bp-eu" style="height:100.0%"></span><span class="bp-st-j">2026*</span></div></div></figure>
-</div>
-<p class="bp-klein">* 2026 tot 13 november (zelfde periode 2025: 868 kopers, 3.467 tickets, € 67.448). Betaalde tickets via onze eigen ticketing; zonder tickets via cultuurcentra en aan de kassa. % = aandeel terugkerende kopers. Bron: WESP vzw.</p>
+<p class="bp-intro bp-groei-intro">Dit jaar, tot 26 november, tegenover dezelfde periode vorig jaar:</p>
+<div class="bp-groei"><div class="bp-gw"><span class="bp-gw-l">Kopers</span><strong class="bp-gw-p">+28 %</strong><span class="bp-gw-v"><b>1.143</b> tegenover 893</span></div><div class="bp-gw"><span class="bp-gw-l">Betaalde tickets</span><strong class="bp-gw-p">+11 %</strong><span class="bp-gw-v"><b>3.941</b> tegenover 3.548</span></div><div class="bp-gw"><span class="bp-gw-l">Ticketopbrengst</span><strong class="bp-gw-p">+19 %</strong><span class="bp-gw-v"><b>€ 82.181</b> tegenover € 69.101</span></div></div>
+<div class="bp-grafieken" role="img" aria-label="In 2026 tot 26 november: 1.143 kopers (+28 % tegenover dezelfde periode in 2025), 3.941 betaalde tickets (+11 %) en € 82.181 ticketopbrengst (+19 %). Over vier jaar groeiden de kopers van 767 naar 1.143."><figure class="bp-gr"><figcaption>Kopers<span class="bp-leg"><i class="bp-nieuw-k"></i>nieuw <i class="bp-terug-k"></i>terugkerend</span></figcaption><div class="bp-staven"><div class="bp-st"><span class="bp-st-w">767</span><span class="bp-st-b" style="height:55.0%"><span class="bp-nieuw" style="flex:513"></span><span class="bp-terug" style="flex:254"><i>33%</i></span></span><span class="bp-st-j">2023</span></div><div class="bp-st"><span class="bp-st-w">706</span><span class="bp-st-b" style="height:50.7%"><span class="bp-nieuw" style="flex:413"></span><span class="bp-terug" style="flex:293"><i>42%</i></span></span><span class="bp-st-j">2024</span></div><div class="bp-st"><span class="bp-st-w">945</span><span class="bp-st-b" style="height:67.8%"><span class="bp-nieuw" style="flex:559"></span><span class="bp-terug" style="flex:386"><i>41%</i></span></span><span class="bp-st-j">2025</span></div><div class="bp-st bp-st-nu"><span class="bp-st-w">1.143</span><span class="bp-st-b bp-nu" style="height:82.0%"><span class="bp-nieuw" style="flex:667"></span><span class="bp-terug" style="flex:476"><i>42%</i></span></span><span class="bp-merk" style="bottom:64.0%" title="2025 op dezelfde datum: 893"></span><span class="bp-st-j">2026*</span></div></div></figure><figure class="bp-gr"><figcaption>Betaalde tickets</figcaption><div class="bp-staven"><div class="bp-st"><span class="bp-st-w">2.960</span><span class="bp-st-b bp-oud-v" style="height:61.6%"></span><span class="bp-st-j">2023</span></div><div class="bp-st"><span class="bp-st-w">3.038</span><span class="bp-st-b bp-oud-v" style="height:63.2%"></span><span class="bp-st-j">2024</span></div><div class="bp-st"><span class="bp-st-w">3.710</span><span class="bp-st-b bp-oud-v" style="height:77.2%"></span><span class="bp-st-j">2025</span></div><div class="bp-st bp-st-nu"><span class="bp-st-w">3.941</span><span class="bp-st-b bp-nu-v" style="height:82.0%"></span><span class="bp-merk" style="bottom:73.8%" title="2025 op dezelfde datum: 3.548"></span><span class="bp-st-j">2026*</span></div></div></figure><figure class="bp-gr"><figcaption>Ticketopbrengst (incl. btw)</figcaption><div class="bp-staven"><div class="bp-st"><span class="bp-st-w">€ 53.182</span><span class="bp-st-b bp-oud-v" style="height:53.1%"></span><span class="bp-st-j">2023</span></div><div class="bp-st"><span class="bp-st-w">€ 60.102</span><span class="bp-st-b bp-oud-v" style="height:59.9%"></span><span class="bp-st-j">2024</span></div><div class="bp-st"><span class="bp-st-w">€ 72.385</span><span class="bp-st-b bp-oud-v" style="height:72.2%"></span><span class="bp-st-j">2025</span></div><div class="bp-st bp-st-nu"><span class="bp-st-w">€ 82.181</span><span class="bp-st-b bp-nu-v" style="height:82.0%"></span><span class="bp-merk" style="bottom:69.0%" title="2025 op dezelfde datum: € 69.101"></span><span class="bp-st-j">2026*</span></div></div></figure></div>
+<p class="bp-klein"><span class="bp-merk-leg"></span> = 2025 op dezelfde datum. * 2026 tot 26 november; 2023 tot 2025 zijn volledige jaren, dus 2026 groeit nog. Betaalde tickets via onze eigen ticketing; zonder tickets via cultuurcentra en aan de kassa. % = aandeel terugkerende kopers. Bron: WESP vzw.</p>
 
 <h3>Elke reeks een eigen publiek</h3>
 <p class="bp-intro">De reeksen delen niet hetzelfde publiek, ze vullen elkaar aan. Uit onze ticketgegevens per reeks, tellingen ter plaatse bij de gratis concerten en het jaarlijkse publieksonderzoek van het Merodefestival.</p>
